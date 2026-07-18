@@ -985,6 +985,33 @@ class PFLT:
             except Exception:
                 pass
 
+        # 1b) Whitaker-style prefix peel → residual lemma in train lexicon
+        if lang in {"la", "lat", "grc", "el", "ang", "oe"}:
+            try:
+                from prefix_analyze import prefix_resolve
+
+                if not hasattr(self, "_rev_lex") or getattr(self, "_rev_lex_size", -1) != len(
+                    self.pul_terms
+                ):
+                    from meaning_clean import fold_form
+                    from reverse_morph import build_prefix_index
+
+                    rev = {}
+                    for k, v in self.pul_terms.items():
+                        rev[k] = v
+                        ff = fold_form(k)
+                        if ff and ff not in rev:
+                            rev[ff] = v
+                    self._rev_lex = rev
+                    self._rev_lex_size = len(self.pul_terms)
+                    self._rev_prefix = build_prefix_index(rev)
+                phit = prefix_resolve(token, self._rev_lex, lang=lang)
+                if phit is not None and phit[2] >= 0.84:
+                    self._gapfill_cache[cache_key] = phit[0]
+                    return phit[0]
+            except Exception:
+                pass
+
         # 2) Open-set booster: stem / n-gram / Rosetta (cached per lang)
         try:
             from open_set_boost import OpenSetBooster

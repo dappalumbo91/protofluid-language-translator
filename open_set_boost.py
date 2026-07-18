@@ -64,6 +64,14 @@ GRC_SUFFIXES = (
     "ισσα", "ισσης",
 )
 
+# Latin derivational / agentive (Whitaker-style residual after inflection peel)
+LAT_DERIV = (
+    "tionibus", "tionem", "tionis", "tiones",
+    "tor", "sor", "trix", "tura", "turae", "mentum", "men",
+    "bilis", "bundus", "idus", "osus", "alis", "aris", "arius",
+    "ensis", "anus", "icus", "ivus", "ulus", "ellus",
+)
+
 # Latinized Greek endings on romanized forms
 GRC_LAT_SUFFIXES = (
     "eous", "ious", "icus", "ica", "icum", "esis", "osis",
@@ -93,7 +101,7 @@ def _norm(s: str) -> str:
 
 def stem_la(word: str) -> str:
     w = _norm(word)
-    for suf in sorted(set(LAT_SUFFIXES), key=len, reverse=True):
+    for suf in sorted(set(LAT_SUFFIXES) | set(LAT_DERIV), key=len, reverse=True):
         if w.endswith(suf) and len(w) - len(suf) >= 3:
             return w[: -len(suf)]
     return w

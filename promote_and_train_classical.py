@@ -160,21 +160,39 @@ def inject(engine: PFLT, rows: List[Dict[str, Any]], *, expand_paradigms: bool =
     Inject train forms with raw gold meanings (keeps closed-set honest).
     Diacritic-folded keys for polytonic/macron variants.
 
+    When a form already exists, prefer a higher content_score gloss for
+    open-set transfer (Whitaker/Morpheus: lemma → best dictionary sense),
+    while still keeping closed-set recoverable via exact surface keys when
+    the new gloss is not worse.
+
     Paradigm expansions go into engine.paradigm_terms (NOT pul_terms) so
     GapFillStudent / OpenSetBooster stay fast on the real gold lexicon while
     inflected forms still resolve as exact map hits.
     """
-    from meaning_clean import fold_form
+    from meaning_clean import content_score, fold_form, is_meta_meaning
 
     n = 0
     for r in rows:
         w = r["source_word"]
         m = r["meaning_key"]
-        engine.pul_terms[w] = m
-        engine.pul_terms[w.lower()] = m
+        # Prefer content glosses as the canonical transfer meaning
+        if is_meta_meaning(m):
+            # still store for closed-set exact hits
+            engine.pul_terms.setdefault(w, m)
+            engine.pul_terms.setdefault(w.lower(), m)
+        else:
+            for key in (w, w.lower()):
+                prev = engine.pul_terms.get(key)
+                if prev is None or content_score(m) >= content_score(prev):
+                    engine.pul_terms[key] = m
         ff = fold_form(w)
-        if ff and ff not in engine.pul_terms:
-            engine.pul_terms[ff] = m
+        if ff:
+            prev = engine.pul_terms.get(ff)
+            if prev is None or (
+                not is_meta_meaning(m) and content_score(m) >= content_score(prev)
+            ):
+                if not is_meta_meaning(m) or ff not in engine.pul_terms:
+                    engine.pul_terms[ff] = m
         n += 1
     engine.paradigm_terms = getattr(engine, "paradigm_terms", {}) or {}
     if expand_paradigms:
