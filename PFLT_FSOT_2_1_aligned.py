@@ -1012,6 +1012,27 @@ class PFLT:
             except Exception:
                 pass
 
+        # 1c) Lemma-sense index: majority content gloss on shared stem (train only)
+        if lang in {"la", "lat", "grc", "el", "ang", "oe"}:
+            try:
+                from lemma_index import LemmaSenseIndex
+
+                if (
+                    not hasattr(self, "_lemma_idx")
+                    or getattr(self, "_lemma_idx_size", -1) != len(self.pul_terms)
+                ):
+                    idx = LemmaSenseIndex()
+                    # language-agnostic build over full pul_terms
+                    idx.build_from_lexicon(self.pul_terms, lang_hint=lang)
+                    self._lemma_idx = idx
+                    self._lemma_idx_size = len(self.pul_terms)
+                lhit = self._lemma_idx.resolve(token, lang=lang)
+                if lhit is not None and lhit.score >= 0.80:
+                    self._gapfill_cache[cache_key] = lhit.meaning
+                    return lhit.meaning
+            except Exception:
+                pass
+
         # 2) Open-set booster: stem / n-gram / Rosetta (cached per lang)
         try:
             from open_set_boost import OpenSetBooster

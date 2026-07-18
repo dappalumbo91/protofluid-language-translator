@@ -122,10 +122,23 @@ class GapFillStudent:
         scored.sort(reverse=True)
         top = scored[:top_k]
         best_sim, best_donor = top[0]
-        # support: how many top donors share same meaning
-        meaning = self.lex[best_donor]
+        # Collatinus-style: vote meanings among top neighbors (content-weighted)
+        try:
+            from meaning_clean import content_score, is_meta_meaning
+
+            votes: Dict[str, float] = {}
+            for s, d in top:
+                m = self.lex[d]
+                w = s * (0.35 + 0.65 * content_score(m))
+                if is_meta_meaning(m):
+                    w *= 0.2
+                votes[m] = votes.get(m, 0.0) + w
+            meaning = max(votes.items(), key=lambda kv: kv[1])[0]
+            best_donor = next(d for s, d in top if self.lex[d] == meaning)
+            best_sim = max(s for s, d in top if self.lex[d] == meaning)
+        except Exception:
+            meaning = self.lex[best_donor]
         support = sum(1 for s, d in top if self.lex[d] == meaning and s >= 0.45)
-        # also support by high-sim neighbors even if different meaning count
         support = max(support, sum(1 for s, _ in top if s >= 0.55))
 
         p = DOMAIN_PARAMS.get(self.context, DOMAIN_PARAMS.get("linguistic", {

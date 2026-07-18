@@ -1,23 +1,23 @@
 {
-  "built_utc": "2026-07-18T12:14:31.498897+00:00",
-  "core_only_partial": 0.16478989288656962,
-  "core_only_exact": 0.021971985718209283,
+  "built_utc": "2026-07-18T12:26:04.140493+00:00",
+  "core_only_partial": 0.1661631419939577,
+  "core_only_exact": 0.021697335896731666,
   "n_test": 3641,
   "by_lang": {
     "la": {
       "n": 1616,
       "exact": 0.011757425742574257,
-      "partial": 0.20544554455445543
+      "partial": 0.20668316831683167
     },
     "grc": {
       "n": 1068,
-      "exact": 0.03089887640449438,
-      "partial": 0.15823970037453183
+      "exact": 0.02902621722846442,
+      "partial": 0.15917602996254682
     },
     "ang": {
       "n": 537,
-      "exact": 0.04655493482309125,
-      "partial": 0.11173184357541899
+      "exact": 0.048417132216014895,
+      "partial": 0.1154562383612663
     },
     "en": {
       "n": 418,
@@ -25,8 +25,7 @@
       "partial": 0.08851674641148326
     }
   },
-  "prior_core_only_partial": 0.162,
-  "delta_pp": 0.27898928865696115,
-  "methods": "Whitaker-style prefix peel + content-prefer inject + deriv stems + reverse morph (FSOT-safe)",
-  "oss_notes": "docs/OSS_TRANSLATOR_METHODS.md"
+  "prior_partial": 0.1648,
+  "delta_pp": 0.1363141993957706,
+  "stack": "lemma_sense(tight)+prefix+gapfill_vote+content_inject"
 }

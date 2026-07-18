@@ -33,12 +33,15 @@ _LA_PREFIXES: Sequence[str] = (
     "de", "per", "pro", "pre",
 )
 
-# Greek (folded) productive prefixes — monotonic-ish after fold
+# Greek (folded) productive prefixes — after diacritic fold
+# Longer preverbs first; alpha-privative last and heavily gated in peel_prefixes
 _GRC_PREFIXES: Sequence[str] = (
-    "κατα", "κατα", "παρα", "περι", "μετα", "προσ", "αντι", "υπερ", "υπο",
-    "εκ", "εξ", "εν", "εμ", "συν", "συμ", "συγ", "συλ",
-    "απο", "επι", "δια", "ανα", "αμφι", "προ", "παρα",
-    "α", "αν",  # alpha privative (careful — short)
+    "κατα", "παρα", "περι", "μετα", "προσ", "αντι", "υπερ", "υπο",
+    "απο", "επι", "δια", "ανα", "αμφι", "εις", "προς",
+    "εκ", "εξ", "εν", "εμ", "συν", "συμ", "συγ", "συλ", "συσ",
+    "προ", "παρα",
+    # alpha privative / an- before vowel — only if residual ≥5 (below)
+    "αν", "α",
 )
 
 _ANG_PREFIXES: Sequence[str] = (
@@ -74,8 +77,8 @@ def peel_prefixes(form: str, lang: str = "la", max_peels: int = 2) -> List[str]:
                 continue
             # avoid stripping too much (leave ≥3 chars stem)
             if cur.startswith(pf) and len(cur) - len(pf) >= 3:
-                # block ultra-short Greek alpha unless remainder long
-                if pf in {"a", "e", "an"} and len(cur) - len(pf) < 4:
+                # Greek alpha-privative: require long residual (avoid false peels)
+                if pf in {"α", "αν", "a", "an", "e"} and len(cur) - len(pf) < 5:
                     continue
                 cur = cur[len(pf) :]
                 if cur not in out:

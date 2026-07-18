@@ -210,12 +210,18 @@ def inject(engine: PFLT, rows: List[Dict[str, Any]], *, expand_paradigms: bool =
         except Exception:
             pass
     engine._keys_sorted = sorted(engine.pul_terms.keys(), key=len, reverse=True)
-    # rebuild gapfill donors / boosters
+    # rebuild gapfill donors / boosters / lemma sense index
     engine._gapfill_cache.clear()
     if hasattr(engine, "_open_boosters"):
         engine._open_boosters = {}
     if hasattr(engine, "_gapfill_students"):
         engine._gapfill_students = {}
+    if hasattr(engine, "_lemma_idx"):
+        engine._lemma_idx = None
+        engine._lemma_idx_size = -1
+    if hasattr(engine, "_rev_lex"):
+        engine._rev_lex = None
+        engine._rev_lex_size = -1
     return n
 
 
