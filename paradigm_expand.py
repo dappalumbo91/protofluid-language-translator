@@ -19,7 +19,8 @@ def _fold(s: str) -> str:
 
 # (stem_suffix_to_strip, endings_to_add)
 _LA_NOUN = [
-    ("us", ["us", "um", "i", "o", "e", "os", "is", "orum", "ibus", "os", "u"]),
+    # 4th declension (manus): stem in -u-
+    ("us", ["us", "um", "ui", "u", "uum", "ibus", "us", "um"]),
     ("um", ["um", "i", "o", "a", "orum", "is", "orum", "a"]),
     ("a", ["a", "am", "ae", "arum", "is", "as", "a", "ā"]),
     ("is", ["is", "em", "i", "e", "es", "ium", "ibus", "im", "e"]),
@@ -32,7 +33,7 @@ _LA_NOUN = [
     ("men", ["men", "minis", "men", "mine", "mina", "minum", "minibus"]),
     ("x", ["x", "cis", "cem", "ce", "ces", "cum", "cibus", "gis", "gem", "ges"]),
     ("ns", ["ns", "ntis", "ntem", "nte", "ntes", "ntium", "ntibus"]),
-    ("er", ["er", "ri", "ro", "rum", "ris", "rem", "re"]),  # ager-like rough
+    ("er", ["er", "ri", "ro", "rum", "ris", "rem", "re"]),
 ]
 
 _LA_ADJ = [

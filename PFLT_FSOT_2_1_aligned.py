@@ -942,57 +942,12 @@ class PFLT:
             # English open-set still benefits from Latin morphology probes
             pass
 
-        # 1) Reverse morphology: strip endings → known lemma
-        # GRC/OE: standard gates. Latin: long stems only (short stems collide).
-        if lang in {"grc", "el", "ang", "oe", "la", "lat"}:
-            try:
-                from reverse_morph import reverse_resolve, build_prefix_index
-                from meaning_clean import fold_form
-
-                if not hasattr(self, "_rev_lex") or getattr(self, "_rev_lex_size", -1) != len(self.pul_terms):
-                    rev = {}
-                    for k, v in self.pul_terms.items():
-                        rev[k] = v
-                        ff = fold_form(k)
-                        if ff and ff not in rev:
-                            rev[ff] = v
-                    self._rev_lex = rev
-                    self._rev_lex_size = len(self.pul_terms)
-                    self._rev_prefix = build_prefix_index(rev)
-                if lang in {"la", "lat"}:
-                    # Latin-safe: lemma reattach only; short stems OK if high form sim
-                    hit = reverse_resolve(
-                        token,
-                        self._rev_lex,
-                        lang=lang,
-                        prefix_index=getattr(self, "_rev_prefix", None),
-                        min_stem=4,
-                        lemma_end_only=True,
-                        min_score=0.84,
-                        min_sim_lemma=0.50,
-                    )
-                else:
-                    hit = reverse_resolve(
-                        token,
-                        self._rev_lex,
-                        lang=lang,
-                        prefix_index=getattr(self, "_rev_prefix", None),
-                    )
-                thr = 0.84 if lang in {"la", "lat"} else 0.80
-                if hit is not None and hit[2] >= thr:
-                    self._gapfill_cache[cache_key] = hit[0]
-                    return hit[0]
-            except Exception:
-                pass
-
-        # 1b) Whitaker-style prefix peel → residual lemma in train lexicon
+        # Ensure folded reverse lexicon once for morph paths
         if lang in {"la", "lat", "grc", "el", "ang", "oe"}:
-            try:
-                from prefix_analyze import prefix_resolve
-
-                if not hasattr(self, "_rev_lex") or getattr(self, "_rev_lex_size", -1) != len(
-                    self.pul_terms
-                ):
+            if not hasattr(self, "_rev_lex") or getattr(self, "_rev_lex_size", -1) != len(
+                self.pul_terms
+            ):
+                try:
                     from meaning_clean import fold_form
                     from reverse_morph import build_prefix_index
 
@@ -1005,29 +960,93 @@ class PFLT:
                     self._rev_lex = rev
                     self._rev_lex_size = len(self.pul_terms)
                     self._rev_prefix = build_prefix_index(rev)
-                phit = prefix_resolve(token, self._rev_lex, lang=lang)
+                except Exception:
+                    self._rev_lex = dict(self.pul_terms)
+                    self._rev_lex_size = len(self.pul_terms)
+
+        # 1) Declension-class first (4th-decl manu- stems beat greedy man- strip)
+        if lang in {"la", "lat", "grc", "el"}:
+            try:
+                from declension_tables import declension_resolve
+
+                dhit = declension_resolve(
+                    token, getattr(self, "_rev_lex", self.pul_terms), lang=lang, context=context
+                )
+                if dhit is not None and dhit[2] >= 0.84:
+                    self._gapfill_cache[cache_key] = dhit[0]
+                    return dhit[0]
+            except Exception:
+                pass
+
+        # 1b) Reverse morphology: strip endings → known lemma
+        if lang in {"grc", "el", "ang", "oe", "la", "lat"}:
+            try:
+                from reverse_morph import reverse_resolve
+
+                if lang in {"la", "lat"}:
+                    hit = reverse_resolve(
+                        token,
+                        getattr(self, "_rev_lex", self.pul_terms),
+                        lang=lang,
+                        prefix_index=getattr(self, "_rev_prefix", None),
+                        min_stem=4,
+                        lemma_end_only=True,
+                        min_score=0.84,
+                        min_sim_lemma=0.50,
+                    )
+                else:
+                    hit = reverse_resolve(
+                        token,
+                        getattr(self, "_rev_lex", self.pul_terms),
+                        lang=lang,
+                        prefix_index=getattr(self, "_rev_prefix", None),
+                    )
+                thr = 0.84 if lang in {"la", "lat"} else 0.80
+                if hit is not None and hit[2] >= thr:
+                    self._gapfill_cache[cache_key] = hit[0]
+                    return hit[0]
+            except Exception:
+                pass
+
+        # 1c) Whitaker-style prefix peel → residual lemma in train lexicon
+        if lang in {"la", "lat", "grc", "el", "ang", "oe"}:
+            try:
+                from prefix_analyze import prefix_resolve
+
+                phit = prefix_resolve(
+                    token, getattr(self, "_rev_lex", self.pul_terms), lang=lang
+                )
                 if phit is not None and phit[2] >= 0.84:
                     self._gapfill_cache[cache_key] = phit[0]
                     return phit[0]
             except Exception:
                 pass
 
-        # 1c) Lemma-sense index: majority content gloss on shared stem (train only)
+        # 1d) Lemma-sense index: majority content gloss on shared stem (train only)
         if lang in {"la", "lat", "grc", "el", "ang", "oe"}:
             try:
                 from lemma_index import LemmaSenseIndex
+                from domain_sense import pick_sense
 
                 if (
                     not hasattr(self, "_lemma_idx")
                     or getattr(self, "_lemma_idx_size", -1) != len(self.pul_terms)
                 ):
                     idx = LemmaSenseIndex()
-                    # language-agnostic build over full pul_terms
                     idx.build_from_lexicon(self.pul_terms, lang_hint=lang)
                     self._lemma_idx = idx
                     self._lemma_idx_size = len(self.pul_terms)
                 lhit = self._lemma_idx.resolve(token, lang=lang)
                 if lhit is not None and lhit.score >= 0.80:
+                    # if stem has multiple senses, domain-rank
+                    senses = list(
+                        self._lemma_idx.stem_senses.get(lhit.donor_stem, {}).keys()
+                    )
+                    if len(senses) > 1:
+                        picked = pick_sense(senses, context)
+                        if picked:
+                            self._gapfill_cache[cache_key] = picked
+                            return picked
                     self._gapfill_cache[cache_key] = lhit.meaning
                     return lhit.meaning
             except Exception:

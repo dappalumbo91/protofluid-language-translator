@@ -1,31 +1,35 @@
 {
-  "built_utc": "2026-07-18T12:26:04.140493+00:00",
-  "core_only_partial": 0.1661631419939577,
-  "core_only_exact": 0.021697335896731666,
-  "n_test": 3641,
+  "built_utc": "2026-07-18T12:42:27.848014+00:00",
+  "core_only_partial": 0.17688467938051966,
+  "core_only_exact": 0.020862664789453474,
+  "n_test": 7813,
+  "n_train": 69719,
+  "n_core_gold": 77532,
   "by_lang": {
     "la": {
-      "n": 1616,
-      "exact": 0.011757425742574257,
-      "partial": 0.20668316831683167
+      "n": 4168,
+      "exact": 0.01991362763915547,
+      "partial": 0.23104606525911708
     },
     "grc": {
-      "n": 1068,
-      "exact": 0.02902621722846442,
-      "partial": 0.15917602996254682
+      "n": 2016,
+      "exact": 0.022817460317460316,
+      "partial": 0.14434523809523808
     },
     "ang": {
-      "n": 537,
-      "exact": 0.048417132216014895,
-      "partial": 0.1154562383612663
+      "n": 919,
+      "exact": 0.029379760609358,
+      "partial": 0.0794341675734494
     },
     "en": {
-      "n": 418,
-      "exact": 0.0023923444976076554,
-      "partial": 0.08851674641148326
+      "n": 708,
+      "exact": 0.007062146892655367,
+      "partial": 0.0748587570621469
     }
   },
-  "prior_partial": 0.1648,
-  "delta_pp": 0.1363141993957706,
-  "stack": "lemma_sense(tight)+prefix+gapfill_vote+content_inject"
+  "prior_v012": 0.1662,
+  "delta_vs_v012_pp": 1.0684679380519673,
+  "delta_vs_16_2_pp": 1.4884679380519654,
+  "meaningful": false,
+  "stack": "dense_short_lemmas+declension_first+domain_sense"
 }

@@ -134,7 +134,8 @@ def mine_dictionary() -> Tuple[List[Dict[str, Any]], Dict[str, str], Dict[str, i
             r"present|perfect|infinitive|participle|alternative form|initialism)\b",
             re.I,
         )
-        for lang, limit in (("grc", 12000), ("la", 16000), ("ang", 5000), ("en", 6000)):
+        # Higher limits + dedicated short-gloss preference (WORDS-style lemma density)
+        for lang, limit in (("grc", 22000), ("la", 28000), ("ang", 8000), ("en", 8000)):
             rows = cur.execute(
                 """
                 SELECT w.word, w.pos, d.gloss
@@ -144,9 +145,10 @@ def mine_dictionary() -> Tuple[List[Dict[str, Any]], Dict[str, str], Dict[str, i
                   AND d.gloss_lang = 'en'
                   AND length(d.gloss) BETWEEN 2 AND 80
                   AND length(w.word) BETWEEN 2 AND 40
+                  AND w.pos IN ('noun', 'verb', 'adj', 'adv', 'name')
                 LIMIT ?
                 """,
-                (lang, limit * 4),
+                (lang, limit * 5),
             ).fetchall()
             best: Dict[str, Tuple[float, str]] = {}
             for word, pos, gloss in rows:
@@ -156,19 +158,21 @@ def mine_dictionary() -> Tuple[List[Dict[str, Any]], Dict[str, str], Dict[str, i
                 if len(g) < 2 or len(g) > 60:
                     continue
                 if _META_GLOSS.match(g):
-                    score = 0.4  # keep only if no better gloss
+                    score = 0.35  # keep only if no better gloss
                 else:
                     score = 1.0
                 if pos and any(x in (pos or "").lower() for x in ("noun", "verb", "adj")):
-                    score += 0.4
-                if len(g.split()) <= 4:
-                    score += 0.3
-                if len(g.split()) <= 2 and not _META_GLOSS.match(g):
-                    score += 0.25  # short concrete glosses are gold for open-set
+                    score += 0.45
+                nwords = len(g.split())
+                if nwords <= 4:
+                    score += 0.35
+                if nwords <= 2 and not _META_GLOSS.match(g):
+                    score += 0.45  # short concrete glosses dominate open-set
+                if nwords == 1 and not _META_GLOSS.match(g):
+                    score += 0.25
                 prev = best.get(word)
                 if prev is None or score > prev[0]:
                     best[word] = (score, g)
-            # take top by score then alpha
             items = sorted(best.items(), key=lambda kv: (-kv[1][0], kv[0]))[:limit]
             for word, (sc, g) in items:
                 gold.append({
@@ -177,11 +181,54 @@ def mine_dictionary() -> Tuple[List[Dict[str, Any]], Dict[str, str], Dict[str, i
                     "target_lang": "en",
                     "target_word": g,
                     "meaning_key": re.sub(r"[^a-z0-9]+", "_", g.lower()).strip("_"),
-                    "confidence": min(0.93, 0.82 + 0.05 * sc),
-                    "tier": "A" if sc >= 1.4 else "B",
+                    "confidence": min(0.95, 0.82 + 0.05 * sc),
+                    "tier": "A" if sc >= 1.5 else "B",
                     "source_title": f"dictionary.db:words+definitions:{lang}",
                 })
             stats[f"extra_{lang}"] = len(items)
+
+        # Second pass: pure short content lemmas only (1–3 English words), high volume
+        for lang, limit in (("grc", 15000), ("la", 20000), ("ang", 6000)):
+            rows = cur.execute(
+                """
+                SELECT w.word, w.pos, d.gloss
+                FROM words w
+                JOIN definitions d ON d.word_id = w.id
+                WHERE w.lang_code = ?
+                  AND d.gloss_lang = 'en'
+                  AND w.pos IN ('noun', 'verb', 'adj')
+                  AND length(d.gloss) BETWEEN 2 AND 36
+                  AND length(w.word) BETWEEN 2 AND 28
+                LIMIT ?
+                """,
+                (lang, limit * 6),
+            ).fetchall()
+            best2: Dict[str, Tuple[float, str]] = {}
+            for word, pos, gloss in rows:
+                g = (gloss or "").split(";")[0].split("\n")[0].strip()
+                g = re.sub(r"\{\{[^}]+\}\}", "", g)
+                g = re.sub(r"\[\[([^|\]]+\|)?([^\]]+)\]\]", r"\2", g).strip(" .,;")
+                if len(g) < 2 or _META_GLOSS.match(g):
+                    continue
+                if len(g.split()) > 3:
+                    continue
+                score = 2.0 + (0.3 if len(g.split()) <= 2 else 0.0)
+                prev = best2.get(word)
+                if prev is None or score > prev[0]:
+                    best2[word] = (score, g)
+            items2 = sorted(best2.items(), key=lambda kv: (-kv[1][0], kv[0]))[:limit]
+            for word, (sc, g) in items2:
+                gold.append({
+                    "source_lang": lang,
+                    "source_word": word,
+                    "target_lang": "en",
+                    "target_word": g,
+                    "meaning_key": re.sub(r"[^a-z0-9]+", "_", g.lower()).strip("_"),
+                    "confidence": 0.94,
+                    "tier": "A",
+                    "source_title": f"dictionary.db:short_content:{lang}",
+                })
+            stats[f"short_content_{lang}"] = len(items2)
 
         # Proper names / places / peoples (high open-set miss class)
         _PLACE_GLOSS = re.compile(
