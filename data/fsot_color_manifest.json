@@ -1,0 +1,103 @@
+{
+  "built_utc": "2026-07-18T00:55:49.640949+00:00",
+  "probes_nm": [
+    431.3990455626693,
+    475.37200084859705,
+    508.7348800359026,
+    572.7264697252082,
+    656.4993374504252,
+    710.4816099380419,
+    729.3806066996889
+  ],
+  "lambda_eff_motif": "pi",
+  "channels": [
+    "bands[7]",
+    "phases[7]",
+    "coherence",
+    "S",
+    "rgb_display[3]"
+  ],
+  "note": "RGB PNGs are display projections only. Student models should train on multi-band FSOT tensors, not gray.",
+  "files": [
+    {
+      "material": "ink_on_stone",
+      "center_S": 0.15935270631328266,
+      "center_coherence": 0.9501403051673162,
+      "center_bands": [
+        0.07066283001657139,
+        0.08132353261451747,
+        0.05777593183269075,
+        0.00913339591812707,
+        0.012187782253591324,
+        0.04624453337542292,
+        0.0589374723106259
+      ],
+      "center_rgb": [
+        0.27420489303918527,
+        0.2934223959914973,
+        0.3669901507768507
+      ],
+      "png": "D:\\training data\\pflt_linguistics\\10_visual_scripts\\hieroglyph_egyptian\\images\\fsot_color\\fsot_color_ink_on_stone.png"
+    },
+    {
+      "material": "ochre_rock",
+      "center_S": 0.16195744592478573,
+      "center_coherence": 0.9501403051673162,
+      "center_bands": [
+        0.058181208792292334,
+        0.07440064944233687,
+        0.057194692983213696,
+        0.010500697650252397,
+        0.01702962314066672,
+        0.07334756852085683,
+        0.09776358296731676
+      ],
+      "center_rgb": [
+        0.3553841288158314,
+        0.2457221766561709,
+        0.2781307510281428
+      ],
+      "png": "D:\\training data\\pflt_linguistics\\10_visual_scripts\\hieroglyph_egyptian\\images\\fsot_color\\fsot_color_ochre_rock.png"
+    },
+    {
+      "material": "papyrus_ink",
+      "center_S": 0.15627370968503068,
+      "center_coherence": 0.9501403051673162,
+      "center_bands": [
+        0.07271296314707747,
+        0.09315822996953066,
+        0.07079831292390791,
+        0.012258964847598836,
+        0.017066167814797282,
+        0.0639529755383116,
+        0.0807275255985401
+      ],
+      "center_rgb": [
+        0.30209305180579804,
+        0.2874739861009748,
+        0.3287507233563691
+      ],
+      "png": "D:\\training data\\pflt_linguistics\\10_visual_scripts\\hieroglyph_egyptian\\images\\fsot_color\\fsot_color_papyrus_ink.png"
+    },
+    {
+      "material": "plain_stone",
+      "center_S": 0.15935270631328266,
+      "center_coherence": 0.9501403051673162,
+      "center_bands": [
+        0.11970917529077903,
+        0.1338052887938344,
+        0.11162509585240647,
+        0.06044370831294507,
+        0.0653875135769407,
+        0.11258496207237374,
+        0.1318233997195568
+      ],
+      "center_rgb": [
+        0.36325196651870617,
+        0.2875874372578103,
+        0.2809536753556972
+      ],
+      "png": "D:\\training data\\pflt_linguistics\\10_visual_scripts\\hieroglyph_egyptian\\images\\fsot_color\\fsot_color_plain_stone.png"
+    }
+  ]
+}

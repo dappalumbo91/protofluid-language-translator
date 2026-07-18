@@ -1,0 +1,16 @@
+Protofluid Language Translator (PFLT)
+Copyright 2026 Damian and contributors
+
+This product includes software developed for FSOT 2.1–aligned historical
+language translation research.
+
+Optional third-party data (not redistributed in this repository unless
+explicitly included under their own terms):
+
+  - Pleiades Gazetteer of Ancient Places (https://pleiades.stoa.org)
+    CC-BY / project terms — see Pleiades licensing for redistributed dumps.
+  - Wiktionary-derived dictionary extracts (local Dictionary.db)
+  - Unicode Unikemet Egyptian hieroglyph data (as applicable)
+
+Large training corpora remain on the author's local training drive and are
+not part of the Apache-2.0 source distribution unless separately published.

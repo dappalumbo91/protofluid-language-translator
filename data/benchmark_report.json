@@ -1,0 +1,322 @@
+{
+  "built_utc": "2026-07-18T00:48:36.700593+00:00",
+  "positioning": {
+    "product_class": "FSOT interlingua communicator (symbolic + neural student slots)",
+    "not_building": "frontier general LLM / chat assistant",
+    "vs_cutting_edge": {
+      "frontier_llm": {
+        "strength": "open-domain fluency, broad world knowledge, tool use",
+        "weakness_for_your_goal": "opaque params, weak formal guarantees, poor cross-domain physics unity",
+        "overlap": "can share *benchmark task shapes* (retrieval, OCR CER, translation F1)"
+      },
+      "classical_mt_interlingua": {
+        "strength": "explainable pipelines, domain lexica",
+        "your_edge": "FSOT scalar teacher + multi-domain (DNA, myth, hieroglyph, cosmos) one geometry"
+      },
+      "vision_ocr_sota": {
+        "strength": "image→text accuracy",
+        "your_use": "U-Net/OCR as *student eyes* only; meaning remains Unikemet/FSOT gated"
+      },
+      "neuro_symbolic_ai": {
+        "closest_peer_class": true,
+        "your_edge": "seed-derived law + Lean cross-verification + historical curriculum"
+      }
+    },
+    "benchmark_axes_we_own": [
+      "closed_set_lexicon_accuracy (hist/classical/glyph)",
+      "held_out_gap_fill under FSOT gates (future)",
+      "glyph_detection_top1 / CER (when U-Net online)",
+      "scalar_panel_coherence / kill_criteria pass rate",
+      "cross_domain_same_engine (gene + myth + glyph + H0)"
+    ],
+    "benchmark_axes_we_borrow_not_chase": [
+      "MMLU as primary KPI",
+      "Chatbot Arena ELO",
+      "next-token perplexity on Common Crawl"
+    ]
+  },
+  "lexicon_size": 28129,
+  "benchmarks": {
+    "scalar_health": {
+      "ok": true,
+      "task": "fsot_scalar_domain_health",
+      "n_domains": 24,
+      "domains": [
+        {
+          "domain": "cosmological",
+          "S": -0.5024559462100433,
+          "finite": true,
+          "observed": false,
+          "quirk_mod": 1.0
+        },
+        {
+          "domain": "nuclear",
+          "S": 0.9504088389342538,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.4973642445479001
+        },
+        {
+          "domain": "atomic",
+          "S": 0.8123251866460616,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.3731123621450358
+        },
+        {
+          "domain": "geological",
+          "S": 0.7770104436534506,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.3731123621450358
+        },
+        {
+          "domain": "quantum",
+          "S": 0.9555063001027196,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.4973642445479001
+        },
+        {
+          "domain": "astrophysical",
+          "S": 0.8989138056093399,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.4973642445479001
+        },
+        {
+          "domain": "material",
+          "S": -0.2940472323673498,
+          "finite": true,
+          "observed": false,
+          "quirk_mod": 1.0
+        },
+        {
+          "domain": "biological",
+          "S": 0.47768238921582773,
+          "finite": true,
+          "observed": false,
+          "quirk_mod": 1.0
+        },
+        {
+          "domain": "genomic",
+          "S": 0.47768238921582773,
+          "finite": true,
+          "observed": false,
+          "quirk_mod": 1.0
+        },
+        {
+          "domain": "neural",
+          "S": 0.42176655698906185,
+          "finite": true,
+          "observed": false,
+          "quirk_mod": 1.0
+        },
+        {
+          "domain": "metabolic",
+          "S": 0.4614225856362781,
+          "finite": true,
+          "observed": false,
+          "quirk_mod": 1.0
+        },
+        {
+          "domain": "ecological",
+          "S": 0.5109185411321919,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.1147032840094916
+        },
+        {
+          "domain": "paleontological",
+          "S": 0.4560569138445697,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.048976863514238834
+        },
+        {
+          "domain": "mythological",
+          "S": 0.6325783360136283,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.2451324643541674
+        },
+        {
+          "domain": "administrative",
+          "S": 0.339197317265763,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": 0.1482786520923667
+        },
+        {
+          "domain": "paranormal",
+          "S": 0.6427341242965491,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -1.0212350279383988
+        },
+        {
+          "domain": "linguistic",
+          "S": 0.6513247618848969,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.2451324643541674
+        },
+        {
+          "domain": "fluid_tongue",
+          "S": 0.8791285168040015,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.4973642445479001
+        },
+        {
+          "domain": "historical",
+          "S": 0.6325783360136283,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.2451324643541674
+        },
+        {
+          "domain": "english",
+          "S": 0.6513247618848969,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.2451324643541674
+        },
+        {
+          "domain": "hieroglyphic",
+          "S": 0.7770104436534506,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.3731123621450358
+        },
+        {
+          "domain": "egyptian",
+          "S": 0.7770104436534506,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.3731123621450358
+        },
+        {
+          "domain": "visual_script",
+          "S": 0.8989138056093399,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.4973642445479001
+        },
+        {
+          "domain": "rock_art",
+          "S": 1.0313327939958346,
+          "finite": true,
+          "observed": true,
+          "quirk_mod": -0.7297676818351424
+        }
+      ]
+    },
+    "hieroglyph": {
+      "ok": true,
+      "n": 10,
+      "map_accuracy": 1.0,
+      "details": [
+        {
+          "code": "A1",
+          "ok": true,
+          "meaning": [
+            "classifier_human_being"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "D21",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_r"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "G17",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_m"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "N5",
+          "ok": true,
+          "meaning": [
+            "logogram_the_sun_re_reading_rꜥ"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "S34",
+          "ok": true,
+          "meaning": [
+            "logogram_life_reading_ꜥnḫ"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "D4",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_ꞽr"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "G5",
+          "ok": true,
+          "meaning": [
+            "logogram_horus_reading_ḥr"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "I9",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_f"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "N35",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_n"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "X1",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_t"
+          ],
+          "S": 0.7770104436534506
+        }
+      ],
+      "task": "hieroglyph_unikemet_closed_set"
+    },
+    "classical": {
+      "ok": true,
+      "n": 100,
+      "exactish_accuracy": 1.0,
+      "task": "classical_grc_la_closed_set"
+    },
+    "vision_contract": {
+      "ok": true,
+      "task": "vision_stub_labels_to_meaning",
+      "map_rate": 1.0,
+      "pipeline": [
+        "vision_stub.v0",
+        "cli_gardiner",
+        "hypotheses_to_token_string",
+        "pflt_fsot_translate"
+      ],
+      "translation": "flowing_classifier_human_being flowing_logogram_the_sun_re_reading_rꜥ flowing_logogram_life_reading_ꜥnḫ [FSOT 2.1 fluid translation]."
+    }
+  }
+}

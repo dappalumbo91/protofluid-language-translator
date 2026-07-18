@@ -1,0 +1,192 @@
+{
+  "n": 8,
+  "mean_semantic_group_coverage": 1.0,
+  "mean_exact_map_rate": 1.0,
+  "cases": [
+    {
+      "id": "eridu_genesis_opening",
+      "source": "Sumerian Eridu Genesis lineage (ETCSL / Kramer tradition)",
+      "gold_gloss": "In those days when heaven and earth were created/formed",
+      "input": "ud-bi-a an ki-ta ba-dim-ma",
+      "tokens": [
+        "ud-bi-a",
+        "an",
+        "ki-ta",
+        "ba-dim-ma"
+      ],
+      "meanings": [
+        "primordial_time_of_that",
+        "sky_domain",
+        "earth_base_from",
+        "creation_act_formed_complete"
+      ],
+      "translation": "flowing_primordial_time_of_that flowing_sky_domain flowing_earth_base_from flowing_creation_act_formed_complete [FSOT 2.1 fluid translation].",
+      "exact_map_rate": 1.0,
+      "semantic_group_coverage": 1.0,
+      "S": 0.6325783360136283,
+      "D_eff": 21.0,
+      "observed": true,
+      "quirk_mod": -0.2451324643541674
+    },
+    {
+      "id": "hbb_cds_start",
+      "source": "Human HBB coding sequence start (NCBI RefSeq NM_000518 family)",
+      "gold_gloss": "start transferring energy structure action (hemoglobin beta construction)",
+      "input": "ATG-GTG-CAC-CTG-ACT",
+      "tokens": [
+        "atg",
+        "gtg",
+        "cac",
+        "ctg",
+        "act"
+      ],
+      "meanings": [
+        "start",
+        "transfer",
+        "energy",
+        "structure",
+        "action"
+      ],
+      "translation": "flowing_start_2.39e-06eV flowing_transfer_2.39e-06eV flowing_energy_2.39e-06eV flowing_structure_2.39e-06eV flowing_action [FSOT 2.1 fluid translation].",
+      "exact_map_rate": 1.0,
+      "semantic_group_coverage": 1.0,
+      "S": 0.47768238921582773,
+      "D_eff": 12.0,
+      "observed": false,
+      "quirk_mod": 1.0
+    },
+    {
+      "id": "linear_a_ht13",
+      "source": "Linear A HT 13 style administrative transaction pattern",
+      "gold_gloss": "transfer to source; goods count",
+      "input": "da-ka-se pa-ki-nu",
+      "tokens": [
+        "da-ka-se",
+        "pa-ki-nu"
+      ],
+      "meanings": [
+        "transfer_to_source",
+        "goods_count"
+      ],
+      "translation": "flowing_transfer_to_source flowing_goods_count [FSOT 2.1 fluid translation].",
+      "exact_map_rate": 1.0,
+      "semantic_group_coverage": 1.0,
+      "S": 0.339197317265763,
+      "D_eff": 15.0,
+      "observed": true,
+      "quirk_mod": 0.1482786520923667
+    },
+    {
+      "id": "fsot_h0_s8",
+      "source": "FSOT 2.1 predicted H0=71.98, S8=0.811",
+      "gold_gloss": "Hubble expansion rate and structure growth amplitude",
+      "input": "hubbk s8",
+      "tokens": [
+        "hubbk",
+        "s8"
+      ],
+      "meanings": [
+        "71.98_km_s_Mpc",
+        "0.811_structure_growth"
+      ],
+      "translation": "stabilized_71.98_km_s_Mpc stabilized_0.811_structure_growth [FSOT 2.1 fluid translation].",
+      "exact_map_rate": 1.0,
+      "semantic_group_coverage": 1.0,
+      "S": -0.5024559462100433,
+      "D_eff": 25.0,
+      "observed": false,
+      "quirk_mod": 1.0
+    },
+    {
+      "id": "akkadian_legal",
+      "source": "Code of Hammurabi tradition (Dictionary historical seed)",
+      "gold_gloss": "if judgment",
+      "input": "summa dinu",
+      "tokens": [
+        "summa",
+        "dinu"
+      ],
+      "meanings": [
+        "if",
+        "judgment"
+      ],
+      "translation": "flowing_if flowing_judgment [FSOT 2.1 fluid translation].",
+      "exact_map_rate": 1.0,
+      "semantic_group_coverage": 1.0,
+      "S": 0.6325783360136283,
+      "D_eff": 21.0,
+      "observed": true,
+      "quirk_mod": -0.2451324643541674
+    },
+    {
+      "id": "sumerian_water_king",
+      "source": "Archaic Sumerian lexical (Dictionary historical seed)",
+      "gold_gloss": "water king",
+      "input": "a-a lugal",
+      "tokens": [
+        "a-a",
+        "lugal"
+      ],
+      "meanings": [
+        "water",
+        "king"
+      ],
+      "translation": "flowing_water flowing_king [FSOT 2.1 fluid translation].",
+      "exact_map_rate": 1.0,
+      "semantic_group_coverage": 1.0,
+      "S": 0.6325783360136283,
+      "D_eff": 21.0,
+      "observed": true,
+      "quirk_mod": -0.2451324643541674
+    },
+    {
+      "id": "quantum_pair",
+      "source": "FSOT quantum domain thesis fixtures",
+      "gold_gloss": "synchronized state vs state disruption",
+      "input": "coherence decoherence",
+      "tokens": [
+        "coherence",
+        "decoherence"
+      ],
+      "meanings": [
+        "synchronized_state",
+        "state_disruption"
+      ],
+      "translation": "flowing_synchronized_state flowing_state_disruption [FSOT 2.1 fluid translation].",
+      "exact_map_rate": 1.0,
+      "semantic_group_coverage": 1.0,
+      "S": 0.9555063001027196,
+      "D_eff": 6.0,
+      "observed": true,
+      "quirk_mod": -0.4973642445479001
+    },
+    {
+      "id": "ecological_carbon",
+      "source": "NOAA / ecological systems thesis fixtures",
+      "gold_gloss": "global flux energy hierarchy",
+      "input": "carbon_cycle trophic_level",
+      "tokens": [
+        "carbon cycle",
+        "trophic level"
+      ],
+      "meanings": [
+        "global_flux",
+        "energy_hierarchy"
+      ],
+      "translation": "flowing_global_flux_8.17e+01eV flowing_energy_hierarchy_8.17e+01eV [FSOT 2.1 fluid translation].",
+      "exact_map_rate": 1.0,
+      "semantic_group_coverage": 1.0,
+      "S": 0.5109185411321919,
+      "D_eff": 18.0,
+      "observed": true,
+      "quirk_mod": -0.1147032840094916
+    }
+  ],
+  "constants_snapshot": {
+    "K": 0.4202216641606967,
+    "C_FACTOR": 0.28760015181918397,
+    "ALPHA": 0.0008082937414140405,
+    "P_VAR": 0.9579871226722757,
+    "C_EFF": 0.9577022026205613
+  }
+}

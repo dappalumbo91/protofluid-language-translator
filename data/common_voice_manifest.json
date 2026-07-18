@@ -1,0 +1,20 @@
+{
+  "built_utc": "2026-07-18T01:25:05.711408+00:00",
+  "root": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\common_voice",
+  "languages_scaffolded": [
+    "en",
+    "es",
+    "fr",
+    "de",
+    "it",
+    "pt",
+    "la"
+  ],
+  "status": "folders_ready_awaiting_clips",
+  "integration": {
+    "pflt": "translate(..., include_audio=True)",
+    "module": "audio_articulation.py",
+    "fsot_role": "S modulates tempo_proxy and energy_proxy"
+  },
+  "download_portal": "https://commonvoice.mozilla.org/datasets"
+}

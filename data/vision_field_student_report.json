@@ -1,0 +1,94 @@
+{
+  "built_utc": "2026-07-18T01:37:49.959224+00:00",
+  "student": "rule_probe_on_fsot_multilayer_tensor",
+  "waveform": "not_used",
+  "checks": {
+    "machine_only_detected": true,
+    "hidden_boost_class": true,
+    "ochre_not_plain": true,
+    "ink_has_structure": true
+  },
+  "ok": true,
+  "results": [
+    {
+      "scene": "ink_visible",
+      "scene_class": "visible_mark_plus_hidden",
+      "confidence": 0.82,
+      "mean_gray": 0.06080568350839597,
+      "mean_uv": 0.1750831497676115,
+      "mean_nir": 0.11597173225443543,
+      "mean_S": 0.1882655064974615,
+      "has_hidden_machine_band": true,
+      "pflt_tokens": [
+        "surface mark",
+        "hidden structure",
+        "uv band"
+      ],
+      "pflt_translation": "flowing_surface_mark flowing_hidden_structure flowing_uv_band [FSOT 2.1 fluid translation].",
+      "notes": [
+        "Localized UV/NIR peaks on surface mark",
+        "peak_uv=0.175 peak_nir=0.116 peak_gray=0.125 ratio=1.082"
+      ]
+    },
+    {
+      "scene": "ochre",
+      "scene_class": "visible_mark_plus_hidden",
+      "confidence": 0.82,
+      "mean_gray": 0.061738806413176174,
+      "mean_uv": 0.10542769833929994,
+      "mean_nir": 0.1537362028293399,
+      "mean_S": 0.18938653655938814,
+      "has_hidden_machine_band": true,
+      "pflt_tokens": [
+        "surface mark",
+        "hidden structure",
+        "uv band"
+      ],
+      "pflt_translation": "flowing_surface_mark flowing_hidden_structure flowing_uv_band [FSOT 2.1 fluid translation].",
+      "notes": [
+        "Localized UV/NIR peaks on surface mark",
+        "peak_uv=0.105 peak_nir=0.154 peak_gray=0.126 ratio=1.017"
+      ]
+    },
+    {
+      "scene": "ink_plus_hidden",
+      "scene_class": "visible_mark_plus_hidden",
+      "confidence": 0.82,
+      "mean_gray": 0.06222749248216224,
+      "mean_uv": 0.24966082050150454,
+      "mean_nir": 0.20484834123555767,
+      "mean_S": 0.1882655064974615,
+      "has_hidden_machine_band": true,
+      "pflt_tokens": [
+        "surface mark",
+        "hidden structure",
+        "uv band"
+      ],
+      "pflt_translation": "flowing_surface_mark flowing_hidden_structure flowing_uv_band [FSOT 2.1 fluid translation].",
+      "notes": [
+        "Localized UV/NIR peaks on surface mark",
+        "peak_uv=0.250 peak_nir=0.205 peak_gray=0.131 ratio=1.219"
+      ]
+    },
+    {
+      "scene": "machine_only",
+      "scene_class": "machine_only_underdrawing",
+      "confidence": 0.88,
+      "mean_gray": 0.05111434300744603,
+      "mean_uv": 0.21805499415997828,
+      "mean_nir": 0.20113340741407973,
+      "mean_S": 0.1876321775036933,
+      "has_hidden_machine_band": true,
+      "pflt_tokens": [
+        "hidden structure",
+        "uv band",
+        "nir band"
+      ],
+      "pflt_translation": "flowing_hidden_structure flowing_uv_band flowing_nir_band [FSOT 2.1 fluid translation].",
+      "notes": [
+        "Peak UV/NIR with weak gray peaks \u2192 beyond-eye content",
+        "peak_uv=0.218 peak_nir=0.201 peak_gray=0.088 ratio=1.415"
+      ]
+    }
+  ]
+}

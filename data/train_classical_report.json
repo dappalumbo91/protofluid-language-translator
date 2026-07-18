@@ -1,0 +1,91 @@
+{
+  "built_utc": "2026-07-18T05:16:22.625794+00:00",
+  "n_gold": 51821,
+  "n_content_gold": 36041,
+  "open_90_10": {
+    "exact": 0.024296919839295963,
+    "partial": 0.16606083795676296,
+    "n": 5227,
+    "by_lang": {
+      "la": {
+        "n": 2432,
+        "exact": 0.016858552631578948,
+        "partial": 0.18914473684210525
+      },
+      "grc": {
+        "n": 1481,
+        "exact": 0.03308575286968265,
+        "partial": 0.18771100607697502
+      },
+      "ang": {
+        "n": 703,
+        "exact": 0.04836415362731152,
+        "partial": 0.10384068278805121
+      },
+      "en": {
+        "n": 609,
+        "exact": 0.0016420361247947454,
+        "partial": 0.090311986863711
+      }
+    }
+  },
+  "open_85_15": {
+    "exact": 0.02281708094327597,
+    "partial": 0.16137667304015296,
+    "n": 7845
+  },
+  "content_85_15": {
+    "exact": 0.03432700993676603,
+    "partial": 0.13785004516711835,
+    "n": 5535,
+    "by_lang": {
+      "grc": {
+        "n": 1988,
+        "exact": 0.04024144869215292,
+        "partial": 0.1750503018108652
+      },
+      "la": {
+        "n": 1826,
+        "exact": 0.030120481927710843,
+        "partial": 0.1276013143483023
+      },
+      "ang": {
+        "n": 1009,
+        "exact": 0.05054509415262636,
+        "partial": 0.1159563924677899
+      },
+      "en": {
+        "n": 709,
+        "exact": 0.0014104372355430183,
+        "partial": 0.08744710860366714
+      }
+    }
+  },
+  "train_closed_sample": {
+    "exact": 0.9766666666666667,
+    "n": 1200
+  },
+  "pul_terms": 73736,
+  "paradigm_terms": 94914,
+  "production_lexicon_keys": 66318,
+  "prior_partial_90_10": 0.1875,
+  "delta_partial_90_10": -0.021439162043237037,
+  "waveforms": [
+    {
+      "text": "aqua",
+      "engine": "sapi_wav",
+      "path": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\la_aqua.wav"
+    },
+    {
+      "text": "water",
+      "engine": "sapi_wav",
+      "path": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\en_water.wav"
+    },
+    {
+      "text": "λόγος",
+      "engine": "sapi_wav",
+      "path": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\grc_logos.wav"
+    }
+  ],
+  "stack": "latin-safe rev_morph + names/places mine + denser paradigms + ethnonym soft + gapfill + waveforms"
+}

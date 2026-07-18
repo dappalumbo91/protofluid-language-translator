@@ -1,0 +1,575 @@
+{
+  "policy": {
+    "include_candidates": false,
+    "note": "Tier A only when include_candidates=False (accuracy-first)"
+  },
+  "gold_summary": {
+    "n_pairs": 23,
+    "by_lang": {
+      "sum": 4,
+      "akk": 4,
+      "hit": 2,
+      "san": 3,
+      "grc": 4,
+      "la": 3,
+      "ang": 3
+    },
+    "by_tier": {
+      "A": 23
+    },
+    "curriculum": {
+      "0_sumerian": 4,
+      "1_akkadian": 4,
+      "2_hittite": 2,
+      "3_sanskrit": 3,
+      "4_ancient_greek": 4,
+      "5_latin": 3,
+      "6_old_english": 3
+    }
+  },
+  "lexicon_injected": 25,
+  "overall": {
+    "n": 23,
+    "exact_accuracy": 1.0,
+    "mean_token_overlap": 1.0
+  },
+  "by_epoch": {
+    "0_sumerian": {
+      "n": 4,
+      "exact_accuracy": 1.0,
+      "mean_token_overlap": 1.0,
+      "mean_lexicon_map_rate": 1.0
+    },
+    "1_akkadian": {
+      "n": 4,
+      "exact_accuracy": 1.0,
+      "mean_token_overlap": 1.0,
+      "mean_lexicon_map_rate": 1.0
+    },
+    "2_hittite": {
+      "n": 2,
+      "exact_accuracy": 1.0,
+      "mean_token_overlap": 1.0,
+      "mean_lexicon_map_rate": 1.0
+    },
+    "3_sanskrit": {
+      "n": 3,
+      "exact_accuracy": 1.0,
+      "mean_token_overlap": 1.0,
+      "mean_lexicon_map_rate": 1.0
+    },
+    "4_ancient_greek": {
+      "n": 4,
+      "exact_accuracy": 1.0,
+      "mean_token_overlap": 1.0,
+      "mean_lexicon_map_rate": 1.0
+    },
+    "5_latin": {
+      "n": 3,
+      "exact_accuracy": 1.0,
+      "mean_token_overlap": 1.0,
+      "mean_lexicon_map_rate": 1.0
+    },
+    "6_old_english": {
+      "n": 3,
+      "exact_accuracy": 1.0,
+      "mean_token_overlap": 1.0,
+      "mean_lexicon_map_rate": 1.0
+    }
+  },
+  "detail": {
+    "0_sumerian": {
+      "n": 4,
+      "exact_accuracy": 1.0,
+      "mean_token_overlap": 1.0,
+      "mean_lexicon_map_rate": 1.0,
+      "cases": [
+        {
+          "source_lang": "sum",
+          "source_word": "a-a",
+          "gold_en": "water",
+          "tokens": [
+            "a-a"
+          ],
+          "meanings": [
+            "water"
+          ],
+          "translation": "flowing_water [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 0.95,
+          "source_title": "Archaic Sumerian Texts (ETCSL)"
+        },
+        {
+          "source_lang": "sum",
+          "source_word": "lugal",
+          "gold_en": "king",
+          "tokens": [
+            "lugal"
+          ],
+          "meanings": [
+            "king"
+          ],
+          "translation": "flowing_king [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 1.0,
+          "source_title": "Sumerian Grammar (Marie-Louise Thomsen)"
+        },
+        {
+          "source_lang": "sum",
+          "source_word": "me",
+          "gold_en": "divine decreee",
+          "tokens": [
+            "me"
+          ],
+          "meanings": [
+            "divine_decreee"
+          ],
+          "translation": "flowing_divine_decreee [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 0.9,
+          "source_title": "Sumerian Religion (Jean Bottéro)"
+        },
+        {
+          "source_lang": "sum",
+          "source_word": "nam-tag",
+          "gold_en": "destiny",
+          "tokens": [
+            "nam-tag"
+          ],
+          "meanings": [
+            "destiny"
+          ],
+          "translation": "flowing_destiny [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 0.9,
+          "source_title": "Sumerian Myths (Samuel Noah Kramer, 1972)"
+        }
+      ]
+    },
+    "1_akkadian": {
+      "n": 4,
+      "exact_accuracy": 1.0,
+      "mean_token_overlap": 1.0,
+      "mean_lexicon_map_rate": 1.0,
+      "cases": [
+        {
+          "source_lang": "akk",
+          "source_word": "dīnu",
+          "gold_en": "judgment",
+          "tokens": [
+            "dīnu"
+          ],
+          "meanings": [
+            "judgment"
+          ],
+          "translation": "flowing_judgment [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 0.95,
+          "source_title": "Code of Hammurabi, Section 1-282"
+        },
+        {
+          "source_lang": "akk",
+          "source_word": "lugal",
+          "gold_en": "king",
+          "tokens": [
+            "lugal"
+          ],
+          "meanings": [
+            "king"
+          ],
+          "translation": "flowing_king [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 0.95,
+          "source_title": "Akkadian-English Dictionary"
+        },
+        {
+          "source_lang": "akk",
+          "source_word": "tuppu",
+          "gold_en": "tablet",
+          "tokens": [
+            "tuppu"
+          ],
+          "meanings": [
+            "tablet"
+          ],
+          "translation": "flowing_tablet [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 1.0,
+          "source_title": "Akkadian Lexical Texts (CAD)"
+        },
+        {
+          "source_lang": "akk",
+          "source_word": "šumma",
+          "gold_en": "if",
+          "tokens": [
+            "šumma"
+          ],
+          "meanings": [
+            "if"
+          ],
+          "translation": "flowing_if [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 1.0,
+          "source_title": "Code of Hammurabi (Kramer & Maynard translation)"
+        }
+      ]
+    },
+    "2_hittite": {
+      "n": 2,
+      "exact_accuracy": 1.0,
+      "mean_token_overlap": 1.0,
+      "mean_lexicon_map_rate": 1.0,
+      "cases": [
+        {
+          "source_lang": "hit",
+          "source_word": "išḫai",
+          "gold_en": "king",
+          "tokens": [
+            "išḫai"
+          ],
+          "meanings": [
+            "king"
+          ],
+          "translation": "flowing_king [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 0.95,
+          "source_title": "Hittite Royal Inscriptions (ANET)"
+        },
+        {
+          "source_lang": "hit",
+          "source_word": "wātar-",
+          "gold_en": "water",
+          "tokens": [
+            "wātar-"
+          ],
+          "meanings": [
+            "water"
+          ],
+          "translation": "flowing_water [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 0.9,
+          "source_title": "Hittite-English Dictionary (Puhvel)"
+        }
+      ]
+    },
+    "3_sanskrit": {
+      "n": 3,
+      "exact_accuracy": 1.0,
+      "mean_token_overlap": 1.0,
+      "mean_lexicon_map_rate": 1.0,
+      "cases": [
+        {
+          "source_lang": "san",
+          "source_word": "apa",
+          "gold_en": "water",
+          "tokens": [
+            "apa"
+          ],
+          "meanings": [
+            "water"
+          ],
+          "translation": "flowing_water [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 0.95,
+          "source_title": "Sanskrit-English Dictionary (Monier-Williams)"
+        },
+        {
+          "source_lang": "san",
+          "source_word": "dharma",
+          "gold_en": "law",
+          "tokens": [
+            "dharma"
+          ],
+          "meanings": [
+            "law"
+          ],
+          "translation": "flowing_law [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 0.95,
+          "source_title": "Vedic Sanskrit Dictionary"
+        },
+        {
+          "source_lang": "san",
+          "source_word": "rājan",
+          "gold_en": "king",
+          "tokens": [
+            "rājan"
+          ],
+          "meanings": [
+            "king"
+          ],
+          "translation": "flowing_king [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 1.0,
+          "source_title": "Sanskrit Lexicon"
+        }
+      ]
+    },
+    "4_ancient_greek": {
+      "n": 4,
+      "exact_accuracy": 1.0,
+      "mean_token_overlap": 1.0,
+      "mean_lexicon_map_rate": 1.0,
+      "cases": [
+        {
+          "source_lang": "grc",
+          "source_word": "λόγος",
+          "gold_en": "word",
+          "tokens": [
+            "λόγος"
+          ],
+          "meanings": [
+            "word"
+          ],
+          "translation": "flowing_word [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 0.95,
+          "source_title": "Early Greek Philosophy (Kirk & Raven)"
+        },
+        {
+          "source_lang": "grc",
+          "source_word": "φιλοσοφία",
+          "gold_en": "philosophy",
+          "tokens": [
+            "φιλοσοφία"
+          ],
+          "meanings": [
+            "philosophy"
+          ],
+          "translation": "flowing_philosophy [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 0.95,
+          "source_title": "Diogenes Laërtius, Lives of the Philosophers"
+        },
+        {
+          "source_lang": "grc",
+          "source_word": "ἀρχή",
+          "gold_en": "principle",
+          "tokens": [
+            "ἀρχή"
+          ],
+          "meanings": [
+            "principle"
+          ],
+          "translation": "flowing_principle [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 0.95,
+          "source_title": "Aristotle, Metaphysics Book I"
+        },
+        {
+          "source_lang": "grc",
+          "source_word": "ὕδωρ",
+          "gold_en": "water",
+          "tokens": [
+            "ὕδωρ"
+          ],
+          "meanings": [
+            "water"
+          ],
+          "translation": "flowing_water [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 1.0,
+          "source_title": "Liddell-Scott Greek Lexicon"
+        }
+      ]
+    },
+    "5_latin": {
+      "n": 3,
+      "exact_accuracy": 1.0,
+      "mean_token_overlap": 1.0,
+      "mean_lexicon_map_rate": 1.0,
+      "cases": [
+        {
+          "source_lang": "la",
+          "source_word": "aqua",
+          "gold_en": "water",
+          "tokens": [
+            "aqua"
+          ],
+          "meanings": [
+            "water"
+          ],
+          "translation": "flowing_water [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 1.0,
+          "source_title": "Latin Etymological Dictionary"
+        },
+        {
+          "source_lang": "la",
+          "source_word": "ius",
+          "gold_en": "law",
+          "tokens": [
+            "ius"
+          ],
+          "meanings": [
+            "law"
+          ],
+          "translation": "flowing_law [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 1.0,
+          "source_title": "Digest of Justinian"
+        },
+        {
+          "source_lang": "la",
+          "source_word": "lingua",
+          "gold_en": "language",
+          "tokens": [
+            "lingua"
+          ],
+          "meanings": [
+            "language"
+          ],
+          "translation": "flowing_language [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 1.0,
+          "source_title": "Latin Dictionary (Lewis & Short)"
+        }
+      ]
+    },
+    "6_old_english": {
+      "n": 3,
+      "exact_accuracy": 1.0,
+      "mean_token_overlap": 1.0,
+      "mean_lexicon_map_rate": 1.0,
+      "cases": [
+        {
+          "source_lang": "ang",
+          "source_word": "cyning",
+          "gold_en": "king",
+          "tokens": [
+            "cyning"
+          ],
+          "meanings": [
+            "king"
+          ],
+          "translation": "flowing_king [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 0.95,
+          "source_title": "Dictionary of Old English"
+        },
+        {
+          "source_lang": "ang",
+          "source_word": "tunge",
+          "gold_en": "tongue",
+          "tokens": [
+            "tunge"
+          ],
+          "meanings": [
+            "tongue"
+          ],
+          "translation": "flowing_tongue [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 1.0,
+          "source_title": "Old English Corpus"
+        },
+        {
+          "source_lang": "ang",
+          "source_word": "wæter",
+          "gold_en": "water",
+          "tokens": [
+            "wæter"
+          ],
+          "meanings": [
+            "water"
+          ],
+          "translation": "flowing_water [FSOT 2.1 fluid translation].",
+          "exact_target_hit": true,
+          "token_overlap": 1.0,
+          "S": 0.6325783360136283,
+          "exact_map_rate": 1.0,
+          "tier": "A",
+          "confidence": 0.95,
+          "source_title": "The Thesaurus of Old English (Roberts & Kay)"
+        }
+      ]
+    }
+  }
+}

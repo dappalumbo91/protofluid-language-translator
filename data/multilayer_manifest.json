@@ -1,0 +1,81 @@
+{
+  "built_utc": "2026-07-18T01:02:33.671769+00:00",
+  "layers": [
+    {
+      "id": "L0_GRAY",
+      "role": "luminance / B&W / OCR-robust edges"
+    },
+    {
+      "id": "L1_VIS",
+      "role": "human-visible FSOT spectrum \u2192 RGB display"
+    },
+    {
+      "id": "L2_UV",
+      "role": "near-UV machine band (beyond normal human vision)"
+    },
+    {
+      "id": "L3_NIR",
+      "role": "near-IR machine band (beyond normal human vision)"
+    },
+    {
+      "id": "L4_META",
+      "role": "FSOT S + coherence + phases"
+    }
+  ],
+  "philosophy": "Like B&W TV before color: gray remains useful. Color is applied under FSOT. Machine bands add what cameras see that eyes miss. Best of all worlds.",
+  "scenes": [
+    {
+      "name": "ink_visible_only",
+      "material": "ink_on_stone",
+      "tensor_dim": 24,
+      "center_uv": 0.10853333869798856,
+      "center_nir": 0.07854364120930864,
+      "center_gray": 0.08322917693453274,
+      "path": "D:\\training data\\pflt_linguistics\\10_visual_scripts\\hieroglyph_egyptian\\images\\fsot_multilayer\\ink_visible_only"
+    },
+    {
+      "name": "ochre_visible",
+      "material": "ochre_rock",
+      "tensor_dim": 24,
+      "center_uv": 0.07250821689121034,
+      "center_nir": 0.09651064065840764,
+      "center_gray": 0.08250913281776498,
+      "path": "D:\\training data\\pflt_linguistics\\10_visual_scripts\\hieroglyph_egyptian\\images\\fsot_multilayer\\ochre_visible"
+    },
+    {
+      "name": "ink_plus_hidden_underdrawing",
+      "material": "ink_on_stone",
+      "tensor_dim": 24,
+      "center_uv": 0.19991112362864,
+      "center_nir": 0.16263885839325473,
+      "center_gray": 0.10261108639433908,
+      "path": "D:\\training data\\pflt_linguistics\\10_visual_scripts\\hieroglyph_egyptian\\images\\fsot_multilayer\\ink_plus_hidden_underdrawing"
+    },
+    {
+      "name": "underdrawing_machine_only",
+      "material": "underdrawing",
+      "tensor_dim": 24,
+      "center_uv": 0.15283235796925487,
+      "center_nir": 0.14210925221123513,
+      "center_gray": 0.07054563041820984,
+      "path": "D:\\training data\\pflt_linguistics\\10_visual_scripts\\hieroglyph_egyptian\\images\\fsot_multilayer\\underdrawing_machine_only"
+    }
+  ],
+  "tensor_schema": {
+    "order": [
+      "gray",
+      "R",
+      "G",
+      "B",
+      "uv_agg",
+      "nir_agg",
+      "uv_bands[4]",
+      "vis_bands[7]",
+      "nir_bands[5]",
+      "S",
+      "coherence"
+    ],
+    "dim": 24,
+    "note": "Train students on this stack; PNGs are human inspection only."
+  }
+}

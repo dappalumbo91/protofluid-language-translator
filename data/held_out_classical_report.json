@@ -1,0 +1,257 @@
+{
+  "built_utc": "2026-07-18T01:42:38.776909+00:00",
+  "n_total": 4000,
+  "n_train": 3179,
+  "n_test": 821,
+  "train_closed_set": {
+    "exact_rate": 0.9977980497011639,
+    "exact_or_partial_rate": 0.9977980497011639,
+    "n": 3179
+  },
+  "test_open_set_with_gapfill": {
+    "exact_rate": 0.015834348355663823,
+    "exact_or_partial_rate": 0.037758830694275276,
+    "n": 821,
+    "misses_sample": [
+      {
+        "lang": "grc",
+        "word": "Αἰγυπτιώδης",
+        "gold": "like an Egyptian",
+        "meanings": [],
+        "kind": "miss",
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "Αἰγυπτογενής",
+        "gold": "born in Egypt",
+        "meanings": [],
+        "kind": "miss",
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "Αἰθιοπικός",
+        "gold": "Ethiopian",
+        "meanings": [],
+        "kind": "miss",
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "Αἰνείας",
+        "gold": "Aeneas",
+        "meanings": [],
+        "kind": "miss",
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "Αἰσών",
+        "gold": "Aeson, Thessaly, Greece",
+        "meanings": [],
+        "kind": "miss",
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "Αἴθρα",
+        "gold": "Aethra",
+        "meanings": [
+          "clear_sky"
+        ],
+        "kind": "miss",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "Αἶα",
+        "gold": "Aea, Colchis",
+        "meanings": [],
+        "kind": "miss",
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "Αἶνος",
+        "gold": "Aenus",
+        "meanings": [
+          "tale"
+        ],
+        "kind": "miss",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "Αὐρήλιος",
+        "gold": "Aurelius",
+        "meanings": [],
+        "kind": "miss",
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "Βάκχειος",
+        "gold": "Bacchus",
+        "meanings": [],
+        "kind": "miss",
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "Βάκχος",
+        "gold": "Bacchus",
+        "meanings": [],
+        "kind": "miss",
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "Βάλβουρα",
+        "gold": "Balbura, Lycia, Turkey",
+        "meanings": [],
+        "kind": "miss",
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "Βάραγγος",
+        "gold": "Varangian",
+        "meanings": [],
+        "kind": "miss",
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "Βάτναι",
+        "gold": "Batnae",
+        "meanings": [],
+        "kind": "miss",
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "Βέργα",
+        "gold": "Berga, Macedonia, Greece",
+        "meanings": [],
+        "kind": "miss",
+        "map_rate": 0.0
+      }
+    ],
+    "hits_sample": [
+      {
+        "lang": "la",
+        "word": "Druides",
+        "gold": "the Druids",
+        "meanings": [
+          "the_druids"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "la",
+        "word": "Drysidae",
+        "gold": "the Druids",
+        "meanings": [
+          "the_druids"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "la",
+        "word": "Helene",
+        "gold": "Helen",
+        "meanings": [
+          "helen"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "la",
+        "word": "Satan",
+        "gold": "Satan, the Devil",
+        "meanings": [
+          "satan_the_devil"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "la",
+        "word": "acheronteus",
+        "gold": "related to Acheron",
+        "meanings": [
+          "related_to_acheron"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "la",
+        "word": "amaritas",
+        "gold": "bitterness, harshness",
+        "meanings": [
+          "bitterness_harshness"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "la",
+        "word": "ambrum",
+        "gold": "amber (fossil resin)",
+        "meanings": [
+          "amber_fossil_resin"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "la",
+        "word": "aquila",
+        "gold": "eagle",
+        "meanings": [
+          "eagle"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "la",
+        "word": "archiepiscopus",
+        "gold": "archbishop",
+        "meanings": [
+          "archbishop"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "la",
+        "word": "avicularius",
+        "gold": "a bird-keeper",
+        "meanings": [
+          "a_bird-keeper"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      }
+    ]
+  },
+  "test_open_set_no_gapfill": {
+    "exact_rate": 0.0,
+    "exact_or_partial_rate": 0.00243605359317905,
+    "n": 821
+  },
+  "test_baseline_no_classical_inject": {
+    "exact_rate": 0.0,
+    "exact_or_partial_rate": 0.001218026796589525,
+    "n": 821
+  },
+  "gapfill_lift_exact": 0.015834348355663823,
+  "gapfill_lift_partial": 0.03532277710109623,
+  "interpretation": "Train closed-set should stay near 1.0. Gap-fill student should lift open-set above pure miss baseline without inventing freely."
+}

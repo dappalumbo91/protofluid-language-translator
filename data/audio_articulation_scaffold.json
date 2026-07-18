@@ -1,0 +1,295 @@
+{
+  "built_utc": "2026-07-18T01:58:23.413149+00:00",
+  "policy": {
+    "waveform": "enabled (SAPI preferred, IPA formant fallback)",
+    "primary": "IPA + articulatory features + FSOT tempo/energy + WAV",
+    "optional_external_clips": "Common Voice folders if user drops files"
+  },
+  "phoible_present": true,
+  "demos": [
+    {
+      "text": "aqua",
+      "lang": "la",
+      "ipa": "ˈa.kʷa",
+      "features": {
+        "voicing": 1.0,
+        "nasality": 0.0,
+        "frontness": 0.5,
+        "openness": 0.8,
+        "length": 0.0,
+        "stress": 1.0,
+        "n_segments": 4.0,
+        "fsot_energy": 0.8530313344054513,
+        "fsot_tempo": 1.1
+      },
+      "phoneme_notes": [
+        "lexicon_ipa",
+        "waveform:sapi_wav"
+      ],
+      "fsot_S": 0.6325783360136283,
+      "tempo_proxy": 1.1,
+      "energy_proxy": 0.8530313344054513,
+      "source": "starter_g2p",
+      "tier": "B",
+      "representation": "ipa_articulatory_fsot_waveform",
+      "waveform_path": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\la_aqua.wav",
+      "waveform_engine": "sapi_wav"
+    },
+    {
+      "text": "water",
+      "lang": "en",
+      "ipa": "ˈwɔːtər",
+      "features": {
+        "voicing": 1.0,
+        "nasality": 0.0,
+        "frontness": 0.2,
+        "openness": 0.8,
+        "length": 1.0,
+        "stress": 1.0,
+        "n_segments": 5.0,
+        "fsot_energy": 0.8605299047539587,
+        "fsot_tempo": 1.1
+      },
+      "phoneme_notes": [
+        "lexicon_ipa",
+        "waveform:sapi_wav"
+      ],
+      "fsot_S": 0.6513247618848969,
+      "tempo_proxy": 1.1,
+      "energy_proxy": 0.8605299047539587,
+      "source": "starter_g2p",
+      "tier": "B",
+      "representation": "ipa_articulatory_fsot_waveform",
+      "waveform_path": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\en_water.wav",
+      "waveform_engine": "sapi_wav"
+    },
+    {
+      "text": "king",
+      "lang": "en",
+      "ipa": "kɪŋ",
+      "features": {
+        "voicing": 1.0,
+        "nasality": 1.0,
+        "frontness": 0.8,
+        "openness": 0.2,
+        "length": 0.0,
+        "stress": 0.0,
+        "n_segments": 3.0,
+        "fsot_energy": 0.8530313344054513,
+        "fsot_tempo": 1.1
+      },
+      "phoneme_notes": [
+        "lexicon_ipa",
+        "waveform:sapi_wav"
+      ],
+      "fsot_S": 0.6325783360136283,
+      "tempo_proxy": 1.1,
+      "energy_proxy": 0.8530313344054513,
+      "source": "starter_g2p",
+      "tier": "B",
+      "representation": "ipa_articulatory_fsot_waveform",
+      "waveform_path": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\en_king.wav",
+      "waveform_engine": "sapi_wav"
+    },
+    {
+      "text": "start",
+      "lang": "en",
+      "ipa": "stɑːrt",
+      "features": {
+        "voicing": 1.0,
+        "nasality": 0.0,
+        "frontness": 0.2,
+        "openness": 0.8,
+        "length": 1.0,
+        "stress": 0.0,
+        "n_segments": 5.0,
+        "fsot_energy": 0.7910729556863311,
+        "fsot_tempo": 1.1
+      },
+      "phoneme_notes": [
+        "lexicon_ipa",
+        "waveform:sapi_wav"
+      ],
+      "fsot_S": 0.47768238921582773,
+      "tempo_proxy": 1.1,
+      "energy_proxy": 0.7910729556863311,
+      "source": "starter_g2p",
+      "tier": "B",
+      "representation": "ipa_articulatory_fsot_waveform",
+      "waveform_path": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\en_start.wav",
+      "waveform_engine": "sapi_wav"
+    },
+    {
+      "text": "soleil",
+      "lang": "fr",
+      "ipa": "sɔ.lɛj",
+      "features": {
+        "voicing": 1.0,
+        "nasality": 0.0,
+        "frontness": 0.8,
+        "openness": 0.8,
+        "length": 0.0,
+        "stress": 0.0,
+        "n_segments": 5.0,
+        "fsot_energy": 0.8605299047539587,
+        "fsot_tempo": 1.1
+      },
+      "phoneme_notes": [
+        "lexicon_ipa",
+        "waveform:sapi_wav"
+      ],
+      "fsot_S": 0.6513247618848969,
+      "tempo_proxy": 1.1,
+      "energy_proxy": 0.8605299047539587,
+      "source": "starter_g2p",
+      "tier": "B",
+      "representation": "ipa_articulatory_fsot_waveform",
+      "waveform_path": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\fr_soleil.wav",
+      "waveform_engine": "sapi_wav"
+    }
+  ],
+  "translation_sample": {
+    "translation": {
+      "input": "aqua lingua ius",
+      "context": "historical",
+      "target_lang": "english",
+      "tokens": [
+        "aqua",
+        "lingua",
+        "ius"
+      ],
+      "meanings": [
+        "water",
+        "language",
+        "law"
+      ],
+      "resolution_trace": [
+        "aqua->water",
+        "lingua->language",
+        "ius->law"
+      ],
+      "translation": "flowing_water flowing_language flowing_law [FSOT 2.1 fluid translation].",
+      "exact_map_rate": 1.0,
+      "exact_hits": 3,
+      "token_count": 3,
+      "fsot_panel": {
+        "S": 0.6325783360136283,
+        "T1": 0.5053444169211716,
+        "T2": 1.0,
+        "T3": 1.1592239677320022e-17,
+        "quirk_mod": -0.2451324643541674,
+        "growth": 1.0002883913967908,
+        "D_eff": 21.0,
+        "observed": true,
+        "delta_psi": 0.8,
+        "delta_theta": 1.0
+      },
+      "fsot_coherence_S": 0.6325783360136283,
+      "fsot_domain_count": 423,
+      "fsot_domain_meta": {
+        "display": null,
+        "kind": null,
+        "parent_core": null,
+        "coverage_tier": null,
+        "record_count": null,
+        "D_eff": 21.0
+      },
+      "fsot_note": "Modulated via FSOT 2.1 S=K(T1+T2+T3); constants seed-derived; Lean/NeuroLab parity; domain-aware; 400+ FSOT scientific domains routable."
+    },
+    "articulations": [
+      {
+        "text": "water",
+        "lang": "en",
+        "ipa": "ˈwɔːtər",
+        "features": {
+          "voicing": 1.0,
+          "nasality": 0.0,
+          "frontness": 0.2,
+          "openness": 0.8,
+          "length": 1.0,
+          "stress": 1.0,
+          "n_segments": 5.0,
+          "fsot_energy": 0.8530313344054513,
+          "fsot_tempo": 1.1
+        },
+        "phoneme_notes": [
+          "lexicon_ipa",
+          "waveform:sapi_wav"
+        ],
+        "fsot_S": 0.6325783360136283,
+        "tempo_proxy": 1.1,
+        "energy_proxy": 0.8530313344054513,
+        "source": "starter_g2p",
+        "tier": "B",
+        "representation": "ipa_articulatory_fsot_waveform",
+        "waveform_path": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\en_water.wav",
+        "waveform_engine": "sapi_wav"
+      },
+      {
+        "text": "language",
+        "lang": "en",
+        "ipa": "ˈlæŋɡwɪdʒ",
+        "features": {
+          "voicing": 1.0,
+          "nasality": 1.0,
+          "frontness": 0.8,
+          "openness": 0.8,
+          "length": 0.0,
+          "stress": 1.0,
+          "n_segments": 8.0,
+          "fsot_energy": 0.8530313344054513,
+          "fsot_tempo": 1.1
+        },
+        "phoneme_notes": [
+          "lexicon_ipa",
+          "waveform:sapi_wav"
+        ],
+        "fsot_S": 0.6325783360136283,
+        "tempo_proxy": 1.1,
+        "energy_proxy": 0.8530313344054513,
+        "source": "starter_g2p",
+        "tier": "B",
+        "representation": "ipa_articulatory_fsot_waveform",
+        "waveform_path": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\en_language.wav",
+        "waveform_engine": "sapi_wav"
+      },
+      {
+        "text": "law",
+        "lang": "en",
+        "ipa": "lɔː",
+        "features": {
+          "voicing": 1.0,
+          "nasality": 0.0,
+          "frontness": 0.2,
+          "openness": 0.8,
+          "length": 1.0,
+          "stress": 0.0,
+          "n_segments": 2.0,
+          "fsot_energy": 0.8530313344054513,
+          "fsot_tempo": 1.1
+        },
+        "phoneme_notes": [
+          "lexicon_ipa",
+          "waveform:sapi_wav"
+        ],
+        "fsot_S": 0.6325783360136283,
+        "tempo_proxy": 1.1,
+        "energy_proxy": 0.8530313344054513,
+        "source": "starter_g2p",
+        "tier": "B",
+        "representation": "ipa_articulatory_fsot_waveform",
+        "waveform_path": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\en_law.wav",
+        "waveform_engine": "sapi_wav"
+      }
+    ],
+    "audio_policy": "ipa_articulatory_fsot_no_waveform",
+    "note": "Waveform TTS is non-optimal here; IPA + articulatory features + FSOT proxies are the speech layer."
+  },
+  "waveform_paths": [
+    "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\la_aqua.wav",
+    "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\en_water.wav",
+    "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\en_king.wav",
+    "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\en_start.wav",
+    "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\fr_soleil.wav"
+  ]
+}

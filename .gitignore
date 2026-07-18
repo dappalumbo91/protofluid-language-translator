@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local / OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.idea/
+.vscode/
+*.log
+
+# Large derived training assets (keep on Game Drive; rebuild with scripts)
+data/dictionary_extra_gold.jsonl
+data/dictionary_classical_lexicon.json
+data/classical_full_trained_lexicon.json
+data/name_gazetteer.json
+data/pleiades_contacts.json
+data/hieroglyph_unikemet_gold.jsonl
+data/historical_gold_merged.json
+data/domain_lexica.json
+data/classical_grc_la_promoted_tierA.jsonl
+data/dictionary_ipa_lexicon.json
+data/hieroglyph_pflt_lexicon.json
+
+# Optional large local media
+*.wav
+*.mp3
+*.mp4
+waveforms/
+
+# Personal PDF chat dumps (optional — not required to run)
+A Proto-Fluid Language Translator Grok.pdf*
+*.pdf
+
+# Secrets
+.env
+.env.*
+*.pem
+credentials.json

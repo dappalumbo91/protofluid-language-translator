@@ -1,0 +1,470 @@
+{
+  "built_utc": "2026-07-18T06:06:17.284047+00:00",
+  "n_gold": 51821,
+  "n_core": 35999,
+  "n_name": 15822,
+  "n_train": 46594,
+  "n_test": 5227,
+  "core_90_10": {
+    "exact": 0.02087338643229882,
+    "partial": 0.1625926943147487,
+    "n": 3641,
+    "by_lang": {
+      "la": {
+        "n": 1616,
+        "exact": 0.013613861386138614,
+        "partial": 0.2042079207920792
+      },
+      "grc": {
+        "n": 1068,
+        "exact": 0.025280898876404494,
+        "partial": 0.15262172284644196
+      },
+      "ang": {
+        "n": 537,
+        "exact": 0.04655493482309125,
+        "partial": 0.10614525139664804
+      },
+      "en": {
+        "n": 418,
+        "exact": 0.0,
+        "partial": 0.09569377990430622
+      }
+    },
+    "hits_sample": [
+      {
+        "lang": "akk",
+        "word": "šumma",
+        "gold": "if",
+        "meanings": [
+          "if"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "λόγος",
+        "gold": "word",
+        "meanings": [
+          "word"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "san",
+        "word": "rājan",
+        "gold": "king",
+        "meanings": [
+          "king"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "Κελτός",
+        "gold": "a Celt",
+        "meanings": [
+          "celtic"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "Πελασγικός",
+        "gold": "Pelasgian",
+        "meanings": [
+          "a_female_pelasgian"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "Πελασγός",
+        "gold": "a Pelasgian",
+        "meanings": [
+          "a_female_pelasgian"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "γυμνασία",
+        "gold": "exercise",
+        "meanings": [
+          "bodily_exercises"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "ζηλότυπος",
+        "gold": "jealous",
+        "meanings": [
+          "jealous"
+        ],
+        "kind": "exact",
+        "map_rate": 1.0
+      }
+    ],
+    "misses_sample": [
+      {
+        "lang": "grc",
+        "word": "Γαλάτης",
+        "gold": "a Galatian",
+        "meanings": [
+          "name_of_several_different_mythological_characters"
+        ],
+        "kind": "miss",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "Δεκέμβριος",
+        "gold": "of December",
+        "meanings": [
+          "dek_mbrios"
+        ],
+        "kind": "miss",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "Κρής",
+        "gold": "Cretan",
+        "meanings": [
+          "narrative_flow"
+        ],
+        "kind": "miss",
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "Λίβυς",
+        "gold": "a Berber",
+        "meanings": [
+          "a_town_of_bithynia_situated_on_the_road_from_nicaea_to_chalcedon"
+        ],
+        "kind": "miss",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "Νοέμβριος",
+        "gold": "of November",
+        "meanings": [
+          "no_mbrios"
+        ],
+        "kind": "miss",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "Σιντός",
+        "gold": "a Sintian",
+        "meanings": [
+          "ravening_predation"
+        ],
+        "kind": "miss",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "αἰδοῖον",
+        "gold": "the genitals",
+        "meanings": [
+          "modest_bashful"
+        ],
+        "kind": "miss",
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "αἰσθάνομαι",
+        "gold": "to understand",
+        "meanings": [
+          "narrative_flow"
+        ],
+        "kind": "miss",
+        "map_rate": 0.0
+      }
+    ]
+  },
+  "name_open_train_seeds": {
+    "exact": 0.05674653215636822,
+    "partial": 0.1708701134930643,
+    "n": 1586,
+    "by_lang": {
+      "la": {
+        "n": 816,
+        "exact": 0.04411764705882353,
+        "partial": 0.14705882352941177
+      },
+      "grc": {
+        "n": 413,
+        "exact": 0.09927360774818401,
+        "partial": 0.2857142857142857
+      },
+      "en": {
+        "n": 191,
+        "exact": 0.015706806282722512,
+        "partial": 0.08900523560209424
+      },
+      "ang": {
+        "n": 166,
+        "exact": 0.060240963855421686,
+        "partial": 0.0963855421686747
+      }
+    },
+    "hits_sample": [
+      {
+        "lang": "grc",
+        "word": "Κένταυρος",
+        "gold": "centaur",
+        "title": "centaur",
+        "meanings": [
+          "centaur"
+        ],
+        "kind": "exact"
+      },
+      {
+        "lang": "grc",
+        "word": "Διόνυσος",
+        "gold": "Dionysus",
+        "title": "dionysus",
+        "meanings": [
+          "dionysus"
+        ],
+        "kind": "exact"
+      },
+      {
+        "lang": "grc",
+        "word": "Κρήτη",
+        "gold": "Crete",
+        "title": "crete",
+        "meanings": [
+          "crete"
+        ],
+        "kind": "exact"
+      },
+      {
+        "lang": "grc",
+        "word": "Λιγυστική",
+        "gold": "Liguria",
+        "title": "liguria",
+        "meanings": [
+          "ligurian"
+        ],
+        "kind": "exact"
+      },
+      {
+        "lang": "grc",
+        "word": "Νομαντία",
+        "gold": "Numantia",
+        "title": "numantia",
+        "meanings": [
+          "an_inhabitant_of_numantia"
+        ],
+        "kind": "exact"
+      },
+      {
+        "lang": "grc",
+        "word": "Πόπλιος",
+        "gold": "Publius",
+        "title": "publius",
+        "meanings": [
+          "old_latin_form_of_publius"
+        ],
+        "kind": "exact"
+      },
+      {
+        "lang": "grc",
+        "word": "Σκυθική",
+        "gold": "Scythia",
+        "title": "scythia",
+        "meanings": [
+          "scythian"
+        ],
+        "kind": "exact"
+      },
+      {
+        "lang": "grc",
+        "word": "Σόλων",
+        "gold": "Solon",
+        "title": "solon",
+        "meanings": [
+          "solon"
+        ],
+        "kind": "exact"
+      }
+    ],
+    "misses_sample": [
+      {
+        "lang": "grc",
+        "word": "Σαρωνικός",
+        "gold": "Saronic",
+        "title": "saronic",
+        "meanings": [
+          "old_hollow_oak"
+        ],
+        "kind": "miss"
+      },
+      {
+        "lang": "grc",
+        "word": "μάσταξ",
+        "gold": "mouthful, morsel",
+        "title": "mouthful_morsel",
+        "meanings": [
+          "mastaura_lycia_turkey"
+        ],
+        "kind": "miss"
+      },
+      {
+        "lang": "grc",
+        "word": "μέρος",
+        "gold": "share, portion",
+        "title": "share_portion",
+        "meanings": [
+          "a_thigh"
+        ],
+        "kind": "miss"
+      },
+      {
+        "lang": "grc",
+        "word": "σίγλος",
+        "gold": "earring",
+        "title": "earring",
+        "meanings": [
+          "rye"
+        ],
+        "kind": "miss"
+      },
+      {
+        "lang": "grc",
+        "word": "τροχός",
+        "gold": "wheel",
+        "title": "wheel",
+        "meanings": [
+          "round_circular"
+        ],
+        "kind": "miss"
+      },
+      {
+        "lang": "grc",
+        "word": "Κέλυδνος",
+        "gold": "river Celydnus, Epirus, Greece",
+        "title": "river_celydnus_epirus_greece",
+        "meanings": [
+          "sheath_case"
+        ],
+        "kind": "miss"
+      },
+      {
+        "lang": "grc",
+        "word": "Πισάτης",
+        "gold": "an inhabitant of Pisa",
+        "title": "inhabitant_of_pisa",
+        "meanings": [
+          "meadow"
+        ],
+        "kind": "miss"
+      },
+      {
+        "lang": "grc",
+        "word": "βασιλεία",
+        "gold": "A hereditary monarchy",
+        "title": "hereditary_monarchy",
+        "meanings": [
+          "queen"
+        ],
+        "kind": "miss"
+      }
+    ],
+    "note": "Train-only name gold + classical seeds; no test leakage; no Pleiades"
+  },
+  "name_open_train_seeds_pleiades": {
+    "exact": 0.06305170239596469,
+    "partial": 0.18095838587641866,
+    "n": 1586,
+    "note": "Train names + seeds + Pleiades external curriculum contacts"
+  },
+  "name_deployed_full_gaz": {
+    "exact": 0.7503152585119798,
+    "partial": 0.7944514501891551,
+    "n": 1586,
+    "note": "Full Dictionary+Pleiades gazetteer (operational coverage, not open-set)"
+  },
+  "full_mixed_90_10": {
+    "exact": 0.02448823416873924,
+    "partial": 0.16548689496843313,
+    "n": 5227,
+    "note": "Mixed bag dilutes; prefer core + name tracks"
+  },
+  "train_closed_sample": {
+    "exact": 0.9766666666666667,
+    "n": 1200
+  },
+  "pul_terms": 73736,
+  "paradigm_terms": 93809,
+  "waveforms": [
+    {
+      "text": "aqua",
+      "engine": "sapi_wav",
+      "path": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\la_aqua.wav"
+    },
+    {
+      "text": "Roma",
+      "engine": "sapi_wav",
+      "path": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\la_roma.wav"
+    },
+    {
+      "text": "Κύπρος",
+      "engine": "sapi_wav",
+      "path": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\grc_kypros.wav"
+    }
+  ],
+  "policy": {
+    "core": "morphology + reverse_morph + paradigms + gapfill",
+    "name": "name_gazetteer + historical contacts + demonym peel (before gapfill)",
+    "scoring": "name track uses cleaned short English titles"
+  },
+  "core_only_90_10": {
+    "exact": 0.021422686075254053,
+    "partial": 0.16204339467179346,
+    "n": 3641,
+    "by_lang": {
+      "la": {
+        "n": 1616,
+        "exact": 0.011757425742574257,
+        "partial": 0.20606435643564355
+      },
+      "grc": {
+        "n": 1068,
+        "exact": 0.0299625468164794,
+        "partial": 0.149812734082397
+      },
+      "ang": {
+        "n": 537,
+        "exact": 0.0446927374301676,
+        "partial": 0.10800744878957169
+      },
+      "en": {
+        "n": 418,
+        "exact": 0.0023923444976076554,
+        "partial": 0.08851674641148326
+      }
+    },
+    "note": "Train+test restricted to non-name gold; empty name gaz; denser paradigms + Latin-safe reverse morph"
+  },
+  "pleiades": {
+    "n_forms": 66435,
+    "n_titles": 24711,
+    "n_multi_contact": 9995
+  }
+}

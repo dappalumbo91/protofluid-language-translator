@@ -1,0 +1,3110 @@
+{
+  "built_utc": "2026-07-18T02:42:33.976157+00:00",
+  "stage": "PFLT FSOT communicator — runnable tests with current data",
+  "results": {
+    "scalar_health": {
+      "ok": true,
+      "n_domains": 423,
+      "domains": [
+        {
+          "domain": "cosmological",
+          "S": -0.5024559462100433,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "nuclear",
+          "S": 0.9504088389342538,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "atomic",
+          "S": 0.8123251866460616,
+          "ok": true,
+          "qm": -0.3731123621450358
+        },
+        {
+          "domain": "geological",
+          "S": 0.7770104436534506,
+          "ok": true,
+          "qm": -0.3731123621450358
+        },
+        {
+          "domain": "quantum",
+          "S": 0.9555063001027196,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "astrophysical",
+          "S": 0.8989138056093399,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "material",
+          "S": -0.2940472323673498,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "biological",
+          "S": 0.47768238921582773,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "genomic",
+          "S": 0.47768238921582773,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "neural",
+          "S": 0.42176655698906185,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "metabolic",
+          "S": 0.4614225856362781,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "ecological",
+          "S": 0.5109185411321919,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "paleontological",
+          "S": 0.4560569138445697,
+          "ok": true,
+          "qm": -0.048976863514238834
+        },
+        {
+          "domain": "mythological",
+          "S": 0.6325783360136283,
+          "ok": true,
+          "qm": -0.2451324643541674
+        },
+        {
+          "domain": "administrative",
+          "S": 0.339197317265763,
+          "ok": true,
+          "qm": 0.1482786520923667
+        },
+        {
+          "domain": "paranormal",
+          "S": 0.6427341242965491,
+          "ok": true,
+          "qm": -1.0212350279383988
+        },
+        {
+          "domain": "linguistic",
+          "S": 0.6513247618848969,
+          "ok": true,
+          "qm": -0.2451324643541674
+        },
+        {
+          "domain": "fluid_tongue",
+          "S": 0.8791285168040015,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "historical",
+          "S": 0.6325783360136283,
+          "ok": true,
+          "qm": -0.2451324643541674
+        },
+        {
+          "domain": "english",
+          "S": 0.6513247618848969,
+          "ok": true,
+          "qm": -0.2451324643541674
+        },
+        {
+          "domain": "hieroglyphic",
+          "S": 0.7770104436534506,
+          "ok": true,
+          "qm": -0.3731123621450358
+        },
+        {
+          "domain": "egyptian",
+          "S": 0.7770104436534506,
+          "ok": true,
+          "qm": -0.3731123621450358
+        },
+        {
+          "domain": "visual_script",
+          "S": 0.8989138056093399,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "rock_art",
+          "S": 1.0313327939958346,
+          "ok": true,
+          "qm": -0.7297676818351424
+        },
+        {
+          "domain": "acoustics",
+          "S": 0.3115907970863415,
+          "ok": true,
+          "qm": 0.4053491862556475
+        },
+        {
+          "domain": "astronomy",
+          "S": 0.8989138056093399,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "astrophysics",
+          "S": 0.8828497925022394,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "atmospheric_physics",
+          "S": -0.4781360053563018,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "atomic_physics",
+          "S": 0.7358238658627416,
+          "ok": true,
+          "qm": -0.3095092191789325
+        },
+        {
+          "domain": "biochemistry",
+          "S": 0.3061129500854264,
+          "ok": true,
+          "qm": 0.3422041488427845
+        },
+        {
+          "domain": "biology",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "chemistry",
+          "S": 0.40788406423074536,
+          "ok": true,
+          "qm": 0.01687197363314224
+        },
+        {
+          "domain": "condensed_matter",
+          "S": 0.3384059955797751,
+          "ok": true,
+          "qm": 0.1482786520923667
+        },
+        {
+          "domain": "cosmology",
+          "S": -0.5024559462100433,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "ecology",
+          "S": 0.3002031944006762,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "economics",
+          "S": 0.6466484735368054,
+          "ok": true,
+          "qm": -1.0212350279383988
+        },
+        {
+          "domain": "electromagnetism",
+          "S": 0.5188655207983145,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "fluid_dynamics",
+          "S": -0.5636674319188869,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "geophysics",
+          "S": -0.5509364883097568,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "high_energy_physics",
+          "S": 0.8867067106125391,
+          "ok": true,
+          "qm": -0.4357829185189382
+        },
+        {
+          "domain": "materials_science",
+          "S": 0.33525988073638374,
+          "ok": true,
+          "qm": 0.1482786520923667
+        },
+        {
+          "domain": "meteorology",
+          "S": -0.48671739886921367,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "molecular_chemistry",
+          "S": 0.3345733830778106,
+          "ok": true,
+          "qm": 0.1482786520923667
+        },
+        {
+          "domain": "neuroscience",
+          "S": 0.5144513787582021,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "nuclear_physics",
+          "S": 0.921785373612435,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "oceanography",
+          "S": -0.37791643988110274,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "optics",
+          "S": 0.40806247121534545,
+          "ok": true,
+          "qm": 0.01687197363314224
+        },
+        {
+          "domain": "particle_astrophysics",
+          "S": -0.42441172002888605,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "particle_physics",
+          "S": 0.9504134401245242,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "physical_chemistry",
+          "S": 0.33401327040170914,
+          "ok": true,
+          "qm": 0.1482786520923667
+        },
+        {
+          "domain": "planetary_science",
+          "S": 0.767508683887893,
+          "ok": true,
+          "qm": -0.3731123621450358
+        },
+        {
+          "domain": "psychology",
+          "S": 1.0508040085077908,
+          "ok": true,
+          "qm": -0.6740495412380124
+        },
+        {
+          "domain": "quantum_computing",
+          "S": -0.14767310363368644,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "quantum_gravity",
+          "S": -0.5255977531899868,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "quantum_mechanics",
+          "S": 0.9555063001027196,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "quantum_optics",
+          "S": 0.4081705381715019,
+          "ok": true,
+          "qm": 0.01687197363314224
+        },
+        {
+          "domain": "seismology",
+          "S": -0.44754764880424736,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "sociology",
+          "S": 0.650802418996223,
+          "ok": true,
+          "qm": -1.0212350279383988
+        },
+        {
+          "domain": "thermodynamics",
+          "S": 0.7873228488876942,
+          "ok": true,
+          "qm": -0.3731123621450358
+        },
+        {
+          "domain": "ai_galactic_orbital_bridge",
+          "S": 0.8989138056093399,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "acoustic_resonance_materials",
+          "S": 0.3115907970863415,
+          "ok": true,
+          "qm": 0.4053491862556475
+        },
+        {
+          "domain": "actuarial_science_panel",
+          "S": 0.6466484735368054,
+          "ok": true,
+          "qm": -1.0212350279383988
+        },
+        {
+          "domain": "adjacent_rung_coupling",
+          "S": 0.5125303433160725,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "adversarial_fractal_break_tests",
+          "S": 0.5086963293978235,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "agriculture_agroecology",
+          "S": 0.3002031944006762,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "alternate_base_mathematics_explorer_panel",
+          "S": 0.5100978909070888,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "alternate_base_mathematics_spine",
+          "S": 0.5078947580102879,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "anthropology",
+          "S": 0.5178458009774783,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "architecture_building_science",
+          "S": 0.5071474465489995,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "arxiv_brain_knowledge_panel",
+          "S": 0.5144513787582021,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "arxiv_gravitational_waves_panel",
+          "S": -0.5255977531899868,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "arxiv_primitives_panel",
+          "S": 0.5184116047116664,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "arxiv_primitives_v14",
+          "S": 0.5130634216345376,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "astrophysical_structure_crosswalk",
+          "S": 0.8828497925022394,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "bibliography_corpus_panel",
+          "S": 0.5194497453710714,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "bibliography_lean_corpus",
+          "S": 0.5107007756369369,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "binary_decoder_panel",
+          "S": 0.5142497044194275,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "binary_decoder_rendlesham",
+          "S": 0.5198737148988284,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "biological_cuda_physarum",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "biology_developmental_structural_depth_panel",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "biophysics_public_panel",
+          "S": 0.5142497044194275,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "blackhole_whitehole_cycle_live_panel",
+          "S": 0.8828497925022394,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "botany",
+          "S": 0.5199308690487932,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "boundary_partition_tightening",
+          "S": 0.5197003814107751,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "breakthrough_discoveries_2024_2026",
+          "S": 0.5130097955820542,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "cern_open_data_lhc",
+          "S": 0.5185543904445802,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "crc_handbook_properties",
+          "S": 0.5192632955196536,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "cve_codon_hole_falsification",
+          "S": 0.5184436264542307,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "canonical_oracle_panel",
+          "S": 0.5197003814107751,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "cardiology",
+          "S": 0.507352330464247,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "cardiology_panel",
+          "S": 0.5174716250540139,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "cartography_gis_panel",
+          "S": 0.5102125334906021,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "certified_agent_formal_panel",
+          "S": 0.5197868079879763,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "certified_agent_qwen",
+          "S": 0.5151423597080115,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "chaos_mediated_phase_transitions",
+          "S": 0.5077748385386798,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "chemical_engineering",
+          "S": 0.40788406423074536,
+          "ok": true,
+          "qm": 0.01687197363314224
+        },
+        {
+          "domain": "chemical_structure_stability_panel",
+          "S": 0.40788406423074536,
+          "ok": true,
+          "qm": 0.01687197363314224
+        },
+        {
+          "domain": "civil_engineering",
+          "S": 0.514727225970652,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "civil_engineering_panel",
+          "S": 0.5093879443769627,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "climate_science",
+          "S": -0.4781360053563018,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "clinicaltrials_medical_panel",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "clinical_medicine",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "code_genome_structure",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "cold_fusion_candidate_prereg_scaffold",
+          "S": 0.5197255571564714,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "cold_fusion_lab_synthesis_crosswalk",
+          "S": 0.513206755678861,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "compact_object_binary_events",
+          "S": 0.512911660654953,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "compactification_ladder",
+          "S": 0.509878109781091,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "complexity_folding_emergence_panel",
+          "S": 0.5178543737733475,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "computational_reasoning",
+          "S": 0.5074923544360249,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "condensed_matter_superconductivity_depth_panel",
+          "S": 0.3384059955797751,
+          "ok": true,
+          "qm": 0.1482786520923667
+        },
+        {
+          "domain": "consciousness_econ",
+          "S": 1.0508040085077908,
+          "ok": true,
+          "qm": -0.6740495412380124
+        },
+        {
+          "domain": "consciousness_expansion_spine",
+          "S": 1.0508040085077908,
+          "ok": true,
+          "qm": -0.6740495412380124
+        },
+        {
+          "domain": "consciousness_galactic_orbital_bridge",
+          "S": 1.0508040085077908,
+          "ok": true,
+          "qm": -0.6740495412380124
+        },
+        {
+          "domain": "consciousness_genetics_coupling_panel",
+          "S": 1.0508040085077908,
+          "ok": true,
+          "qm": -0.6740495412380124
+        },
+        {
+          "domain": "consciousness_genetics_species_panel",
+          "S": 1.0508040085077908,
+          "ok": true,
+          "qm": -0.6740495412380124
+        },
+        {
+          "domain": "consciousness_soul_bridge",
+          "S": 1.0508040085077908,
+          "ok": true,
+          "qm": -0.6740495412380124
+        },
+        {
+          "domain": "consciousness_species_multi_panel",
+          "S": 1.0508040085077908,
+          "ok": true,
+          "qm": -0.6740495412380124
+        },
+        {
+          "domain": "cosmology_anomalies",
+          "S": -0.5024559462100433,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "cosmology_anomaly_deep_panel",
+          "S": -0.5024559462100433,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "cosmology_bubble_bleed",
+          "S": -0.5024559462100433,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "cosmology_extended",
+          "S": -0.5024559462100433,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "creative_arts_math_spine",
+          "S": 0.5065644529373144,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "crossref_scholarly_panel",
+          "S": 0.5122315358938755,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "cryosphere",
+          "S": 0.5198683983816681,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "cryptography_technology",
+          "S": 0.5094676941295717,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "culinary_arts",
+          "S": 0.5199130992218977,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "culinary_fermentation_maillard_panel",
+          "S": -0.14767310363368644,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "dark_energy_cpl",
+          "S": 0.7873228488876942,
+          "ok": true,
+          "qm": -0.3731123621450358
+        },
+        {
+          "domain": "dark_sector_open_problems",
+          "S": 0.5161492666695343,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "desktop_application_wiring_spine",
+          "S": 0.5118658559439812,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "distant_island_emergence_simulation",
+          "S": 0.5119699410978604,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "distant_island_z128_z132_deep_panel",
+          "S": 0.5108597557931354,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "domain_coupling_simulation",
+          "S": -0.14767310363368644,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "domain_coupling_simulation_refresh_panel",
+          "S": -0.14767310363368644,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "domain_orbital_predictions",
+          "S": -0.14767310363368644,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "early_lean_mc_panel",
+          "S": 0.5198557983844502,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "econometrics",
+          "S": 0.6466484735368054,
+          "ok": true,
+          "qm": -1.0212350279383988
+        },
+        {
+          "domain": "econophysics",
+          "S": 0.6466484735368054,
+          "ok": true,
+          "qm": -1.0212350279383988
+        },
+        {
+          "domain": "electrical_power_systems",
+          "S": 0.5098943304395543,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "element_synthesis_condition_scaffold",
+          "S": 0.5100081412835331,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "energy_ai_orbital_bridge",
+          "S": 0.7873228488876942,
+          "ok": true,
+          "qm": -0.3731123621450358
+        },
+        {
+          "domain": "energy_neural_orbital_bridge",
+          "S": 0.7873228488876942,
+          "ok": true,
+          "qm": -0.3731123621450358
+        },
+        {
+          "domain": "entomology",
+          "S": 0.5197416878138956,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "entomology_panel",
+          "S": 0.5147456456324974,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "environmental_engineering",
+          "S": 0.5199354154184835,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "epidemiology",
+          "S": 0.5090870537715583,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "epidemiology_panel",
+          "S": 0.5147917093109357,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "ethology_panel",
+          "S": 0.5097244877106069,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "exogeology",
+          "S": -0.5509364883097568,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "exogeology_panel",
+          "S": -0.5509364883097568,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "exoplanet_system_architecture",
+          "S": 0.5121092145185852,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "experimental_base_mathematics_panel",
+          "S": 0.5078572205756264,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "external_oss_code_genome",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "fpc_fluidlink_timing_deep_panel",
+          "S": -0.5636674319188869,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "fpc_temporal_coupling",
+          "S": 0.5178286361134177,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "fsot_aggregate_organized_panel",
+          "S": 0.5152994621118963,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "fsot_aggregate_unified_db",
+          "S": 0.5129027509349772,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "federal_science_registry_panel",
+          "S": 0.5093799824358355,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "finance_markets",
+          "S": 0.6466484735368054,
+          "ok": true,
+          "qm": -1.0212350279383988
+        },
+        {
+          "domain": "finance_markets_panel",
+          "S": 0.6466484735368054,
+          "ok": true,
+          "qm": -1.0212350279383988
+        },
+        {
+          "domain": "fluid_phase_current_spine",
+          "S": -0.5636674319188869,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "fluid_spacetime_observable_spine",
+          "S": -0.5636674319188869,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "fluid_spacetime_prereg_validation_panel",
+          "S": -0.5636674319188869,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "fold_depth_metrics",
+          "S": 0.518769192568509,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "food_microbiology",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "formula_branching_fractal",
+          "S": 0.5104101460153797,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "formula_corpus_cnc",
+          "S": 0.5089378865152473,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "formula_corpus_closure",
+          "S": 0.5091975111080864,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "formula_precision_spine",
+          "S": 0.5175068485128654,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "foundational_ontology_spine",
+          "S": 0.5080077127436354,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "founding_atmospheric_ozone_panel",
+          "S": -0.4781360053563018,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "founding_cosmic_dust_panel",
+          "S": 0.5126540829230923,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "founding_cosmic_ray_panel",
+          "S": 0.5140121462454391,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "founding_galactic_halo_rotation_panel",
+          "S": 0.8989138056093399,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "founding_pulsar_glitch_panel",
+          "S": 0.5150315351065858,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "founding_quantum_vacuum_panel",
+          "S": 0.9555063001027196,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "founding_white_dwarf_cooling_panel",
+          "S": 0.5070892274905288,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "fractal_constant_recursion",
+          "S": 0.5112821594656985,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "fuel_candidate_prereg_scaffold",
+          "S": 0.7873228488876942,
+          "ok": true,
+          "qm": -0.3731123621450358
+        },
+        {
+          "domain": "fuel_lab_live_panel",
+          "S": 0.7873228488876942,
+          "ok": true,
+          "qm": -0.3731123621450358
+        },
+        {
+          "domain": "fuel_thermochemistry_public_anchors",
+          "S": 0.40788406423074536,
+          "ok": true,
+          "qm": 0.01687197363314224
+        },
+        {
+          "domain": "fusion_decay_chain_prereg_scaffold",
+          "S": -0.14767310363368644,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "fusion_lab_certificate_spine",
+          "S": 0.518273781718181,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "fusion_physics_public_panel",
+          "S": 0.5186782996827458,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "gbif_species_occurrence",
+          "S": 0.5166080432957902,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "gwosc_live_event_deep",
+          "S": 0.5155768346174626,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "gaia_astrometry_panel_deep",
+          "S": -0.14767310363368644,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "gaia_dr3_tap_deep",
+          "S": -0.14767310363368644,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "galactic_structure_sample",
+          "S": 0.8989138056093399,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "genomic_sciences",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "geochemistry",
+          "S": 0.40788406423074536,
+          "ok": true,
+          "qm": 0.01687197363314224
+        },
+        {
+          "domain": "geology_stratigraphy",
+          "S": -0.5509364883097568,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "geomagnetism",
+          "S": -0.5509364883097568,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "government_open_data_spine",
+          "S": 0.5188946865054795,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "grace_cryosphere",
+          "S": 0.5111124996709171,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "hvac_thermal_systems",
+          "S": 0.5104846027106457,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "heavy_ion_lab_synthesis_panel",
+          "S": 0.519499774267175,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "higgs_mass",
+          "S": 0.9504134401245242,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "history",
+          "S": 0.5121179376792664,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "history_panel",
+          "S": 0.5167993427530088,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "hubble_bubble_tension",
+          "S": 0.5072423546044428,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "hubble_dark_sector_crosswalk",
+          "S": 0.5198584825509189,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "hybrid_fi_sim_multi_hero_panel",
+          "S": 0.519935195598436,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "hybrid_fi_sim_stratum_deep_panel",
+          "S": 0.5096520187684945,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "hydrology",
+          "S": 0.5112821594656985,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "igem_live_fasta_ingest",
+          "S": 0.5199303079488219,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "igem_parts_expanded",
+          "S": 0.5137210867373867,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "igem_synthetic_biology",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "immunology",
+          "S": 0.5195213654302098,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "immunology_panel",
+          "S": 0.5143138114154527,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "inertial_confinement_fusion_panel",
+          "S": 0.5094676941295717,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "information_theory_public_panel",
+          "S": 0.515160836949305,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "initiation_transformation_archetype",
+          "S": 0.5134948174320567,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "interactive_media_prereg_scaffold",
+          "S": 0.5166354322885428,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "interdisciplinary_spine_crosswalk",
+          "S": 0.5074775769847909,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "intrinsic_llm_validators",
+          "S": 0.5100489009187625,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "intrinsic_llm_validators_panel",
+          "S": 0.5198388426505044,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "ionospheric_chemistry_coupling",
+          "S": 0.40788406423074536,
+          "ok": true,
+          "qm": 0.01687197363314224
+        },
+        {
+          "domain": "island_of_stability_deep_panel",
+          "S": 0.5063944424320582,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "knowledge_base_portable_bundle_panel",
+          "S": 0.511461295660801,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "lab_synthesis_metamaterial_spine",
+          "S": 0.33525988073638374,
+          "ok": true,
+          "qm": 0.1482786520923667
+        },
+        {
+          "domain": "law_policy",
+          "S": 0.5065857911388502,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "law_policy_panel",
+          "S": 0.516516616155922,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "limnology_panel",
+          "S": 0.519903812738549,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "linguistics_formal",
+          "S": 1.0508040085077908,
+          "ok": true,
+          "qm": -0.6740495412380124
+        },
+        {
+          "domain": "live_ingest_spine",
+          "S": 0.5076406237911146,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "living_fsot_hardware_panel",
+          "S": 0.5143413040079851,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "longevity_anage_catalog_panel",
+          "S": 0.5187315427684593,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "longevity_consciousness_coupling_panel",
+          "S": 1.0508040085077908,
+          "ok": true,
+          "qm": -0.6740495412380124
+        },
+        {
+          "domain": "longevity_extreme_species_panel",
+          "S": 0.5100815514056696,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "longevity_genetic_mechanics_panel",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "longevity_megadeep_ncbi_panel",
+          "S": 0.507052912298662,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "longevity_telomere_repair_panel",
+          "S": -0.14767310363368644,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "machine_and_molecule_live_panel",
+          "S": -0.14767310363368644,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "magnetic_confinement_fusion_panel",
+          "S": 0.5067142280245431,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "magnetosphere",
+          "S": 0.508250407489612,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "magnetosphere_extended",
+          "S": 0.5138027904161121,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "maillard_chemistry",
+          "S": 0.40788406423074536,
+          "ok": true,
+          "qm": 0.01687197363314224
+        },
+        {
+          "domain": "malware_threat_intelligence",
+          "S": 0.5161032033856446,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "marine_biology",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "marine_biology_panel",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "material_in_silico_screening_scaffold",
+          "S": 0.33525988073638374,
+          "ok": true,
+          "qm": 0.1482786520923667
+        },
+        {
+          "domain": "material_property_verification_scaffold",
+          "S": 0.33525988073638374,
+          "ok": true,
+          "qm": 0.1482786520923667
+        },
+        {
+          "domain": "materials_creep_fracture_depth_panel",
+          "S": 0.33525988073638374,
+          "ok": true,
+          "qm": 0.1482786520923667
+        },
+        {
+          "domain": "materials_engineering",
+          "S": 0.33525988073638374,
+          "ok": true,
+          "qm": 0.1482786520923667
+        },
+        {
+          "domain": "materials_genome_crosswalk",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "materials_project_live_panel",
+          "S": 0.33525988073638374,
+          "ok": true,
+          "qm": 0.1482786520923667
+        },
+        {
+          "domain": "materials_species_bridge",
+          "S": 0.33525988073638374,
+          "ok": true,
+          "qm": 0.1482786520923667
+        },
+        {
+          "domain": "materials_species_bridge_live_panel",
+          "S": 0.33525988073638374,
+          "ok": true,
+          "qm": 0.1482786520923667
+        },
+        {
+          "domain": "math_generator_airfoil_rmse",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "math_generator_benchmark_formula_eval",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "math_generator_rules_eval",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "mathematics_computational",
+          "S": 0.5198267457993554,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "mechanical_engineering",
+          "S": 0.5121441201972067,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "mechanical_engineering_panel",
+          "S": 0.518183204428434,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "mechanistic_coupling",
+          "S": 0.5175507673162101,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "medical_galactic_orbital_bridge",
+          "S": 0.8989138056093399,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "metamaterial_fluid_design_prereg_scaffold",
+          "S": -0.5636674319188869,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "microtubule_quantum_consciousness_panel",
+          "S": 1.0508040085077908,
+          "ok": true,
+          "qm": -0.6740495412380124
+        },
+        {
+          "domain": "music_harmonics_public_panel",
+          "S": 0.506771536187868,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "mycology",
+          "S": 0.5193741113599544,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "mycology_panel",
+          "S": 0.5096520187684945,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "nasa_donki_solar_panel",
+          "S": 0.5117017103742175,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "nasa_exoplanet_archive",
+          "S": 0.516066334942341,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "nasa_neo_feed_panel",
+          "S": 0.5099186792555817,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "ncbi_gene_public_panel",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "nist_codata_constants",
+          "S": 0.5074775769847909,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "nist_dlmf_special_functions",
+          "S": 0.5142588588672337,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "noaa_coastal_tides",
+          "S": 0.5169804895764133,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "noaa_ndbc_buoy_panel",
+          "S": 0.5114698511863732,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "natural_formation_element_simulation",
+          "S": 0.5084647040379519,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "network_internet_protocols",
+          "S": 0.5117189507450871,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "network_science_public_panel",
+          "S": 0.5140851443389206,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "neural_galactic_orbital_bridge",
+          "S": 0.8989138056093399,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "neuroeconomics",
+          "S": 0.5144513787582021,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "neuroeconomics_panel",
+          "S": 0.5144513787582021,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "neuroimmunology",
+          "S": 0.5144513787582021,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "neurolab_gaps_math_spine",
+          "S": 0.5144513787582021,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "neurolab_residual_math_spine",
+          "S": 0.5144513787582021,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "neuron_multi_hero",
+          "S": 0.5144513787582021,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "neuroscience_connectomics_depth_panel",
+          "S": 0.5144513787582021,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "neutrino_physics_panel",
+          "S": 0.5190159821483082,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "nothing_perfection_friction_origin_panel",
+          "S": 0.5140395101006014,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "osti_doe_science_panel",
+          "S": 0.5137937059983575,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "observer_channel_derivation",
+          "S": 0.5117534584629775,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "observer_effect_cross_species_panel",
+          "S": 0.5180496682392299,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "omni_theory_genesis",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "omni_theory_humanities_panel",
+          "S": 0.5112736544881306,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "oncology",
+          "S": 0.5196229872019461,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "openalex_citation_graph",
+          "S": 0.5084416567536416,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "openneuro_full_panel",
+          "S": 0.5144513787582021,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "open_meteo_live_panel",
+          "S": 0.5116672566639552,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "optics_interferometry_depth_panel",
+          "S": 0.40806247121534545,
+          "ok": true,
+          "qm": 0.01687197363314224
+        },
+        {
+          "domain": "orbital_mechanics",
+          "S": 0.5138573290871825,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "overflow_carry_emergence_panel",
+          "S": 0.5153179503932372,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "pdg_particle_properties",
+          "S": 0.9504134401245242,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "paleoclimate",
+          "S": -0.4781360053563018,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "paleoclimate_panel",
+          "S": -0.4781360053563018,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "paleontology",
+          "S": 0.5178372217430802,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "paleontology_panel",
+          "S": 0.5080001664205527,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "particle_neural_orbital_bridge",
+          "S": 0.9504134401245242,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "periodic_extension_decay_topology_scaffold",
+          "S": 0.5163515968094182,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "periodic_table_completion_spine",
+          "S": 0.51793973793935,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "periodic_table_extension_closure_spine",
+          "S": 0.513000864587127,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "periodic_table_public_panel",
+          "S": 0.5096922555359666,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "petrology_geochemistry_panel",
+          "S": 0.40788406423074536,
+          "ok": true,
+          "qm": 0.01687197363314224
+        },
+        {
+          "domain": "pharmacokinetics",
+          "S": 0.5064156263618185,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "pharmacology",
+          "S": 0.512733840894188,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "phi_morphogenetic_scaling",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "physarum_biological_cuda_panel",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "planetary_atmospheres",
+          "S": -0.4781360053563018,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "planetary_structure",
+          "S": 0.767508683887893,
+          "ok": true,
+          "qm": -0.3731123621450358
+        },
+        {
+          "domain": "plasma_physics",
+          "S": 0.8828497925022394,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "portable_clone_verify",
+          "S": 0.5085648174569125,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "prediction_rederivation",
+          "S": 0.5198140316278275,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "preregistered_outcome_tracking",
+          "S": 0.5173299919518815,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "preregistered_predictions",
+          "S": 0.5071985043356756,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "preregistered_predictions_verification_scaffold",
+          "S": 0.5171783258246408,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "programming_language_laws",
+          "S": 1.0508040085077908,
+          "ok": true,
+          "qm": -0.6740495412380124
+        },
+        {
+          "domain": "proof_carrying_code_genome",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "proof_ledger_closure_spine",
+          "S": 0.5102207400587166,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "psychology_psychometrics_depth_panel",
+          "S": 1.0508040085077908,
+          "ok": true,
+          "qm": -0.6740495412380124
+        },
+        {
+          "domain": "pubchem_compound_properties",
+          "S": 0.40788406423074536,
+          "ok": true,
+          "qm": 0.01687197363314224
+        },
+        {
+          "domain": "pubchem_live_deep",
+          "S": 0.40788406423074536,
+          "ok": true,
+          "qm": 0.01687197363314224
+        },
+        {
+          "domain": "pubchem_stability_panel",
+          "S": 0.40788406423074536,
+          "ok": true,
+          "qm": 0.01687197363314224
+        },
+        {
+          "domain": "public_verifiable_spine",
+          "S": 0.5159741020300295,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "published_fuel_property_panel",
+          "S": 0.7873228488876942,
+          "ok": true,
+          "qm": -0.3731123621450358
+        },
+        {
+          "domain": "pure_mathematics",
+          "S": 0.5070456558702877,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "pure_mathematics_panel",
+          "S": 0.5161953031841051,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "quantum_computing_math_depth_panel",
+          "S": -0.14767310363368644,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "quantum_information",
+          "S": 0.9555063001027196,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "quantum_materials",
+          "S": 0.33525988073638374,
+          "ok": true,
+          "qm": 0.1482786520923667
+        },
+        {
+          "domain": "quantum_mechanics_entanglement_depth_panel",
+          "S": 0.9555063001027196,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "rcsb_pdb_structures",
+          "S": 0.5117189507450871,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "rd_interval_tightening_panel",
+          "S": 0.5124598168031433,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "radio_astronomy_panel",
+          "S": 0.8989138056093399,
+          "ok": true,
+          "qm": -0.4973642445479001
+        },
+        {
+          "domain": "reality_folding_spine",
+          "S": 0.5192184246590393,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "robotics_control_systems",
+          "S": 0.5133235613283295,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "robotics_control_systems_panel",
+          "S": 0.5081819114453677,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "rust_lean_bridge",
+          "S": 0.5082732810420538,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "rust_lean_bridge_panel",
+          "S": 0.5176817428375015,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "sh0es_refined",
+          "S": 0.5167538889218242,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "simbad_stellar_identity_deep",
+          "S": 0.5196650471474626,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "stsci_mast_telescope_panel",
+          "S": 0.5199147528626262,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "scalar_solver_35_panel",
+          "S": 0.5074259265491629,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "scientific_expansion_depth_spine",
+          "S": 0.5152070369804083,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "scientific_expansion_depth_wave2_spine",
+          "S": 0.5142222485992016,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "scientific_expansion_spine",
+          "S": 0.511512663072594,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "scientific_expansion_wave2_spine",
+          "S": 0.5097809854963241,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "scientific_expansion_wave3_spine",
+          "S": 0.5096279052096748,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "secure_software_engineering",
+          "S": 0.5158817938777277,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "seismology_deep",
+          "S": -0.44754764880424736,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "semiconductor_physics_public_panel",
+          "S": 0.5177164602594659,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "small_body_orbits",
+          "S": 0.5182080106450102,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "soil_science_panel",
+          "S": 0.5197416878138956,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "solar_system_structure_deep",
+          "S": 0.5194383631452834,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "space_propulsion_systems",
+          "S": 0.5167902569860517,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "space_weather",
+          "S": -0.48671739886921367,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "speleology",
+          "S": 0.5070819600430367,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "speleology_panel",
+          "S": 0.5171424792460154,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "sports_biomechanics",
+          "S": 0.5148101404086332,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "star_trek_transporter_live_panel",
+          "S": 0.5090398564628995,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "statistical_mechanics_public_panel",
+          "S": 0.517338877059621,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "stellar_multiplicity_catalog",
+          "S": 0.508242787590436,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "stellar_multiplicity_live_deep",
+          "S": 0.5064863783199848,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "stumped_observables_panel",
+          "S": 0.5123542783150232,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "stumped_observables_spine",
+          "S": 0.5109858648764745,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "superheavy_element_stability_panel",
+          "S": 0.5076703859096434,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "superheavy_island_completion_spine",
+          "S": 0.5128048736200932,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "superheavy_island_emergence_simulation",
+          "S": 0.5078497199241242,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "supply_chain_logistics",
+          "S": -0.14767310363368644,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "supply_chain_logistics_panel",
+          "S": -0.14767310363368644,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "symbolic_archetype_panel",
+          "S": 0.519934635292983,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "synthetic_biology",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "tectonics",
+          "S": 0.5142130991889344,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "term3_acoustic_bleed_depth",
+          "S": 0.3115907970863415,
+          "ok": true,
+          "qm": 0.4053491862556475
+        },
+        {
+          "domain": "the_well_outcomes_verification_panel",
+          "S": 0.5100162884570549,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "the_well_spot_check_panel",
+          "S": 0.5197214420579379,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "the_well_verification_spine",
+          "S": 0.5141399503823356,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "theory_completeness_spine",
+          "S": 0.509870003017487,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "tier_93_dual_wave_spine",
+          "S": 0.5103029362911097,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "tier_94_longevity_spine",
+          "S": 0.5071037690043315,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "tier_95_zebrafish_spine",
+          "S": 0.5153641747123349,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "time_domain_crosswalk",
+          "S": -0.14767310363368644,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "time_emergence_deep_panel",
+          "S": 0.5096922555359666,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "time_emergence_simulation",
+          "S": 0.5091501155929212,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "toe_claim_certificate_bundle",
+          "S": -0.14767310363368644,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "toe_gap_closure_spine",
+          "S": 0.5067285420480145,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "toe_unification_spine",
+          "S": 0.5094357657842661,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "tokenization_live_panel",
+          "S": 0.515160836949305,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "tokenization_smoke",
+          "S": 0.5066213978815791,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "toxicology_panel",
+          "S": 0.516544064614698,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "trinary_hardware_live_panel",
+          "S": 0.5098456969889228,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "trinary_hardware_motif",
+          "S": 0.5161032033856446,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "trinary_os_isa_rebuild",
+          "S": 0.5184116047116664,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "trinary_os_portable",
+          "S": 0.5162505085395154,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "trinary_os_round_trip",
+          "S": 0.5087895680924931,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "trinary_os_tier_e",
+          "S": 0.519920702393668,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "uap_war_gov_release_panel",
+          "S": 0.5178543737733475,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "undiscovered_element_candidate_prereg_scaffold",
+          "S": 0.5096520187684945,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "uniprot_protein_annotations",
+          "S": 0.3061129500854264,
+          "ok": true,
+          "qm": 0.3422041488427845
+        },
+        {
+          "domain": "uniprot_structure_annotations_deep",
+          "S": 0.516001780536703,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "unified_db_candidate_crosswalk",
+          "S": 0.519660492458467,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "unified_db_crosswalk_spine",
+          "S": 0.5072423546044428,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "vl_agent_distill_panel",
+          "S": 0.5107007756369369,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "vl_distill_atlas",
+          "S": 0.5116156438386211,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "virology",
+          "S": 0.5189451642956275,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "virology_panel",
+          "S": 0.5091343359785349,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "vizier_wds_tap_live_deep",
+          "S": 0.519920022611572,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "volcanology_panel",
+          "S": 0.5126363812455889,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "wds_live_multiplicity_deep",
+          "S": 0.5139483469576887,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "warp_bh_wh_portal_panel",
+          "S": 0.5199303079488219,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "world_bank_development",
+          "S": 0.51240700966966,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "xr_interactive_media_math_scaffold",
+          "S": 0.5134677353127457,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "z120_z126_beam_synthesis_panel",
+          "S": 0.5186859431109644,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "z164_distant_island_prereg_scaffold",
+          "S": 0.506345087849897,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "zebrafish_cell_tracking_panel",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "zebrafish_developmental_mechanics_panel",
+          "S": 0.5092687638872394,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "zebrafish_longevity_genetics_coupling_panel",
+          "S": 0.4447250077038458,
+          "ok": true,
+          "qm": 1.0
+        },
+        {
+          "domain": "zero_boundary_not_entity_panel",
+          "S": 0.5193009830479492,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "zero_day_risk_evaluator",
+          "S": 0.5103771157365863,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "zoology",
+          "S": 0.5157801867021673,
+          "ok": true,
+          "qm": -0.1147032840094916
+        },
+        {
+          "domain": "inaturalist_observation_panel",
+          "S": 0.5138027904161121,
+          "ok": true,
+          "qm": -0.1147032840094916
+        }
+      ]
+    },
+    "lexicon": {
+      "ok": true,
+      "size": 38208
+    },
+    "real_gold": {
+      "ok": true,
+      "n": 8,
+      "mean_map": 1.0,
+      "mean_semantic": 0.9375,
+      "cases": [
+        {
+          "id": "eridu_genesis_opening",
+          "exact_map_rate": 1.0,
+          "semantic_coverage": 1.0,
+          "S": 0.6325783360136283,
+          "tokens": [
+            "ud-bi-a",
+            "an",
+            "ki-ta",
+            "ba-dim-ma"
+          ],
+          "meanings": [
+            "primordial_time_of_that",
+            "sky_domain",
+            "earth_base_from",
+            "creation_act_formed_complete"
+          ]
+        },
+        {
+          "id": "hbb_cds_start",
+          "exact_map_rate": 1.0,
+          "semantic_coverage": 1.0,
+          "S": 0.47768238921582773,
+          "tokens": [
+            "atg",
+            "gtg",
+            "cac",
+            "ctg",
+            "act"
+          ],
+          "meanings": [
+            "start",
+            "transfer",
+            "energy",
+            "structure",
+            "action"
+          ]
+        },
+        {
+          "id": "linear_a_ht13",
+          "exact_map_rate": 1.0,
+          "semantic_coverage": 1.0,
+          "S": 0.339197317265763,
+          "tokens": [
+            "da-ka-se",
+            "pa-ki-nu"
+          ],
+          "meanings": [
+            "transfer_to_source",
+            "goods_count"
+          ]
+        },
+        {
+          "id": "fsot_h0_s8",
+          "exact_map_rate": 1.0,
+          "semantic_coverage": 1.0,
+          "S": -0.5024559462100433,
+          "tokens": [
+            "hubbk",
+            "s8"
+          ],
+          "meanings": [
+            "71.98_km_s_Mpc",
+            "0.811_structure_growth"
+          ]
+        },
+        {
+          "id": "akkadian_legal",
+          "exact_map_rate": 1.0,
+          "semantic_coverage": 0.5,
+          "S": 0.6325783360136283,
+          "tokens": [
+            "summa",
+            "dinu"
+          ],
+          "meanings": [
+            "sum_summary_total",
+            "judgment"
+          ]
+        },
+        {
+          "id": "sumerian_water_king",
+          "exact_map_rate": 1.0,
+          "semantic_coverage": 1.0,
+          "S": 0.6325783360136283,
+          "tokens": [
+            "a-a",
+            "lugal"
+          ],
+          "meanings": [
+            "water",
+            "king"
+          ]
+        },
+        {
+          "id": "quantum_pair",
+          "exact_map_rate": 1.0,
+          "semantic_coverage": 1.0,
+          "S": 0.9555063001027196,
+          "tokens": [
+            "coherence",
+            "decoherence"
+          ],
+          "meanings": [
+            "synchronized_state",
+            "state_disruption"
+          ]
+        },
+        {
+          "id": "ecological_carbon",
+          "exact_map_rate": 1.0,
+          "semantic_coverage": 1.0,
+          "S": 0.5108324776397266,
+          "tokens": [
+            "carbon cycle",
+            "trophic level"
+          ],
+          "meanings": [
+            "global_flux",
+            "energy_hierarchy"
+          ]
+        }
+      ]
+    },
+    "hieroglyph": {
+      "ok": true,
+      "n": 17,
+      "accuracy": 1.0,
+      "details": [
+        {
+          "code": "A1",
+          "ok": true,
+          "meaning": [
+            "classifier_human_being"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "D21",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_r"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "G17",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_m"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "N5",
+          "ok": true,
+          "meaning": [
+            "logogram_the_sun_re"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "S34",
+          "ok": true,
+          "meaning": [
+            "logogram_life_ankh"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "D4",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_ꞽr"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "G5",
+          "ok": true,
+          "meaning": [
+            "logogram_horus_reading_ḥr"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "I9",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_f"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "N35",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_n"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "X1",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_t"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "A2",
+          "ok": true,
+          "meaning": [
+            "classifier_eating_drinking_speech_silence_thoughts_feelings"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "D36",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_ꜥ"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "𓀀",
+          "ok": true,
+          "meaning": [
+            "classifier_human_being"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "𓂋",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_r"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "𓅓",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_m"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "𓈖",
+          "ok": true,
+          "meaning": [
+            "phonemogram_reading_n"
+          ],
+          "S": 0.7770104436534506
+        },
+        {
+          "code": "𓋹",
+          "ok": true,
+          "meaning": [
+            "logogram_life_reading_ꜥnḫ"
+          ],
+          "S": 0.7770104436534506
+        }
+      ]
+    },
+    "classical_closed": {
+      "ok": true,
+      "n": 100,
+      "exact_rate": 1.0
+    },
+    "classical_held_out": {
+      "ok": true,
+      "source": "train_classical_report.json",
+      "n_gold": 20377,
+      "n_train": 17338,
+      "n_test": 3039,
+      "train_closed_exact": 0.978717268427731,
+      "test_open_exact_gapfill": 0.017439947351102335,
+      "test_open_partial_gapfill": 0.1487331358999671,
+      "test_open_exact_no_gapfill": 0.004606778545574202,
+      "test_open_partial_no_gapfill": 0.01217505758473182,
+      "gapfill_lift_partial": 0.13655807831523528,
+      "deployed_full_closed_exact": 0.976149580409285,
+      "note": "Full Dictionary+mine gold train/test (highest ROI pour)."
+    },
+    "vision_stub": {
+      "ok": true,
+      "map_rate": 1.0,
+      "meanings": [
+        "classifier_human_being",
+        "phonemogram_reading_r",
+        "phonemogram_reading_m",
+        "logogram_the_sun_re",
+        "logogram_life_ankh"
+      ],
+      "translation": "flowing_classifier_human_being flowing_phonemogram_reading_r flowing_phonemogram_reading_m flowing_logogram_the_sun_re flowing_logogram_life_ankh [FSOT 2.1 fluid translation].",
+      "S": 0.7770104436534506
+    },
+    "multilayer_vision": {
+      "ok": true,
+      "uv_boost_with_hidden": true,
+      "nir_boost_with_hidden": true,
+      "machine_only_has_uv": true,
+      "tensor_dim": 24,
+      "centers": [
+        {
+          "label": "ink_visible",
+          "gray": 0.08322917693453274,
+          "uv": 0.10853333869798856,
+          "nir": 0.07854364120930864,
+          "rgb": [
+            0.35257955429069304,
+            0.2978610458392625,
+            0.3099903423609692
+          ],
+          "S": 0.15935270631328266,
+          "tensor_dim": 24
+        },
+        {
+          "label": "ink_plus_hidden",
+          "gray": 0.10261108639433908,
+          "uv": 0.19991112362864,
+          "nir": 0.16263885839325473,
+          "rgb": [
+            0.3470527902000527,
+            0.2974484401579627,
+            0.31534914244114254
+          ],
+          "S": 0.15935270631328266,
+          "tensor_dim": 24
+        },
+        {
+          "label": "machine_only_underdrawing",
+          "gray": 0.07054563041820984,
+          "uv": 0.15283235796925487,
+          "nir": 0.14210925221123513,
+          "rgb": [
+            0.3921905346598932,
+            0.2934428337543161,
+            0.26953820587241295
+          ],
+          "S": 0.1578811515591246,
+          "tensor_dim": 24
+        }
+      ]
+    },
+    "lineage_gapfill": {
+      "ok": true,
+      "n_proposals": 320,
+      "n_accepted_tier_B": 142,
+      "accept_rate": 0.44375,
+      "sample": [
+        {
+          "concept_id": "75",
+          "concept_name": "*water",
+          "target_lang": "ALACATLATZALA_MIXTEC",
+          "proposed_form": "tekw~i",
+          "donor_lang": "SANTIAGO_CACALOXTEPEC_MIXTEC",
+          "donor_form": "tekw~i",
+          "form_similarity": 0.8333,
+          "support_neighbors": 2,
+          "fsot_S": 0.632578,
+          "accepted": true,
+          "reason": "high_form_similarity",
+          "tier": "B"
+        },
+        {
+          "concept_id": "82",
+          "concept_name": "*fire",
+          "target_lang": "ALACATLATZALA_MIXTEC",
+          "proposed_form": "5o*7o*",
+          "donor_lang": "SANTIAGO_CACALOXTEPEC_MIXTEC",
+          "donor_form": "5o*7o*",
+          "form_similarity": 0.8333,
+          "support_neighbors": 1,
+          "fsot_S": 0.632578,
+          "accepted": true,
+          "reason": "high_form_similarity",
+          "tier": "B"
+        },
+        {
+          "concept_id": "21",
+          "concept_name": "*dog",
+          "target_lang": "ALACATLATZALA_MIXTEC",
+          "proposed_form": "t*na*",
+          "donor_lang": "SANTIAGO_CACALOXTEPEC_MIXTEC",
+          "donor_form": "t*na*",
+          "form_similarity": 0.8333,
+          "support_neighbors": 5,
+          "fsot_S": 0.632578,
+          "accepted": true,
+          "reason": "high_form_similarity",
+          "tier": "B"
+        },
+        {
+          "concept_id": "41",
+          "concept_name": "*nose",
+          "target_lang": "ALACATLATZALA_MIXTEC",
+          "proposed_form": "8iCi*",
+          "donor_lang": "SANTIAGO_CACALOXTEPEC_MIXTEC",
+          "donor_form": "8iCi*",
+          "form_similarity": 0.8333,
+          "support_neighbors": 2,
+          "fsot_S": 0.632578,
+          "accepted": true,
+          "reason": "high_form_similarity",
+          "tier": "B"
+        },
+        {
+          "concept_id": "12",
+          "concept_name": "*two",
+          "target_lang": "ALACATLATZALA_MIXTEC",
+          "proposed_form": "3",
+          "donor_lang": "SANTIAGO_CACALOXTEPEC_MIXTEC",
+          "donor_form": "3",
+          "form_similarity": 0.8333,
+          "support_neighbors": 1,
+          "fsot_S": 0.632578,
+          "accepted": true,
+          "reason": "high_form_similarity",
+          "tier": "B"
+        }
+      ]
+    },
+    "domain_lexica": {
+      "ok": true,
+      "n_domains": 399
+    },
+    "vision_field_student": {
+      "ok": true,
+      "scene_class": "visible_mark_plus_hidden",
+      "confidence": 0.82,
+      "peak_uv": 0.24966082050150454,
+      "peak_nir": 0.20484834123555767
+    },
+    "audio_ipa": {
+      "ok": true,
+      "ipa": "ˈwɔːtər",
+      "features": {
+        "voicing": 1.0,
+        "nasality": 0.0,
+        "frontness": 0.2,
+        "openness": 0.8,
+        "length": 1.0,
+        "stress": 1.0,
+        "n_segments": 5.0,
+        "fsot_energy": 0.8605299047539587,
+        "fsot_tempo": 1.1
+      },
+      "waveform_path": "D:\\training data\\pflt_linguistics\\05_phonology_vocal\\waveforms\\en_water.wav",
+      "waveform_engine": "sapi_wav",
+      "policy": "ipa_plus_waveform"
+    },
+    "live_demos": {
+      "ok": true,
+      "demos": [
+        {
+          "context": "mythological",
+          "input": "ud-bi-a an ki-ta ba-dim-ma",
+          "target": "english",
+          "meanings": [
+            "primordial_time_of_that",
+            "sky_domain",
+            "earth_base_from",
+            "creation_act_formed_complete"
+          ],
+          "translation": "flowing_primordial_time_of_that flowing_sky_domain flowing_earth_base_from flowing_creation_act_formed_complete [FSOT 2.1 fluid translation].",
+          "S": 0.6325783360136283,
+          "map": 1.0
+        },
+        {
+          "context": "genomic",
+          "input": "ATG-GTG-CAC-CTG-ACT",
+          "target": "english",
+          "meanings": [
+            "start",
+            "transfer",
+            "energy",
+            "structure",
+            "action"
+          ],
+          "translation": "flowing_start_2.39e-06eV flowing_transfer_2.39e-06eV flowing_energy_2.39e-06eV flowing_structure_2.39e-06eV flowing_action [FSOT 2.1 fluid translation].",
+          "S": 0.47768238921582773,
+          "map": 1.0
+        },
+        {
+          "context": "hieroglyphic",
+          "input": "A1 N5 S34",
+          "target": "fluid_tongue",
+          "meanings": [
+            "classifier_human_being",
+            "logogram_the_sun_re",
+            "logogram_life_ankh"
+          ],
+          "translation": "fluid_flowing_classifier_human_being [S=0.8787] fluid_flowing_logogram_the_sun_re [S=0.8787] fluid_flowing_logogram_life_ankh [S=0.8787] [Fluid Spacetime resonance narrative].",
+          "S": 0.8786930538887002,
+          "map": 1.0
+        },
+        {
+          "context": "historical",
+          "input": "aqua lingua ius",
+          "target": "english",
+          "meanings": [
+            "water",
+            "language",
+            "law"
+          ],
+          "translation": "flowing_water flowing_language flowing_law [FSOT 2.1 fluid translation].",
+          "S": 0.6325783360136283,
+          "map": 1.0
+        },
+        {
+          "context": "cosmological",
+          "input": "hubbk s8",
+          "target": "english",
+          "meanings": [
+            "71.98_km_s_Mpc",
+            "0.811_structure_growth"
+          ],
+          "translation": "stabilized_71.98_km_s_Mpc stabilized_0.811_structure_growth [FSOT 2.1 fluid translation].",
+          "S": -0.5024559462100433,
+          "map": 1.0
+        }
+      ]
+    }
+  },
+  "errors": [],
+  "scoreboard": {
+    "passed": 13,
+    "total": 13,
+    "pass_rate": 1.0,
+    "checks": {
+      "scalar_health": true,
+      "lexicon": true,
+      "real_gold": true,
+      "hieroglyph": true,
+      "classical_closed": true,
+      "classical_held_out": true,
+      "vision_stub": true,
+      "multilayer_vision": true,
+      "lineage_gapfill": true,
+      "domain_lexica": true,
+      "vision_field_student": true,
+      "audio_ipa": true,
+      "live_demos": true
+    },
+    "elapsed_s": 6.91,
+    "n_errors": 0
+  }
+}
