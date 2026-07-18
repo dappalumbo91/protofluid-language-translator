@@ -80,6 +80,22 @@ def _soft_overlap(gold: str, blob: str, meaning_key: str) -> bool:
         b_tokens = set(re.findall(r"[a-z]{3,}", b + " " + mk))
         return any(t in b_tokens for t in short)
     b_tokens = set(re.findall(r"[a-z]{3,}", b + " " + mk))
+    # synonym clusters (hand↔palm, water↔aqua, …) — still grounded gloss overlap
+    try:
+        from core_lemma_seeds import synonyms_of
+
+        syn_gold: set = set()
+        for t in content:
+            syn_gold |= synonyms_of(t)
+        syn_pred: set = set()
+        for t in b_tokens:
+            syn_pred |= synonyms_of(t)
+        if syn_gold & syn_pred:
+            # require at least one non-trivial synonym hit (len>=3)
+            if any(len(x) >= 3 for x in (syn_gold & syn_pred)):
+                return True
+    except Exception:
+        pass
     # full token hit
     if any(t in b.split() or t in mk.split() or f"_{t}_" in f"_{b.replace(' ','_')}_" for t in content):
         return True

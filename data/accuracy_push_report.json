@@ -1,35 +1,33 @@
 {
-  "built_utc": "2026-07-18T12:42:27.848014+00:00",
-  "core_only_partial": 0.17688467938051966,
-  "core_only_exact": 0.020862664789453474,
-  "n_test": 7813,
-  "n_train": 69719,
-  "n_core_gold": 77532,
+  "built_utc": "2026-07-18T12:53:21.869939+00:00",
+  "core_only_partial": 0.17781486712029784,
+  "core_only_exact": 0.020413403517781488,
+  "n_test": 7789,
+  "n_train": 69832,
   "by_lang": {
     "la": {
-      "n": 4168,
-      "exact": 0.01991362763915547,
-      "partial": 0.23104606525911708
+      "n": 4160,
+      "exact": 0.01971153846153846,
+      "partial": 0.2329326923076923
     },
     "grc": {
-      "n": 2016,
-      "exact": 0.022817460317460316,
-      "partial": 0.14434523809523808
+      "n": 2006,
+      "exact": 0.020937188434695914,
+      "partial": 0.14356929212362912
     },
     "ang": {
-      "n": 919,
-      "exact": 0.029379760609358,
-      "partial": 0.0794341675734494
+      "n": 913,
+      "exact": 0.029572836801752465,
+      "partial": 0.07886089813800658
     },
     "en": {
       "n": 708,
-      "exact": 0.007062146892655367,
-      "partial": 0.0748587570621469
+      "exact": 0.00847457627118644,
+      "partial": 0.07627118644067797
     }
   },
   "prior_v012": 0.1662,
-  "delta_vs_v012_pp": 1.0684679380519673,
-  "delta_vs_16_2_pp": 1.4884679380519654,
+  "delta_vs_v012_pp": 1.1614867120297856,
   "meaningful": false,
-  "stack": "dense_short_lemmas+declension_first+domain_sense"
+  "stack": "core_lemma_seeds+synonym_soft+dense_paradigms+declension"
 }

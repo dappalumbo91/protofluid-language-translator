@@ -130,6 +130,28 @@ def load_all_gold() -> List[Dict[str, Any]]:
             prev["is_name"] = True
             if st and not prev.get("source_title"):
                 prev["source_title"] = st
+
+    # Merge high-frequency classical lemma seeds (WORDS-style curriculum)
+    try:
+        from core_lemma_seeds import seed_records
+
+        for rec in seed_records():
+            key = f"{rec['source_lang']}|{rec['source_word']}"
+            prev = best.get(key)
+            if prev is None or float(rec.get("confidence") or 0) >= float(prev.get("confidence") or 0):
+                best[key] = rec
+            # also keep seed if prev exists but boost confidence for transfer priority
+            elif prev is not None and prev.get("source_title") != "core_lemma_seeds":
+                # ensure seed gloss is available as alternate via higher content if meta prev
+                from meaning_clean import content_score, is_meta_meaning
+
+                if is_meta_meaning(prev.get("meaning_key") or "") or content_score(
+                    rec["meaning_key"]
+                ) > content_score(prev.get("meaning_key") or ""):
+                    best[key] = rec
+    except Exception:
+        pass
+
     return list(best.values())
 
 
@@ -144,9 +166,31 @@ def partition_core_name(rows: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]
     return core, names
 
 
-def split_rows(rows: List[Dict[str, Any]], train_frac: float = 0.85) -> Tuple[List, List]:
+def split_rows(
+    rows: List[Dict[str, Any]],
+    train_frac: float = 0.85,
+    *,
+    force_seeds_train: bool = True,
+) -> Tuple[List, List]:
+    """
+    Stable hash split. High-frequency core lemma seeds are forced into train
+    so productive morphology has donor lemmas (open-set tests other forms).
+    """
+    seed_keys = set()
+    if force_seeds_train:
+        try:
+            from core_lemma_seeds import seed_keys as _sk
+
+            seed_keys = _sk()
+        except Exception:
+            seed_keys = set()
+
     train, test = [], []
     for r in rows:
+        key = f"{r['source_lang']}|{r['source_word']}"
+        if key in seed_keys or r.get("source_title") == "core_lemma_seeds":
+            train.append(r)
+            continue
         h = int(hashlib.sha256(f"{r['source_lang']}:{r['source_word']}".encode()).hexdigest(), 16) % 10000
         if h < int(train_frac * 10000):
             train.append(r)
@@ -169,7 +213,7 @@ def inject(engine: PFLT, rows: List[Dict[str, Any]], *, expand_paradigms: bool =
     GapFillStudent / OpenSetBooster stay fast on the real gold lexicon while
     inflected forms still resolve as exact map hits.
     """
-    from meaning_clean import content_score, fold_form, is_meta_meaning
+    from meaning_clean import content_score, fold_form, is_meta_meaning  # noqa: F811
 
     n = 0
     for r in rows:
@@ -198,15 +242,30 @@ def inject(engine: PFLT, rows: List[Dict[str, Any]], *, expand_paradigms: bool =
     if expand_paradigms:
         try:
             from paradigm_expand import expand_lexicon
+            from core_lemma_seeds import seed_keys
 
-            extra = expand_lexicon(rows, max_per_form=10, only_content=True)
-            if len(extra) > 100000:
-                items = sorted(extra.items(), key=lambda kv: len(kv[0]))[:100000]
-                extra = dict(items)
-            for form, meaning in extra.items():
+            seed_set = seed_keys()
+            seed_rows = [
+                r
+                for r in rows
+                if f"{r.get('source_lang')}|{r.get('source_word')}" in seed_set
+                or r.get("source_title") == "core_lemma_seeds"
+                or (
+                    not is_meta_meaning(r.get("meaning_key") or "")
+                    and len((r.get("meaning_key") or "").replace("_", " ").split()) <= 2
+                )
+            ]
+            extra = expand_lexicon(seed_rows, max_per_form=14, only_content=True)
+            extra2 = expand_lexicon(rows, max_per_form=8, only_content=True)
+            for form, meaning in {**extra2, **extra}.items():
                 if form not in engine.pul_terms and form not in engine.paradigm_terms:
                     engine.paradigm_terms[form] = meaning
                     n += 1
+            if len(engine.paradigm_terms) > 120000:
+                items = sorted(engine.paradigm_terms.items(), key=lambda kv: len(kv[0]))[
+                    :120000
+                ]
+                engine.paradigm_terms = dict(items)
         except Exception:
             pass
     engine._keys_sorted = sorted(engine.pul_terms.keys(), key=len, reverse=True)

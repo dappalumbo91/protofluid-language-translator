@@ -9,6 +9,7 @@ FSOT-safe: no free generation; only reuses train-supported senses.
 """
 from __future__ import annotations
 
+import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from typing import Dict, Iterable, List, Optional, Tuple
@@ -43,16 +44,33 @@ class LemmaSenseIndex:
         if content_score(meaning) < 0.35:
             return
         self.n_forms += 1
+        # expand meaning with synonym cluster heads for voting reinforcement
+        meanings = {meaning}
+        try:
+            from core_lemma_seeds import synonyms_of
+
+            # map cluster members back to a canonical short gloss when possible
+            for part in re.findall(r"[a-z]{3,}", meaning.lower().replace("_", " ")):
+                syns = synonyms_of(part)
+                if len(syns) > 1:
+                    # keep original + shortest synonym as alias votes
+                    meanings.add(meaning)
+                    short = min(syns, key=len)
+                    if len(short) >= 3:
+                        meanings.add(short)
+        except Exception:
+            pass
         # index full fold + all candidate stems
         nf = fold_form(form)
-        if len(nf) >= 3:
-            self.stem_senses[nf][meaning] += 1
-            self.stem_example.setdefault(nf, form)
-        for st in candidate_stems(form, lang):
-            if len(st) < 3:
-                continue
-            self.stem_senses[st][meaning] += 2 if st == nf else 1
-            self.stem_example.setdefault(st, form)
+        for meaning_i in meanings:
+            if len(nf) >= 3:
+                self.stem_senses[nf][meaning_i] += 1
+                self.stem_example.setdefault(nf, form)
+            for st in candidate_stems(form, lang):
+                if len(st) < 3:
+                    continue
+                self.stem_senses[st][meaning_i] += 2 if st == nf else 1
+                self.stem_example.setdefault(st, form)
 
     def build_from_lexicon(self, lexicon: Dict[str, str], lang_hint: str = "la") -> int:
         n = 0
