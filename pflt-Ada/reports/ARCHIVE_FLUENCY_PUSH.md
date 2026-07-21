@@ -1,6 +1,6 @@
 # Archive linguistics → fluency push
 
-**Built:** 2026-07-21T17:56:00.669967+00:00
+**Built:** 2026-07-21T18:27:13.540369+00:00
 **Archive:** `I:\FSOT-Physical-Archive\02_FSOT-2.1-Lean-Full`
 **Pin:** D1D38A ok=True
 
@@ -28,12 +28,12 @@
 | Metric | Before | After |
 |--------|-------:|------:|
 | BLEU-4 | 5.99 | **27.03** |
-| BLEU-1 | 69.04 | **89.06** |
-| U-F1 | 53.19 | **81.2** |
+| BLEU-1 | 69.04 | **89.05** |
+| U-F1 | 53.19 | **81.19** |
 | chrF | 40.01 | **64.74** |
 | Coverage | 99.97 | **100.0** |
 
-Zipf densify: +671 unigrams, +9192 bigrams/templates.
+Zipf densify: +0 unigrams, +0 bigrams/templates.
 
 Law panel S=0.651324761885 (densify does not move law).
 

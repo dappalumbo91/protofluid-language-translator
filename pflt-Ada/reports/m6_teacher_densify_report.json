@@ -1,0 +1,105 @@
+{
+  "built_utc": "2026-07-21T18:26:55.550632+00:00",
+  "fsot": "Teacher densify only; law S=K(T1+T2+T3) pin D1D38A unchanged",
+  "models_root": "D:\\training data\\pflt_linguistics\\13_huggingface\\models",
+  "stats": {
+    "langs": {
+      "zh": {
+        "n": 800,
+        "uni": 2624,
+        "bi": 891
+      },
+      "de": {
+        "n": 800,
+        "uni": 97,
+        "bi": 1352
+      },
+      "ru": {
+        "n": 800,
+        "uni": 433,
+        "bi": 2175
+      },
+      "fr": {
+        "n": 800,
+        "uni": 191,
+        "bi": 1688
+      },
+      "es": {
+        "n": 800,
+        "uni": 144,
+        "bi": 1684
+      },
+      "ja": {
+        "n": 708,
+        "uni": 2805,
+        "bi": 1206
+      },
+      "nl": {
+        "n": 800,
+        "uni": 246,
+        "bi": 2276
+      },
+      "ar": {
+        "n": 800,
+        "uni": 432,
+        "bi": 2527
+      },
+      "pt": {
+        "n": 800,
+        "uni": 163,
+        "bi": 1952
+      },
+      "he": {
+        "n": 800,
+        "uni": 544,
+        "bi": 2665
+      },
+      "it": {
+        "n": 800,
+        "uni": 150,
+        "bi": 1524
+      },
+      "tr": {
+        "n": 800,
+        "uni": 893,
+        "bi": 3257
+      },
+      "hi": {
+        "n": 800,
+        "uni": 36,
+        "bi": 859
+      },
+      "ko": {
+        "n": 800,
+        "uni": 1002,
+        "bi": 1231
+      },
+      "pl": {
+        "n": 800,
+        "uni": 462,
+        "bi": 2450
+      }
+    },
+    "models_used": [
+      "Helsinki-NLP__opus-mt-zh-en",
+      "Helsinki-NLP__opus-mt-de-en",
+      "Helsinki-NLP__opus-mt-ru-en",
+      "Helsinki-NLP__opus-mt-fr-en",
+      "Helsinki-NLP__opus-mt-es-en",
+      "Helsinki-NLP__opus-mt-ja-en",
+      "Helsinki-NLP__opus-mt-mul-en",
+      "Helsinki-NLP__opus-mt-ar-en",
+      "Helsinki-NLP__opus-mt-mul-en",
+      "Helsinki-NLP__opus-mt-mul-en",
+      "Helsinki-NLP__opus-mt-mul-en",
+      "Helsinki-NLP__opus-mt-mul-en",
+      "Helsinki-NLP__opus-mt-mul-en",
+      "Helsinki-NLP__opus-mt-mul-en",
+      "Helsinki-NLP__opus-mt-mul-en"
+    ]
+  },
+  "total_uni": 10222,
+  "total_bi": 27737,
+  "flores": "still gated — accept https://huggingface.co/datasets/facebook/flores",
+  "next": "python fsot_archive_fluency_push.py && python fsot_solve_fluency_gap.py"
+}

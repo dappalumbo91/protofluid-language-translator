@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-07-21T17:56:00.669967+00:00",
+  "built_utc": "2026-07-21T18:27:13.540369+00:00",
   "archive_root": "I:\\FSOT-Physical-Archive\\02_FSOT-2.1-Lean-Full",
   "pin": {
     "archive_path": "I:\\FSOT-Physical-Archive\\02_FSOT-2.1-Lean-Full\\vendor\\fsot_compute.py",
@@ -28,8 +28,8 @@
     "Cross_linguistic_info_rate": "FSOT: (phi^3)*(phi^7)/pi"
   },
   "densify": {
-    "uni": 671,
-    "bi": 9192
+    "uni": 0,
+    "bi": 0
   },
   "before_overall": {
     "n": 6400,
@@ -46,12 +46,12 @@
   "after_overall": {
     "n": 6400,
     "bleu": 27.03,
-    "bleu1": 89.06,
-    "bleu2": 39.13,
-    "bp": 0.824,
-    "u_prec": 89.06,
-    "u_rec": 74.61,
-    "u_f1": 81.2,
+    "bleu1": 89.05,
+    "bleu2": 39.12,
+    "bp": 0.8241,
+    "u_prec": 89.05,
+    "u_rec": 74.62,
+    "u_f1": 81.19,
     "chrf": 64.74,
     "token_coverage": 100.0
   },
@@ -99,13 +99,13 @@
       "lang": "fr",
       "n": 400,
       "bleu": 18.29,
-      "bleu1": 83.22,
-      "bleu2": 28.53,
-      "bp": 0.8563,
-      "u_prec": 83.21,
+      "bleu1": 83.14,
+      "bleu2": 28.5,
+      "bp": 0.8572,
+      "u_prec": 83.14,
       "u_rec": 72.03,
-      "u_f1": 77.22,
-      "chrf": 61.43,
+      "u_f1": 77.19,
+      "chrf": 61.41,
       "token_coverage": 100.0
     },
     {
@@ -124,14 +124,14 @@
     {
       "lang": "hi",
       "n": 400,
-      "bleu": 5.87,
-      "bleu1": 46.27,
+      "bleu": 5.88,
+      "bleu1": 46.29,
       "bleu2": 8.66,
       "bp": 1.0,
-      "u_prec": 46.25,
+      "u_prec": 46.27,
       "u_rec": 48.63,
-      "u_f1": 47.41,
-      "chrf": 36.77,
+      "u_f1": 47.42,
+      "chrf": 36.72,
       "token_coverage": 100.0
     },
     {
@@ -189,14 +189,14 @@
     {
       "lang": "nl",
       "n": 400,
-      "bleu": 22.98,
-      "bleu1": 84.96,
-      "bleu2": 33.46,
+      "bleu": 23.08,
+      "bleu1": 84.94,
+      "bleu2": 33.54,
       "bp": 1.0,
-      "u_prec": 84.95,
-      "u_rec": 85.1,
-      "u_f1": 85.03,
-      "chrf": 67.73,
+      "u_prec": 84.94,
+      "u_rec": 85.23,
+      "u_f1": 85.08,
+      "chrf": 67.81,
       "token_coverage": 100.0
     },
     {
@@ -215,27 +215,27 @@
     {
       "lang": "pt",
       "n": 400,
-      "bleu": 18.94,
-      "bleu1": 84.41,
-      "bleu2": 30.43,
-      "bp": 0.9859,
-      "u_prec": 84.41,
-      "u_rec": 83.23,
-      "u_f1": 83.81,
-      "chrf": 67.84,
+      "bleu": 18.9,
+      "bleu1": 84.35,
+      "bleu2": 30.34,
+      "bp": 0.9863,
+      "u_prec": 84.34,
+      "u_rec": 83.19,
+      "u_f1": 83.76,
+      "chrf": 67.81,
       "token_coverage": 100.0
     },
     {
       "lang": "ru",
       "n": 400,
       "bleu": 25.16,
-      "bleu1": 95.04,
+      "bleu1": 94.99,
       "bleu2": 35.61,
       "bp": 0.8963,
-      "u_prec": 95.03,
-      "u_rec": 85.66,
-      "u_f1": 90.1,
-      "chrf": 71.53,
+      "u_prec": 94.99,
+      "u_rec": 85.62,
+      "u_f1": 90.06,
+      "chrf": 71.5,
       "token_coverage": 100.0
     },
     {
