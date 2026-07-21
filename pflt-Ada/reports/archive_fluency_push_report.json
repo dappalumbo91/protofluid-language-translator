@@ -1,0 +1,282 @@
+{
+  "built_utc": "2026-07-21T17:56:00.669967+00:00",
+  "archive_root": "I:\\FSOT-Physical-Archive\\02_FSOT-2.1-Lean-Full",
+  "pin": {
+    "archive_path": "I:\\FSOT-Physical-Archive\\02_FSOT-2.1-Lean-Full\\vendor\\fsot_compute.py",
+    "sha256": "d1d38a185487b452e470ac68ece2eb45aeb1ca9ce25fc9bf9564c19633ffbe70",
+    "prefix": "D1D38A",
+    "ok": true
+  },
+  "how_to_use_math": {
+    "law": "S=K(T1+T2+T3) only from seeds; never fit K to BLEU",
+    "students": "densify / morph / phrase / reorder under law",
+    "linguistics_priors": "Zipf, sentence length, dependency length from archive derivations",
+    "domain": "linguistic D_eff=12 from linguistics_formal_benchmark"
+  },
+  "priors_used": {
+    "zipf_s": 1.0,
+    "mean_sent_len": 17.5992242940162,
+    "mean_dep_len": 2.40001358369048,
+    "heaps_beta": 0.599997786040735,
+    "info_rate_bps": 39.1495279442755,
+    "D_eff_linguistic": 12.0
+  },
+  "formulas": {
+    "Zipf_exponent_English": "FSOT: phi**2 - phi  (exact golden-ratio identity)",
+    "Mean_dependency_length_EN": "FSOT: phi*(e/pi)+1",
+    "Sentence_length_mean_EN": "FSOT: ((phi^3)-(e/pi))*(e^phi)",
+    "Cross_linguistic_info_rate": "FSOT: (phi^3)*(phi^7)/pi"
+  },
+  "densify": {
+    "uni": 671,
+    "bi": 9192
+  },
+  "before_overall": {
+    "n": 6400,
+    "bleu": 5.99,
+    "bleu1": 69.04,
+    "bleu2": 17.65,
+    "bp": 0.5512,
+    "u_prec": 69.04,
+    "u_rec": 43.26,
+    "u_f1": 53.19,
+    "chrf": 40.01,
+    "token_coverage": 99.97
+  },
+  "after_overall": {
+    "n": 6400,
+    "bleu": 27.03,
+    "bleu1": 89.06,
+    "bleu2": 39.13,
+    "bp": 0.824,
+    "u_prec": 89.06,
+    "u_rec": 74.61,
+    "u_f1": 81.2,
+    "chrf": 64.74,
+    "token_coverage": 100.0
+  },
+  "by_lang": [
+    {
+      "lang": "ar",
+      "n": 400,
+      "bleu": 25.66,
+      "bleu1": 94.1,
+      "bleu2": 38.11,
+      "bp": 0.9427,
+      "u_prec": 94.1,
+      "u_rec": 88.86,
+      "u_f1": 91.4,
+      "chrf": 73.3,
+      "token_coverage": 100.0
+    },
+    {
+      "lang": "de",
+      "n": 400,
+      "bleu": 17.77,
+      "bleu1": 84.58,
+      "bleu2": 28.13,
+      "bp": 0.8341,
+      "u_prec": 84.58,
+      "u_rec": 71.59,
+      "u_f1": 77.54,
+      "chrf": 61.39,
+      "token_coverage": 100.0
+    },
+    {
+      "lang": "es",
+      "n": 400,
+      "bleu": 18.53,
+      "bleu1": 83.95,
+      "bleu2": 28.87,
+      "bp": 0.9357,
+      "u_prec": 83.95,
+      "u_rec": 78.72,
+      "u_f1": 81.25,
+      "chrf": 64.93,
+      "token_coverage": 100.0
+    },
+    {
+      "lang": "fr",
+      "n": 400,
+      "bleu": 18.29,
+      "bleu1": 83.22,
+      "bleu2": 28.53,
+      "bp": 0.8563,
+      "u_prec": 83.21,
+      "u_rec": 72.03,
+      "u_f1": 77.22,
+      "chrf": 61.43,
+      "token_coverage": 100.0
+    },
+    {
+      "lang": "he",
+      "n": 400,
+      "bleu": 26.1,
+      "bleu1": 97.49,
+      "bleu2": 39.03,
+      "bp": 0.9007,
+      "u_prec": 97.49,
+      "u_rec": 88.26,
+      "u_f1": 92.64,
+      "chrf": 74.12,
+      "token_coverage": 100.0
+    },
+    {
+      "lang": "hi",
+      "n": 400,
+      "bleu": 5.87,
+      "bleu1": 46.27,
+      "bleu2": 8.66,
+      "bp": 1.0,
+      "u_prec": 46.25,
+      "u_rec": 48.63,
+      "u_f1": 47.41,
+      "chrf": 36.77,
+      "token_coverage": 100.0
+    },
+    {
+      "lang": "it",
+      "n": 400,
+      "bleu": 21.26,
+      "bleu1": 89.28,
+      "bleu2": 31.1,
+      "bp": 1.0,
+      "u_prec": 89.28,
+      "u_rec": 89.56,
+      "u_f1": 89.42,
+      "chrf": 70.5,
+      "token_coverage": 100.0
+    },
+    {
+      "lang": "ja",
+      "n": 400,
+      "bleu": 28.31,
+      "bleu1": 99.72,
+      "bleu2": 99.51,
+      "bp": 0.2849,
+      "u_prec": 99.72,
+      "u_rec": 44.21,
+      "u_f1": 61.27,
+      "chrf": 49.19,
+      "token_coverage": 100.0
+    },
+    {
+      "lang": "ko",
+      "n": 400,
+      "bleu": 27.78,
+      "bleu1": 96.97,
+      "bleu2": 41.11,
+      "bp": 0.9165,
+      "u_prec": 96.96,
+      "u_rec": 89.18,
+      "u_f1": 92.91,
+      "chrf": 73.84,
+      "token_coverage": 100.0
+    },
+    {
+      "lang": "la",
+      "n": 400,
+      "bleu": 23.32,
+      "bleu1": 98.15,
+      "bleu2": 37.67,
+      "bp": 0.8769,
+      "u_prec": 98.15,
+      "u_rec": 86.75,
+      "u_f1": 92.1,
+      "chrf": 71.63,
+      "token_coverage": 100.0
+    },
+    {
+      "lang": "nl",
+      "n": 400,
+      "bleu": 22.98,
+      "bleu1": 84.96,
+      "bleu2": 33.46,
+      "bp": 1.0,
+      "u_prec": 84.95,
+      "u_rec": 85.1,
+      "u_f1": 85.03,
+      "chrf": 67.73,
+      "token_coverage": 100.0
+    },
+    {
+      "lang": "pl",
+      "n": 400,
+      "bleu": 22.37,
+      "bleu1": 96.61,
+      "bleu2": 36.6,
+      "bp": 0.8726,
+      "u_prec": 96.6,
+      "u_rec": 85.02,
+      "u_f1": 90.44,
+      "chrf": 71.35,
+      "token_coverage": 100.0
+    },
+    {
+      "lang": "pt",
+      "n": 400,
+      "bleu": 18.94,
+      "bleu1": 84.41,
+      "bleu2": 30.43,
+      "bp": 0.9859,
+      "u_prec": 84.41,
+      "u_rec": 83.23,
+      "u_f1": 83.81,
+      "chrf": 67.84,
+      "token_coverage": 100.0
+    },
+    {
+      "lang": "ru",
+      "n": 400,
+      "bleu": 25.16,
+      "bleu1": 95.04,
+      "bleu2": 35.61,
+      "bp": 0.8963,
+      "u_prec": 95.03,
+      "u_rec": 85.66,
+      "u_f1": 90.1,
+      "chrf": 71.53,
+      "token_coverage": 100.0
+    },
+    {
+      "lang": "tr",
+      "n": 400,
+      "bleu": 23.83,
+      "bleu1": 96.63,
+      "bleu2": 36.09,
+      "bp": 0.908,
+      "u_prec": 96.63,
+      "u_rec": 88.13,
+      "u_f1": 92.19,
+      "chrf": 73.08,
+      "token_coverage": 100.0
+    },
+    {
+      "lang": "zh",
+      "n": 400,
+      "bleu": 33.35,
+      "bleu1": 100.0,
+      "bleu2": 100.0,
+      "bp": 0.3335,
+      "u_prec": 100.0,
+      "u_rec": 47.66,
+      "u_f1": 64.55,
+      "chrf": 53.46,
+      "token_coverage": 100.0
+    }
+  ],
+  "law_panel": {
+    "S": 0.6513247618848969,
+    "T1": 0.5499552199094241,
+    "T2": 1.0,
+    "T3": 1.7070633668184452e-17,
+    "pin": "D1D38A"
+  },
+  "synced_files": [
+    "linguistics_derivations.json",
+    "LINGUISTIC_TARGETS.csv",
+    "linguistics_manifest.yaml",
+    "linguistics_formal_benchmark.json",
+    "fsot_compute_AUTHORITY_PIN.json"
+  ]
+}
