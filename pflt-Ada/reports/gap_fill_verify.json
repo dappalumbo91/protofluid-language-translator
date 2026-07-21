@@ -1,0 +1,52 @@
+{
+  "langs": 113,
+  "open_overall": 99.99,
+  "product_overall": 99.99,
+  "thin_n_lt_50": [],
+  "border_50_99": [],
+  "solid_n50_ge95_open": 113,
+  "weak": [],
+  "targets": {
+    "hit": {
+      "n": 200,
+      "open": 100.0,
+      "product": 100.0
+    },
+    "pal": {
+      "n": 200,
+      "open": 100.0,
+      "product": 100.0
+    },
+    "pro": {
+      "n": 200,
+      "open": 100.0,
+      "product": 100.0
+    },
+    "mga": {
+      "n": 200,
+      "open": 100.0,
+      "product": 100.0
+    },
+    "osp": {
+      "n": 200,
+      "open": 100.0,
+      "product": 100.0
+    },
+    "orv": {
+      "n": 200,
+      "open": 100.0,
+      "product": 100.0
+    },
+    "roa-opt": {
+      "n": 200,
+      "open": 99.0,
+      "product": 99.0
+    },
+    "uga": {
+      "n": 200,
+      "open": 100.0,
+      "product": 100.0
+    }
+  },
+  "ready_for_hf_packaging": true
+}

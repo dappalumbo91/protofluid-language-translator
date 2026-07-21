@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-07-21T16:48:50.142038+00:00",
+  "built_utc": "2026-07-21T16:59:49.035147+00:00",
   "goal": "Beat competitors: accuracy + breadth + depth under FSOT",
   "catalog_size": 113,
   "catalog": [
@@ -851,64 +851,64 @@
       "ok": true
     },
     {
-      "lang": "xcl",
-      "n": 175,
-      "open": 100.0,
-      "product": 100.0,
-      "ok": true
-    },
-    {
-      "lang": "uga",
-      "n": 96,
-      "open": 100.0,
-      "product": 100.0,
-      "ok": true
-    },
-    {
-      "lang": "roa-opt",
-      "n": 47,
-      "open": 100.0,
-      "product": 100.0,
-      "ok": true
-    },
-    {
-      "lang": "orv",
-      "n": 36,
-      "open": 100.0,
-      "product": 100.0,
-      "ok": true
-    },
-    {
-      "lang": "osp",
-      "n": 34,
+      "lang": "hit",
+      "n": 200,
       "open": 100.0,
       "product": 100.0,
       "ok": true
     },
     {
       "lang": "mga",
-      "n": 25,
+      "n": 200,
       "open": 100.0,
       "product": 100.0,
       "ok": true
     },
     {
-      "lang": "pro",
-      "n": 17,
+      "lang": "orv",
+      "n": 200,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "osp",
+      "n": 200,
       "open": 100.0,
       "product": 100.0,
       "ok": true
     },
     {
       "lang": "pal",
-      "n": 10,
+      "n": 200,
       "open": 100.0,
       "product": 100.0,
       "ok": true
     },
     {
-      "lang": "hit",
-      "n": 3,
+      "lang": "pro",
+      "n": 200,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "roa-opt",
+      "n": 200,
+      "open": 99.0,
+      "product": 99.0,
+      "ok": true
+    },
+    {
+      "lang": "uga",
+      "n": 200,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "xcl",
+      "n": 175,
       "open": 100.0,
       "product": 100.0,
       "ok": true
