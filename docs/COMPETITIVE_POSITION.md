@@ -34,17 +34,27 @@ This bar is **not** what Google advertises — but it is real offline inventory 
 
 ### B — Sentence fluency (product densify path)
 
-Eval: Tatoeba-style held sample (16 langs × 400), **product densify** after FSOT Zipf/dep push.
+**B1 — Chat/Tatoeba domain** (16 langs × 400, product densify after FSOT Zipf/dep):
 
-| Metric | PFLT (best recent) | Rough competitor band* |
-|--------|-------------------:|------------------------|
-| **BLEU-4** | **~27** | High-resource pairs often **~35–50+** (news/FLORES; system-dependent) |
-| **BLEU-1** | **~89** | Often **~70–90** (unigram content; we look strong) |
-| **U-F1** | **~81** | Content overlap — **competitive** |
-| **chrF** | **~65** | Strong systems often **~50–70+** |
-| **Coverage** | **~100%** | High for lexicon systems |
+| Metric | PFLT | Rough competitor band* |
+|--------|-----:|------------------------|
+| **BLEU-4** | **~27** | Neural on easy chat often **higher**; content-level we look strong |
+| **BLEU-1** | **~89** | Often **~70–90** |
+| **U-F1** | **~81** | Competitive content overlap |
+| **chrF** | **~65** | Strong systems **~50–70+** |
+| **Coverage** | **~100%** | High |
 
-\*Competitor bands are **order-of-magnitude literature ranges** for neural MT on standard test sets — not a same-day A/B on identical FLORES files (FLORES data files still **403 gated** from our API despite README access).
+**B2 — News domain (public WMT14 de→en test, n=3003)** — harder bar:
+
+| Metric | PFLT densify path | Typical neural (DeepL/Google-class) |
+|--------|------------------:|-------------------------------------|
+| **BLEU-4 / sacreBLEU** | **~1.0 / ~1.1** | Often **~30–45+** on de–en news |
+| **BLEU-1** | **~31** | Much higher |
+| **Coverage** | **~86%** | Near full |
+
+This shows **domain shift**: chat densify does not yet transfer to news. Competitors train on news-scale parallel; we must densify WMT/news or use neural student for that bar.
+
+\*Literature ranges, not same-day FLORES A/B. FLORES **data files still 403** (README ok; parquet gated — re-check Hub “Access granted”).
 
 **Per-lang snapshot (product densify, BLEU-4):**  
 ar/he/ru/ko/tr often **~22–28**; de/es/fr/pt **~17–19**; **ja/zh** high B1 but low BP (order/seg) → full BLEU still limited.
