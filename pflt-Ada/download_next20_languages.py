@@ -104,9 +104,15 @@ def clean_form(w: str) -> str:
 
 
 def kaikki_url(name: str) -> str:
-    # spaces in path
-    enc = name.replace(" ", "%20")
-    return f"https://kaikki.org/dictionary/{enc}/kaikki.org-dictionary-{enc}.jsonl"
+    """Kaikki page path keeps spaces; JSONL filename drops spaces.
+
+    Ancient Greek → /dictionary/Ancient%20Greek/kaikki.org-dictionary-AncientGreek.jsonl
+    """
+    from urllib.parse import quote
+
+    page = quote(name)
+    stem = name.replace(" ", "")  # Ancient Greek → AncientGreek
+    return f"https://kaikki.org/dictionary/{page}/kaikki.org-dictionary-{stem}.jsonl"
 
 
 def download_file(url: str, dest: Path, retries: int = 3) -> bool:

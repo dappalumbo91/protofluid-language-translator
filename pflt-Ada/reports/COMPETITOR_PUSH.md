@@ -1,6 +1,6 @@
 # Competitor push — universal form→gloss under FSOT
 
-**Built:** 2026-07-21T16:11:27.286443+00:00
+**Built:** 2026-07-21T16:16:51.347507+00:00
 **Catalog:** 58 language codes
 **OPEN-SET:** 100.0%
 **PRODUCT:** 100.0%
@@ -30,10 +30,10 @@ Shipping path: Ada `pflt_main.exe` + rebuilt local packs.
 | pt | 100.0 | 100.0 | 4356 | Y |
 | nl | 100.0 | 100.0 | 4305 | Y |
 | vi | 100.0 | 100.0 | 4079 | Y |
+| grc | 100.0 | 100.0 | 3966 | Y |
 | id | 100.0 | 100.0 | 3814 | Y |
-| grc | 100.0 | 100.0 | 3166 | Y |
+| ang | 99.96 | 99.96 | 2789 | Y |
 | egy | 100.0 | 100.0 | 2044 | Y |
-| ang | 100.0 | 100.0 | 1989 | Y |
 | ar | 100.0 | 100.0 | 1319 | Y |
 | got | 99.91 | 99.91 | 1133 | Y |
 | he | 100.0 | 100.0 | 917 | Y |

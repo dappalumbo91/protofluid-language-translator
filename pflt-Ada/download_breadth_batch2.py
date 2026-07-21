@@ -33,6 +33,9 @@ MANIFEST = DRIVE / "download_manifest_batch2.json"
 
 # Batch 2: high-coverage modern + classical not yet in batch1 Kaikki list
 # (batch1 already has es/it/de/fr/pt/ru/nl/pl/sv/tr/ja/ko/hi/vi/id/ca/pi/uga/akk/egy)
+#
+# Multi-word Kaikki names: page path keeps spaces; JSONL stem DROPS spaces
+# (Ancient Greek -> AncientGreek). Use download_grc_ang_full.py for grc/ang.
 KAIKKI_BATCH2: list[tuple[str, str, str]] = [
     ("Chinese", "zh", "modern"),
     ("Arabic", "ar", "modern"),
@@ -50,8 +53,6 @@ KAIKKI_BATCH2: list[tuple[str, str, str]] = [
     ("Tamil", "ta", "modern"),
     ("Malay", "ms", "modern"),
     ("Latin", "la", "classical"),  # full Kaikki Latin boost
-    ("Ancient Greek", "grc", "ancient"),
-    ("Old English", "ang", "ancient"),
     ("Sanskrit", "san", "ancient"),
     ("Gothic", "got", "ancient"),
 ]

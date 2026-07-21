@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-07-21T16:11:27.286443+00:00",
+  "built_utc": "2026-07-21T16:16:51.347507+00:00",
   "goal": "Beat competitors: accuracy + breadth + depth under FSOT",
   "catalog_size": 58,
   "catalog": [
@@ -187,6 +187,13 @@
       "ok": true
     },
     {
+      "lang": "grc",
+      "n": 3966,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
       "lang": "id",
       "n": 3814,
       "open": 100.0,
@@ -194,22 +201,15 @@
       "ok": true
     },
     {
-      "lang": "grc",
-      "n": 3166,
-      "open": 100.0,
-      "product": 100.0,
+      "lang": "ang",
+      "n": 2789,
+      "open": 99.96,
+      "product": 99.96,
       "ok": true
     },
     {
       "lang": "egy",
       "n": 2044,
-      "open": 100.0,
-      "product": 100.0,
-      "ok": true
-    },
-    {
-      "lang": "ang",
-      "n": 1989,
       "open": 100.0,
       "product": 100.0,
       "ok": true
