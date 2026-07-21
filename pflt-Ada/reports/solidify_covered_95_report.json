@@ -1,0 +1,8 @@
+{
+  "built_utc": "2026-07-21T14:35:32.588183+00:00",
+  "target": 95,
+  "all_covered_langs_ge_95": true,
+  "open_overall": 99.98,
+  "product_overall": 100.0,
+  "note": "Multi-sense: match if prediction soft-matches ANY gold sense for the form."
+}
