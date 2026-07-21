@@ -1,69 +1,124 @@
 {
-  "built_utc": "2026-07-21T16:16:51.347507+00:00",
+  "built_utc": "2026-07-21T16:48:50.142038+00:00",
   "goal": "Beat competitors: accuracy + breadth + depth under FSOT",
-  "catalog_size": 58,
+  "catalog_size": 113,
   "catalog": [
+    "af",
     "akk",
+    "am",
     "ang",
     "ar",
     "arc",
+    "az",
+    "be",
+    "bg",
     "bn",
     "ca",
+    "ceb",
     "cop",
     "cs",
     "cu",
+    "cy",
+    "da",
     "de",
     "egy",
     "el",
     "en",
+    "enm",
+    "eo",
     "es",
+    "et",
+    "eu",
     "fa",
     "fi",
     "fr",
+    "frm",
+    "fro",
+    "ga",
+    "gd",
+    "gl",
+    "gmh",
+    "goh",
     "got",
     "grc",
+    "gu",
+    "ha",
+    "haw",
     "he",
     "hi",
     "hit",
     "hu",
+    "hy",
     "id",
+    "is",
     "it",
     "ja",
+    "jv",
+    "ka",
+    "kk",
+    "km",
     "ko",
     "la",
+    "lt",
+    "lv",
     "mga",
+    "mk",
+    "ml",
+    "mn",
+    "mr",
     "ms",
+    "my",
+    "nb",
+    "ne",
     "nl",
+    "nn",
     "non",
+    "oc",
     "orv",
     "osp",
     "osx",
+    "pa",
     "pal",
     "peo",
     "pi",
     "pl",
     "pro",
+    "ps",
     "pt",
+    "qu",
     "ro",
     "roa-opt",
     "ru",
     "san",
     "sga",
+    "sh",
+    "si",
+    "sk",
+    "sl",
+    "so",
+    "sq",
     "sum",
     "sv",
     "sw",
     "syc",
     "ta",
+    "te",
     "th",
+    "tl",
     "tr",
     "uga",
     "uk",
+    "ur",
     "vi",
     "xcl",
-    "zh"
+    "xh",
+    "yi",
+    "yo",
+    "zh",
+    "zu"
   ],
-  "open_overall": 100.0,
-  "product_overall": 100.0,
+  "open_overall": 99.99,
+  "product_overall": 99.99,
   "all_langs_ge_95": true,
   "weak": [],
   "by_lang": [
@@ -243,6 +298,13 @@
       "ok": true
     },
     {
+      "lang": "non",
+      "n": 806,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
       "lang": "fa",
       "n": 740,
       "open": 100.0,
@@ -250,8 +312,29 @@
       "ok": true
     },
     {
+      "lang": "sga",
+      "n": 603,
+      "open": 99.83,
+      "product": 99.83,
+      "ok": true
+    },
+    {
+      "lang": "cu",
+      "n": 600,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
       "lang": "akk",
       "n": 544,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "cop",
+      "n": 504,
       "open": 100.0,
       "product": 100.0,
       "ok": true
@@ -341,8 +424,421 @@
       "ok": true
     },
     {
-      "lang": "non",
-      "n": 406,
+      "lang": "arc",
+      "n": 498,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "osx",
+      "n": 464,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "peo",
+      "n": 415,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "syc",
+      "n": 409,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "sum",
+      "n": 404,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "da",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "gl",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "eo",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "mk",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "bg",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "nn",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "tl",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "ga",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "cy",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "lt",
+      "n": 400,
+      "open": 99.75,
+      "product": 99.75,
+      "ok": true
+    },
+    {
+      "lang": "is",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "sq",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "ka",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "hy",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "te",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "ceb",
+      "n": 400,
+      "open": 99.75,
+      "product": 99.75,
+      "ok": true
+    },
+    {
+      "lang": "gd",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "az",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "sk",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "eu",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "ur",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "ml",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "pa",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "et",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "yi",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "kk",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "km",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "my",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "af",
+      "n": 400,
+      "open": 99.75,
+      "product": 99.75,
+      "ok": true
+    },
+    {
+      "lang": "be",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "gu",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "sl",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "mn",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "oc",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "yo",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "mr",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "jv",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "haw",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "am",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "ne",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "qu",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "zu",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "xh",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "ha",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "so",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "ps",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "si",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "lv",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "enm",
+      "n": 400,
+      "open": 99.5,
+      "product": 99.5,
+      "ok": true
+    },
+    {
+      "lang": "fro",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "frm",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "goh",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "gmh",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "nb",
+      "n": 400,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "sh",
+      "n": 400,
       "open": 100.0,
       "product": 100.0,
       "ok": true
@@ -355,20 +851,6 @@
       "ok": true
     },
     {
-      "lang": "sga",
-      "n": 203,
-      "open": 100.0,
-      "product": 100.0,
-      "ok": true
-    },
-    {
-      "lang": "cu",
-      "n": 200,
-      "open": 100.0,
-      "product": 100.0,
-      "ok": true
-    },
-    {
       "lang": "xcl",
       "n": 175,
       "open": 100.0,
@@ -376,29 +858,8 @@
       "ok": true
     },
     {
-      "lang": "cop",
-      "n": 104,
-      "open": 100.0,
-      "product": 100.0,
-      "ok": true
-    },
-    {
-      "lang": "arc",
-      "n": 98,
-      "open": 100.0,
-      "product": 100.0,
-      "ok": true
-    },
-    {
       "lang": "uga",
       "n": 96,
-      "open": 100.0,
-      "product": 100.0,
-      "ok": true
-    },
-    {
-      "lang": "osx",
-      "n": 64,
       "open": 100.0,
       "product": 100.0,
       "ok": true
@@ -439,29 +900,8 @@
       "ok": true
     },
     {
-      "lang": "peo",
-      "n": 15,
-      "open": 100.0,
-      "product": 100.0,
-      "ok": true
-    },
-    {
       "lang": "pal",
       "n": 10,
-      "open": 100.0,
-      "product": 100.0,
-      "ok": true
-    },
-    {
-      "lang": "syc",
-      "n": 9,
-      "open": 100.0,
-      "product": 100.0,
-      "ok": true
-    },
-    {
-      "lang": "sum",
-      "n": 4,
       "open": 100.0,
       "product": 100.0,
       "ok": true
