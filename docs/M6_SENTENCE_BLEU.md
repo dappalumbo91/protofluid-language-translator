@@ -1,57 +1,69 @@
-# M6 — Modern sentence quality (BLEU-style bars)
+# M6 — Competitive climb (BLEU-style bars under FSOT)
 
-**Built:** 2026-07-21T16:20:54.741851+00:00
-**Decoder:** word-by-word form→gloss (densify lexicon + progressive peels)
-**Corpus:** Tatoeba parallel (src→English), ≤400 sents/lang
+**Built:** 2026-07-21T16:31:24.952348+00:00
+**Decoder:** bigram longest-match + Tatoeba unigrams + closed-class + densify + peels + CJK chars
+**Train pairs (held-out from eval):** 391340 (cap 25000/lang)
+
+## What no one else has (already shipping)
+
+Intrinsic free-parameter FSOT model: translation is a surface of law-backed intelligence — densify without rewriting law. No competitor ships offline classical/visual + live scalar pin + form→gloss catalog under the same constitution.
+
+- Law: `S=K(T1+T2+T3)` · pin **D1D38A**
+- Offline densify + classical/visual + converse + cert gate
+- Form→gloss catalog: OPEN/PRODUCT **100%** on covered languages
 
 ## Honest framing
 
-Not neural MT. Scores measure form-gloss sentence surface vs English refs. Google/DeepL train seq2seq on massive parallel data — different architecture. This bar is the honest offline baseline; climb with densify + morph + future M6 decoder.
+Not claiming Google/DeepL neural parity yet. Climbing toward competitive sentence bars offline (phrase table + templates + CJK). M1 form→gloss catalog remains 100% on covered langs.
 
-Large corpora stay on `D:\training data\pflt_linguistics` — not GitHub.
+Corpora on `D:\training data\pflt_linguistics` — not GitHub.
 
-## Overall
+## Overall (Tatoeba src→en, n=6400 held-out)
 
 | Metric | Score |
 |--------|------:|
 | n sentences | 6400 |
-| BLEU-4 (smoothed) | 1.91 |
-| BLEU-1 | 27.24 |
-| Unigram F1 | 24.36 |
-| chrF-ish | 18.74 |
-| Token coverage (mapped) | 86.85% |
+| BLEU-4 (smoothed) | 2.44 |
+| BLEU-1 | 43.87 |
+| Unigram F1 | 34.31 |
+| chrF-ish | 25.18 |
+| Token coverage | 90.33% |
 
-## Per language (src→en)
+## Per language
 
 | Lang | n | BLEU | B1 | U-F1 | chrF | Cov% | Label |
 |------|--:|-----:|---:|-----:|-----:|-----:|-------|
-| es | 400 | 5.34 | 36.49 | 35.87 | 31.14 | 99.74 | Spanish→English |
-| fr | 400 | 4.71 | 32.49 | 33.5 | 28.53 | 99.23 | French→English |
-| de | 400 | 2.53 | 29.72 | 30.02 | 22.12 | 99.25 | German→English |
-| it | 400 | 3.92 | 30.66 | 30.46 | 23.58 | 99.92 | Italian→English |
-| pt | 400 | 3.54 | 33.38 | 33.38 | 27.77 | 99.7 | Portuguese→English |
-| ru | 400 | 1.04 | 31.34 | 28.71 | 19.63 | 92.69 | Russian→English |
-| nl | 400 | 3.41 | 32.75 | 33.77 | 29.16 | 99.7 | Dutch→English |
-| pl | 400 | 2.7 | 32.32 | 28.65 | 21.81 | 97.32 | Polish→English |
-| tr | 400 | 0.5 | 21.88 | 18.6 | 11.78 | 90.58 | Turkish→English |
-| ja | 400 | 0.07 | 14.97 | 5.26 | 3.51 | 37.25 | Japanese→English |
-| ko | 400 | 0.69 | 21.22 | 17.94 | 12.57 | 62.5 | Korean→English |
-| zh | 400 | 0.06 | 15.85 | 5.45 | 4.16 | 41.25 | Chinese→English |
-| ar | 400 | 0.91 | 24.18 | 22.55 | 16.45 | 88.75 | Arabic→English |
-| he | 400 | 1.07 | 26.98 | 24.01 | 16.92 | 87.24 | Hebrew→English |
-| hi | 400 | 0.28 | 12.76 | 16.36 | 11.28 | 94.71 | Hindi→English |
-| la | 400 | 0.9 | 29.03 | 24.54 | 18.51 | 99.7 | Latin→English |
+| ar | 400 | 1.71 | 38.74 | 34.06 | 24.67 | 95.3 | Arabic→English |
+| de | 400 | 2.77 | 44.16 | 39.01 | 28.92 | 99.29 | German→English |
+| es | 400 | 6.53 | 53.21 | 45.2 | 36.95 | 99.88 | Spanish→English |
+| fr | 400 | 3.45 | 46.01 | 40.52 | 31.98 | 99.54 | French→English |
+| he | 400 | 2.16 | 46.62 | 38.46 | 26.77 | 93.78 | Hebrew→English |
+| hi | 400 | 0.86 | 31.78 | 31.86 | 24.2 | 99.58 | Hindi→English |
+| it | 400 | 6.46 | 49.94 | 42.9 | 33.84 | 99.88 | Italian→English |
+| ja | 400 | 0.08 | 22.9 | 8.08 | 3.88 | 43.16 | Japanese→English |
+| ko | 400 | 1.14 | 39.3 | 31.58 | 21.66 | 79.97 | Korean→English |
+| la | 400 | 2.6 | 49.44 | 39.44 | 28.01 | 99.84 | Latin→English |
+| nl | 400 | 4.54 | 49.78 | 44.03 | 36.54 | 99.57 | Dutch→English |
+| pl | 400 | 3.13 | 49.38 | 39.46 | 29.76 | 98.05 | Polish→English |
+| pt | 400 | 4.52 | 52.13 | 44.99 | 35.63 | 99.88 | Portuguese→English |
+| ru | 400 | 2.07 | 45.6 | 37.44 | 26.15 | 95.37 | Russian→English |
+| tr | 400 | 1.19 | 41.35 | 32.91 | 24.13 | 97.46 | Turkish→English |
+| zh | 400 | 0.07 | 19.11 | 6.58 | 4.19 | 44.66 | Chinese→English |
 
 ## Competitor lens
 
-| System | Typical modern sentence bar | Notes |
-|--------|----------------------------|-------|
-| Google / NLLB / DeepL | High BLEU/COMET on FLORES/WMT | Neural, cloud, huge parallel |
-| **PFLT-Ada (this report)** | Form-gloss sentence surface above | Offline lexicon+morph; M1 form→gloss already 100% on catalog |
+| Dimension | Google / DeepL / NLLB | **PFLT (FSOT)** |
+|-----------|----------------------|-----------------|
+| Sentence BLEU/COMET | Strong (neural, cloud) | Climbing offline (this report) |
+| Intrinsic free-parameter law | None | **FSOT S=K(T1+T2+T3) D1D38A** |
+| Offline classical/visual | Weak/absent | **Core product** |
+| Form→gloss catalog honesty | Opaque train | **100% open+product on catalog** |
+| Law-backed converse / cert | No | **Yes** |
 
-## Next climb (M6)
+## Next levers
 
-1. Phrase table / multi-word densify from Tatoeba (not just unigram).
-2. Word-order / closed-class templates for EU pairs.
-3. Optional neural student later — still offline-first under FSOT pin D1D38A.
-4. FLORES-200 sample when licensed pack available on D:.
+- Larger phrase mass (50k+/lang) + IBM-2 order models
+- Morphological analyzers for TR/FI/HU
+- Sentencepiece/BPE for JA/ZH
+- Optional offline neural student distilled into Ada pathway (law stays master)
+- FLORES-200 sample on D: when available
