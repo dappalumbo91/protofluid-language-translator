@@ -974,8 +974,275 @@
     },
     "ready_for_hf_packaging": true
   },
+  "m6_hf_fluency_report.json": {
+    "built_utc": "2026-07-21T17:37:54.286348+00:00",
+    "goal": "Sentence fluency climb toward Google/DeepL parity using HF data",
+    "fsot": {
+      "law": "S=K(T1+T2+T3)",
+      "pin": "D1D38A",
+      "role": "Law unchanged; HF OPUS/Tatoeba densify surface only"
+    },
+    "hf_assets_used": [
+      "Helsinki-NLP/opus_books (parallel densify)",
+      "local Tatoeba (D:)",
+      "sacrebleu (when installed)"
+    ],
+    "hf_assets_blocked": [
+      "facebook/flores — gated; accept license at huggingface.co/datasets/facebook/flores then re-run FLORES eval",
+      "NLLB teacher — optional next: facebook/nllb-200-distilled-600M offline densify"
+    ],
+    "train_rows": 748703,
+    "uni": 116791,
+    "bi": 347552,
+    "overall": {
+      "n": 6400,
+      "bleu": 2.2,
+      "bleu1": 45.87,
+      "bleu2": 7.48,
+      "bp": 0.5297,
+      "u_prec": 45.87,
+      "u_rec": 28.05,
+      "u_f1": 34.81,
+      "chrf": 25.07,
+      "sacrebleu": 0.89,
+      "token_coverage": 91.3
+    },
+    "by_lang": [
+      {
+        "lang": "ar",
+        "n": 400,
+        "bleu": 2.58,
+        "bleu1": 40.41,
+        "bleu2": 6.41,
+        "bp": 0.739,
+        "u_prec": 40.37,
+        "u_rec": 31.0,
+        "u_f1": 35.07,
+        "chrf": 25.77,
+        "sacrebleu": 1.14,
+        "token_coverage": 96.94
+      },
+      {
+        "lang": "de",
+        "n": 400,
+        "bleu": 2.29,
+        "bleu1": 44.33,
+        "bleu2": 7.04,
+        "bp": 0.6483,
+        "u_prec": 44.3,
+        "u_rec": 30.9,
+        "u_f1": 36.41,
+        "chrf": 26.02,
+        "sacrebleu": 0.86,
+        "token_coverage": 99.71
+      },
+      {
+        "lang": "es",
+        "n": 400,
+        "bleu": 4.11,
+        "bleu1": 53.55,
+        "bleu2": 11.95,
+        "bp": 0.6015,
+        "u_prec": 53.52,
+        "u_rec": 35.48,
+        "u_f1": 42.68,
+        "chrf": 33.05,
+        "sacrebleu": 2.02,
+        "token_coverage": 99.95
+      },
+      {
+        "lang": "fr",
+        "n": 400,
+        "bleu": 4.46,
+        "bleu1": 47.39,
+        "bleu2": 9.1,
+        "bp": 0.669,
+        "u_prec": 47.36,
+        "u_rec": 33.78,
+        "u_f1": 39.43,
+        "chrf": 29.82,
+        "sacrebleu": 2.27,
+        "token_coverage": 99.83
+      },
+      {
+        "lang": "he",
+        "n": 400,
+        "bleu": 2.5,
+        "bleu1": 50.61,
+        "bleu2": 7.0,
+        "bp": 0.6146,
+        "u_prec": 50.58,
+        "u_rec": 34.02,
+        "u_f1": 40.68,
+        "chrf": 28.29,
+        "sacrebleu": 0.94,
+        "token_coverage": 95.62
+      },
+      {
+        "lang": "hi",
+        "n": 400,
+        "bleu": 0.86,
+        "bleu1": 31.74,
+        "bleu2": 2.48,
+        "bp": 1.0,
+        "u_prec": 31.71,
+        "u_rec": 31.98,
+        "u_f1": 31.84,
+        "chrf": 24.25,
+        "sacrebleu": 0.36,
+        "token_coverage": 99.77
+      },
+      {
+        "lang": "it",
+        "n": 400,
+        "bleu": 6.28,
+        "bleu1": 53.33,
+        "bleu2": 13.97,
+        "bp": 0.6833,
+        "u_prec": 53.3,
+        "u_rec": 38.6,
+        "u_f1": 44.77,
+        "chrf": 35.48,
+        "sacrebleu": 2.37,
+        "token_coverage": 99.88
+      },
+      {
+        "lang": "ja",
+        "n": 400,
+        "bleu": 0.08,
+        "bleu1": 24.66,
+        "bleu2": 0.83,
+        "bp": 0.0257,
+        "u_prec": 24.57,
+        "u_rec": 5.27,
+        "u_f1": 8.68,
+        "chrf": 3.99,
+        "sacrebleu": 0.01,
+        "token_coverage": 45.04
+      },
+      {
+        "lang": "ko",
+        "n": 400,
+        "bleu": 1.19,
+        "bleu1": 40.54,
+        "bleu2": 3.49,
+        "bp": 0.6138,
+        "u_prec": 40.5,
+        "u_rec": 27.22,
+        "u_f1": 32.56,
+        "chrf": 22.19,
+        "sacrebleu": 0.49,
+        "token_coverage": 82.05
+      },
+      {
+        "lang": "la",
+        "n": 400,
+        "bleu": 2.24,
+        "bleu1": 52.94,
+        "bleu2": 6.32,
+        "bp": 0.5648,
+        "u_prec": 52.91,
+        "u_rec": 33.67,
+        "u_f1": 41.15,
+        "chrf": 29.25,
+        "sacrebleu": 0.32,
+        "token_coverage": 99.98
+      },
+      {
+        "lang": "nl",
+        "n": 400,
+        "bleu": 3.84,
+        "bleu1": 51.23,
+        "bleu2": 10.2,
+        "bp": 0.7251,
+        "u_prec": 51.21,
+        "u_rec": 38.75,
+        "u_f1": 44.11,
+        "chrf": 35.26,
+        "sacrebleu": 1.14,
+        "token_coverage": 99.74
+      },
+      {
+        "lang": "pl",
+        "n": 400,
+        "bleu": 2.46,
+        "bleu1": 52.52,
+        "bleu2": 9.79,
+        "bp": 0.5684,
+        "u_prec": 52.49,
+        "u_rec": 33.54,
+        "u_f1": 40.93,
+        "chrf": 30.72,
+        "sacrebleu": 1.17,
+        "token_coverage": 98.72
+      },
+      {
+        "lang": "pt",
+        "n": 400,
+        "bleu": 4.0,
+        "bleu1": 55.06,
+        "bleu2": 11.67,
+        "bp": 0.6682,
+        "u_prec": 55.04,
+        "u_rec": 39.22,
+        "u_f1": 45.81,
+        "chrf": 35.98,
+        "sacrebleu": 1.47,
+        "token_coverage": 99.94
+      },
+      {
+        "lang": "ru",
+        "n": 400,
+        "bleu": 2.37,
+        "bleu1": 50.74,
+        "bleu2": 8.2,
+        "bp": 0.6051,
+        "u_prec": 50.71,
+        "u_rec": 33.76,
+        "u_f1": 40.53,
+        "chrf": 28.76,
+        "sacrebleu": 0.87,
+        "token_coverage": 97.8
+      },
+      {
+        "lang": "tr",
+        "n": 400,
+        "bleu": 1.58,
+        "bleu1": 45.41,
+        "bleu2": 3.42,
+        "bp": 0.5689,
+        "u_prec": 45.37,
+        "u_rec": 29.01,
+        "u_f1": 35.39,
+        "chrf": 25.94,
+        "sacrebleu": 0.48,
+        "token_coverage": 99.1
+      },
+      {
+        "lang": "zh",
+        "n": 400,
+        "bleu": 0.07,
+        "bleu1": 20.58,
+        "bleu2": 1.01,
+        "bp": 0.0226,
+        "u_prec": 20.49,
+        "u_rec": 4.28,
+        "u_f1": 7.08,
+        "chrf": 4.39,
+        "sacrebleu": 0.01,
+        "token_coverage": 46.77
+      }
+    ],
+    "next": [
+      "User: accept FLORES-200 access on HF for industry eval",
+      "Download NLLB-600M to D: as teacher densify student",
+      "EU order model + CJK SentencePiece train",
+      "Optional local neural decode under FSOT cert gate"
+    ]
+  },
   "m6_sentence_bleu_report.json": {
     "built_utc": "2026-07-21T16:31:24.952348+00:00",
+    "metric": "M6 competitive climb",
     "fsot": {
       "law": "S=K(T1+T2+T3)",
       "pin": "D1D38A",
@@ -983,6 +1250,9 @@
     },
     "honest_note": "Not claiming Google/DeepL neural parity yet. Climbing toward competitive sentence bars offline (phrase table + templates + CJK). M1 form→gloss catalog remains 100% on covered langs.",
     "decoder": "bigram longest-match + Tatoeba unigrams + closed-class + densify + peels + CJK chars",
+    "train_pairs": 391340,
+    "train_per_lang_cap": 25000,
+    "eval_held_out": true,
     "overall": {
       "n": 6400,
       "bleu": 2.44,
@@ -994,1663 +1264,431 @@
       "u_f1": 34.31,
       "chrf": 25.18,
       "token_coverage": 90.33
-    }
-  },
-  "cross_lingual_fsot_report.json": {
-    "built_utc": "2026-07-21T16:50:31.075216+00:00",
-    "goal": "Cross-lingual analysis and translation under FSOT",
-    "fsot": {
-      "formula": "S=K(T1+T2+T3)",
-      "pin": "D1D38A",
-      "domains": [
-        "linguistic",
-        "historical",
-        "mythological",
-        "quantum",
-        "cosmological"
-      ],
-      "note": "Cross-lingual mapping is a surface of FSOT intelligence: densify knowledge without rewriting seed law. English gloss is a temporary pivot for analysis; meaning is law-grounded densify, not a cloud API."
     },
-    "catalog": {
-      "catalog_size": 113,
-      "open_overall": 99.99,
-      "product_overall": 99.99,
-      "weak": [],
-      "by_lang": [
-        {
-          "lang": "ko",
-          "n": 14646,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "la",
-          "n": 11360,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "pl",
-          "n": 8037,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "sv",
-          "n": 6452,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ja",
-          "n": 6342,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "de",
-          "n": 6002,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "hi",
-          "n": 5731,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ru",
-          "n": 5564,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "it",
-          "n": 5428,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "tr",
-          "n": 5162,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "es",
-          "n": 5028,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "pi",
-          "n": 4765,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ca",
-          "n": 4619,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "fr",
-          "n": 4566,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "pt",
-          "n": 4356,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "nl",
-          "n": 4305,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "vi",
-          "n": 4079,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "grc",
-          "n": 3966,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "id",
-          "n": 3814,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ang",
-          "n": 2789,
-          "open": 99.96,
-          "product": 99.96,
-          "ok": true
-        },
-        {
-          "lang": "egy",
-          "n": 2044,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ar",
-          "n": 1319,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "got",
-          "n": 1133,
-          "open": 99.91,
-          "product": 99.91,
-          "ok": true
-        },
-        {
-          "lang": "he",
-          "n": 917,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "san",
-          "n": 910,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "non",
-          "n": 806,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "fa",
-          "n": 740,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "sga",
-          "n": 603,
-          "open": 99.83,
-          "product": 99.83,
-          "ok": true
-        },
-        {
-          "lang": "cu",
-          "n": 600,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "akk",
-          "n": 544,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "cop",
-          "n": 504,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "bn",
-          "n": 500,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "cs",
-          "n": 500,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "el",
-          "n": 500,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "fi",
-          "n": 500,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "hu",
-          "n": 500,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ms",
-          "n": 500,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ro",
-          "n": 500,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "sw",
-          "n": 500,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ta",
-          "n": 500,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "th",
-          "n": 500,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "uk",
-          "n": 500,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "zh",
-          "n": 500,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "arc",
-          "n": 498,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "osx",
-          "n": 464,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "peo",
-          "n": 415,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "syc",
-          "n": 409,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "sum",
-          "n": 404,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "da",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "gl",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "eo",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "mk",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "bg",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "nn",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "tl",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ga",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "cy",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "lt",
-          "n": 400,
-          "open": 99.75,
-          "product": 99.75,
-          "ok": true
-        },
-        {
-          "lang": "is",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "sq",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ka",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "hy",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "te",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ceb",
-          "n": 400,
-          "open": 99.75,
-          "product": 99.75,
-          "ok": true
-        },
-        {
-          "lang": "gd",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "az",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "sk",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "eu",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ur",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ml",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "pa",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "et",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "yi",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "kk",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "km",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "my",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "af",
-          "n": 400,
-          "open": 99.75,
-          "product": 99.75,
-          "ok": true
-        },
-        {
-          "lang": "be",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "gu",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "sl",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "mn",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "oc",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "yo",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "mr",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "jv",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "haw",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "am",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ne",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "qu",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "zu",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "xh",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ha",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "so",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "ps",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "si",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "lv",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "enm",
-          "n": 400,
-          "open": 99.5,
-          "product": 99.5,
-          "ok": true
-        },
-        {
-          "lang": "fro",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "frm",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "goh",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "gmh",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "nb",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "sh",
-          "n": 400,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "en",
-          "n": 228,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "xcl",
-          "n": 175,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "uga",
-          "n": 96,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "roa-opt",
-          "n": 47,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "orv",
-          "n": 36,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "osp",
-          "n": 34,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "mga",
-          "n": 25,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "pro",
-          "n": 17,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "pal",
-          "n": 10,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        },
-        {
-          "lang": "hit",
-          "n": 3,
-          "open": 100.0,
-          "product": 100.0,
-          "ok": true
-        }
-      ],
-      "all_ge_95": true
-    },
-    "breadth_vs_competitors": {
-      "pflt_catalog": 113,
-      "google_approx": 249,
-      "nllb_approx": 200,
-      "deepl_approx": "30–100",
-      "pflt_fraction_of_google": 0.454,
-      "pflt_fraction_of_nllb": 0.565,
-      "toward_100": true,
-      "gap_to_100": 0
-    },
-    "gloss_hub": {
-      "gloss_keys_sampled": 40058,
-      "cross_lingual_glosses_ge3": 1762,
-      "top_shared_concepts": [
-        {
-          "gloss": "order",
-          "n_langs": 12,
-          "langs": [
-            "arc",
-            "de",
-            "es",
-            "fr",
-            "it",
-            "ja",
-            "nl",
-            "pl",
-            "pt",
-            "ru",
-            "sga",
-            "tr"
-          ]
-        },
-        {
-          "gloss": "say",
-          "n_langs": 12,
-          "langs": [
-            "de",
-            "es",
-            "fr",
-            "it",
-            "ja",
-            "la",
-            "nl",
-            "orv",
-            "pl",
-            "pt",
-            "ru",
-            "sv"
-          ]
-        },
-        {
-          "gloss": "help",
-          "n_langs": 11,
-          "langs": [
-            "ar",
-            "cu",
-            "es",
-            "fr",
-            "it",
-            "nl",
-            "osx",
-            "pt",
-            "ru",
-            "sv",
-            "tr"
-          ]
-        },
-        {
-          "gloss": "see",
-          "n_langs": 11,
-          "langs": [
-            "cu",
-            "de",
-            "es",
-            "fr",
-            "it",
-            "ja",
-            "osx",
-            "pt",
-            "ru",
-            "san",
-            "sv"
-          ]
-        },
-        {
-          "gloss": "work",
-          "n_langs": 11,
-          "langs": [
-            "de",
-            "es",
-            "fr",
-            "grc",
-            "it",
-            "nl",
-            "non",
-            "pt",
-            "ru",
-            "sga",
-            "sv"
-          ]
-        },
-        {
-          "gloss": "bear",
-          "n_langs": 11,
-          "langs": [
-            "cu",
-            "es",
-            "fr",
-            "grc",
-            "it",
-            "ja",
-            "nl",
-            "pl",
-            "pt",
-            "ru",
-            "san"
-          ]
-        },
-        {
-          "gloss": "sound",
-          "n_langs": 11,
-          "langs": [
-            "ang",
-            "es",
-            "fr",
-            "it",
-            "ja",
-            "nl",
-            "ru",
-            "san",
-            "sv",
-            "tr",
-            "xcl"
-          ]
-        },
-        {
-          "gloss": "leave",
-          "n_langs": 11,
-          "langs": [
-            "de",
-            "es",
-            "fr",
-            "got",
-            "grc",
-            "it",
-            "ja",
-            "pl",
-            "pt",
-            "sv",
-            "tr"
-          ]
-        },
-        {
-          "gloss": "female given name",
-          "n_langs": 11,
-          "langs": [
-            "de",
-            "es",
-            "fr",
-            "it",
-            "ja",
-            "nl",
-            "pl",
-            "pt",
-            "ru",
-            "sv",
-            "tr"
-          ]
-        },
-        {
-          "gloss": "remain",
-          "n_langs": 10,
-          "langs": [
-            "cu",
-            "egy",
-            "es",
-            "fr",
-            "it",
-            "ja",
-            "la",
-            "nl",
-            "pt",
-            "sv"
-          ]
-        },
-        {
-          "gloss": "kill",
-          "n_langs": 10,
-          "langs": [
-            "cu",
-            "de",
-            "es",
-            "fr",
-            "it",
-            "nl",
-            "pl",
-            "pt",
-            "sga",
-            "sv"
-          ]
-        },
-        {
-          "gloss": "throw",
-          "n_langs": 10,
-          "langs": [
-            "cu",
-            "de",
-            "es",
-            "fr",
-            "he",
-            "it",
-            "pt",
-            "san",
-            "tr",
-            "xcl"
-          ]
-        },
-        {
-          "gloss": "sing",
-          "n_langs": 10,
-          "langs": [
-            "ang",
-            "cu",
-            "de",
-            "es",
-            "fr",
-            "it",
-            "osx",
-            "pl",
-            "pt",
-            "sv"
-          ]
-        },
-        {
-          "gloss": "sin",
-          "n_langs": 10,
-          "langs": [
-            "ar",
-            "cop",
-            "es",
-            "fr",
-            "got",
-            "grc",
-            "la",
-            "roa-opt",
-            "sga",
-            "sv"
-          ]
-        },
-        {
-          "gloss": "raise",
-          "n_langs": 10,
-          "langs": [
-            "arc",
-            "de",
-            "es",
-            "fr",
-            "it",
-            "ja",
-            "nl",
-            "pt",
-            "san",
-            "sv"
-          ]
-        },
-        {
-          "gloss": "go",
-          "n_langs": 10,
-          "langs": [
-            "de",
-            "fa",
-            "fr",
-            "it",
-            "ja",
-            "non",
-            "pi",
-            "pl",
-            "ru",
-            "sv"
-          ]
-        },
-        {
-          "gloss": "do",
-          "n_langs": 10,
-          "langs": [
-            "ang",
-            "de",
-            "es",
-            "fa",
-            "fr",
-            "got",
-            "grc",
-            "it",
-            "ja",
-            "nl"
-          ]
-        },
-        {
-          "gloss": "move",
-          "n_langs": 10,
-          "langs": [
-            "de",
-            "es",
-            "fr",
-            "he",
-            "it",
-            "la",
-            "nl",
-            "pl",
-            "ru",
-            "sv"
-          ]
-        },
-        {
-          "gloss": "call",
-          "n_langs": 10,
-          "langs": [
-            "cop",
-            "de",
-            "fr",
-            "it",
-            "ja",
-            "non",
-            "pl",
-            "roa-opt",
-            "ru",
-            "sv"
-          ]
-        },
-        {
-          "gloss": "close",
-          "n_langs": 10,
-          "langs": [
-            "ar",
-            "de",
-            "fr",
-            "grc",
-            "ja",
-            "nl",
-            "pl",
-            "pt",
-            "ru",
-            "sv"
-          ]
-        },
-        {
-          "gloss": "bite",
-          "n_langs": 10,
-          "langs": [
-            "ang",
-            "de",
-            "es",
-            "fr",
-            "it",
-            "nl",
-            "pl",
-            "pt",
-            "ru",
-            "sv"
-          ]
-        },
-        {
-          "gloss": "run",
-          "n_langs": 10,
-          "langs": [
-            "arc",
-            "de",
-            "es",
-            "fr",
-            "it",
-            "nl",
-            "pl",
-            "ru",
-            "sv",
-            "tr"
-          ]
-        },
-        {
-          "gloss": "show",
-          "n_langs": 10,
-          "langs": [
-            "de",
-            "es",
-            "fr",
-            "got",
-            "it",
-            "ja",
-            "nl",
-            "pt",
-            "sv",
-            "xcl"
-          ]
-        },
-        {
-          "gloss": "(slang",
-          "n_langs": 10,
-          "langs": [
-            "de",
-            "es",
-            "fr",
-            "it",
-            "ja",
-            "nl",
-            "pl",
-            "ru",
-            "sv",
-            "tr"
-          ]
-        },
-        {
-          "gloss": "play",
-          "n_langs": 10,
-          "langs": [
-            "de",
-            "es",
-            "fr",
-            "it",
-            "ja",
-            "pl",
-            "pt",
-            "ru",
-            "sv",
-            "tr"
-          ]
-        },
-        {
-          "gloss": "male given name",
-          "n_langs": 10,
-          "langs": [
-            "de",
-            "fr",
-            "it",
-            "ja",
-            "nl",
-            "pl",
-            "pt",
-            "ru",
-            "sv",
-            "tr"
-          ]
-        },
-        {
-          "gloss": "desire",
-          "n_langs": 9,
-          "langs": [
-            "arc",
-            "cop",
-            "es",
-            "fr",
-            "he",
-            "it",
-            "san",
-            "sv",
-            "xcl"
-          ]
-        },
-        {
-          "gloss": "be",
-          "n_langs": 9,
-          "langs": [
-            "cu",
-            "de",
-            "fa",
-            "fr",
-            "ja",
-            "la",
-            "orv",
-            "pt",
-            "ru"
-          ]
-        },
-        {
-          "gloss": "house",
-          "n_langs": 9,
-          "langs": [
-            "cu",
-            "grc",
-            "ja",
-            "pal",
-            "pl",
-            "pt",
-            "ru",
-            "sga",
-            "tr"
-          ]
-        },
-        {
-          "gloss": "end",
-          "n_langs": 9,
-          "langs": [
-            "cu",
-            "es",
-            "it",
-            "nl",
-            "pi",
-            "pl",
-            "ru",
-            "sv",
-            "tr"
-          ]
-        }
-      ],
-      "top_lang_pairs_via_gloss": [
-        {
-          "pair": "ru-sv",
-          "shared_concepts": 298
-        },
-        {
-          "pair": "fr-it",
-          "shared_concepts": 269
-        },
-        {
-          "pair": "nl-sv",
-          "shared_concepts": 245
-        },
-        {
-          "pair": "fr-sv",
-          "shared_concepts": 236
-        },
-        {
-          "pair": "fr-nl",
-          "shared_concepts": 230
-        },
-        {
-          "pair": "it-nl",
-          "shared_concepts": 225
-        },
-        {
-          "pair": "nl-ru",
-          "shared_concepts": 225
-        },
-        {
-          "pair": "it-sv",
-          "shared_concepts": 223
-        },
-        {
-          "pair": "es-it",
-          "shared_concepts": 221
-        },
-        {
-          "pair": "it-pt",
-          "shared_concepts": 219
-        },
-        {
-          "pair": "de-ru",
-          "shared_concepts": 216
-        },
-        {
-          "pair": "de-nl",
-          "shared_concepts": 215
-        },
-        {
-          "pair": "fr-pt",
-          "shared_concepts": 210
-        },
-        {
-          "pair": "ja-ru",
-          "shared_concepts": 204
-        },
-        {
-          "pair": "it-ru",
-          "shared_concepts": 200
-        },
-        {
-          "pair": "de-sv",
-          "shared_concepts": 198
-        },
-        {
-          "pair": "es-fr",
-          "shared_concepts": 196
-        },
-        {
-          "pair": "de-it",
-          "shared_concepts": 196
-        },
-        {
-          "pair": "ja-nl",
-          "shared_concepts": 188
-        },
-        {
-          "pair": "pl-sv",
-          "shared_concepts": 184
-        },
-        {
-          "pair": "fr-ru",
-          "shared_concepts": 180
-        },
-        {
-          "pair": "ja-sv",
-          "shared_concepts": 178
-        },
-        {
-          "pair": "nl-pt",
-          "shared_concepts": 177
-        },
-        {
-          "pair": "pl-ru",
-          "shared_concepts": 176
-        },
-        {
-          "pair": "it-ja",
-          "shared_concepts": 174
-        }
-      ]
-    },
-    "probes": [
+    "by_lang": [
       {
-        "lang": "es",
-        "src": "hola mundo",
-        "hyp": "hello world",
-        "coverage": 1.0,
-        "mapped": 2,
-        "tokens": 2
-      },
-      {
-        "lang": "fr",
-        "src": "bonjour monde",
-        "hyp": "hello world",
-        "coverage": 1.0,
-        "mapped": 2,
-        "tokens": 2
+        "lang": "ar",
+        "label": "Arabic→English",
+        "n": 400,
+        "bleu": 1.71,
+        "bleu1": 38.74,
+        "bleu2": 5.48,
+        "bp": 0.7613,
+        "u_prec": 38.71,
+        "u_rec": 30.41,
+        "u_f1": 34.06,
+        "chrf": 24.67,
+        "token_coverage": 95.3,
+        "examples": [
+          {
+            "src": "لنجرب شيئاً!",
+            "ref": "Let's try something.",
+            "hyp": "to anything"
+          },
+          {
+            "src": "لا تقلق.",
+            "ref": "At ease.",
+            "hyp": "don't"
+          }
+        ]
       },
       {
         "lang": "de",
-        "src": "hallo welt",
-        "hyp": "hello world",
-        "coverage": 1.0,
-        "mapped": 2,
-        "tokens": 2
+        "label": "German→English",
+        "n": 400,
+        "bleu": 2.77,
+        "bleu1": 44.16,
+        "bleu2": 7.63,
+        "bp": 0.7692,
+        "u_prec": 44.13,
+        "u_rec": 34.96,
+        "u_f1": 39.01,
+        "chrf": 28.92,
+        "token_coverage": 99.29,
+        "examples": [
+          {
+            "src": "Beeil dich!",
+            "ref": "Hurry up.",
+            "hyp": "hurry"
+          },
+          {
+            "src": "Ich faste.",
+            "ref": "I'm fasting.",
+            "hyp": "i fstus"
+          }
+        ]
       },
       {
-        "lang": "it",
-        "src": "ciao mondo",
-        "hyp": "hello world",
-        "coverage": 1.0,
-        "mapped": 2,
-        "tokens": 2
+        "lang": "es",
+        "label": "Spanish→English",
+        "n": 400,
+        "bleu": 6.53,
+        "bleu1": 53.21,
+        "bleu2": 13.68,
+        "bp": 0.7024,
+        "u_prec": 53.19,
+        "u_rec": 39.3,
+        "u_f1": 45.2,
+        "chrf": 36.95,
+        "token_coverage": 99.88,
+        "examples": [
+          {
+            "src": "¡Intentemos algo!",
+            "ref": "Let's try something.",
+            "hyp": "try something"
+          },
+          {
+            "src": "Reunámonos mañana.",
+            "ref": "Let's get together tomorrow.",
+            "hyp": "join tomorrow"
+          }
+        ]
       },
       {
-        "lang": "la",
-        "src": "aqua lingua",
-        "hyp": "water language",
-        "coverage": 1.0,
-        "mapped": 2,
-        "tokens": 2
-      },
-      {
-        "lang": "pt",
-        "src": "ola mundo",
-        "hyp": "hello world",
-        "coverage": 1.0,
-        "mapped": 2,
-        "tokens": 2
-      },
-      {
-        "lang": "nl",
-        "src": "hallo wereld",
-        "hyp": "hello world",
-        "coverage": 1.0,
-        "mapped": 2,
-        "tokens": 2
-      },
-      {
-        "lang": "ru",
-        "src": "привет мир",
-        "hyp": "hello world",
-        "coverage": 1.0,
-        "mapped": 2,
-        "tokens": 2
-      },
-      {
-        "lang": "ja",
-        "src": "水",
-        "hyp": "water",
-        "coverage": 1.0,
-        "mapped": 1,
-        "tokens": 1
-      },
-      {
-        "lang": "zh",
-        "src": "水",
-        "hyp": "water",
-        "coverage": 1.0,
-        "mapped": 1,
-        "tokens": 1
-      },
-      {
-        "lang": "ar",
-        "src": "ماء",
-        "hyp": "water",
-        "coverage": 1.0,
-        "mapped": 1,
-        "tokens": 1
-      },
-      {
-        "lang": "hi",
-        "src": "नमस्ते",
-        "hyp": "hello",
-        "coverage": 1.0,
-        "mapped": 1,
-        "tokens": 1
-      },
-      {
-        "lang": "sw",
-        "src": "jambo",
-        "hyp": "hello",
-        "coverage": 1.0,
-        "mapped": 1,
-        "tokens": 1
-      },
-      {
-        "lang": "tr",
-        "src": "merhaba dünya",
-        "hyp": "hello world",
-        "coverage": 1.0,
-        "mapped": 2,
-        "tokens": 2
-      },
-      {
-        "lang": "pl",
-        "src": "cześć świecie",
-        "hyp": "hello world",
-        "coverage": 1.0,
-        "mapped": 2,
-        "tokens": 2
-      },
-      {
-        "lang": "ko",
-        "src": "안녕",
-        "hyp": "hello",
-        "coverage": 1.0,
-        "mapped": 1,
-        "tokens": 1
+        "lang": "fr",
+        "label": "French→English",
+        "n": 400,
+        "bleu": 3.45,
+        "bleu1": 46.01,
+        "bleu2": 9.53,
+        "bp": 0.7635,
+        "u_prec": 45.99,
+        "u_rec": 36.21,
+        "u_f1": 40.52,
+        "chrf": 31.98,
+        "token_coverage": 99.54,
+        "examples": [
+          {
+            "src": "Es-tu sûr ?",
+            "ref": "Are you sure?",
+            "hyp": "you"
+          },
+          {
+            "src": "Pourrais-tu m'aider ?",
+            "ref": "Could you give me a hand?",
+            "hyp": "you me"
+          }
+        ]
       },
       {
         "lang": "he",
-        "src": "שלום",
-        "hyp": "peace",
-        "coverage": 1.0,
-        "mapped": 1,
-        "tokens": 1
+        "label": "Hebrew→English",
+        "n": 400,
+        "bleu": 2.16,
+        "bleu1": 46.62,
+        "bleu2": 5.84,
+        "bp": 0.6551,
+        "u_prec": 46.59,
+        "u_rec": 32.74,
+        "u_f1": 38.46,
+        "chrf": 26.77,
+        "token_coverage": 93.78,
+        "examples": [
+          {
+            "src": "מיד אשוב.",
+            "ref": "I will be back soon.",
+            "hyp": "the fire"
+          },
+          {
+            "src": "אתה שיכור!",
+            "ref": "You are drunk!",
+            "hyp": "you drunk"
+          }
+        ]
       },
       {
-        "lang": "el",
-        "src": "γεια",
-        "hyp": "hi",
-        "coverage": 1.0,
-        "mapped": 1,
-        "tokens": 1
+        "lang": "hi",
+        "label": "Hindi→English",
+        "n": 400,
+        "bleu": 0.86,
+        "bleu1": 31.78,
+        "bleu2": 2.43,
+        "bp": 1.0,
+        "u_prec": 31.75,
+        "u_rec": 31.98,
+        "u_f1": 31.86,
+        "chrf": 24.2,
+        "token_coverage": 99.58,
+        "examples": [
+          {
+            "src": "पक्का?",
+            "ref": "Are you sure?",
+            "hyp": "that"
+          },
+          {
+            "src": "यह रखें।",
+            "ref": "Keep this.",
+            "hyp": "this the"
+          }
+        ]
       },
       {
-        "lang": "ga",
-        "src": "dia dhuit",
-        "hyp": "Genderless alternative",
-        "coverage": 1.0,
-        "mapped": 2,
-        "tokens": 2
+        "lang": "it",
+        "label": "Italian→English",
+        "n": 400,
+        "bleu": 6.46,
+        "bleu1": 49.94,
+        "bleu2": 12.95,
+        "bp": 0.7212,
+        "u_prec": 49.91,
+        "u_rec": 37.62,
+        "u_f1": 42.9,
+        "chrf": 33.84,
+        "token_coverage": 99.88,
+        "examples": [
+          {
+            "src": "Proviamo qualcosa!",
+            "ref": "Let's try something.",
+            "hyp": "you something"
+          },
+          {
+            "src": "Sono assurdità.",
+            "ref": "That's nonsense.",
+            "hyp": "are comparative"
+          }
+        ]
       },
       {
-        "lang": "eo",
-        "src": "saluton mondo",
-        "hyp": "hello world",
-        "coverage": 1.0,
-        "mapped": 2,
-        "tokens": 2
+        "lang": "ja",
+        "label": "Japanese→English",
+        "n": 400,
+        "bleu": 0.08,
+        "bleu1": 22.9,
+        "bleu2": 1.04,
+        "bp": 0.026,
+        "u_prec": 22.81,
+        "u_rec": 4.91,
+        "u_f1": 8.08,
+        "chrf": 3.88,
+        "token_coverage": 43.16,
+        "examples": [
+          {
+            "src": "今日は６月１８日で、ムーリエルの誕生日です！",
+            "ref": "Today is June 18th and it is Muiriel's birthday!",
+            "hyp": "good ムーリエルの誕生日です"
+          },
+          {
+            "src": "こちらは私の友達のレイチェルです。私たちは同じ高校に通っていました。",
+            "ref": "This is my friend Rachel. We went to the same high school.",
+            "hyp": "こちらは私の友達のレイチェルです 私たちは同じ高校に通っていました"
+          }
+        ]
+      },
+      {
+        "lang": "ko",
+        "label": "Korean→English",
+        "n": 400,
+        "bleu": 1.14,
+        "bleu1": 39.3,
+        "bleu2": 3.04,
+        "bp": 0.615,
+        "u_prec": 39.26,
+        "u_rec": 26.42,
+        "u_f1": 31.58,
+        "chrf": 21.66,
+        "token_coverage": 79.97,
+        "examples": [
+          {
+            "src": "뭔가 해보자!",
+            "ref": "Let's try something.",
+            "hyp": "something 해보자"
+          },
+          {
+            "src": "아는분이 없을겁니다.",
+            "ref": "No one will know.",
+            "hyp": "know i"
+          }
+        ]
+      },
+      {
+        "lang": "la",
+        "label": "Latin→English",
+        "n": 400,
+        "bleu": 2.6,
+        "bleu1": 49.44,
+        "bleu2": 5.75,
+        "bp": 0.603,
+        "u_prec": 49.41,
+        "u_rec": 32.81,
+        "u_f1": 39.44,
+        "chrf": 28.01,
+        "token_coverage": 99.84,
+        "examples": [
+          {
+            "src": "Aliquid conemur.",
+            "ref": "Let's try something.",
+            "hyp": "something try"
+          },
+          {
+            "src": "Cur discitis?",
+            "ref": "Why do you study?",
+            "hyp": "why you"
+          }
+        ]
+      },
+      {
+        "lang": "nl",
+        "label": "Dutch→English",
+        "n": 400,
+        "bleu": 4.54,
+        "bleu1": 49.78,
+        "bleu2": 11.06,
+        "bp": 0.7711,
+        "u_prec": 49.75,
+        "u_rec": 39.49,
+        "u_f1": 44.03,
+        "chrf": 36.54,
+        "token_coverage": 99.57,
+        "examples": [
+          {
+            "src": "Ik ga.",
+            "ref": "I'm going to go.",
+            "hyp": "i"
+          },
+          {
+            "src": "Noteer het!",
+            "ref": "Write it down!",
+            "hyp": "write the"
+          }
+        ]
+      },
+      {
+        "lang": "pl",
+        "label": "Polish→English",
+        "n": 400,
+        "bleu": 3.13,
+        "bleu1": 49.38,
+        "bleu2": 9.58,
+        "bp": 0.6058,
+        "u_prec": 49.35,
+        "u_rec": 32.87,
+        "u_f1": 39.46,
+        "chrf": 29.76,
+        "token_coverage": 98.05,
+        "examples": [
+          {
+            "src": "Spróbujmy coś.",
+            "ref": "Let's try something.",
+            "hyp": "try something"
+          },
+          {
+            "src": "Odejdź teraz.",
+            "ref": "Leave now.",
+            "hyp": "is now"
+          }
+        ]
+      },
+      {
+        "lang": "pt",
+        "label": "Portuguese→English",
+        "n": 400,
+        "bleu": 4.52,
+        "bleu1": 52.13,
+        "bleu2": 11.31,
+        "bp": 0.7288,
+        "u_prec": 52.1,
+        "u_rec": 39.58,
+        "u_f1": 44.99,
+        "chrf": 35.63,
+        "token_coverage": 99.88,
+        "examples": [
+          {
+            "src": "Preciso dormir.",
+            "ref": "I have to go to sleep.",
+            "hyp": "i sleep"
+          },
+          {
+            "src": "Vocês fumam?",
+            "ref": "Do you smoke?",
+            "hyp": "you smoke"
+          }
+        ]
+      },
+      {
+        "lang": "ru",
+        "label": "Russian→English",
+        "n": 400,
+        "bleu": 2.07,
+        "bleu1": 45.6,
+        "bleu2": 6.54,
+        "bp": 0.6479,
+        "u_prec": 45.57,
+        "u_rec": 31.77,
+        "u_f1": 37.44,
+        "chrf": 26.15,
+        "token_coverage": 95.37,
+        "examples": [
+          {
+            "src": "Пароль «Muiriel».",
+            "ref": "The password is \"Muiriel\".",
+            "hyp": "password sea"
+          },
+          {
+            "src": "Весёлого Рождества!",
+            "ref": "Merry Christmas!",
+            "hyp": "weight рождества"
+          }
+        ]
+      },
+      {
+        "lang": "tr",
+        "label": "Turkish→English",
+        "n": 400,
+        "bleu": 1.19,
+        "bleu1": 41.35,
+        "bleu2": 2.6,
+        "bp": 0.5998,
+        "u_prec": 41.32,
+        "u_rec": 27.34,
+        "u_f1": 32.91,
+        "chrf": 24.13,
+        "token_coverage": 97.46,
+        "examples": [
+          {
+            "src": "Uyumam lazım.",
+            "ref": "I have to go to sleep.",
+            "hyp": "cow's i"
+          },
+          {
+            "src": "Hayaletler var.",
+            "ref": "Ghosts exist.",
+            "hyp": "i a"
+          }
+        ]
+      },
+      {
+        "lang": "zh",
+        "label": "Chinese→English",
+        "n": 400,
+        "bleu": 0.07,
+        "bleu1": 19.11,
+        "bleu2": 0.81,
+        "bp": 0.0228,
+        "u_prec": 19.02,
+        "u_rec": 3.98,
+        "u_f1": 6.58,
+        "chrf": 4.19,
+        "token_coverage": 44.66,
+        "examples": [
+          {
+            "src": "今天是６月１８号，也是Muiriel的生日！",
+            "ref": "Today is June 18th and it is Muiriel's birthday!",
+            "hyp": "today 也是muiriel的生日"
+          },
+          {
+            "src": "“电话响了。”“我去接。”",
+            "ref": "\"The phone is ringing.\" \"I'll get it.\"",
+            "hyp": "i 我去接"
+          }
+        ]
       }
     ],
-    "m6_snapshot": {
-      "overall": {
-        "n": 6400,
-        "bleu": 2.44,
-        "bleu1": 43.87,
-        "bleu2": 7.39,
-        "bp": 0.5729,
-        "u_prec": 43.87,
-        "u_rec": 28.18,
-        "u_f1": 34.31,
-        "chrf": 25.18,
-        "token_coverage": 90.33
-      },
-      "note": "Not claiming Google/DeepL neural parity yet. Climbing toward competitive sentence bars offline (phrase table + templates + CJK). M1 form→gloss catalog remains 100% on covered langs."
-    },
-    "solid_langs_n50": 106,
-    "thin_langs": [
-      {
-        "lang": "roa-opt",
-        "n": 47,
-        "open": 100.0,
-        "product": 100.0,
-        "ok": true
-      },
-      {
-        "lang": "orv",
-        "n": 36,
-        "open": 100.0,
-        "product": 100.0,
-        "ok": true
-      },
-      {
-        "lang": "osp",
-        "n": 34,
-        "open": 100.0,
-        "product": 100.0,
-        "ok": true
-      },
-      {
-        "lang": "mga",
-        "n": 25,
-        "open": 100.0,
-        "product": 100.0,
-        "ok": true
-      },
-      {
-        "lang": "pro",
-        "n": 17,
-        "open": 100.0,
-        "product": 100.0,
-        "ok": true
-      },
-      {
-        "lang": "pal",
-        "n": 10,
-        "open": 100.0,
-        "product": 100.0,
-        "ok": true
-      },
-      {
-        "lang": "hit",
-        "n": 3,
-        "open": 100.0,
-        "product": 100.0,
-        "ok": true
-      }
-    ],
-    "unique": "Intrinsic free-parameter FSOT model — competitors have no law pin, no offline classical+visual densify stack, and no cert-gated converse under the same constitution.",
-    "next": [
-      "Continue Kaikki to100 until catalog≥100 with all n≥50 solid",
-      "Boost thin historical codes (hit/sum/syc/pal/peo)",
-      "M6 CJK BPE / larger phrase mass for ja/zh",
-      "Optional Ada converse smoke on multi-lang probes"
+    "next_levers": [
+      "Larger phrase mass (50k+/lang) + IBM-2 order models",
+      "Morphological analyzers for TR/FI/HU",
+      "Sentencepiece/BPE for JA/ZH",
+      "Optional offline neural student distilled into Ada pathway (law stays master)",
+      "FLORES-200 sample on D: when available"
     ]
   }
 }
