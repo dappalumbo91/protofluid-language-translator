@@ -118,16 +118,19 @@ package body PFLT_Store is
       if K'Length = 0 or else V'Length = 0 then
          return;
       end if;
-      --  Prefer higher-scoring gloss if key exists
+      --  Prefer higher-scoring gloss if key exists; on tie prefer longer content.
       declare
          C : constant Maps.Cursor := Table.Find (K);
+         New_S : Long_Float;
+         Old_S : Long_Float;
       begin
          if Maps.Has_Element (C) then
-            if PFLT_Gloss_Quality.Score_Gloss (V)
-              <= PFLT_Gloss_Quality.Score_Gloss (Maps.Element (C))
+            New_S := PFLT_Gloss_Quality.Score_Gloss (V);
+            Old_S := PFLT_Gloss_Quality.Score_Gloss (Maps.Element (C));
+            if New_S > Old_S
+              or else
+                (New_S = Old_S and then V'Length > Maps.Element (C)'Length)
             then
-               null; -- keep better existing
-            else
                Table.Replace_Element (C, V);
             end if;
          else
@@ -140,11 +143,20 @@ package body PFLT_Store is
       begin
          if Kl /= K then
             if Maps.Has_Element (C2) then
-               if PFLT_Gloss_Quality.Score_Gloss (V)
-                 > PFLT_Gloss_Quality.Score_Gloss (Maps.Element (C2))
-               then
-                  Table.Replace_Element (C2, V);
-               end if;
+               declare
+                  New_S : constant Long_Float :=
+                    PFLT_Gloss_Quality.Score_Gloss (V);
+                  Old_S : constant Long_Float :=
+                    PFLT_Gloss_Quality.Score_Gloss (Maps.Element (C2));
+               begin
+                  if New_S > Old_S
+                    or else
+                      (New_S = Old_S
+                       and then V'Length > Maps.Element (C2)'Length)
+                  then
+                     Table.Replace_Element (C2, V);
+                  end if;
+               end;
             else
                Table.Include (Kl, V);
             end if;
@@ -404,6 +416,7 @@ package body PFLT_Store is
    is
       R : constant String := To_String (Data_Root_U);
    begin
+      --  Gold first (mass inventory), densify last so preferred product senses win.
       Gold_N    := Load_Gold_TSV (Join (R, "gold_core.tsv"));
       Densify_N := Load_TSV_Map (Join (R, "densify.tsv"));
    end Load_Default_Packs;

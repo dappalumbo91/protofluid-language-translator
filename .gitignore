@@ -37,10 +37,12 @@ data/expanded_gold.jsonl
 data/dictionary_db_mined_gold.jsonl
 data/chew_climb/
 
-# Ada huge packs (rebuild: solidify_core_langs.py / accuracy_push.py / fast_climb.py)
+# Ada huge packs (rebuild locally from D: Kaikki + push_universal / export)
+# Product binary loads densify+gold from local disk — not shipped on GitHub.
 pflt-Ada/data/train_mass.tsv
 pflt-Ada/data/train_cache.pkl
 pflt-Ada/data/gold_core.tsv
+pflt-Ada/data/densify.tsv
 pflt-Ada/bin/
 pflt-Ada/obj/
 pflt-Ada/alire/

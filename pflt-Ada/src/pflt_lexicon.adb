@@ -41,8 +41,8 @@ is
       Empty.Gloss := (others => ' ');
       Empty.Gloss_Last := 0;
 
-      --  Classical seeds (parity with product teach panel / climb)
-      if F = "aqua" then
+      --  Classical + modern converse seeds (product demos; beat peel pollution)
+      if F = "aqua" or else F = "agua" then
          return Pad_Gloss ("water");
       elsif F = "manus" or else F = "manibus" then
          return Pad_Gloss ("hand");
@@ -52,7 +52,7 @@ is
          return Pad_Gloss ("word");
       elsif F = "logos" then
          return Pad_Gloss ("word");
-      elsif F = "theos" then
+      elsif F = "theos" or else F = "deus" then
          return Pad_Gloss ("god");
       elsif F = "rex" then
          return Pad_Gloss ("king");
@@ -72,6 +72,36 @@ is
          return Pad_Gloss ("hand");
       elsif F = "latin" then
          return Pad_Gloss ("latin");
+      elsif F = "hola" or else F = "bonjour" or else F = "ciao"
+        or else F = "hallo" or else F = "hello"
+      then
+         return Pad_Gloss ("hello");
+      elsif F = "mundo" or else F = "world" then
+         return Pad_Gloss ("world");
+      elsif F = "gracias" or else F = "merci" or else F = "danke"
+        or else F = "thanks"
+      then
+         return Pad_Gloss ("thanks");
+      elsif F = "amor" then
+         return Pad_Gloss ("love");
+      elsif F = "vita" then
+         return Pad_Gloss ("life");
+      elsif F = "pax" then
+         return Pad_Gloss ("peace");
+      elsif F = "casa" then
+         return Pad_Gloss ("house");
+      elsif F = "libro" then
+         return Pad_Gloss ("book");
+      elsif F = "luna" then
+         return Pad_Gloss ("moon");
+      elsif F = "terra" then
+         return Pad_Gloss ("earth");
+      elsif F = "mare" then
+         return Pad_Gloss ("sea");
+      elsif F = "ignis" then
+         return Pad_Gloss ("fire");
+      elsif F = "ventus" then
+         return Pad_Gloss ("wind");
       else
          return Empty;
       end if;

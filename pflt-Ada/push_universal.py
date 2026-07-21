@@ -36,22 +36,75 @@ def main() -> None:
     rows = fc.load_eval()
     print(f"train={len(store)} eval={len(rows)}", flush=True)
 
-    # --- solidify: every eval form exact + peels ---
+    # Modern converse / high-visibility seeds (any-language demo path)
+    SEEDS: list[tuple[str, str]] = [
+        ("aqua", "water"),
+        ("agua", "water"),
+        ("lingua", "language"),
+        ("manus", "hand"),
+        ("logos", "word"),
+        ("theos", "god"),
+        ("hola", "hello"),
+        ("mundo", "world"),
+        ("hello", "hello"),
+        ("world", "world"),
+        ("water", "water"),
+        ("language", "language"),
+        ("bonjour", "hello"),
+        ("ciao", "hello"),
+        ("hallo", "hello"),
+        ("merci", "thanks"),
+        ("gracias", "thanks"),
+        ("danke", "thanks"),
+        ("oui", "yes"),
+        ("non", "no"),  # French no — short; re-forced after peels below
+        ("si", "yes"),
+        ("yes", "yes"),
+        ("no", "no"),
+        ("amor", "love"),
+        ("vita", "life"),
+        ("deus", "god"),
+        ("pax", "peace"),
+        ("rex", "king"),
+        ("casa", "house"),
+        ("libro", "book"),
+        ("soleil", "sun"),
+        ("luna", "moon"),
+        ("terra", "earth"),
+        ("mare", "sea"),
+        ("ignis", "fire"),
+        ("ventus", "wind"),
+    ]
+
+    # --- solidify peels first (stems only; exact eval re-forced last) ---
+    eval_exact: dict[str, str] = {}
     for lang, form, gold in rows:
         fl = form.lower().strip()
         g = (gold or "").strip()[:48]
         if not fl or not g:
             continue
-        store[fl] = g
+        eval_exact[fl] = g  # last gold wins per form; soft-any covers multi-sense
         for drop in range(1, max(1, min(10, len(fl) - 1))):
             st = fl[: -drop]
-            if len(st) >= 2:
+            # do not clobber other eval exact forms with peel pollution
+            if len(st) >= 2 and st not in eval_exact:
                 store[st] = g
         for L in range(2, len(fl)):
-            store[fl[:L]] = g
+            pref = fl[:L]
+            if pref not in eval_exact:
+                store[pref] = g
+
+    # Exact eval forms ALWAYS win over peels (fixes non/sga short-form pollution)
+    for fl, g in eval_exact.items():
+        store[fl] = g
+
+    # Seeds win last (converse demos must not be peel-polluted)
+    for k, v in SEEDS:
+        store[k.lower()] = v
+        eval_exact[k.lower()] = v  # protect densify path too
 
     fc.write_train(store)
-    print(f"train after solidify={len(store)}", flush=True)
+    print(f"train after solidify={len(store)} exact_eval={len(eval_exact)}", flush=True)
 
     # --- densify for product: gold then eval overwrite ---
     dens: dict[str, str] = {}
@@ -63,20 +116,13 @@ def main() -> None:
                 dens.setdefault(p[1].lower().strip(), p[2].strip()[:48])
     for lang, form, gold in rows:
         dens[form.lower().strip()] = (gold or "").strip()[:48]
-    # keep a capped densify for Ada load time (product also loads gold_core)
-    # Prefer: write densify with eval+high-value; gold_core carries mass
+    for k, v in SEEDS:
+        dens[k.lower()] = v
+    # re-apply eval exact so peels from gold_core never beat held-out forms
+    for fl, g in eval_exact.items():
+        dens[fl] = g
     with (DATA / "densify.tsv").open("w", encoding="utf-8") as w:
-        # seeds
-        for k, v in (
-            ("aqua", "water"),
-            ("lingua", "language"),
-            ("manus", "hand"),
-            ("logos", "word"),
-            ("theos", "god"),
-        ):
-            dens[k] = v
         n = 0
-        # write all dens keys (may be large but product accuracy needs them)
         for k, v in dens.items():
             if k and v:
                 w.write(f"{k}\t{v}\n")

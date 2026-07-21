@@ -130,10 +130,17 @@ is
          return 0.0;
       end if;
       S := 0.5;
-      if C'Length <= 12 then
-         S := S + 0.3;
+      -- Prefer real content words over peel-pollution stubs (hol, sj, rr).
+      if C'Length <= 2 then
+         S := S - 0.35;
+      elsif C'Length = 3 then
+         S := S + 0.05;
+      elsif C'Length <= 12 then
+         S := S + 0.35;
       elsif C'Length <= 24 then
          S := S + 0.15;
+      else
+         S := S + 0.05;
       end if;
       if not Contains (To_Lower (C), " ") then
          S := S + 0.15;  -- single token preferred for map

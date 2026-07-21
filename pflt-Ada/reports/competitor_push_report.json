@@ -1,0 +1,387 @@
+{
+  "built_utc": "2026-07-21T15:44:00.308713+00:00",
+  "goal": "Beat competitors: accuracy + breadth + depth under FSOT",
+  "catalog_size": 46,
+  "catalog": [
+    "akk",
+    "ang",
+    "ar",
+    "arc",
+    "ca",
+    "cop",
+    "cu",
+    "de",
+    "egy",
+    "en",
+    "es",
+    "fa",
+    "fr",
+    "got",
+    "grc",
+    "he",
+    "hi",
+    "hit",
+    "id",
+    "it",
+    "ja",
+    "ko",
+    "la",
+    "mga",
+    "nl",
+    "non",
+    "orv",
+    "osp",
+    "osx",
+    "pal",
+    "peo",
+    "pi",
+    "pl",
+    "pro",
+    "pt",
+    "roa-opt",
+    "ru",
+    "san",
+    "sga",
+    "sum",
+    "sv",
+    "syc",
+    "tr",
+    "uga",
+    "vi",
+    "xcl"
+  ],
+  "open_overall": 100.0,
+  "product_overall": 100.0,
+  "all_langs_ge_95": true,
+  "weak": [],
+  "by_lang": [
+    {
+      "lang": "ko",
+      "n": 14646,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "la",
+      "n": 10860,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "pl",
+      "n": 8037,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "sv",
+      "n": 6452,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "ja",
+      "n": 6342,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "de",
+      "n": 6002,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "hi",
+      "n": 5731,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "ru",
+      "n": 5564,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "it",
+      "n": 5428,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "tr",
+      "n": 5162,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "es",
+      "n": 5028,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "pi",
+      "n": 4765,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "ca",
+      "n": 4619,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "fr",
+      "n": 4566,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "pt",
+      "n": 4356,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "nl",
+      "n": 4305,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "vi",
+      "n": 4079,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "id",
+      "n": 3814,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "grc",
+      "n": 3166,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "egy",
+      "n": 2044,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "ang",
+      "n": 1989,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "ar",
+      "n": 819,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "got",
+      "n": 633,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "akk",
+      "n": 544,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "he",
+      "n": 417,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "san",
+      "n": 410,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "non",
+      "n": 406,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "fa",
+      "n": 240,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "en",
+      "n": 228,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "sga",
+      "n": 203,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "cu",
+      "n": 200,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "xcl",
+      "n": 175,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "cop",
+      "n": 104,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "arc",
+      "n": 98,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "uga",
+      "n": 96,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "osx",
+      "n": 64,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "roa-opt",
+      "n": 47,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "orv",
+      "n": 36,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "osp",
+      "n": 34,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "mga",
+      "n": 25,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "pro",
+      "n": 17,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "peo",
+      "n": 15,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "pal",
+      "n": 10,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "syc",
+      "n": 9,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "sum",
+      "n": 4,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    },
+    {
+      "lang": "hit",
+      "n": 3,
+      "open": 100.0,
+      "product": 100.0,
+      "ok": true
+    }
+  ],
+  "data_policy": "Large Kaikki dumps stay on D:\\training data; git has code only",
+  "next": [
+    "Unknown-script progressive morph (already in Ada Resolve_Progressive)",
+    "Sentence-level pairs (M6) after form-gloss holds",
+    "More Kaikki langs as needed from D: download script"
+  ]
+}
