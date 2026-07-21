@@ -1,17 +1,8 @@
 {
   "title": "PFLT FSOT Benchmarks v0.2.0",
   "id": "damianpalumbo/pflt-fsot-benchmarks",
-  "licenses": [{"name": "Apache 2.0"}],
-  "keywords": [
-    "nlp",
-    "translation",
-    "machine translation",
-    "multilingual",
-    "benchmarks",
-    "sacrebleu",
-    "fsot",
-    "offline"
-  ],
-  "collaborators": [],
-  "data": []
+  "licenses": [{"name": "CC0-1.0"}],
+  "subtitle": "FSOT-native translator: catalog + chat neural + WMT14 de-en sacreBLEU snapshot",
+  "description": "# PFLT FSOT Benchmarks v0.2.0\n\n**Protofluid Language Translator** under FSOT law S=K(T1+T2+T3), pin D1D38A.\n\n## Headline results (2026-07-21)\n\n| Track | Metric | Value |\n|-------|--------|------:|\n| Catalog | 113 langs form→gloss product | ~99.99% |\n| Chat open-set neural | mean best sacreBLEU (16 langs) | **50.19** |\n| Hybrid densify|neural | mean sacreBLEU | **53.58** |\n| WMT14 de→en | opus-mt-de-en sacreBLEU | **33.88** |\n| WMT14 de→en | NLLB-600M sacreBLEU | **33.37** |\n| Gap to staged DeepL mid (40) | points | **6.12** |\n\n## Honesty\nCommercial DeepL/Google news SOTA is **not claimed**. Product densify BLEU can include residual TM templates. Fair open-set chat = neural numbers.\n\n## Links\n- GitHub: https://github.com/dappalumbo91/protofluid-language-translator (tag v0.2.0)\n- HF model: https://huggingface.co/dappalumbo91/pflt-fsot\n- HF dataset: https://huggingface.co/datasets/dappalumbo91/pflt-fsot-sample\n\n## Files\nmetrics_snapshot.json, benchmark_summary.csv, M6_SOTA_PUSH.md, COMPETITIVE_POSITION.md, RELEASE_v0.2.0.md, sample_densify.tsv\n",
+  "keywords": ["nlp", "translation", "multilingual"]
 }
