@@ -387,37 +387,42 @@ is
    end Resolve_EN;
 
    function Resolve_Progressive (Form : String) return Morph_Hit is
-      --  Universal char strip for ar/he/san/egy/… (no Latin endings).
+      --  Universal char strip; prefer LONGEST stem (avoid short pollution).
       F : constant String := To_Lower (Form);
       H : Morph_Hit;
+      Best : Morph_Hit;
+      Best_Len : Natural := 0;
    begin
-      if F'Length < 4 then
+      if F'Length < 3 then
          return H;
       end if;
-      for Drop in 1 .. Natural'Min (10, F'Length - 2) loop
+      --  suffixes dropped: try longer stems first (small Drop first)
+      for Drop in 1 .. Natural'Min (12, F'Length - 2) loop
          declare
             Stem : constant String := F (F'First .. F'Last - Drop);
             T    : Morph_Hit;
          begin
             T := Try_Key (Stem, "prog-stem");
-            if T.Found then
-               return T;
+            if T.Found and then Stem'Length > Best_Len then
+               Best := T;
+               Best_Len := Stem'Length;
             end if;
          end;
       end loop;
-      --  progressive prefixes length 3 .. len-1
-      for L in 3 .. F'Length - 1 loop
+      --  prefixes: try longer first
+      for L in reverse 3 .. F'Length - 1 loop
          declare
             Pref : constant String := F (F'First .. F'First + L - 1);
             T    : Morph_Hit;
          begin
             T := Try_Key (Pref, "prog-pref");
-            if T.Found then
-               return T;
+            if T.Found and then Pref'Length > Best_Len then
+               Best := T;
+               Best_Len := Pref'Length;
             end if;
          end;
       end loop;
-      return H;
+      return Best;
    end Resolve_Progressive;
 
    function Resolve

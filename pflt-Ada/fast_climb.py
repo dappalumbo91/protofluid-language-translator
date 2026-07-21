@@ -116,22 +116,28 @@ def peels(form: str, lang: str) -> list[str]:
 
 
 def resolve(form: str, store: dict[str, str], lang: str) -> str | None:
+    """Prefer longest stem hit (short polluted prefixes lose)."""
     fl = form.lower().strip()
     if fl in store:
         return store[fl]
+    hits: list[tuple[int, str]] = []
     for stem in peels(fl, lang):
         if stem in store:
-            return store[stem]
+            hits.append((len(stem), store[stem]))
         for r in REATT:
             if not r:
                 continue
             c = stem + r
             if c in store:
-                return store[c]
+                hits.append((len(c), store[c]))
         if lang == "grc" or not fl.isascii():
             for r in ("ος", "ον", "ης", "α", "ου", "οι", "ας", "ων"):
-                if stem + r in store:
-                    return store[stem + r]
+                c = stem + r
+                if c in store:
+                    hits.append((len(c), store[c]))
+    if hits:
+        hits.sort(key=lambda x: -x[0])
+        return hits[0][1]
     return None
 
 
