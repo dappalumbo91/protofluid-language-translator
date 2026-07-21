@@ -1,0 +1,336 @@
+{
+  "built_utc": "2026-07-21T19:01:25.800526+00:00",
+  "fsot": "S=K(T1+T2+T3) pin D1D38A; densify only",
+  "goal": "Chat content competitive + full BLEU toward DeepL",
+  "chat_densify": {
+    "rows": 846448,
+    "uni": 0,
+    "bi": 0,
+    "per_lang": {
+      "zh": 21424,
+      "de": 60000,
+      "ru": 60000,
+      "fr": 60000,
+      "es": 60000,
+      "nl": 60000,
+      "ar": 60000,
+      "pt": 60000,
+      "he": 60000,
+      "it": 60000,
+      "tr": 60000,
+      "hi": 25108,
+      "la": 60000,
+      "ko": 19916,
+      "pl": 60000,
+      "ja": 60000
+    }
+  },
+  "wmt_densify": {
+    "rows": 138172,
+    "uni": 0,
+    "bi": 0,
+    "method": "cooccurrence_vote"
+  },
+  "teacher": {
+    "es": {
+      "n": 400,
+      "uni": 0,
+      "bi": 0
+    },
+    "de": {
+      "n": 400,
+      "uni": 0,
+      "bi": 0
+    },
+    "fr": {
+      "n": 400,
+      "uni": 0,
+      "bi": 0
+    },
+    "ru": {
+      "n": 400,
+      "uni": 0,
+      "bi": 0
+    },
+    "zh": {
+      "n": 400,
+      "uni": 0,
+      "bi": 0
+    },
+    "ja": {
+      "n": 400,
+      "uni": 0,
+      "bi": 0
+    },
+    "ar": {
+      "n": 400,
+      "uni": 0,
+      "bi": 0
+    }
+  },
+  "phrase_sizes": {
+    "uni": 453464,
+    "bi": 6320906
+  },
+  "chat_tatoeba": {
+    "overall": {
+      "bleu": 26.36,
+      "bleu1": 82.8,
+      "bleu2": 35.14,
+      "bp": 0.9079,
+      "u_f1": 78.99,
+      "u_prec": 82.8,
+      "u_rec": 75.51,
+      "chrf": 63.22,
+      "n": 6400,
+      "cov": 100.0
+    },
+    "by_lang": [
+      {
+        "lang": "ar",
+        "n": 400,
+        "bleu": 24.06,
+        "bleu1": 88.31,
+        "bleu2": 34.03,
+        "bp": 0.9791,
+        "u_f1": 87.38,
+        "u_prec": 88.3,
+        "u_rec": 86.48,
+        "chrf": 69.74,
+        "cov": 100.0
+      },
+      {
+        "lang": "de",
+        "n": 400,
+        "bleu": 16.79,
+        "bleu1": 72.69,
+        "bleu2": 22.32,
+        "bp": 1.0,
+        "u_f1": 73.57,
+        "u_prec": 72.68,
+        "u_rec": 74.49,
+        "chrf": 59.54,
+        "cov": 100.0
+      },
+      {
+        "lang": "es",
+        "n": 400,
+        "bleu": 18.55,
+        "bleu1": 80.27,
+        "bleu2": 25.52,
+        "bp": 1.0,
+        "u_f1": 80.52,
+        "u_prec": 80.26,
+        "u_rec": 80.79,
+        "chrf": 64.14,
+        "cov": 100.0
+      },
+      {
+        "lang": "fr",
+        "n": 400,
+        "bleu": 17.28,
+        "bleu1": 74.98,
+        "bleu2": 24.85,
+        "bp": 1.0,
+        "u_f1": 77.24,
+        "u_prec": 74.97,
+        "u_rec": 79.65,
+        "chrf": 62.62,
+        "cov": 100.0
+      },
+      {
+        "lang": "he",
+        "n": 400,
+        "bleu": 26.08,
+        "bleu1": 96.07,
+        "bleu2": 37.83,
+        "bp": 0.912,
+        "u_f1": 91.84,
+        "u_prec": 96.07,
+        "u_rec": 87.97,
+        "chrf": 73.49,
+        "cov": 100.0
+      },
+      {
+        "lang": "hi",
+        "n": 400,
+        "bleu": 3.49,
+        "bleu1": 29.87,
+        "bleu2": 6.43,
+        "bp": 1.0,
+        "u_f1": 36.56,
+        "u_prec": 29.85,
+        "u_rec": 47.17,
+        "chrf": 29.14,
+        "cov": 100.0
+      },
+      {
+        "lang": "it",
+        "n": 400,
+        "bleu": 21.52,
+        "bleu1": 87.02,
+        "bleu2": 30.63,
+        "bp": 1.0,
+        "u_f1": 89.04,
+        "u_prec": 87.01,
+        "u_rec": 91.16,
+        "chrf": 71.06,
+        "cov": 100.0
+      },
+      {
+        "lang": "ja",
+        "n": 400,
+        "bleu": 28.24,
+        "bleu1": 99.67,
+        "bleu2": 99.5,
+        "bp": 0.2839,
+        "u_f1": 61.16,
+        "u_prec": 99.67,
+        "u_rec": 44.12,
+        "chrf": 49.12,
+        "cov": 100.0
+      },
+      {
+        "lang": "ko",
+        "n": 400,
+        "bleu": 28.52,
+        "bleu1": 96.79,
+        "bleu2": 41.1,
+        "bp": 0.9213,
+        "u_f1": 92.97,
+        "u_prec": 96.79,
+        "u_rec": 89.45,
+        "chrf": 73.98,
+        "cov": 100.0
+      },
+      {
+        "lang": "la",
+        "n": 400,
+        "bleu": 21.99,
+        "bleu1": 96.56,
+        "bleu2": 36.08,
+        "bp": 0.8886,
+        "u_f1": 91.17,
+        "u_prec": 96.56,
+        "u_rec": 86.36,
+        "chrf": 71.27,
+        "cov": 100.0
+      },
+      {
+        "lang": "nl",
+        "n": 400,
+        "bleu": 21.26,
+        "bleu1": 81.08,
+        "bleu2": 30.4,
+        "bp": 1.0,
+        "u_f1": 84.06,
+        "u_prec": 81.07,
+        "u_rec": 87.27,
+        "chrf": 66.99,
+        "cov": 100.0
+      },
+      {
+        "lang": "pl",
+        "n": 400,
+        "bleu": 20.84,
+        "bleu1": 94.73,
+        "bleu2": 34.46,
+        "bp": 0.8971,
+        "u_f1": 89.85,
+        "u_prec": 94.73,
+        "u_rec": 85.45,
+        "chrf": 71.12,
+        "cov": 100.0
+      },
+      {
+        "lang": "pt",
+        "n": 400,
+        "bleu": 17.84,
+        "bleu1": 80.38,
+        "bleu2": 28.38,
+        "bp": 1.0,
+        "u_f1": 82.85,
+        "u_prec": 80.38,
+        "u_rec": 85.49,
+        "chrf": 67.28,
+        "cov": 100.0
+      },
+      {
+        "lang": "ru",
+        "n": 400,
+        "bleu": 21.89,
+        "bleu1": 89.69,
+        "bleu2": 30.32,
+        "bp": 0.9596,
+        "u_f1": 87.87,
+        "u_prec": 89.69,
+        "u_rec": 86.13,
+        "chrf": 70.23,
+        "cov": 100.0
+      },
+      {
+        "lang": "tr",
+        "n": 400,
+        "bleu": 23.25,
+        "bleu1": 94.83,
+        "bleu2": 35.18,
+        "bp": 0.92,
+        "u_f1": 91.03,
+        "u_prec": 94.82,
+        "u_rec": 87.52,
+        "chrf": 72.12,
+        "cov": 100.0
+      },
+      {
+        "lang": "zh",
+        "n": 400,
+        "bleu": 33.35,
+        "bleu1": 100.0,
+        "bleu2": 100.0,
+        "bp": 0.3335,
+        "u_f1": 64.55,
+        "u_prec": 100.0,
+        "u_rec": 47.66,
+        "chrf": 53.46,
+        "cov": 100.0
+      }
+    ]
+  },
+  "wmt14_deen": {
+    "n": 3003,
+    "bleu": 0.4,
+    "bleu1": 25.3,
+    "bleu2": 2.85,
+    "bp": 0.9114,
+    "u_f1": 24.17,
+    "u_prec": 25.3,
+    "u_rec": 23.15,
+    "chrf": 23.94,
+    "cov": 98.42,
+    "sacrebleu": 0.35
+  },
+  "targets": {
+    "chat_bleu4": 35,
+    "chat_bleu1": 92,
+    "wmt_bleu4": 30,
+    "wmt_sacrebleu": 30,
+    "note": "Staged DeepL-class intermediate bars"
+  },
+  "gaps": {
+    "chat_bleu4_to_35": 8.64,
+    "wmt_bleu4_to_30": 29.6
+  },
+  "neural_student_wmt14_deen": {
+    "model": "Helsinki-NLP/opus-mt-de-en (local D:)",
+    "sacrebleu": 33.93,
+    "n": 3003,
+    "note": "FSOT densify remains offline surface; neural student for news full BLEU under law wrap"
+  },
+  "competitive_summary": {
+    "chat_bleu4": 26.36,
+    "chat_bleu1": 82.8,
+    "chat_uf1": 78.99,
+    "wmt_densify_bleu4": 0.4,
+    "wmt_neural_student_sacrebleu": 33.93
+  }
+}
