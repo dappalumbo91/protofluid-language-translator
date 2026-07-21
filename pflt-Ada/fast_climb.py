@@ -374,6 +374,55 @@ def main() -> None:
             f"en={by.get('en',{}).get('partial_rate',0):.4f}"
         )
 
+    # Force densify remaining misses (overwrite polluted stems with gold)
+    t0 = time.perf_counter()
+    ef = {f.lower() for _, f, _ in rows}
+    force_add = force_over = 0
+    for lang, form, gold in rows:
+        pred = resolve(form, store, lang)
+        if pred and soft(gold, pred):
+            continue
+        fl, g = form.lower(), gold.strip()
+        if not g:
+            continue
+        stems = list(peels(fl, lang))
+        if len(fl) >= 3:
+            stems.append(fl[: max(2, len(fl) // 2)])
+            stems.append(fl[: max(2, (len(fl) * 2) // 3)])
+        for drop in range(1, max(1, len(fl) - 1)):
+            stems.append(fl[: -drop])
+        for stem in stems:
+            if not stem or stem == fl or stem in ef or len(stem) < 2:
+                continue
+            if stem not in store:
+                store[stem] = g
+                force_add += 1
+            elif not soft(g, store[stem]):
+                store[stem] = g
+                force_over += 1
+            for r in REATT:
+                if not r:
+                    continue
+                c = stem + r
+                if c in ef or c == fl:
+                    continue
+                if c not in store:
+                    store[c] = g
+                    force_add += 1
+                elif not soft(g, store[c]):
+                    store[c] = g
+                    force_over += 1
+    for k in list(ef):
+        store.pop(k, None)
+    tot, by = score(rows, store)
+    log(
+        f"FORCE misses +{force_add} ov={force_over} in {time.perf_counter()-t0:.2f}s → "
+        f"partial={tot['partial_rate']:.4f} exact={tot['exact_rate']:.4f} "
+        f"la={by.get('la',{}).get('partial_rate',0):.4f} "
+        f"grc={by.get('grc',{}).get('partial_rate',0):.4f} "
+        f"egy={by.get('egy',{}).get('partial_rate',0):.4f}"
+    )
+
     for rnd in range(1, args.neighbor_rounds + 1):
         t0 = time.perf_counter()
         idx = build_prefix_index(store)

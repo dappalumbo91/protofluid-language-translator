@@ -1,8 +1,8 @@
 {
-  "built_utc": "2026-07-21T05:31:32.579626+00:00",
-  "runtime_sec": 8.8,
+  "built_utc": "2026-07-21T14:03:26.894777+00:00",
+  "runtime_sec": 11.76,
   "supervised_stems": true,
-  "train_keys": 5311643,
+  "train_keys": 5375524,
   "open_set": {
     "n": 20000,
     "exact_rate": 0.8498,
