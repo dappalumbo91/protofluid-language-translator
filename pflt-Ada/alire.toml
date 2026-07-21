@@ -1,0 +1,18 @@
+name = "pflt_ada"
+description = "Protofluid Translator Ada/SPARK law kernel (PFLT parallel)"
+version = "0.1.0-dev"
+
+authors = ["Damian Arthur Palumbo"]
+maintainers = ["Damian Arthur Palumbo <damian@example.com>"]
+maintainers-logins = ["pflt"]
+licenses = "Apache-2.0"
+website = "https://example.com/pflt-ada"
+tags = ["fsot", "pflt", "spark", "translation"]
+
+executables = ["pflt_main"]
+
+[build-switches]
+"*".style_checks = "No"
+
+[[depends-on]]
+gnatprove = "^16.1.0"

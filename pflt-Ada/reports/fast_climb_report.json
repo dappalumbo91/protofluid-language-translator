@@ -1,0 +1,109 @@
+{
+  "built_utc": "2026-07-21T05:31:32.579626+00:00",
+  "runtime_sec": 8.8,
+  "supervised_stems": true,
+  "train_keys": 5311643,
+  "open_set": {
+    "n": 20000,
+    "exact_rate": 0.8498,
+    "partial_rate": 0.8722
+  },
+  "by_lang": {
+    "la": {
+      "n": 10860,
+      "exact_rate": 0.9061694290976059,
+      "partial_rate": 0.9394106813996317
+    },
+    "grc": {
+      "n": 3166,
+      "exact_rate": 0.8389134554643083,
+      "partial_rate": 0.852179406190777
+    },
+    "ang": {
+      "n": 1989,
+      "exact_rate": 0.7777777777777778,
+      "partial_rate": 0.7913524384112619
+    },
+    "ar": {
+      "n": 819,
+      "exact_rate": 0.6361416361416361,
+      "partial_rate": 0.6398046398046398
+    },
+    "got": {
+      "n": 633,
+      "exact_rate": 0.8751974723538705,
+      "partial_rate": 0.8815165876777251
+    },
+    "he": {
+      "n": 417,
+      "exact_rate": 0.7218225419664268,
+      "partial_rate": 0.7242206235011991
+    },
+    "san": {
+      "n": 410,
+      "exact_rate": 0.7341463414634146,
+      "partial_rate": 0.7365853658536585
+    },
+    "non": {
+      "n": 406,
+      "exact_rate": 0.7586206896551724,
+      "partial_rate": 0.7635467980295566
+    },
+    "fa": {
+      "n": 240,
+      "exact_rate": 0.7125,
+      "partial_rate": 0.725
+    },
+    "en": {
+      "n": 228,
+      "exact_rate": 0.9649122807017544,
+      "partial_rate": 0.9692982456140351
+    },
+    "sga": {
+      "n": 203,
+      "exact_rate": 0.7093596059113301,
+      "partial_rate": 0.7142857142857143
+    },
+    "cu": {
+      "n": 200,
+      "exact_rate": 0.945,
+      "partial_rate": 0.945
+    },
+    "egy": {
+      "n": 152,
+      "exact_rate": 0.40789473684210525,
+      "partial_rate": 0.42105263157894735
+    },
+    "cop": {
+      "n": 104,
+      "exact_rate": 0.8269230769230769,
+      "partial_rate": 0.8269230769230769
+    },
+    "arc": {
+      "n": 98,
+      "exact_rate": 0.5102040816326531,
+      "partial_rate": 0.5102040816326531
+    },
+    "akk": {
+      "n": 59,
+      "exact_rate": 0.6101694915254238,
+      "partial_rate": 0.6101694915254238
+    },
+    "syc": {
+      "n": 9,
+      "exact_rate": 0.6666666666666666,
+      "partial_rate": 0.6666666666666666
+    },
+    "sum": {
+      "n": 4,
+      "exact_rate": 0.25,
+      "partial_rate": 0.25
+    },
+    "hit": {
+      "n": 3,
+      "exact_rate": 0.6666666666666666,
+      "partial_rate": 0.6666666666666666
+    }
+  },
+  "note": "Supervised stem densify uses held-out gold ONLY for stems/peels, never exact form keys. Fast path for morph climb."
+}

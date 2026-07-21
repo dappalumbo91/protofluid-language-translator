@@ -1,0 +1,4 @@
+gardiner	confidence	source	bbox
+A1	0.91	unet_slot	0.10,0.20,0.15,0.25
+N5	0.87	unet_slot	0.40,0.18,0.12,0.20
+S34	0.84	unet_slot	0.65,0.22,0.14,0.22

@@ -1,0 +1,291 @@
+{
+  "built_utc": "2026-07-21T03:23:59.817990+00:00",
+  "goal": "Solidify existing languages (quality) before catalog expansion",
+  "strategy": "DeepL-class: fewer languages, high accuracy; then expand with frozen FSOT approach",
+  "inventory": {
+    "gold_rows": 1010826,
+    "langs": 20,
+    "train_keys": 1610985,
+    "paradigm_expand": 700000,
+    "densify": 99182,
+    "eval_n": 20000
+  },
+  "open_set_overall": {
+    "n": 20000,
+    "exact_rate": 0.25375,
+    "partial_rate": 0.271
+  },
+  "open_set_by_lang": {
+    "la": {
+      "n": 11408,
+      "exact_rate": 0.40296283309957925,
+      "partial_rate": 0.42987377279102384
+    },
+    "grc": {
+      "n": 2975,
+      "exact_rate": 0.03529411764705882,
+      "partial_rate": 0.041008403361344536
+    },
+    "ang": {
+      "n": 2028,
+      "exact_rate": 0.16666666666666666,
+      "partial_rate": 0.1711045364891519
+    },
+    "ar": {
+      "n": 648,
+      "exact_rate": 0.0,
+      "partial_rate": 0.0
+    },
+    "got": {
+      "n": 446,
+      "exact_rate": 0.033632286995515695,
+      "partial_rate": 0.05605381165919283
+    },
+    "he": {
+      "n": 422,
+      "exact_rate": 0.0,
+      "partial_rate": 0.0
+    },
+    "en": {
+      "n": 397,
+      "exact_rate": 0.005037783375314861,
+      "partial_rate": 0.007556675062972292
+    },
+    "egy": {
+      "n": 302,
+      "exact_rate": 0.0,
+      "partial_rate": 0.0033112582781456954
+    },
+    "fa": {
+      "n": 237,
+      "exact_rate": 0.0,
+      "partial_rate": 0.0
+    },
+    "non": {
+      "n": 217,
+      "exact_rate": 0.08294930875576037,
+      "partial_rate": 0.08294930875576037
+    },
+    "san": {
+      "n": 217,
+      "exact_rate": 0.0,
+      "partial_rate": 0.0
+    },
+    "cu": {
+      "n": 205,
+      "exact_rate": 0.0,
+      "partial_rate": 0.0
+    },
+    "cop": {
+      "n": 200,
+      "exact_rate": 0.0,
+      "partial_rate": 0.0
+    },
+    "arc": {
+      "n": 168,
+      "exact_rate": 0.0,
+      "partial_rate": 0.0
+    },
+    "akk": {
+      "n": 103,
+      "exact_rate": 0.0,
+      "partial_rate": 0.0
+    },
+    "sga": {
+      "n": 14,
+      "exact_rate": 0.0,
+      "partial_rate": 0.0
+    },
+    "sum": {
+      "n": 7,
+      "exact_rate": 0.0,
+      "partial_rate": 0.0
+    },
+    "syc": {
+      "n": 5,
+      "exact_rate": 0.0,
+      "partial_rate": 0.0
+    },
+    "hit": {
+      "n": 1,
+      "exact_rate": 0.0,
+      "partial_rate": 0.0
+    }
+  },
+  "core_open_set": {
+    "la": {
+      "n": 11408,
+      "exact_rate": 0.40296283309957925,
+      "partial_rate": 0.42987377279102384
+    },
+    "grc": {
+      "n": 2975,
+      "exact_rate": 0.03529411764705882,
+      "partial_rate": 0.041008403361344536
+    },
+    "ang": {
+      "n": 2028,
+      "exact_rate": 0.16666666666666666,
+      "partial_rate": 0.1711045364891519
+    },
+    "egy": {
+      "n": 302,
+      "exact_rate": 0.0,
+      "partial_rate": 0.0033112582781456954
+    },
+    "en": {
+      "n": 397,
+      "exact_rate": 0.005037783375314861,
+      "partial_rate": 0.007556675062972292
+    }
+  },
+  "deploy_overall": {
+    "n": 7660,
+    "exact_rate": 0.8219321148825065,
+    "partial_rate": 0.8351174934725849
+  },
+  "deploy_by_lang": {
+    "akk": {
+      "n": 400,
+      "exact_rate": 0.9225,
+      "partial_rate": 0.9275
+    },
+    "ang": {
+      "n": 400,
+      "exact_rate": 0.8225,
+      "partial_rate": 0.865
+    },
+    "ar": {
+      "n": 400,
+      "exact_rate": 1.0,
+      "partial_rate": 1.0
+    },
+    "arc": {
+      "n": 400,
+      "exact_rate": 0.9475,
+      "partial_rate": 0.95
+    },
+    "cop": {
+      "n": 400,
+      "exact_rate": 0.9925,
+      "partial_rate": 0.9925
+    },
+    "cu": {
+      "n": 400,
+      "exact_rate": 0.9975,
+      "partial_rate": 0.9975
+    },
+    "egy": {
+      "n": 400,
+      "exact_rate": 0.875,
+      "partial_rate": 0.8775
+    },
+    "en": {
+      "n": 400,
+      "exact_rate": 0.8675,
+      "partial_rate": 0.93
+    },
+    "fa": {
+      "n": 400,
+      "exact_rate": 0.74,
+      "partial_rate": 0.7475
+    },
+    "got": {
+      "n": 400,
+      "exact_rate": 0.5275,
+      "partial_rate": 0.5275
+    },
+    "grc": {
+      "n": 400,
+      "exact_rate": 0.76,
+      "partial_rate": 0.815
+    },
+    "he": {
+      "n": 400,
+      "exact_rate": 0.89,
+      "partial_rate": 0.8925
+    },
+    "hit": {
+      "n": 307,
+      "exact_rate": 0.9543973941368078,
+      "partial_rate": 0.9706840390879479
+    },
+    "la": {
+      "n": 400,
+      "exact_rate": 0.765,
+      "partial_rate": 0.7925
+    },
+    "non": {
+      "n": 400,
+      "exact_rate": 0.5475,
+      "partial_rate": 0.55
+    },
+    "phn": {
+      "n": 153,
+      "exact_rate": 0.9934640522875817,
+      "partial_rate": 0.9934640522875817
+    },
+    "san": {
+      "n": 400,
+      "exact_rate": 0.995,
+      "partial_rate": 0.995
+    },
+    "sga": {
+      "n": 400,
+      "exact_rate": 0.4275,
+      "partial_rate": 0.4375
+    },
+    "sum": {
+      "n": 400,
+      "exact_rate": 0.5525,
+      "partial_rate": 0.5725
+    },
+    "syc": {
+      "n": 400,
+      "exact_rate": 0.9975,
+      "partial_rate": 0.9975
+    }
+  },
+  "core_deploy": {
+    "la": {
+      "n": 400,
+      "exact_rate": 0.765,
+      "partial_rate": 0.7925
+    },
+    "grc": {
+      "n": 400,
+      "exact_rate": 0.76,
+      "partial_rate": 0.815
+    },
+    "ang": {
+      "n": 400,
+      "exact_rate": 0.8225,
+      "partial_rate": 0.865
+    },
+    "egy": {
+      "n": 400,
+      "exact_rate": 0.875,
+      "partial_rate": 0.8775
+    },
+    "en": {
+      "n": 400,
+      "exact_rate": 0.8675,
+      "partial_rate": 0.93
+    }
+  },
+  "approach_frozen": [
+    "Quality-filter forms/glosses (no FSOT panel junk as English lemmas)",
+    "S=K(T1+T2+T3) pin D1D38A never rewritten",
+    "train_mass + paradigm densify from train stems only (honest open-set)",
+    "Deploy map = densify + gold; open-set = train_mass only",
+    "Per-lang morph peels (la/en/ang/grc/egy) before catalog growth",
+    "Expand to new languages only after core open-set and deploy hold"
+  ],
+  "expansion_rule": "Do not add language codes until core la/grc/ang/egy/en are solidified (deploy ≥85% sample, Latin open-set ≥60% target, en free of panel junk).",
+  "next": [
+    "Keep Latin open-set climb toward 60–70%",
+    "Greek Unicode densify + peels",
+    "Egyptian transliteration variants",
+    "Then expand catalog 20 → 40 → 100 with same pipeline"
+  ]
+}

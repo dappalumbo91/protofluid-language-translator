@@ -1,0 +1,20 @@
+code,name,n,exact_rate,partial_rate,gold_inventory,tier
+la,Latin,11408,0.6159,0.658,696876,B_usable
+grc,Ancient Greek,2975,0.0286,0.0323,109136,D_thin
+ang,Old English,2028,0.0804,0.0942,48022,D_thin
+ar,Arabic,648,0.0,0.0,22145,D_thin
+got,Gothic,446,0.0561,0.0852,18553,D_thin
+he,Hebrew,422,0.0,0.0,10828,D_thin
+en,English,397,0.005,0.0126,30402,D_thin
+egy,Egyptian (incl. hieroglyph/Unikemet),302,0.0,0.0033,23110,D_thin
+fa,Persian (Farsi),237,0.0,0.0,14352,D_thin
+non,Old Norse,217,0.0968,0.0968,8383,D_thin
+san,Sanskrit,217,0.0,0.0,9821,D_thin
+cu,Church Slavonic,205,0.0,0.0,4282,D_thin
+cop,Coptic,200,0.0,0.0,2251,D_thin
+arc,Aramaic,168,0.0,0.0,1744,D_thin
+akk,Akkadian,103,0.0,0.0,1066,D_thin
+sga,Old Irish,14,0.0,0.0,4944,C_sparse
+sum,Sumerian,7,0.0,0.0,1999,C_sparse
+syc,Syriac,5,0.0,0.0,2452,C_sparse
+hit,Hittite,1,0.0,0.0,307,C_sparse

@@ -1,0 +1,27 @@
+project Pflt_Ada is
+
+   for Source_Dirs use ("src");
+   for Object_Dir use "obj";
+   for Exec_Dir use "bin";
+   for Main use ("pflt_main.adb");
+   for Create_Missing_Dirs use "True";
+
+   package Compiler is
+      for Default_Switches ("Ada") use
+        ("-gnat2022", "-gnata", "-gnatwa", "-fstack-check");
+   end Compiler;
+
+   package Binder is
+      for Default_Switches ("Ada") use ("-Es");
+   end Binder;
+
+   package Builder is
+      for Default_Switches ("Ada") use ("-g");
+   end Builder;
+
+   package Prove is
+      for Proof_Dir use "proof";
+      for Proof_Switches ("Ada") use ("--level=2", "--timeout=60");
+   end Prove;
+
+end Pflt_Ada;

@@ -1,34 +1,67 @@
 # Protofluid Language Translator (PFLT)
 
-**FSOT 2.1–aligned** historical → modern language translation stack: morphology gap-fill, paradigm tables, dual-track **core lexicon** vs **proper-name gazetteer**, multilayer vision scaffolding, and IPA + waveform audio.
+**Protofluid Language Translator** — a **universal translator intelligence** surface under **FSOT 2.1 law**.
 
-This repository is the working implementation of the *Proto-Fluid Language Translator* concept under **FSOT 2.1** (seed scalar \(S = K(T_1+T_2+T_3)\); zero free parameters in the teacher scalar path). It does **not** use an LLM as the translation core.
+It is **not** “dictionary BLEU only.” It is meant to:
+
+1. **Translate** fluid language surfaces (historical → modern, multi-script)  
+2. **Converse / relay** what was translated  
+3. **Incorporate** claims into a growing **knowledge ledger**  
+4. Ground every act in the FSOT seed scalar \(S = K(T_1+T_2+T_3)\) as the **factual base**
+
+**Law authority:** archive-pinned `fsot_compute.py` (SHA256 `D1D38A…`) via `fsot_law_bridge.py`.  
+**Not** an LLM as translation or truth core. Morph/lexicon is the **language surface**; FSOT is the **constitution**.
+
+Architecture realignment vs Physical Archive: [`docs/FSOT_ARCHIVE_REALIGNMENT.md`](docs/FSOT_ARCHIVE_REALIGNMENT.md).  
+North-star multi-metric goals (beat every bar): [`docs/NORTH_STAR_METRICS.md`](docs/NORTH_STAR_METRICS.md).  
+Fast climb: [`docs/FAST_CLIMB.md`](docs/FAST_CLIMB.md) · Accuracy dual-metric: [`docs/ACCURACY_PUSH.md`](docs/ACCURACY_PUSH.md).
+
+### Shipping product: **Ada/SPARK** ([`pflt-Ada/`](pflt-Ada/))
+
+Python is the **data factory** (export/climb). The binary product is Ada:
+
+```powershell
+cd pflt-Ada
+python accuracy_push.py          # rebuild quality packs from local gold (large; optional)
+python -u fast_climb.py --target 0.90
+alr build
+.\bin\pflt_main.exe eval-product # shipping inventory accuracy
+.\bin\pflt_main.exe eval         # open-set morph stress
+.\bin\pflt_main.exe converse "aqua lingua manus"
+.\bin\pflt_main.exe archive      # live D1D38A pin of I:\ FSOT archive
+```
+
+| Track (Ada) | Meaning | Approx. (latest climb) |
+|-------------|---------|-------------------------|
+| **PRODUCT** | Full gold+densify+morph (shipping) | **~99.5%** partial form→gloss |
+| **OPEN-SET** | Held-out morph (train_mass only) | **~87%** partial (Latin ~94%) |
+| **Catalog** | Quality gold language codes | **20** (solidify first; expand later) |
+| **Law pin** | Live SHA256 of archive `fsot_compute.py` | **D1D38A** |
+
+Large packs (`gold_core.tsv`, `train_mass.tsv`) are **not** in git — rebuild with scripts. See `pflt-Ada/README.md`.
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
-## Status (v0.1 baseline)
+## Status
 
-Honest dual-track open-set (see `data/dual_track_report.json` when regenerated locally):
-
-| Track | Role | Typical partial (90/10) |
-|--------|------|-------------------------|
-| **Core** | Common vocabulary (morph / paradigms / gap-fill) | ~16–22% by language |
-| **Name open** | Train-only gazetteer + classical seeds | ~17% |
-| **Name + Pleiades** | + ancient-place contacts | ~18% |
-| **Name deployed** | Full Dictionary + Pleiades gaz | ~79% |
-| **Train closed** | Injected train forms | ~98% |
-
-Open-set is still early; this tag freezes a **working multimodal stack** for versioning while we keep pushing accuracy.
+**Ada-primary product** with dual metrics (product inventory vs open-set morph). Python dual-track reports remain for the climb factory (`data/dual_track_report.json` when regenerated).
 
 ## Features
 
-- **FSOT 2.1 domain routing** — 400+ scientific / historical domains (`build_fsot_domain_catalog.py`)
-- **Core open-set** — reverse morphology, precision-gated boosters, finite Latin/Greek/OE paradigms
-- **Name track** — `name_gazetteer.py` + historical contacts; optional **Pleiades** ingest
-- **Audio** — IPA + articulatory features + WAV (Windows SAPI or formant fallback)
-- **Vision scaffolding** — multilayer gray + VIS + UV/NIR field student stubs
-- **Hieroglyph / genetic code** hooks — Unikemet gold path, 64-codon symbols
-- **Dual-track eval** — never mix unique entities into morph metrics
+- **Converse + knowledge** — `protofluid_converse.py`: pathway → translate → law scalar → archive+ledger relay → append ledger  
+- **Law bridge** — `fsot_law_bridge.py` pins Physical Archive `fsot_compute` (D1D38A)  
+- **Knowledge ledger** — `knowledge_ledger.py` append-only claims (domain + S + authority)  
+- **Archive memory** — `fsot_archive_memory.py` loads linguistics_derivations, linguistic targets, kb_portable inventory  
+- **Pathway reasoner** — `pathway_reasoner.py` multi-hop attention over FSOT domain graph (Realities OS style)  
+- **Teach panel** — `teach_panel.py` English-meta Latin/Greek form↔gloss (e.g. water ↔ aqua)  
+- **Observer densify** — `observer_densify.py` rate-limited thin-knowledge plans + ledger densify claims  
+- **Certified math** — `certified_math.py` numeric gate via D1D38A pin / archive anchors (refuse vibes math)  
+- **Ledger hygiene** — `ledger_hygiene.py` cleans legacy `flowing_*` for display  
+- **FSOT 2.1 domain routing** — 400+ scientific / historical domains  
+- **Language surface** — reverse morph, paradigms, multi-gloss banks, per-lang JSON tables (`data/lang_tables/`)  
+- **Name track** — gazetteer + optional Pleiades (entities ≠ morph metrics)  
+- **Audio / vision stubs** — IPA + waveforms; multilayer vision scaffolding  
+- **Math microscope** — Mathematica + Lean/Coq/Isabelle/F* golden parity (`formal/`)
 
 ## Requirements
 
@@ -49,6 +82,15 @@ python run_stage_test.py
 # Dual-track honest eval (core vs name)
 python dual_track_eval.py
 
+# Ingest ALL local language + hieroglyph sources → expanded gold
+python ingest_all_language_data.py
+
+# Autonomous local climb (chew until partial target — no cloud APIs)
+python chew_climb.py --target 0.70 --max-rounds 120 --sample 2500 --full-every 4 --resume
+python chew_climb.py --status
+# PowerShell: .\chew_climb.ps1 -Target 0.70 -MaxRounds 120 -Resume -Background
+
+
 # Mine desktop Dictionary + Rosetta (paths in mine_desktop_assets.py)
 python mine_desktop_assets.py
 
@@ -58,11 +100,42 @@ python ingest_pleiades.py
 # Waveform demo
 python audio_articulation.py
 
-# Translate (API)
+# Law status (archive pin)
+python fsot_law_bridge.py
+
+# Protofluid converse (translate + relay + knowledge ledger)
+python protofluid_converse.py "aqua lingua manus"
+python protofluid_converse.py --repl
+python protofluid_converse.py --status
+
+# Translate-only API (language surface)
 python -c "from PFLT_FSOT_2_1_aligned import PFLT; p=PFLT(); print(p.translate('aqua lingua', context='historical'))"
+
+# Morph subsystem eval (not the full product success definition)
+python dual_track_eval.py
+python climb_open_set.py
+
+# Math microscope + formal golden
+python fsot_math_microscope.py
+python formal/run_formal_asserts.py
 ```
 
-### Example
+### Example — converse (product surface)
+
+```python
+from protofluid_converse import ProtofluidTranslator
+
+pt = ProtofluidTranslator()
+print(pt.status())  # law pin + ledger
+r = pt.converse("aqua lingua et manus")
+print(r["reply"])           # relay under FSOT domain + S
+print(r["fsot_law"])        # archive-backed scalar panel
+print(r["claim_ids"])       # stored in data/knowledge_ledger.jsonl
+r2 = pt.converse("what about water and hand?")  # retrieves ledger
+print(r2["reply"])
+```
+
+### Example — translate surface only
 
 ```python
 from PFLT_FSOT_2_1_aligned import PFLT
@@ -71,6 +144,8 @@ p = PFLT(enable_gapfill=True)
 print(p.translate("aqua", context="historical", include_audio=True))
 print(p.translate("Κύπρος", context="mythological"))
 ```
+
+See `docs/FSOT_ARCHIVE_REALIGNMENT.md` and `formal/README.md`.
 
 ## Repository layout
 

@@ -1,0 +1,411 @@
+name	D_eff	delta_psi	delta_theta	observed	keywords
+acoustic_resonance_materials	10.0	0.3	1.0	1	acoustic resonance materials
+acoustics	10.0	0.3	1.0	1	acoustics
+actuarial_science_panel	20.0	1.5	1.0	1	actuarial science panel
+adjacent_rung_coupling	16.13	0.7	1.0	1	adjacent rung coupling
+adversarial_fractal_break_tests	20.75	0.7	1.0	1	adversarial fractal break tests
+agriculture_agroecology	15.0	0.2	1.0	0	agriculture agroecology
+ai_galactic_orbital_bridge	20.0	1.0	1.0	1	galactic orbital bridge
+alternate_base_mathematics_explorer_panel	18.99	0.7	1.0	1	alternate base mathematics explorer panel
+alternate_base_mathematics_spine	21.8	0.7	1.0	1	alternate base mathematics spine
+anthropology	10.27	0.7	1.0	1	anthropology
+architecture_building_science	22.81	0.7	1.0	1	architecture building science
+arxiv_brain_knowledge_panel	14.0	0.7	1.0	1	arxiv brain knowledge panel
+arxiv_gravitational_waves_panel	22.0	1.0	1.0	0	arxiv gravitational waves panel
+arxiv_primitives_panel	9.59	0.7	1.0	1	arxiv primitives panel
+arxiv_primitives_v14	15.53	0.7	1.0	1	arxiv primitives v14
+astronomy	20.0	1.0	1.0	1	astronomy
+astrophysical	24.0	1.0	1.0	1	astrophysical (alias→astrophysics)
+astrophysical_structure_crosswalk	24.0	1.0	1.0	1	astrophysical structure crosswalk
+astrophysics	24.0	1.0	1.0	1	astrophysics
+atmospheric_physics	17.0	0.8	1.0	0	atmospheric physics
+atomic	7.0	0.85	1.0	1	atomic (alias→atomic physics)
+atomic_physics	7.0	0.85	1.0	1	atomic physics
+bibliography_corpus_panel	8.11	0.7	1.0	1	bibliography corpus panel
+bibliography_lean_corpus	18.26	0.7	1.0	1	bibliography lean corpus
+binary_decoder_panel	14.22	0.7	1.0	1	binary decoder panel
+binary_decoder_rendlesham	7.1	0.7	1.0	1	binary decoder rendlesham
+biochemistry	13.0	0.35	1.0	1	biochemistry
+biological	12.0	0.08	1.0	0	biological (alias→biology)
+biological_cuda_physarum	12.0	0.08	1.0	0	biological cuda physarum
+biology	12.0	0.08	1.0	0	biology
+biology_developmental_structural_depth_panel	12.0	0.08	1.0	0	biology developmental structural depth panel
+biophysics_public_panel	14.22	0.7	1.0	1	biophysics public panel
+blackhole_whitehole_cycle_live_panel	24.0	1.0	1.0	1	blackhole whitehole cycle live panel
+botany	6.74	0.7	1.0	1	botany
+boundary_partition_tightening	7.61	0.7	1.0	1	boundary partition tightening
+breakthrough_discoveries_2024_2026	15.59	0.7	1.0	1	breakthrough discoveries 2024 2026
+canonical_oracle_panel	7.61	0.7	1.0	1	canonical oracle panel
+cardiology	22.53	0.7	1.0	1	cardiology
+cardiology_panel	10.7	0.7	1.0	1	cardiology panel
+cartography_gis_panel	18.85	0.7	1.0	1	cartography gis panel
+cern_open_data_lhc	9.41	0.7	1.0	1	cern open data lhc
+certified_agent_formal_panel	7.39	0.7	1.0	1	certified agent formal panel
+certified_agent_qwen	13.25	0.7	1.0	1	certified agent qwen
+chaos_mediated_phase_transitions	21.96	0.7	1.0	1	chaos mediated phase transitions
+chemical_engineering	8.0	0.6	1.0	1	chemical engineering
+chemical_structure_stability_panel	8.0	0.6	1.0	1	chemical structure stability panel
+chemistry	8.0	0.6	1.0	1	chemistry
+civil_engineering	13.7	0.7	1.0	1	civil engineering
+civil_engineering_panel	19.87	0.7	1.0	1	civil engineering panel
+climate_science	17.0	0.8	1.0	0	climate science
+clinical_medicine	12.0	0.08	1.0	0	clinical medicine
+clinicaltrials_medical_panel	12.0	0.08	1.0	0	clinicaltrials medical panel
+code_genome_structure	12.0	0.08	1.0	0	code genome structure
+cold_fusion_candidate_prereg_scaffold	7.55	0.7	1.0	1	cold fusion candidate prereg scaffold
+cold_fusion_lab_synthesis_crosswalk	15.37	0.7	1.0	1	cold fusion lab synthesis crosswalk
+compact_object_binary_events	15.7	0.7	1.0	1	compact object binary events
+compactification_ladder	19.26	0.7	1.0	1	compactification ladder
+complexity_folding_emergence_panel	10.26	0.7	1.0	1	complexity folding emergence panel
+computational_reasoning	22.34	0.7	1.0	1	computational reasoning
+condensed_matter	14.0	0.5	1.0	1	condensed matter
+condensed_matter_superconductivity_depth_panel	14.0	0.5	1.0	1	condensed matter superconductivity depth panel
+consciousness_econ	16.0	1.15	1.0	1	consciousness econ
+consciousness_expansion_spine	16.0	1.15	1.0	1	consciousness expansion spine
+consciousness_galactic_orbital_bridge	16.0	1.15	1.0	1	consciousness galactic orbital bridge
+consciousness_genetics_coupling_panel	16.0	1.15	1.0	1	consciousness genetics coupling panel
+consciousness_genetics_species_panel	16.0	1.15	1.0	1	consciousness genetics species panel
+consciousness_soul_bridge	16.0	1.15	1.0	1	consciousness soul bridge
+consciousness_species_multi_panel	16.0	1.15	1.0	1	consciousness species multi panel
+cosmological	25.0	1.0	1.0	0	cosmological (alias→cosmology)
+cosmology	25.0	1.0	1.0	0	cosmology
+cosmology_anomalies	25.0	1.0	1.0	0	cosmology anomalies
+cosmology_anomaly_deep_panel	25.0	1.0	1.0	0	cosmology anomaly deep panel
+cosmology_bubble_bleed	25.0	1.0	1.0	0	cosmology bubble bleed
+cosmology_extended	25.0	1.0	1.0	0	cosmology extended
+crc_handbook_properties	8.42	0.7	1.0	1	crc handbook properties
+creative_arts_math_spine	23.62	0.7	1.0	1	creative arts math spine
+crossref_scholarly_panel	16.47	0.7	1.0	1	crossref scholarly panel
+cryosphere	6.15	0.7	1.0	1	cryosphere
+cryptography_technology	19.77	0.7	1.0	1	cryptography technology
+culinary_arts	6.34	0.7	1.0	1	culinary arts
+culinary_fermentation_maillard_panel	11.0	0.5	1.0	0	culinary fermentation maillard panel
+cve_codon_hole_falsification	9.55	0.7	1.0	1	cve codon hole falsification
+dark_energy_cpl	15.0	0.9	1.0	1	dark energy cpl
+dark_sector_open_problems	12.16	0.7	1.0	1	dark sector open problems
+desktop_application_wiring_spine	16.89	0.7	1.0	1	desktop application wiring spine
+distant_island_emergence_simulation	16.77	0.7	1.0	1	distant island emergence simulation
+distant_island_z128_z132_deep_panel	18.07	0.7	1.0	1	distant island z128 z132 deep panel
+domain_coupling_simulation	11.0	0.5	1.0	0	domain coupling simulation
+domain_coupling_simulation_refresh_panel	11.0	0.5	1.0	0	domain coupling simulation refresh panel
+domain_orbital_predictions	11.0	0.5	1.0	0	domain orbital predictions
+early_lean_mc_panel	7.17	0.7	1.0	1	early lean panel
+ecological	15.0	0.2	1.0	0	ecological (alias→ecology)
+ecology	15.0	0.2	1.0	0	ecology
+econometrics	20.0	1.5	1.0	1	econometrics
+economics	20.0	1.5	1.0	1	economics
+econophysics	20.0	1.5	1.0	1	econophysics
+electrical_power_systems	19.24	0.7	1.0	1	electrical power systems
+electromagnetism	9.0	0.7	1.0	1	electromagnetism
+element_synthesis_condition_scaffold	19.1	0.7	1.0	1	element synthesis condition scaffold
+energy_ai_orbital_bridge	15.0	0.9	1.0	1	energy orbital bridge
+energy_neural_orbital_bridge	15.0	0.9	1.0	1	energy neural orbital bridge
+entomology	7.51	0.7	1.0	1	entomology
+entomology_panel	13.68	0.7	1.0	1	entomology panel
+environmental_engineering	6.61	0.7	1.0	1	environmental engineering
+epidemiology	20.25	0.7	1.0	1	epidemiology
+epidemiology_panel	13.63	0.7	1.0	1	epidemiology panel
+ethology_panel	19.45	0.7	1.0	1	ethology panel
+exogeology	19.0	1.0	1.0	0	exogeology
+exogeology_panel	19.0	1.0	1.0	0	exogeology panel
+exoplanet_system_architecture	16.61	0.7	1.0	1	exoplanet system architecture
+experimental_base_mathematics_panel	21.85	0.7	1.0	1	experimental base mathematics panel
+external_oss_code_genome	12.0	0.08	1.0	0	external oss code genome
+federal_science_registry_panel	19.88	0.7	1.0	1	federal science registry panel
+finance_markets	20.0	1.5	1.0	1	finance markets
+finance_markets_panel	20.0	1.5	1.0	1	finance markets panel
+fluid_dynamics	15.0	0.9	1.0	0	fluid dynamics
+fluid_phase_current_spine	15.0	0.9	1.0	0	fluid phase current spine
+fluid_spacetime_observable_spine	15.0	0.9	1.0	0	fluid spacetime observable spine
+fluid_spacetime_prereg_validation_panel	15.0	0.9	1.0	0	fluid spacetime prereg validation panel
+fluid_tongue	15.0	0.9	1.0	0	fluid tongue (alias→fluid dynamics)
+fold_depth_metrics	9.13	0.7	1.0	1	fold depth metrics
+food_microbiology	12.0	0.08	1.0	0	food microbiology
+formula_branching_fractal	18.61	0.7	1.0	1	formula branching fractal
+formula_corpus_closure	20.11	0.7	1.0	1	formula corpus closure
+formula_corpus_cnc	20.44	0.7	1.0	1	formula corpus cnc
+formula_precision_spine	10.66	0.7	1.0	1	formula precision spine
+foundational_ontology_spine	21.65	0.7	1.0	1	foundational ontology spine
+founding_atmospheric_ozone_panel	17.0	0.8	1.0	0	founding atmospheric ozone panel
+founding_cosmic_dust_panel	15.99	0.7	1.0	1	founding cosmic dust panel
+founding_cosmic_ray_panel	14.48	0.7	1.0	1	founding cosmic ray panel
+founding_galactic_halo_rotation_panel	20.0	1.0	1.0	1	founding galactic halo rotation panel
+founding_pulsar_glitch_panel	13.37	0.7	1.0	1	founding pulsar glitch panel
+founding_quantum_vacuum_panel	6.0	1.0	1.0	1	founding quantum vacuum panel
+founding_white_dwarf_cooling_panel	22.89	0.7	1.0	1	founding white dwarf cooling panel
+fpc_fluidlink_timing_deep_panel	15.0	0.9	1.0	0	fpc fluidlink timing deep panel
+fpc_temporal_coupling	10.29	0.7	1.0	1	fpc temporal coupling
+fractal_constant_recursion	17.57	0.7	1.0	1	fractal constant recursion
+fsot_aggregate_organized_panel	13.08	0.7	1.0	1	fsot aggregate organized panel
+fsot_aggregate_unified_db	15.71	0.7	1.0	1	fsot aggregate unified
+fuel_candidate_prereg_scaffold	15.0	0.9	1.0	1	fuel candidate prereg scaffold
+fuel_lab_live_panel	15.0	0.9	1.0	1	fuel lab live panel
+fuel_thermochemistry_public_anchors	8.0	0.6	1.0	1	fuel thermochemistry public anchors
+fusion_decay_chain_prereg_scaffold	11.0	0.5	1.0	0	fusion decay chain prereg scaffold
+fusion_lab_certificate_spine	9.76	0.7	1.0	1	fusion lab certificate spine
+fusion_physics_public_panel	9.25	0.7	1.0	1	fusion physics public panel
+gaia_astrometry_panel_deep	11.0	0.5	1.0	0	gaia astrometry panel deep
+gaia_dr3_tap_deep	11.0	0.5	1.0	0	gaia dr3 tap deep
+galactic_structure_sample	20.0	1.0	1.0	1	galactic structure sample
+gbif_species_occurrence	11.66	0.7	1.0	1	gbif species occurrence
+genomic_sciences	12.0	0.08	1.0	0	genomic sciences
+geochemistry	8.0	0.6	1.0	1	geochemistry
+geological	19.0	1.0	1.0	0	geological (alias→geophysics)
+geology_stratigraphy	19.0	1.0	1.0	0	geology stratigraphy
+geomagnetism	19.0	1.0	1.0	0	geomagnetism
+geophysics	19.0	1.0	1.0	0	geophysics
+government_open_data_spine	8.96	0.7	1.0	1	government open data spine
+grace_cryosphere	17.77	0.7	1.0	1	grace cryosphere
+gwosc_live_event_deep	12.78	0.7	1.0	1	gwosc live event deep
+heavy_ion_lab_synthesis_panel	8.02	0.7	1.0	1	heavy ion lab synthesis panel
+higgs_mass	5.0	1.0	1.0	1	higgs mass
+high_energy_physics	7.0	0.95	1.0	1	high energy physics
+history	16.6	0.7	1.0	1	history
+history_panel	11.45	0.7	1.0	1	history panel
+hubble_bubble_tension	22.68	0.7	1.0	1	hubble bubble tension
+hubble_dark_sector_crosswalk	7.16	0.7	1.0	1	hubble dark sector crosswalk
+hvac_thermal_systems	18.52	0.7	1.0	1	hvac thermal systems
+hybrid_fi_sim_multi_hero_panel	6.64	0.7	1.0	1	hybrid sim multi hero panel
+hybrid_fi_sim_stratum_deep_panel	19.54	0.7	1.0	1	hybrid sim stratum deep panel
+hydrology	17.57	0.7	1.0	1	hydrology
+igem_live_fasta_ingest	6.48	0.7	1.0	1	igem live fasta ingest
+igem_parts_expanded	14.8	0.7	1.0	1	igem parts expanded
+igem_synthetic_biology	12.0	0.08	1.0	0	igem synthetic biology
+immunology	7.98	0.7	1.0	1	immunology
+immunology_panel	14.15	0.7	1.0	1	immunology panel
+inaturalist_observation_panel	14.71	0.7	1.0	1	inaturalist observation panel
+inertial_confinement_fusion_panel	19.77	0.7	1.0	1	inertial confinement fusion panel
+information_theory_public_panel	13.23	0.7	1.0	1	information theory public panel
+initiation_transformation_archetype	15.05	0.7	1.0	1	initiation transformation archetype
+interactive_media_prereg_scaffold	11.63	0.7	1.0	1	interactive media prereg scaffold
+interdisciplinary_spine_crosswalk	22.36	0.7	1.0	1	interdisciplinary spine crosswalk
+intrinsic_llm_validators	19.05	0.7	1.0	1	intrinsic llm validators
+intrinsic_llm_validators_panel	7.23	0.7	1.0	1	intrinsic llm validators panel
+ionospheric_chemistry_coupling	8.0	0.6	1.0	1	ionospheric chemistry coupling
+island_of_stability_deep_panel	23.86	0.7	1.0	1	island stability deep panel
+knowledge_base_portable_bundle_panel	17.36	0.7	1.0	1	knowledge base portable bundle panel
+lab_synthesis_metamaterial_spine	10.0	0.5	1.0	1	lab synthesis metamaterial spine
+law_policy	23.59	0.7	1.0	1	law policy
+law_policy_panel	11.76	0.7	1.0	1	law policy panel
+limnology_panel	6.29	0.7	1.0	1	limnology panel
+linguistics_formal	16.0	1.15	1.0	1	linguistics formal
+live_ingest_spine	22.14	0.7	1.0	1	live ingest spine
+living_fsot_hardware_panel	14.12	0.7	1.0	1	living fsot hardware panel
+longevity_anage_catalog_panel	9.18	0.7	1.0	1	longevity anage catalog panel
+longevity_consciousness_coupling_panel	16.0	1.15	1.0	1	longevity consciousness coupling panel
+longevity_extreme_species_panel	19.01	0.7	1.0	1	longevity extreme species panel
+longevity_genetic_mechanics_panel	12.0	0.08	1.0	0	longevity genetic mechanics panel
+longevity_megadeep_ncbi_panel	22.94	0.7	1.0	1	longevity megadeep ncbi panel
+longevity_telomere_repair_panel	11.0	0.5	1.0	0	longevity telomere repair panel
+machine_and_molecule_live_panel	11.0	0.5	1.0	0	machine and molecule live panel
+magnetic_confinement_fusion_panel	23.41	0.7	1.0	1	magnetic confinement fusion panel
+magnetosphere	21.33	0.7	1.0	1	magnetosphere
+magnetosphere_extended	14.71	0.7	1.0	1	magnetosphere extended
+maillard_chemistry	8.0	0.6	1.0	1	maillard chemistry
+malware_threat_intelligence	12.21	0.7	1.0	1	malware threat intelligence
+marine_biology	12.0	0.08	1.0	0	marine biology
+marine_biology_panel	12.0	0.08	1.0	0	marine biology panel
+material	10.0	0.5	1.0	1	material (alias→materials science)
+material_in_silico_screening_scaffold	10.0	0.5	1.0	1	material silico screening scaffold
+material_property_verification_scaffold	10.0	0.5	1.0	1	material property verification scaffold
+materials_creep_fracture_depth_panel	10.0	0.5	1.0	1	materials creep fracture depth panel
+materials_engineering	10.0	0.5	1.0	1	materials engineering
+materials_genome_crosswalk	12.0	0.08	1.0	0	materials genome crosswalk
+materials_project_live_panel	10.0	0.5	1.0	1	materials project live panel
+materials_science	10.0	0.5	1.0	1	materials science
+materials_species_bridge	10.0	0.5	1.0	1	materials species bridge
+materials_species_bridge_live_panel	10.0	0.5	1.0	1	materials species bridge live panel
+math_generator_airfoil_rmse	12.0	0.08	1.0	0	math generator airfoil rmse
+math_generator_benchmark_formula_eval	12.0	0.08	1.0	0	math generator benchmark formula eval
+math_generator_rules_eval	12.0	0.08	1.0	0	math generator rules eval
+mathematics_computational	7.27	0.7	1.0	1	mathematics computational
+mechanical_engineering	16.57	0.7	1.0	1	mechanical engineering
+mechanical_engineering_panel	9.87	0.7	1.0	1	mechanical engineering panel
+mechanistic_coupling	10.61	0.7	1.0	1	mechanistic coupling
+medical_galactic_orbital_bridge	20.0	1.0	1.0	1	medical galactic orbital bridge
+metamaterial_fluid_design_prereg_scaffold	15.0	0.9	1.0	0	metamaterial fluid design prereg scaffold
+meteorology	16.0	0.8	1.0	0	meteorology
+microtubule_quantum_consciousness_panel	16.0	1.15	1.0	1	microtubule quantum consciousness panel
+molecular_chemistry	9.0	0.5	1.0	1	molecular chemistry
+music_harmonics_public_panel	23.33	0.7	1.0	1	music harmonics public panel
+mycology	8.24	0.7	1.0	1	mycology
+mycology_panel	19.54	0.7	1.0	1	mycology panel
+nasa_donki_solar_panel	17.08	0.7	1.0	1	nasa donki solar panel
+nasa_exoplanet_archive	12.25	0.7	1.0	1	nasa exoplanet archive
+nasa_neo_feed_panel	19.21	0.7	1.0	1	nasa neo feed panel
+natural_formation_element_simulation	21.05	0.7	1.0	1	natural formation element simulation
+ncbi_gene_public_panel	12.0	0.08	1.0	0	ncbi gene public panel
+network_internet_protocols	17.06	0.7	1.0	1	network internet protocols
+network_science_public_panel	14.4	0.7	1.0	1	network science public panel
+neural	14.0	0.7	1.0	1	neural (alias→neuroscience)
+neural_galactic_orbital_bridge	20.0	1.0	1.0	1	neural galactic orbital bridge
+neuroeconomics	14.0	0.7	1.0	1	neuroeconomics
+neuroeconomics_panel	14.0	0.7	1.0	1	neuroeconomics panel
+neuroimmunology	14.0	0.7	1.0	1	neuroimmunology
+neurolab_gaps_math_spine	14.0	0.7	1.0	1	neurolab gaps math spine
+neurolab_residual_math_spine	14.0	0.7	1.0	1	neurolab residual math spine
+neuron_multi_hero	14.0	0.7	1.0	1	neuron multi hero
+neuroscience	14.0	0.7	1.0	1	neuroscience
+neuroscience_connectomics_depth_panel	14.0	0.7	1.0	1	neuroscience connectomics depth panel
+neutrino_physics_panel	8.79	0.7	1.0	1	neutrino physics panel
+nist_codata_constants	22.36	0.7	1.0	1	nist codata constants
+nist_dlmf_special_functions	14.21	0.7	1.0	1	nist dlmf special functions
+noaa_coastal_tides	11.25	0.7	1.0	1	noaa coastal tides
+noaa_ndbc_buoy_panel	17.35	0.7	1.0	1	noaa ndbc buoy panel
+nothing_perfection_friction_origin_panel	14.45	0.7	1.0	1	nothing perfection friction origin panel
+nuclear	15.0	1.0	1.0	1	nuclear (alias→nuclear physics)
+nuclear_physics	15.0	1.0	1.0	1	nuclear physics
+observer_channel_derivation	17.02	0.7	1.0	1	observer channel derivation
+observer_effect_cross_species_panel	10.03	0.7	1.0	1	observer effect cross species panel
+oceanography	17.0	0.7	1.0	0	oceanography
+omni_theory_genesis	12.0	0.08	1.0	0	omni theory genesis
+omni_theory_humanities_panel	17.58	0.7	1.0	1	omni theory humanities panel
+oncology	7.78	0.7	1.0	1	oncology
+open_meteo_live_panel	17.12	0.7	1.0	1	open meteo live panel
+openalex_citation_graph	21.08	0.7	1.0	1	openalex citation graph
+openneuro_full_panel	14.0	0.7	1.0	1	openneuro full panel
+optics	10.0	0.6	1.0	1	optics
+optics_interferometry_depth_panel	10.0	0.6	1.0	1	optics interferometry depth panel
+orbital_mechanics	14.65	0.7	1.0	1	orbital mechanics
+osti_doe_science_panel	14.72	0.7	1.0	1	osti doe science panel
+overflow_carry_emergence_panel	13.06	0.7	1.0	1	overflow carry emergence panel
+paleoclimate	17.0	0.8	1.0	0	paleoclimate
+paleoclimate_panel	17.0	0.8	1.0	0	paleoclimate panel
+paleontology	10.28	0.7	1.0	1	paleontology
+paleontology_panel	21.66	0.7	1.0	1	paleontology panel
+particle_astrophysics	24.0	0.8	1.0	0	particle astrophysics
+particle_neural_orbital_bridge	5.0	1.0	1.0	1	particle neural orbital bridge
+particle_physics	5.0	1.0	1.0	1	particle physics
+pdg_particle_properties	5.0	1.0	1.0	1	pdg particle properties
+periodic_extension_decay_topology_scaffold	11.94	0.7	1.0	1	periodic extension decay topology scaffold
+periodic_table_completion_spine	10.16	0.7	1.0	1	periodic table completion spine
+periodic_table_extension_closure_spine	15.6	0.7	1.0	1	periodic table extension closure spine
+periodic_table_public_panel	19.49	0.7	1.0	1	periodic table public panel
+petrology_geochemistry_panel	8.0	0.6	1.0	1	petrology geochemistry panel
+pharmacokinetics	23.83	0.7	1.0	1	pharmacokinetics
+pharmacology	15.9	0.7	1.0	1	pharmacology
+phi_morphogenetic_scaling	12.0	0.08	1.0	0	phi morphogenetic scaling
+physarum_biological_cuda_panel	12.0	0.08	1.0	0	physarum biological cuda panel
+physical_chemistry	8.0	0.5	1.0	1	physical chemistry
+planetary_atmospheres	17.0	0.8	1.0	0	planetary atmospheres
+planetary_science	21.0	0.9	1.0	1	planetary science
+planetary_structure	21.0	0.9	1.0	1	planetary structure
+plasma_physics	24.0	1.0	1.0	1	plasma physics
+portable_clone_verify	20.92	0.7	1.0	1	portable clone verify
+prediction_rederivation	7.31	0.7	1.0	1	prediction rederivation
+preregistered_outcome_tracking	10.86	0.7	1.0	1	preregistered outcome tracking
+preregistered_predictions	22.74	0.7	1.0	1	preregistered predictions
+preregistered_predictions_verification_scaffold	11.03	0.7	1.0	1	preregistered predictions verification scaffold
+programming_language_laws	16.0	1.15	1.0	1	programming language laws
+proof_carrying_code_genome	12.0	0.08	1.0	0	proof carrying code genome
+proof_ledger_closure_spine	18.84	0.7	1.0	1	proof ledger closure spine
+psychology	16.0	1.15	1.0	1	psychology
+psychology_psychometrics_depth_panel	16.0	1.15	1.0	1	psychology psychometrics depth panel
+pubchem_compound_properties	8.0	0.6	1.0	1	pubchem compound properties
+pubchem_live_deep	8.0	0.6	1.0	1	pubchem live deep
+pubchem_stability_panel	8.0	0.6	1.0	1	pubchem stability panel
+public_verifiable_spine	12.35	0.7	1.0	1	public verifiable spine
+published_fuel_property_panel	15.0	0.9	1.0	1	published fuel property panel
+pure_mathematics	22.95	0.7	1.0	1	pure mathematics
+pure_mathematics_panel	12.11	0.7	1.0	1	pure mathematics panel
+quantum	6.0	1.0	1.0	1	quantum (alias→quantum mechanics)
+quantum_computing	11.0	0.5	1.0	0	quantum computing
+quantum_computing_math_depth_panel	11.0	0.5	1.0	0	quantum computing math depth panel
+quantum_gravity	22.0	1.0	1.0	0	quantum gravity
+quantum_information	6.0	1.0	1.0	1	quantum information
+quantum_materials	10.0	0.5	1.0	1	quantum materials
+quantum_mechanics	6.0	1.0	1.0	1	quantum mechanics
+quantum_mechanics_entanglement_depth_panel	6.0	1.0	1.0	1	quantum mechanics entanglement depth panel
+quantum_optics	11.0	0.6	1.0	1	quantum optics
+radio_astronomy_panel	20.0	1.0	1.0	1	radio astronomy panel
+rcsb_pdb_structures	17.06	0.7	1.0	1	rcsb pdb structures
+rd_interval_tightening_panel	16.21	0.7	1.0	1	interval tightening panel
+reality_folding_spine	8.49	0.7	1.0	1	reality folding spine
+robotics_control_systems	15.24	0.7	1.0	1	robotics control systems
+robotics_control_systems_panel	21.42	0.7	1.0	1	robotics control systems panel
+rust_lean_bridge	21.3	0.7	1.0	1	rust lean bridge
+rust_lean_bridge_panel	10.46	0.7	1.0	1	rust lean bridge panel
+scalar_solver_35_panel	22.43	0.7	1.0	1	scalar solver panel
+scientific_expansion_depth_spine	13.18	0.7	1.0	1	scientific expansion depth spine
+scientific_expansion_depth_wave2_spine	14.25	0.7	1.0	1	scientific expansion depth wave2 spine
+scientific_expansion_spine	17.3	0.7	1.0	1	scientific expansion spine
+scientific_expansion_wave2_spine	19.38	0.7	1.0	1	scientific expansion wave2 spine
+scientific_expansion_wave3_spine	19.57	0.7	1.0	1	scientific expansion wave3 spine
+secure_software_engineering	12.45	0.7	1.0	1	secure software engineering
+seismology	18.0	1.2	1.0	0	seismology
+seismology_deep	18.0	1.2	1.0	0	seismology deep
+semiconductor_physics_public_panel	10.42	0.7	1.0	1	semiconductor physics public panel
+sh0es_refined	11.5	0.7	1.0	1	sh0es refined
+simbad_stellar_identity_deep	7.69	0.7	1.0	1	simbad stellar identity deep
+small_body_orbits	9.84	0.7	1.0	1	small body orbits
+sociology	18.0	1.5	1.0	1	sociology
+soil_science_panel	7.51	0.7	1.0	1	soil science panel
+solar_system_structure_deep	8.13	0.7	1.0	1	solar system structure deep
+space_propulsion_systems	11.46	0.7	1.0	1	space propulsion systems
+space_weather	16.0	0.8	1.0	0	space weather
+speleology	22.9	0.7	1.0	1	speleology
+speleology_panel	11.07	0.7	1.0	1	speleology panel
+sports_biomechanics	13.61	0.7	1.0	1	sports biomechanics
+star_trek_transporter_live_panel	20.31	0.7	1.0	1	star trek transporter live panel
+statistical_mechanics_public_panel	10.85	0.7	1.0	1	statistical mechanics public panel
+stellar_multiplicity_catalog	21.34	0.7	1.0	1	stellar multiplicity catalog
+stellar_multiplicity_live_deep	23.73	0.7	1.0	1	stellar multiplicity live deep
+stsci_mast_telescope_panel	6.35	0.7	1.0	1	stsci mast telescope panel
+stumped_observables_panel	16.33	0.7	1.0	1	stumped observables panel
+stumped_observables_spine	17.92	0.7	1.0	1	stumped observables spine
+superheavy_element_stability_panel	22.1	0.7	1.0	1	superheavy element stability panel
+superheavy_island_completion_spine	15.82	0.7	1.0	1	superheavy island completion spine
+superheavy_island_emergence_simulation	21.86	0.7	1.0	1	superheavy island emergence simulation
+supply_chain_logistics	11.0	0.5	1.0	0	supply chain logistics
+supply_chain_logistics_panel	11.0	0.5	1.0	0	supply chain logistics panel
+symbolic_archetype_panel	6.56	0.7	1.0	1	symbolic archetype panel
+synthetic_biology	12.0	0.08	1.0	0	synthetic biology
+tectonics	14.26	0.7	1.0	1	tectonics
+term3_acoustic_bleed_depth	10.0	0.3	1.0	1	term3 acoustic bleed depth
+the_well_outcomes_verification_panel	19.09	0.7	1.0	1	the well outcomes verification panel
+the_well_spot_check_panel	7.56	0.7	1.0	1	the well spot check panel
+the_well_verification_spine	14.34	0.7	1.0	1	the well verification spine
+theory_completeness_spine	19.27	0.7	1.0	1	theory completeness spine
+thermodynamics	15.0	0.9	1.0	1	thermodynamics
+tier_93_dual_wave_spine	18.74	0.7	1.0	1	tier dual wave spine
+tier_94_longevity_spine	22.87	0.7	1.0	1	tier longevity spine
+tier_95_zebrafish_spine	13.01	0.7	1.0	1	tier zebrafish spine
+time_domain_crosswalk	11.0	0.5	1.0	0	time domain crosswalk
+time_emergence_deep_panel	19.49	0.7	1.0	1	time emergence deep panel
+time_emergence_simulation	20.17	0.7	1.0	1	time emergence simulation
+toe_claim_certificate_bundle	11.0	0.5	1.0	0	toe claim certificate bundle
+toe_gap_closure_spine	23.39	0.7	1.0	1	toe gap closure spine
+toe_unification_spine	19.81	0.7	1.0	1	toe unification spine
+tokenization_live_panel	13.23	0.7	1.0	1	tokenization live panel
+tokenization_smoke	23.54	0.7	1.0	1	tokenization smoke
+toxicology_panel	11.73	0.7	1.0	1	toxicology panel
+trinary_hardware_live_panel	19.3	0.7	1.0	1	trinary hardware live panel
+trinary_hardware_motif	12.21	0.7	1.0	1	trinary hardware motif
+trinary_os_isa_rebuild	9.59	0.7	1.0	1	trinary isa rebuild
+trinary_os_portable	12.05	0.7	1.0	1	trinary portable
+trinary_os_round_trip	20.63	0.7	1.0	1	trinary round trip
+trinary_os_tier_e	6.39	0.7	1.0	1	trinary tier
+uap_war_gov_release_panel	10.26	0.7	1.0	1	uap war gov release panel
+undiscovered_element_candidate_prereg_scaffold	19.54	0.7	1.0	1	undiscovered element candidate prereg scaffold
+unified_db_candidate_crosswalk	7.7	0.7	1.0	1	unified candidate crosswalk
+unified_db_crosswalk_spine	22.68	0.7	1.0	1	unified crosswalk spine
+uniprot_protein_annotations	13.0	0.35	1.0	1	uniprot protein annotations
+uniprot_structure_annotations_deep	12.32	0.7	1.0	1	uniprot structure annotations deep
+virology	8.89	0.7	1.0	1	virology
+virology_panel	20.19	0.7	1.0	1	virology panel
+vizier_wds_tap_live_deep	6.85	0.7	1.0	1	vizier wds tap live deep
+vl_agent_distill_panel	18.26	0.7	1.0	1	agent distill panel
+vl_distill_atlas	17.18	0.7	1.0	1	distill atlas
+volcanology_panel	16.01	0.7	1.0	1	volcanology panel
+warp_bh_wh_portal_panel	6.48	0.7	1.0	1	warp portal panel
+wds_live_multiplicity_deep	14.55	0.7	1.0	1	wds live multiplicity deep
+world_bank_development	16.27	0.7	1.0	1	world bank development
+xr_interactive_media_math_scaffold	15.08	0.7	1.0	1	interactive media math scaffold
+z120_z126_beam_synthesis_panel	9.24	0.7	1.0	1	z120 z126 beam synthesis panel
+z164_distant_island_prereg_scaffold	23.93	0.7	1.0	1	z164 distant island prereg scaffold
+zebrafish_cell_tracking_panel	12.0	0.08	1.0	0	zebrafish cell tracking panel
+zebrafish_developmental_mechanics_panel	20.02	0.7	1.0	1	zebrafish developmental mechanics panel
+zebrafish_longevity_genetics_coupling_panel	12.0	0.08	1.0	0	zebrafish longevity genetics coupling panel
+zero_boundary_not_entity_panel	8.36	0.7	1.0	1	zero boundary not entity panel
+zero_day_risk_evaluator	18.65	0.7	1.0	1	zero day risk evaluator
+zoology	12.56	0.7	1.0	1	zoology

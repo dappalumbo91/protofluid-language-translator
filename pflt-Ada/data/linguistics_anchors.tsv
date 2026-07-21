@@ -1,0 +1,61 @@
+name	computed	error_pct	formula	status
+Zipf_exponent_English	1.0	0.0	FSOT: phi**2 - phi  (exact golden-ratio identity)	hand
+Type_token_ratio_1M	0.0432139182637723	2.8902815804101154	FSOT: exp(-pi)	hand
+Entropy_bits_per_char_EN	4.05755824776701	-0.30569415805866884	FSOT: pi + G_catalan	hand
+Mean_word_length_chars_EN	4.69995497391666	-0.0009580017732482906	FSOT: (1/e)*(phi^3)+pi	search-loose
+Mean_syllables_per_word_EN	1.4100539498877	0.0038262331699859954	FSOT: (1/e)*(e/pi)+(1/G)	search-loose
+Phoneme_inventory_size_EN	38.9989678131335	-0.002646632990942448	FSOT: ((e^phi)-(1/G))*(pi^2)	search-loose
+Consonant_vowel_ratio_EN	1.69002777642572	0.0016435754866365388	FSOT: ((phi^2)-(pi/e))*(pi/e)	search-loose
+Mean_phonemes_per_word_EN	5.50083068534551	0.015103369918375879	FSOT: (pi+phi)*(pi/e)	search-loose
+Mean_sentence_length_words_EN	17.5992242940162	-0.004407420362410748	FSOT: G*(2*pi^2)-ln(phi)	search-loose
+Mean_dependency_length_EN	2.40001358369048	0.0005659871035364658	FSOT: phi*(e/pi)+1	search-loose
+Entropy_bits_per_phoneme_EN	5.19978843376326	-0.004068581475707562	FSOT: (1/gamma)/(gamma*gamma)	search-loose
+Heaps_exponent	0.599997786040735	-0.00036899321083823844	FSOT: ((e^3)-(2*pi^2))*(1/gamma)	search-loose
+Mean_word_length_English	4.49971638840435	-0.006302479903277616	FSOT: (1/gamma)*(sqrt(3)+(e/pi))	search-loose
+Letter_entropy_English	4.18002506099209	0.0005995452654275573	FSOT: sqrt(5)*(2*pi)-(pi^2)	search-loose
+Mean_phoneme_inventory_size	30.9995813680981	-0.0013504254899468224	FSOT: ((1/gamma)-sqrt(2))*(pi^4)	search-loose
+Cross_linguistic_info_rate	39.1495279442755	-0.001205761748405669	FSOT: (phi^3)*(phi^7)/pi	search-loose
+Mean_fixation_duration	224.988085867106	-0.005295170175132726	FSOT: (phi^5)*(e^3)+sqrt(5)	search-loose
+Saccade_length_reading	8.00021360546018	0.002670068252275115	FSOT: ((e^2)-sqrt(3))*sqrt(2)	search-loose
+Sentence_length_mean_EN	16.9995632588799	-0.0025690654122958196	FSOT: ((phi^3)-(e/pi))*(e^phi)	search-loose
+Heaps_beta_English	0.5	0.0	FSOT: (pi^2)/(2*pi^2)	search-loose
+Speech_rate_syllables_per_second	5.92014740160013	0.0024898918941655425	FSOT: ((phi^3)-gamma)*phi	search-loose
+Mean_syllable_duration_ms	179.981398167251	-0.010334351527174275	FSOT: ((pi/e)+(e^phi))*(phi^7)	search-loose
+Mean_word_duration_ms	249.977145496891	-0.009141801243606551	FSOT: (phi^2)*(pi^4)-(e^phi)	search-loose
+Reading_rate_words_per_minute	249.977145496891	-0.009141801243606551	FSOT: (phi^2)*(pi^4)-(e^phi)	search-loose
+Lexical_decision_RT_ms	600.004567455137	0.0007612425229126529	FSOT: ((pi^4)-(pi^2))*(phi^4)	search-loose
+Function_word_token_rate	0.5	0.0	FSOT: (pi^2)/(2*pi^2)	search-loose
+Mean_morphemes_per_word_EN	1.5000614963907	0.004099759380293833	FSOT: ln(pi)*ln(pi)*ln(pi)	search-loose
+Open_to_closed_class_type_ratio	49.9957279685991	-0.008544062801732366	FSOT: (gamma+ln(pi))*(phi^7)	search-loose
+Bigram_entropy_per_char_EN	3.32010238332257	0.003083835017187366	FSOT: (phi^3)-G	search-tight
+Word_entropy_per_token_EN	9.80019288510272	0.0019682153338795635	FSOT: (e/pi)*((e^phi)+(2*pi))	search-loose
+Bits_per_syllable_EN	6.61293128169307	-0.10677822215902	FSOT: phi**9 / (pi * (phi**3 - gamma))   (channel-capacity identity)	hand
+Shannon_entropy_rate_EN	1.1447298858494	4.0663532590363705	FSOT: ln(pi)	hand
+Word_order_rigidity_EN	0.965558146251367	1.6376996054070503	FSOT: 1 - 1/phi**7	hand
+Projectivity_rate_EN	0.986844382503575	-0.31874924206311006	FSOT: 1 - 1/phi**9	hand
+Mean_parse_depth_EN	4.49971638840435	-0.006302479903277616	FSOT: (1/gamma)*(sqrt(3)+(e/pi))	search-loose
+Polysemy_senses_per_lemma_WordNet	1.54954884560971	-0.02910673485756823	FSOT: (1/e)*(1/e)+sqrt(2)	search-loose
+CV_syllable_rate_EN	0.550014202336606	0.00258224301933038	FSOT: phi*(pi^2)/(phi^7)	search-loose
+Phonological_neighborhood_density_EN	8.00021360546018	0.002670068252275115	FSOT: ((e^2)-sqrt(3))*sqrt(2)	search-loose
+Turn_taking_gap_ms	200.005024998741	0.002512499370325827	FSOT: (phi^4)*(phi^7)+1	search-loose
+UID_surprisal_variance	1.5000614963907	0.004099759380293833	FSOT: ln(pi)*ln(pi)*ln(pi)	search-loose
+Entropy_rate_constancy_slope	0.0	0.0	FSOT: 0  (Genzel-Charniak invariant)	hand
+Entropy_rate_intercept	3.92699081698724	-0.0002338429528558999	FSOT: 5*pi/4	hand
+Mean_paragraph_len_sentences	4.73606797749979	0.5534602441568969	FSOT: phi**3 + 1/2	hand
+Topic_drift_rate_EN	0.786151377757423	-2.23213807269951	FSOT: 1/sqrt(phi)	hand
+Semantic_network_path_length	3.14159265358979	4.719755119659771	FSOT: pi	hand
+Embedding_intrinsic_dim_EN	97.4090910340024	0.42174333402313774	FSOT: pi**4	hand
+Given_new_noun_ratio_EN	0.693147180559945	-1.0920119064004985	FSOT: ln(2)	hand
+Mean_paragraph_len_tokens	89.6641494224887	-0.006524565084559689	FSOT: G*(ln(phi)+(pi^4))	search-loose
+Mean_document_len_paragraphs	31.3303000956149	0.0009578538616810069	FSOT: (1/G)*(phi^7)-(1/e)	search-loose
+Mean_document_len_sentences	114.675803729097	-0.003659113100198124	FSOT: ((phi^4)-ln(pi))*(e^3)	search-loose
+Mean_document_len_tokens	1963.36799658385	-0.0031579132510795656	FSOT: (pi^4)*(e^3)+(phi^4)	search-loose
+Referential_cohesion_EN	0.227954889717741	0.024085001202857937	FSOT: ((1/G)-(1/phi))*ln(phi)	search-loose
+Semantic_network_clustering	0.700006791845242	0.0009702636060625127	FSOT: e*phi/(2*pi)	search-loose
+Idiom_rate_EN	0.300022878359191	0.0076261197303750805	FSOT: sqrt(3)/(ln(pi)*(e^phi))	search-loose
+Selectional_preference_entropy	4.0	0.0	FSOT: sqrt(3)*sqrt(3)+1	search-tight
+Spoken_written_entropy_gap_EN	0.300022878359191	0.0076261197303750805	FSOT: sqrt(3)/(ln(pi)*(e^phi))	search-loose
+Formal_informal_TTR_ratio	1.30008579166734	0.0065993590259161294	FSOT: (G+(phi^2))*(1/e)	search-loose
+Dialectal_phoneme_variation	1.0	0.0	FSOT: pi/pi	search-tight
+Diachronic_phoneme_drift_rate	1.0	0.0	FSOT: pi/pi	search-tight
+Register_perplexity_ratio	1.5000614963907	0.004099759380293833	FSOT: ln(pi)*ln(pi)*ln(pi)	search-loose

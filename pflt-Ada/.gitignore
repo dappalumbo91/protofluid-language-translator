@@ -1,0 +1,29 @@
+# Build / Alire
+obj/
+bin/
+alire/
+config/
+proof/
+*.ali
+*.o
+*.exe
+b__*
+*.bexch
+
+# Huge derived lexicon packs (rebuild via scripts)
+data/train_mass.tsv
+data/train_cache.pkl
+data/gold_core.tsv
+data/ltm_mulling.jsonl
+data/knowledge_ledger_ada.jsonl
+
+# Keep small samples / catalogs tracked:
+# densify.tsv (capped), eval_sample.tsv, domain_atlas.tsv,
+# linguistics_anchors.tsv, unet_hypotheses_sample.tsv, form_sense.tsv
+
+# GNATprove noise
+**/gnatprove/
+*.cswi
+*.spark
+*.stderr
+*.stdout

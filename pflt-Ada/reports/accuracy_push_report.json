@@ -1,0 +1,339 @@
+{
+  "built_utc": "2026-07-21T03:44:22.378555+00:00",
+  "goal": "Match or exceed competitor-class accuracy on form→gloss track",
+  "competitor_framing": {
+    "google_deepl_nllb": "Modern sentence BLEU/COMET — different track",
+    "our_primary": "PRODUCT form→gloss with full quality lexicon + morph",
+    "our_stress": "OPEN-SET morph held-out (harder than typical MT reports)",
+    "note": "Dictionary-style systems and MT models train on nearly all labeled pairs. PRODUCT ≈ that regime. OPEN-SET is generalization under FSOT densify."
+  },
+  "inventory": {
+    "gold_rows": 1079602,
+    "langs": 20,
+    "train_keys": 3420924,
+    "eval_n": 20000,
+    "held_out_pct_approx": 5
+  },
+  "PRODUCT_full_lexicon_morph": {
+    "overall": {
+      "n": 20000,
+      "exact_rate": 0.99615,
+      "partial_rate": 0.99635
+    },
+    "by_lang": {
+      "la": {
+        "n": 10860,
+        "exact_rate": 0.9996316758747698,
+        "partial_rate": 0.9996316758747698
+      },
+      "grc": {
+        "n": 3166,
+        "exact_rate": 1.0,
+        "partial_rate": 1.0
+      },
+      "ang": {
+        "n": 1989,
+        "exact_rate": 0.9989944695827049,
+        "partial_rate": 0.9989944695827049
+      },
+      "ar": {
+        "n": 819,
+        "exact_rate": 1.0,
+        "partial_rate": 1.0
+      },
+      "got": {
+        "n": 633,
+        "exact_rate": 0.9936808846761453,
+        "partial_rate": 0.9936808846761453
+      },
+      "he": {
+        "n": 417,
+        "exact_rate": 0.9664268585131894,
+        "partial_rate": 0.9664268585131894
+      },
+      "san": {
+        "n": 410,
+        "exact_rate": 1.0,
+        "partial_rate": 1.0
+      },
+      "non": {
+        "n": 406,
+        "exact_rate": 0.9753694581280788,
+        "partial_rate": 0.9778325123152709
+      },
+      "fa": {
+        "n": 240,
+        "exact_rate": 0.8875,
+        "partial_rate": 0.8958333333333334
+      },
+      "en": {
+        "n": 228,
+        "exact_rate": 0.9912280701754386,
+        "partial_rate": 0.9912280701754386
+      },
+      "sga": {
+        "n": 203,
+        "exact_rate": 0.9458128078817734,
+        "partial_rate": 0.9507389162561576
+      },
+      "cu": {
+        "n": 200,
+        "exact_rate": 1.0,
+        "partial_rate": 1.0
+      },
+      "egy": {
+        "n": 152,
+        "exact_rate": 0.993421052631579,
+        "partial_rate": 0.993421052631579
+      },
+      "cop": {
+        "n": 104,
+        "exact_rate": 1.0,
+        "partial_rate": 1.0
+      },
+      "arc": {
+        "n": 98,
+        "exact_rate": 0.9897959183673469,
+        "partial_rate": 0.9897959183673469
+      },
+      "akk": {
+        "n": 59,
+        "exact_rate": 1.0,
+        "partial_rate": 1.0
+      },
+      "syc": {
+        "n": 9,
+        "exact_rate": 1.0,
+        "partial_rate": 1.0
+      },
+      "sum": {
+        "n": 4,
+        "exact_rate": 0.75,
+        "partial_rate": 0.75
+      },
+      "hit": {
+        "n": 3,
+        "exact_rate": 1.0,
+        "partial_rate": 1.0
+      }
+    }
+  },
+  "OPEN_SET_train_mass_only": {
+    "overall": {
+      "n": 20000,
+      "exact_rate": 0.3033,
+      "partial_rate": 0.32825
+    },
+    "by_lang": {
+      "la": {
+        "n": 10860,
+        "exact_rate": 0.5117863720073664,
+        "partial_rate": 0.5495395948434623
+      },
+      "grc": {
+        "n": 3166,
+        "exact_rate": 0.08812381554011371,
+        "partial_rate": 0.10012634238787113
+      },
+      "ang": {
+        "n": 1989,
+        "exact_rate": 0.08094519859225742,
+        "partial_rate": 0.09703368526897939
+      },
+      "ar": {
+        "n": 819,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0
+      },
+      "got": {
+        "n": 633,
+        "exact_rate": 0.06477093206951026,
+        "partial_rate": 0.0947867298578199
+      },
+      "he": {
+        "n": 417,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0
+      },
+      "san": {
+        "n": 410,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0
+      },
+      "non": {
+        "n": 406,
+        "exact_rate": 0.06157635467980296,
+        "partial_rate": 0.06157635467980296
+      },
+      "fa": {
+        "n": 240,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0
+      },
+      "en": {
+        "n": 228,
+        "exact_rate": 0.0043859649122807015,
+        "partial_rate": 0.0043859649122807015
+      },
+      "sga": {
+        "n": 203,
+        "exact_rate": 0.0049261083743842365,
+        "partial_rate": 0.0049261083743842365
+      },
+      "cu": {
+        "n": 200,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0
+      },
+      "egy": {
+        "n": 152,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0
+      },
+      "cop": {
+        "n": 104,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0
+      },
+      "arc": {
+        "n": 98,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0
+      },
+      "akk": {
+        "n": 59,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0
+      },
+      "syc": {
+        "n": 9,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0
+      },
+      "sum": {
+        "n": 4,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0
+      },
+      "hit": {
+        "n": 3,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0
+      }
+    }
+  },
+  "DEPLOY_random_gold_sample": {
+    "overall": {
+      "n": 7669,
+      "exact_rate": 0.8187508149693572,
+      "partial_rate": 0.8319207197809363
+    },
+    "by_lang": {
+      "akk": {
+        "n": 400,
+        "exact_rate": 0.9175,
+        "partial_rate": 0.9225
+      },
+      "ang": {
+        "n": 400,
+        "exact_rate": 0.8225,
+        "partial_rate": 0.865
+      },
+      "ar": {
+        "n": 400,
+        "exact_rate": 1.0,
+        "partial_rate": 1.0
+      },
+      "arc": {
+        "n": 400,
+        "exact_rate": 0.9475,
+        "partial_rate": 0.95
+      },
+      "cop": {
+        "n": 400,
+        "exact_rate": 0.99,
+        "partial_rate": 0.99
+      },
+      "cu": {
+        "n": 400,
+        "exact_rate": 0.9975,
+        "partial_rate": 0.9975
+      },
+      "egy": {
+        "n": 400,
+        "exact_rate": 0.86,
+        "partial_rate": 0.8625
+      },
+      "en": {
+        "n": 400,
+        "exact_rate": 0.8675,
+        "partial_rate": 0.93
+      },
+      "fa": {
+        "n": 400,
+        "exact_rate": 0.745,
+        "partial_rate": 0.7525
+      },
+      "got": {
+        "n": 400,
+        "exact_rate": 0.51,
+        "partial_rate": 0.51
+      },
+      "grc": {
+        "n": 400,
+        "exact_rate": 0.76,
+        "partial_rate": 0.815
+      },
+      "he": {
+        "n": 400,
+        "exact_rate": 0.9,
+        "partial_rate": 0.9025
+      },
+      "hit": {
+        "n": 314,
+        "exact_rate": 0.9554140127388535,
+        "partial_rate": 0.9713375796178344
+      },
+      "la": {
+        "n": 400,
+        "exact_rate": 0.765,
+        "partial_rate": 0.7925
+      },
+      "non": {
+        "n": 400,
+        "exact_rate": 0.5275,
+        "partial_rate": 0.5325
+      },
+      "phn": {
+        "n": 155,
+        "exact_rate": 0.9935483870967742,
+        "partial_rate": 0.9935483870967742
+      },
+      "san": {
+        "n": 400,
+        "exact_rate": 0.995,
+        "partial_rate": 0.995
+      },
+      "sga": {
+        "n": 400,
+        "exact_rate": 0.4075,
+        "partial_rate": 0.4175
+      },
+      "sum": {
+        "n": 400,
+        "exact_rate": 0.5525,
+        "partial_rate": 0.57
+      },
+      "syc": {
+        "n": 400,
+        "exact_rate": 0.9975,
+        "partial_rate": 0.9975
+      }
+    }
+  },
+  "targets": {
+    "product_partial": ">= 0.90 (competitor-class on our track)",
+    "open_set_partial": ">= 0.55 then 0.70",
+    "latin_open": ">= 0.70"
+  }
+}

@@ -33,6 +33,18 @@ data/domain_lexica.json
 data/classical_grc_la_promoted_tierA.jsonl
 data/dictionary_ipa_lexicon.json
 data/hieroglyph_pflt_lexicon.json
+data/expanded_gold.jsonl
+data/dictionary_db_mined_gold.jsonl
+data/chew_climb/
+
+# Ada huge packs (rebuild: solidify_core_langs.py / accuracy_push.py / fast_climb.py)
+pflt-Ada/data/train_mass.tsv
+pflt-Ada/data/train_cache.pkl
+pflt-Ada/data/gold_core.tsv
+pflt-Ada/bin/
+pflt-Ada/obj/
+pflt-Ada/alire/
+pflt-Ada/proof/
 
 # Optional large local media
 *.wav

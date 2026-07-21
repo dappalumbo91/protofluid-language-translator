@@ -1,0 +1,493 @@
+{
+  "built_utc": "2026-07-21T03:24:21.013713+00:00",
+  "product": "Protofluid-Ada V6",
+  "pin": "D1D38A",
+  "metric_note": "form→gloss exact/partial on classical-historical surfaces; NOT FLORES/WMT sentence BLEU",
+  "inventory": {
+    "gold_core_rows": 1010826,
+    "gold_language_codes": 20,
+    "gold_by_lang": {
+      "la": 696876,
+      "grc": 109136,
+      "ang": 48022,
+      "en": 30402,
+      "egy": 23110,
+      "ar": 22145,
+      "got": 18553,
+      "fa": 14352,
+      "he": 10828,
+      "san": 9821,
+      "non": 8383,
+      "sga": 4944,
+      "cu": 4282,
+      "syc": 2452,
+      "cop": 2251,
+      "sum": 1999,
+      "arc": 1744,
+      "akk": 1066,
+      "hit": 307,
+      "phn": 153
+    },
+    "train_mass_keys_approx": 3610856,
+    "deploy_keys_approx": 2011650,
+    "eval_held_out_rows": 20000,
+    "densify_rows": 299182
+  },
+  "open_set": {
+    "definition": "train_mass only; held-out eval_sample forms",
+    "n": 20000,
+    "exact_rate": 0.3661,
+    "partial_rate": 0.3929,
+    "miss_rate": 0.6071,
+    "by_lang": [
+      {
+        "code": "la",
+        "name": "Latin",
+        "n": 11408,
+        "exact_rate": 0.6159,
+        "partial_rate": 0.658,
+        "miss_rate": 0.342,
+        "gold_inventory": 696876,
+        "tier": "B_usable"
+      },
+      {
+        "code": "grc",
+        "name": "Ancient Greek",
+        "n": 2975,
+        "exact_rate": 0.0286,
+        "partial_rate": 0.0323,
+        "miss_rate": 0.9677,
+        "gold_inventory": 109136,
+        "tier": "D_thin"
+      },
+      {
+        "code": "ang",
+        "name": "Old English",
+        "n": 2028,
+        "exact_rate": 0.0804,
+        "partial_rate": 0.0942,
+        "miss_rate": 0.9058,
+        "gold_inventory": 48022,
+        "tier": "D_thin"
+      },
+      {
+        "code": "ar",
+        "name": "Arabic",
+        "n": 648,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0,
+        "miss_rate": 1.0,
+        "gold_inventory": 22145,
+        "tier": "D_thin"
+      },
+      {
+        "code": "got",
+        "name": "Gothic",
+        "n": 446,
+        "exact_rate": 0.0561,
+        "partial_rate": 0.0852,
+        "miss_rate": 0.9148,
+        "gold_inventory": 18553,
+        "tier": "D_thin"
+      },
+      {
+        "code": "he",
+        "name": "Hebrew",
+        "n": 422,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0,
+        "miss_rate": 1.0,
+        "gold_inventory": 10828,
+        "tier": "D_thin"
+      },
+      {
+        "code": "en",
+        "name": "English",
+        "n": 397,
+        "exact_rate": 0.005,
+        "partial_rate": 0.0126,
+        "miss_rate": 0.9874,
+        "gold_inventory": 30402,
+        "tier": "D_thin"
+      },
+      {
+        "code": "egy",
+        "name": "Egyptian (incl. hieroglyph/Unikemet)",
+        "n": 302,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0033,
+        "miss_rate": 0.9967,
+        "gold_inventory": 23110,
+        "tier": "D_thin"
+      },
+      {
+        "code": "fa",
+        "name": "Persian (Farsi)",
+        "n": 237,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0,
+        "miss_rate": 1.0,
+        "gold_inventory": 14352,
+        "tier": "D_thin"
+      },
+      {
+        "code": "non",
+        "name": "Old Norse",
+        "n": 217,
+        "exact_rate": 0.0968,
+        "partial_rate": 0.0968,
+        "miss_rate": 0.9032,
+        "gold_inventory": 8383,
+        "tier": "D_thin"
+      },
+      {
+        "code": "san",
+        "name": "Sanskrit",
+        "n": 217,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0,
+        "miss_rate": 1.0,
+        "gold_inventory": 9821,
+        "tier": "D_thin"
+      },
+      {
+        "code": "cu",
+        "name": "Church Slavonic",
+        "n": 205,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0,
+        "miss_rate": 1.0,
+        "gold_inventory": 4282,
+        "tier": "D_thin"
+      },
+      {
+        "code": "cop",
+        "name": "Coptic",
+        "n": 200,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0,
+        "miss_rate": 1.0,
+        "gold_inventory": 2251,
+        "tier": "D_thin"
+      },
+      {
+        "code": "arc",
+        "name": "Aramaic",
+        "n": 168,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0,
+        "miss_rate": 1.0,
+        "gold_inventory": 1744,
+        "tier": "D_thin"
+      },
+      {
+        "code": "akk",
+        "name": "Akkadian",
+        "n": 103,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0,
+        "miss_rate": 1.0,
+        "gold_inventory": 1066,
+        "tier": "D_thin"
+      },
+      {
+        "code": "sga",
+        "name": "Old Irish",
+        "n": 14,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0,
+        "miss_rate": 1.0,
+        "gold_inventory": 4944,
+        "tier": "C_sparse"
+      },
+      {
+        "code": "sum",
+        "name": "Sumerian",
+        "n": 7,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0,
+        "miss_rate": 1.0,
+        "gold_inventory": 1999,
+        "tier": "C_sparse"
+      },
+      {
+        "code": "syc",
+        "name": "Syriac",
+        "n": 5,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0,
+        "miss_rate": 1.0,
+        "gold_inventory": 2452,
+        "tier": "C_sparse"
+      },
+      {
+        "code": "hit",
+        "name": "Hittite",
+        "n": 1,
+        "exact_rate": 0.0,
+        "partial_rate": 0.0,
+        "miss_rate": 1.0,
+        "gold_inventory": 307,
+        "tier": "C_sparse"
+      }
+    ],
+    "productive_langs_partial_ge_15pct": 1,
+    "strong_langs_partial_ge_70pct": 0,
+    "usable_langs_partial_ge_40pct": 1
+  },
+  "deploy_closed_sample": {
+    "definition": "up to 400 gold rows/lang; full densify+gold map",
+    "n": 7660,
+    "exact_rate": 0.8227,
+    "partial_rate": 0.836,
+    "by_lang": [
+      {
+        "code": "akk",
+        "name": "Akkadian",
+        "n": 400,
+        "exact_rate": 0.9225,
+        "partial_rate": 0.9275,
+        "gold_inventory": 1066,
+        "tier": "A_strong"
+      },
+      {
+        "code": "ang",
+        "name": "Old English",
+        "n": 400,
+        "exact_rate": 0.8225,
+        "partial_rate": 0.865,
+        "gold_inventory": 48022,
+        "tier": "A_strong"
+      },
+      {
+        "code": "ar",
+        "name": "Arabic",
+        "n": 400,
+        "exact_rate": 1.0,
+        "partial_rate": 1.0,
+        "gold_inventory": 22145,
+        "tier": "A_strong"
+      },
+      {
+        "code": "arc",
+        "name": "Aramaic",
+        "n": 400,
+        "exact_rate": 0.9475,
+        "partial_rate": 0.95,
+        "gold_inventory": 1744,
+        "tier": "A_strong"
+      },
+      {
+        "code": "cop",
+        "name": "Coptic",
+        "n": 400,
+        "exact_rate": 0.9925,
+        "partial_rate": 0.9925,
+        "gold_inventory": 2251,
+        "tier": "A_strong"
+      },
+      {
+        "code": "cu",
+        "name": "Church Slavonic",
+        "n": 400,
+        "exact_rate": 0.9975,
+        "partial_rate": 0.9975,
+        "gold_inventory": 4282,
+        "tier": "A_strong"
+      },
+      {
+        "code": "egy",
+        "name": "Egyptian (incl. hieroglyph/Unikemet)",
+        "n": 400,
+        "exact_rate": 0.875,
+        "partial_rate": 0.8775,
+        "gold_inventory": 23110,
+        "tier": "A_strong"
+      },
+      {
+        "code": "en",
+        "name": "English",
+        "n": 400,
+        "exact_rate": 0.8675,
+        "partial_rate": 0.93,
+        "gold_inventory": 30402,
+        "tier": "A_strong"
+      },
+      {
+        "code": "fa",
+        "name": "Persian (Farsi)",
+        "n": 400,
+        "exact_rate": 0.74,
+        "partial_rate": 0.7475,
+        "gold_inventory": 14352,
+        "tier": "A_strong"
+      },
+      {
+        "code": "got",
+        "name": "Gothic",
+        "n": 400,
+        "exact_rate": 0.53,
+        "partial_rate": 0.53,
+        "gold_inventory": 18553,
+        "tier": "B_usable"
+      },
+      {
+        "code": "grc",
+        "name": "Ancient Greek",
+        "n": 400,
+        "exact_rate": 0.76,
+        "partial_rate": 0.815,
+        "gold_inventory": 109136,
+        "tier": "A_strong"
+      },
+      {
+        "code": "he",
+        "name": "Hebrew",
+        "n": 400,
+        "exact_rate": 0.89,
+        "partial_rate": 0.8925,
+        "gold_inventory": 10828,
+        "tier": "A_strong"
+      },
+      {
+        "code": "la",
+        "name": "Latin",
+        "n": 400,
+        "exact_rate": 0.765,
+        "partial_rate": 0.7925,
+        "gold_inventory": 696876,
+        "tier": "A_strong"
+      },
+      {
+        "code": "non",
+        "name": "Old Norse",
+        "n": 400,
+        "exact_rate": 0.5525,
+        "partial_rate": 0.5575,
+        "gold_inventory": 8383,
+        "tier": "B_usable"
+      },
+      {
+        "code": "san",
+        "name": "Sanskrit",
+        "n": 400,
+        "exact_rate": 0.995,
+        "partial_rate": 0.995,
+        "gold_inventory": 9821,
+        "tier": "A_strong"
+      },
+      {
+        "code": "sga",
+        "name": "Old Irish",
+        "n": 400,
+        "exact_rate": 0.43,
+        "partial_rate": 0.44,
+        "gold_inventory": 4944,
+        "tier": "B_usable"
+      },
+      {
+        "code": "sum",
+        "name": "Sumerian",
+        "n": 400,
+        "exact_rate": 0.5575,
+        "partial_rate": 0.5775,
+        "gold_inventory": 1999,
+        "tier": "B_usable"
+      },
+      {
+        "code": "syc",
+        "name": "Syriac",
+        "n": 400,
+        "exact_rate": 0.9975,
+        "partial_rate": 0.9975,
+        "gold_inventory": 2452,
+        "tier": "A_strong"
+      },
+      {
+        "code": "hit",
+        "name": "Hittite",
+        "n": 307,
+        "exact_rate": 0.9544,
+        "partial_rate": 0.9707,
+        "gold_inventory": 307,
+        "tier": "A_strong"
+      },
+      {
+        "code": "phn",
+        "name": "Phoenician",
+        "n": 153,
+        "exact_rate": 0.9935,
+        "partial_rate": 0.9935,
+        "gold_inventory": 153,
+        "tier": "A_strong"
+      }
+    ]
+  },
+  "capability_summary": {
+    "language_codes_in_gold": 20,
+    "productive_open_set_langs": 1,
+    "deploy_strong_langs_partial_ge_70": 16,
+    "deploy_usable_langs_partial_ge_40": 20,
+    "deploy_langs_partial_ge_50": 19,
+    "open_set_partial_overall": 0.3929,
+    "open_set_exact_overall": 0.3661,
+    "deploy_partial_sample": 0.836,
+    "latin_open_set_partial": 0.658,
+    "vs_google_249": "20/249 gold codes (8.0% of Google breadth count)",
+    "vs_nllb_200": "20/200 (10.0% of NLLB count)",
+    "honest_caveat": "Two tracks: DEPLOY (form in lexicon) vs OPEN-SET (held-out morph). Google/NLLB optimize modern sentences; PFLT optimizes FSOT classical/visual form→gloss offline."
+  },
+  "competitors": [
+    {
+      "system": "Google Translate",
+      "language_surfaces": "~249",
+      "strength": "Modern sentence MT, breadth, cloud",
+      "weakness_vs_pflt": "Classical/dead/visual (la/grc/egy hieroglyphs) thin or absent",
+      "pflt_track": "M4 breadth bar; M6 modern later"
+    },
+    {
+      "system": "Meta NLLB-200",
+      "language_surfaces": "200",
+      "strength": "Many low-resource modern langs, research MT",
+      "weakness_vs_pflt": "Not offline FSOT-law product; classical visual not core",
+      "pflt_track": "M4 catalog growth toward 200+"
+    },
+    {
+      "system": "DeepL",
+      "language_surfaces": "~30–100 (product varies)",
+      "strength": "EU modern sentence quality (often SOTA-class)",
+      "weakness_vs_pflt": "Narrow classical/historical; cloud",
+      "pflt_track": "M6 modern only after M1≥70%"
+    },
+    {
+      "system": "Frontier LLM MT (Gemini/GPT class)",
+      "language_surfaces": "many via prompting",
+      "strength": "Fluent modern + some classical with hallucination risk",
+      "weakness_vs_pflt": "No D1D38A law pin; not offline densify constitution",
+      "pflt_track": "M7–M10 unique FSOT product"
+    },
+    {
+      "system": "Protofluid-Ada (this report)",
+      "language_surfaces": "20 gold codes · deploy A_strong=16 · open productive=1",
+      "strength": "Offline classical/visual; deploy ~84% when known; Latin open-set ~66%; live D1D38A",
+      "weakness_vs_pflt": "Modern sentence BLEU not primary; non-Latin open-set morph thin",
+      "pflt_track": "Own M5; climb M1 to 70%+ starting from Latin 50%"
+    }
+  ],
+  "residuals_closed_this_cycle": [
+    "Per-lang open-set + deploy scoring report (this file)",
+    "Language archive with tiers A/B/C/D",
+    "Competitor multi-metric comparison table"
+  ],
+  "residuals_still_open": [
+    "Open-set partial toward 70%+ (morph densify climb)",
+    "Real U-Net image weights (hyp TSV contract ready)",
+    "Modern sentence BLEU/COMET (M6 after M1)",
+    "Lean spawn on every numeric claim"
+  ],
+  "next_climb": [
+    "Paradigm densify + inject for miss-heavy langs (grc Unicode, ar, got)",
+    "Raise open-set partial la first (largest mass)",
+    "Grow gold codes toward 100 meaningful surfaces"
+  ]
+}
