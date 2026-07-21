@@ -43,6 +43,8 @@ pflt-Ada/data/train_mass.tsv
 pflt-Ada/data/train_cache.pkl
 pflt-Ada/data/gold_core.tsv
 pflt-Ada/data/densify.tsv
+pflt-Ada/data/m6_phrase_table.tsv
+pflt-Ada/data/m6_bigram_table.tsv
 pflt-Ada/bin/
 pflt-Ada/obj/
 pflt-Ada/alire/
