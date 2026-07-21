@@ -1,0 +1,17 @@
+{
+  "title": "PFLT FSOT Benchmarks v0.2.0",
+  "id": "damianpalumbo/pflt-fsot-benchmarks",
+  "licenses": [{"name": "Apache 2.0"}],
+  "keywords": [
+    "nlp",
+    "translation",
+    "machine translation",
+    "multilingual",
+    "benchmarks",
+    "sacrebleu",
+    "fsot",
+    "offline"
+  ],
+  "collaborators": [],
+  "data": []
+}

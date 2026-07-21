@@ -15,7 +15,13 @@ It is **not** “dictionary BLEU only.” It is meant to:
 Architecture realignment vs Physical Archive: [`docs/FSOT_ARCHIVE_REALIGNMENT.md`](docs/FSOT_ARCHIVE_REALIGNMENT.md).  
 North-star multi-metric goals (beat every bar): [`docs/NORTH_STAR_METRICS.md`](docs/NORTH_STAR_METRICS.md).  
 **Law audit (no ad-hoc scalar):** [`docs/FSOT_LAW_AUDIT.md`](docs/FSOT_LAW_AUDIT.md).  
-**Hugging Face:** [`docs/HUGGINGFACE.md`](docs/HUGGINGFACE.md) · model [dappalumbo91/pflt-fsot](https://huggingface.co/dappalumbo91/pflt-fsot) · dataset [pflt-fsot-sample](https://huggingface.co/datasets/dappalumbo91/pflt-fsot-sample).  
+**Public storefront (v0.2.0):**  
+- Hugging Face model: [dappalumbo91/pflt-fsot](https://huggingface.co/dappalumbo91/pflt-fsot)  
+- Hugging Face dataset: [pflt-fsot-sample](https://huggingface.co/datasets/dappalumbo91/pflt-fsot-sample)  
+- Kaggle benchmarks: [damianpalumbo/pflt-fsot-benchmarks](https://www.kaggle.com/datasets/damianpalumbo/pflt-fsot-benchmarks)  
+- Release notes: [`docs/RELEASE_v0.2.0.md`](docs/RELEASE_v0.2.0.md) · HF packaging: [`docs/HUGGINGFACE.md`](docs/HUGGINGFACE.md)  
+- Competitive position: [`docs/COMPETITIVE_POSITION.md`](docs/COMPETITIVE_POSITION.md) · SOTA report: [`docs/M6_SOTA_PUSH.md`](docs/M6_SOTA_PUSH.md)
+
 Fast climb: [`docs/FAST_CLIMB.md`](docs/FAST_CLIMB.md) · Accuracy dual-metric: [`docs/ACCURACY_PUSH.md`](docs/ACCURACY_PUSH.md).
 
 ### Shipping product: **Ada/SPARK** ([`pflt-Ada/`](pflt-Ada/))
@@ -39,7 +45,7 @@ alr build
 | **OPEN-SET** | Held-out morph (train_mass densify path) | **~99.99%** on catalog eval |
 | **Catalog** | Language codes solidified (n≥200 thin set) | **113** (0 thin n&lt;50) |
 | **Law pin** | Live SHA256 of archive `fsot_compute.py` | **D1D38A** (parity 0 absdiff) |
-| **M6 sentence** | Offline Tatoeba BLEU-style climb | BLEU~2.4 · B1~44 (not neural parity) |
+| **M6 sentence** | Dual track: chat neural + WMT news student | Chat mean sacre **~50**; WMT de-en **~33.9** |
 
 Large packs (`gold_core.tsv`, `train_mass.tsv`, `densify.tsv`) are **not** in git — rebuild with scripts. See `pflt-Ada/README.md`.
 

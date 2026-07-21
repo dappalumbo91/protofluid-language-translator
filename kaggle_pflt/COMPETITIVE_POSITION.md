@@ -125,11 +125,8 @@ Define stages (honest):
 | Question | Answer |
 |----------|--------|
 | Competitive on form→gloss / offline catalog? | **Yes** |
-| Competitive on chat open-set neural? | **Yes — mid/high open MT** (~50 mean sacre) |
-| Competitive on Google/DeepL **news** fluency? | **Not parity; S3** (~34 WMT sacre; ~6 to mid bar) |
-| How far on news sacreBLEU? | **~6 pts** to staged 40; **~14 pts** to stretch 48 |
-| Unique advantage? | **FSOT law + classical + offline densify + hybrid student path** |
-
-**Public storefront:** HF `dappalumbo91/pflt-fsot` · Kaggle `damianpalumbo/pflt-fsot-benchmarks` · GitHub tag/docs `RELEASE_v0.2.0`.
+| Competitive on Google/DeepL sentence fluency? | **Not parity; mid-climb (~S2)** |
+| How far on sentence BLEU-4? | Roughly **+10 to +25 points** toward mid/strong neural bands, pair-dependent |
+| Unique advantage? | **FSOT law + classical + offline densify** |
 
 We do **not** claim DeepL parity. We **do** claim a real, measured climb under fixed FSOT law, with high content-level scores and mid full-sentence BLEU.

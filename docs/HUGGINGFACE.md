@@ -2,13 +2,16 @@
 
 **Account:** `dappalumbo91`  
 **GitHub:** https://github.com/dappalumbo91/protofluid-language-translator  
+**Version:** `0.2.0` (2026-07-21 SOTA snapshot)
 
 ## Live on Hub
 
 | Resource | URL | Notes |
 |----------|-----|--------|
-| **Model** | https://huggingface.co/dappalumbo91/pflt-fsot | Card, sample densify, metrics, Gradio `app.py` |
-| **Dataset** | https://huggingface.co/datasets/dappalumbo91/pflt-fsot-sample | Sample densify + metrics snapshot |
+| **Model** | https://huggingface.co/dappalumbo91/pflt-fsot | Professional card + YAML `model-index` benchmarks, Gradio `app.py` |
+| **Dataset** | https://huggingface.co/datasets/dappalumbo91/pflt-fsot-sample | Sample densify + `metrics_snapshot.json` v0.2.0 |
+| **Kaggle** | https://www.kaggle.com/datasets/damianpalumbo/pflt-fsot-benchmarks | Versioned benchmark pack (CSV + reports) |
+| **Release notes** | [`docs/RELEASE_v0.2.0.md`](RELEASE_v0.2.0.md) | Where we are + resume path to SOTA |
 
 ### Gradio Space note
 
