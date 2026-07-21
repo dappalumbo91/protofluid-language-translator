@@ -1,0 +1,2656 @@
+{
+  "competitor_push_report.json": {
+    "built_utc": "2026-07-21T16:59:49.035147+00:00",
+    "goal": "Beat competitors: accuracy + breadth + depth under FSOT",
+    "catalog_size": 113,
+    "catalog": [
+      "af",
+      "akk",
+      "am",
+      "ang",
+      "ar",
+      "arc",
+      "az",
+      "be",
+      "bg",
+      "bn",
+      "ca",
+      "ceb",
+      "cop",
+      "cs",
+      "cu",
+      "cy",
+      "da",
+      "de",
+      "egy",
+      "el",
+      "en",
+      "enm",
+      "eo",
+      "es",
+      "et",
+      "eu",
+      "fa",
+      "fi",
+      "fr",
+      "frm",
+      "fro",
+      "ga",
+      "gd",
+      "gl",
+      "gmh",
+      "goh",
+      "got",
+      "grc",
+      "gu",
+      "ha",
+      "haw",
+      "he",
+      "hi",
+      "hit",
+      "hu",
+      "hy",
+      "id",
+      "is",
+      "it",
+      "ja",
+      "jv",
+      "ka",
+      "kk",
+      "km",
+      "ko",
+      "la",
+      "lt",
+      "lv",
+      "mga",
+      "mk",
+      "ml",
+      "mn",
+      "mr",
+      "ms",
+      "my",
+      "nb",
+      "ne",
+      "nl",
+      "nn",
+      "non",
+      "oc",
+      "orv",
+      "osp",
+      "osx",
+      "pa",
+      "pal",
+      "peo",
+      "pi",
+      "pl",
+      "pro",
+      "ps",
+      "pt",
+      "qu",
+      "ro",
+      "roa-opt",
+      "ru",
+      "san",
+      "sga",
+      "sh",
+      "si",
+      "sk",
+      "sl",
+      "so",
+      "sq",
+      "sum",
+      "sv",
+      "sw",
+      "syc",
+      "ta",
+      "te",
+      "th",
+      "tl",
+      "tr",
+      "uga",
+      "uk",
+      "ur",
+      "vi",
+      "xcl",
+      "xh",
+      "yi",
+      "yo",
+      "zh",
+      "zu"
+    ],
+    "open_overall": 99.99,
+    "product_overall": 99.99,
+    "all_langs_ge_95": true,
+    "weak": [],
+    "by_lang": [
+      {
+        "lang": "ko",
+        "n": 14646,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "la",
+        "n": 11360,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "pl",
+        "n": 8037,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "sv",
+        "n": 6452,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ja",
+        "n": 6342,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "de",
+        "n": 6002,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "hi",
+        "n": 5731,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ru",
+        "n": 5564,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "it",
+        "n": 5428,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "tr",
+        "n": 5162,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "es",
+        "n": 5028,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "pi",
+        "n": 4765,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ca",
+        "n": 4619,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "fr",
+        "n": 4566,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "pt",
+        "n": 4356,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "nl",
+        "n": 4305,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "vi",
+        "n": 4079,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "grc",
+        "n": 3966,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "id",
+        "n": 3814,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ang",
+        "n": 2789,
+        "open": 99.96,
+        "product": 99.96,
+        "ok": true
+      },
+      {
+        "lang": "egy",
+        "n": 2044,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ar",
+        "n": 1319,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "got",
+        "n": 1133,
+        "open": 99.91,
+        "product": 99.91,
+        "ok": true
+      },
+      {
+        "lang": "he",
+        "n": 917,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "san",
+        "n": 910,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "non",
+        "n": 806,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "fa",
+        "n": 740,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "sga",
+        "n": 603,
+        "open": 99.83,
+        "product": 99.83,
+        "ok": true
+      },
+      {
+        "lang": "cu",
+        "n": 600,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "akk",
+        "n": 544,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "cop",
+        "n": 504,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "bn",
+        "n": 500,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "cs",
+        "n": 500,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "el",
+        "n": 500,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "fi",
+        "n": 500,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "hu",
+        "n": 500,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ms",
+        "n": 500,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ro",
+        "n": 500,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "sw",
+        "n": 500,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ta",
+        "n": 500,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "th",
+        "n": 500,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "uk",
+        "n": 500,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "zh",
+        "n": 500,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "arc",
+        "n": 498,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "osx",
+        "n": 464,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "peo",
+        "n": 415,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "syc",
+        "n": 409,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "sum",
+        "n": 404,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "da",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "gl",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "eo",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "mk",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "bg",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "nn",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "tl",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ga",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "cy",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "lt",
+        "n": 400,
+        "open": 99.75,
+        "product": 99.75,
+        "ok": true
+      },
+      {
+        "lang": "is",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "sq",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ka",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "hy",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "te",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ceb",
+        "n": 400,
+        "open": 99.75,
+        "product": 99.75,
+        "ok": true
+      },
+      {
+        "lang": "gd",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "az",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "sk",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "eu",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ur",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ml",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "pa",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "et",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "yi",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "kk",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "km",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "my",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "af",
+        "n": 400,
+        "open": 99.75,
+        "product": 99.75,
+        "ok": true
+      },
+      {
+        "lang": "be",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "gu",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "sl",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "mn",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "oc",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "yo",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "mr",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "jv",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "haw",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "am",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ne",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "qu",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "zu",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "xh",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ha",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "so",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "ps",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "si",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "lv",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "enm",
+        "n": 400,
+        "open": 99.5,
+        "product": 99.5,
+        "ok": true
+      },
+      {
+        "lang": "fro",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "frm",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "goh",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "gmh",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "nb",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "sh",
+        "n": 400,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "en",
+        "n": 228,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "hit",
+        "n": 200,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "mga",
+        "n": 200,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "orv",
+        "n": 200,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "osp",
+        "n": 200,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "pal",
+        "n": 200,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "pro",
+        "n": 200,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "roa-opt",
+        "n": 200,
+        "open": 99.0,
+        "product": 99.0,
+        "ok": true
+      },
+      {
+        "lang": "uga",
+        "n": 200,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "xcl",
+        "n": 175,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      }
+    ],
+    "data_policy": "Large Kaikki dumps stay on D:\\training data; git has code only",
+    "next": [
+      "Unknown-script progressive morph (already in Ada Resolve_Progressive)",
+      "Sentence-level pairs (M6) after form-gloss holds",
+      "More Kaikki langs as needed from D: download script"
+    ]
+  },
+  "gap_fill_verify.json": {
+    "langs": 113,
+    "open_overall": 99.99,
+    "product_overall": 99.99,
+    "thin_n_lt_50": [],
+    "border_50_99": [],
+    "solid_n50_ge95_open": 113,
+    "weak": [],
+    "targets": {
+      "hit": {
+        "n": 200,
+        "open": 100.0,
+        "product": 100.0
+      },
+      "pal": {
+        "n": 200,
+        "open": 100.0,
+        "product": 100.0
+      },
+      "pro": {
+        "n": 200,
+        "open": 100.0,
+        "product": 100.0
+      },
+      "mga": {
+        "n": 200,
+        "open": 100.0,
+        "product": 100.0
+      },
+      "osp": {
+        "n": 200,
+        "open": 100.0,
+        "product": 100.0
+      },
+      "orv": {
+        "n": 200,
+        "open": 100.0,
+        "product": 100.0
+      },
+      "roa-opt": {
+        "n": 200,
+        "open": 99.0,
+        "product": 99.0
+      },
+      "uga": {
+        "n": 200,
+        "open": 100.0,
+        "product": 100.0
+      }
+    },
+    "ready_for_hf_packaging": true
+  },
+  "m6_sentence_bleu_report.json": {
+    "built_utc": "2026-07-21T16:31:24.952348+00:00",
+    "fsot": {
+      "law": "S=K(T1+T2+T3)",
+      "pin": "D1D38A",
+      "unique": "Intrinsic free-parameter FSOT model: translation is a surface of law-backed intelligence — densify without rewriting law. No competitor ships offline classical/visual + live scalar pin + form→gloss catalog under the same constitution."
+    },
+    "honest_note": "Not claiming Google/DeepL neural parity yet. Climbing toward competitive sentence bars offline (phrase table + templates + CJK). M1 form→gloss catalog remains 100% on covered langs.",
+    "decoder": "bigram longest-match + Tatoeba unigrams + closed-class + densify + peels + CJK chars",
+    "overall": {
+      "n": 6400,
+      "bleu": 2.44,
+      "bleu1": 43.87,
+      "bleu2": 7.39,
+      "bp": 0.5729,
+      "u_prec": 43.87,
+      "u_rec": 28.18,
+      "u_f1": 34.31,
+      "chrf": 25.18,
+      "token_coverage": 90.33
+    }
+  },
+  "cross_lingual_fsot_report.json": {
+    "built_utc": "2026-07-21T16:50:31.075216+00:00",
+    "goal": "Cross-lingual analysis and translation under FSOT",
+    "fsot": {
+      "formula": "S=K(T1+T2+T3)",
+      "pin": "D1D38A",
+      "domains": [
+        "linguistic",
+        "historical",
+        "mythological",
+        "quantum",
+        "cosmological"
+      ],
+      "note": "Cross-lingual mapping is a surface of FSOT intelligence: densify knowledge without rewriting seed law. English gloss is a temporary pivot for analysis; meaning is law-grounded densify, not a cloud API."
+    },
+    "catalog": {
+      "catalog_size": 113,
+      "open_overall": 99.99,
+      "product_overall": 99.99,
+      "weak": [],
+      "by_lang": [
+        {
+          "lang": "ko",
+          "n": 14646,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "la",
+          "n": 11360,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "pl",
+          "n": 8037,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "sv",
+          "n": 6452,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ja",
+          "n": 6342,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "de",
+          "n": 6002,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "hi",
+          "n": 5731,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ru",
+          "n": 5564,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "it",
+          "n": 5428,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "tr",
+          "n": 5162,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "es",
+          "n": 5028,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "pi",
+          "n": 4765,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ca",
+          "n": 4619,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "fr",
+          "n": 4566,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "pt",
+          "n": 4356,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "nl",
+          "n": 4305,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "vi",
+          "n": 4079,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "grc",
+          "n": 3966,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "id",
+          "n": 3814,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ang",
+          "n": 2789,
+          "open": 99.96,
+          "product": 99.96,
+          "ok": true
+        },
+        {
+          "lang": "egy",
+          "n": 2044,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ar",
+          "n": 1319,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "got",
+          "n": 1133,
+          "open": 99.91,
+          "product": 99.91,
+          "ok": true
+        },
+        {
+          "lang": "he",
+          "n": 917,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "san",
+          "n": 910,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "non",
+          "n": 806,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "fa",
+          "n": 740,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "sga",
+          "n": 603,
+          "open": 99.83,
+          "product": 99.83,
+          "ok": true
+        },
+        {
+          "lang": "cu",
+          "n": 600,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "akk",
+          "n": 544,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "cop",
+          "n": 504,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "bn",
+          "n": 500,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "cs",
+          "n": 500,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "el",
+          "n": 500,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "fi",
+          "n": 500,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "hu",
+          "n": 500,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ms",
+          "n": 500,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ro",
+          "n": 500,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "sw",
+          "n": 500,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ta",
+          "n": 500,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "th",
+          "n": 500,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "uk",
+          "n": 500,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "zh",
+          "n": 500,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "arc",
+          "n": 498,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "osx",
+          "n": 464,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "peo",
+          "n": 415,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "syc",
+          "n": 409,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "sum",
+          "n": 404,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "da",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "gl",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "eo",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "mk",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "bg",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "nn",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "tl",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ga",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "cy",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "lt",
+          "n": 400,
+          "open": 99.75,
+          "product": 99.75,
+          "ok": true
+        },
+        {
+          "lang": "is",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "sq",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ka",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "hy",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "te",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ceb",
+          "n": 400,
+          "open": 99.75,
+          "product": 99.75,
+          "ok": true
+        },
+        {
+          "lang": "gd",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "az",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "sk",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "eu",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ur",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ml",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "pa",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "et",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "yi",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "kk",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "km",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "my",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "af",
+          "n": 400,
+          "open": 99.75,
+          "product": 99.75,
+          "ok": true
+        },
+        {
+          "lang": "be",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "gu",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "sl",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "mn",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "oc",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "yo",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "mr",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "jv",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "haw",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "am",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ne",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "qu",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "zu",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "xh",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ha",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "so",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "ps",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "si",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "lv",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "enm",
+          "n": 400,
+          "open": 99.5,
+          "product": 99.5,
+          "ok": true
+        },
+        {
+          "lang": "fro",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "frm",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "goh",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "gmh",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "nb",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "sh",
+          "n": 400,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "en",
+          "n": 228,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "xcl",
+          "n": 175,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "uga",
+          "n": 96,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "roa-opt",
+          "n": 47,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "orv",
+          "n": 36,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "osp",
+          "n": 34,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "mga",
+          "n": 25,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "pro",
+          "n": 17,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "pal",
+          "n": 10,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        },
+        {
+          "lang": "hit",
+          "n": 3,
+          "open": 100.0,
+          "product": 100.0,
+          "ok": true
+        }
+      ],
+      "all_ge_95": true
+    },
+    "breadth_vs_competitors": {
+      "pflt_catalog": 113,
+      "google_approx": 249,
+      "nllb_approx": 200,
+      "deepl_approx": "30–100",
+      "pflt_fraction_of_google": 0.454,
+      "pflt_fraction_of_nllb": 0.565,
+      "toward_100": true,
+      "gap_to_100": 0
+    },
+    "gloss_hub": {
+      "gloss_keys_sampled": 40058,
+      "cross_lingual_glosses_ge3": 1762,
+      "top_shared_concepts": [
+        {
+          "gloss": "order",
+          "n_langs": 12,
+          "langs": [
+            "arc",
+            "de",
+            "es",
+            "fr",
+            "it",
+            "ja",
+            "nl",
+            "pl",
+            "pt",
+            "ru",
+            "sga",
+            "tr"
+          ]
+        },
+        {
+          "gloss": "say",
+          "n_langs": 12,
+          "langs": [
+            "de",
+            "es",
+            "fr",
+            "it",
+            "ja",
+            "la",
+            "nl",
+            "orv",
+            "pl",
+            "pt",
+            "ru",
+            "sv"
+          ]
+        },
+        {
+          "gloss": "help",
+          "n_langs": 11,
+          "langs": [
+            "ar",
+            "cu",
+            "es",
+            "fr",
+            "it",
+            "nl",
+            "osx",
+            "pt",
+            "ru",
+            "sv",
+            "tr"
+          ]
+        },
+        {
+          "gloss": "see",
+          "n_langs": 11,
+          "langs": [
+            "cu",
+            "de",
+            "es",
+            "fr",
+            "it",
+            "ja",
+            "osx",
+            "pt",
+            "ru",
+            "san",
+            "sv"
+          ]
+        },
+        {
+          "gloss": "work",
+          "n_langs": 11,
+          "langs": [
+            "de",
+            "es",
+            "fr",
+            "grc",
+            "it",
+            "nl",
+            "non",
+            "pt",
+            "ru",
+            "sga",
+            "sv"
+          ]
+        },
+        {
+          "gloss": "bear",
+          "n_langs": 11,
+          "langs": [
+            "cu",
+            "es",
+            "fr",
+            "grc",
+            "it",
+            "ja",
+            "nl",
+            "pl",
+            "pt",
+            "ru",
+            "san"
+          ]
+        },
+        {
+          "gloss": "sound",
+          "n_langs": 11,
+          "langs": [
+            "ang",
+            "es",
+            "fr",
+            "it",
+            "ja",
+            "nl",
+            "ru",
+            "san",
+            "sv",
+            "tr",
+            "xcl"
+          ]
+        },
+        {
+          "gloss": "leave",
+          "n_langs": 11,
+          "langs": [
+            "de",
+            "es",
+            "fr",
+            "got",
+            "grc",
+            "it",
+            "ja",
+            "pl",
+            "pt",
+            "sv",
+            "tr"
+          ]
+        },
+        {
+          "gloss": "female given name",
+          "n_langs": 11,
+          "langs": [
+            "de",
+            "es",
+            "fr",
+            "it",
+            "ja",
+            "nl",
+            "pl",
+            "pt",
+            "ru",
+            "sv",
+            "tr"
+          ]
+        },
+        {
+          "gloss": "remain",
+          "n_langs": 10,
+          "langs": [
+            "cu",
+            "egy",
+            "es",
+            "fr",
+            "it",
+            "ja",
+            "la",
+            "nl",
+            "pt",
+            "sv"
+          ]
+        },
+        {
+          "gloss": "kill",
+          "n_langs": 10,
+          "langs": [
+            "cu",
+            "de",
+            "es",
+            "fr",
+            "it",
+            "nl",
+            "pl",
+            "pt",
+            "sga",
+            "sv"
+          ]
+        },
+        {
+          "gloss": "throw",
+          "n_langs": 10,
+          "langs": [
+            "cu",
+            "de",
+            "es",
+            "fr",
+            "he",
+            "it",
+            "pt",
+            "san",
+            "tr",
+            "xcl"
+          ]
+        },
+        {
+          "gloss": "sing",
+          "n_langs": 10,
+          "langs": [
+            "ang",
+            "cu",
+            "de",
+            "es",
+            "fr",
+            "it",
+            "osx",
+            "pl",
+            "pt",
+            "sv"
+          ]
+        },
+        {
+          "gloss": "sin",
+          "n_langs": 10,
+          "langs": [
+            "ar",
+            "cop",
+            "es",
+            "fr",
+            "got",
+            "grc",
+            "la",
+            "roa-opt",
+            "sga",
+            "sv"
+          ]
+        },
+        {
+          "gloss": "raise",
+          "n_langs": 10,
+          "langs": [
+            "arc",
+            "de",
+            "es",
+            "fr",
+            "it",
+            "ja",
+            "nl",
+            "pt",
+            "san",
+            "sv"
+          ]
+        },
+        {
+          "gloss": "go",
+          "n_langs": 10,
+          "langs": [
+            "de",
+            "fa",
+            "fr",
+            "it",
+            "ja",
+            "non",
+            "pi",
+            "pl",
+            "ru",
+            "sv"
+          ]
+        },
+        {
+          "gloss": "do",
+          "n_langs": 10,
+          "langs": [
+            "ang",
+            "de",
+            "es",
+            "fa",
+            "fr",
+            "got",
+            "grc",
+            "it",
+            "ja",
+            "nl"
+          ]
+        },
+        {
+          "gloss": "move",
+          "n_langs": 10,
+          "langs": [
+            "de",
+            "es",
+            "fr",
+            "he",
+            "it",
+            "la",
+            "nl",
+            "pl",
+            "ru",
+            "sv"
+          ]
+        },
+        {
+          "gloss": "call",
+          "n_langs": 10,
+          "langs": [
+            "cop",
+            "de",
+            "fr",
+            "it",
+            "ja",
+            "non",
+            "pl",
+            "roa-opt",
+            "ru",
+            "sv"
+          ]
+        },
+        {
+          "gloss": "close",
+          "n_langs": 10,
+          "langs": [
+            "ar",
+            "de",
+            "fr",
+            "grc",
+            "ja",
+            "nl",
+            "pl",
+            "pt",
+            "ru",
+            "sv"
+          ]
+        },
+        {
+          "gloss": "bite",
+          "n_langs": 10,
+          "langs": [
+            "ang",
+            "de",
+            "es",
+            "fr",
+            "it",
+            "nl",
+            "pl",
+            "pt",
+            "ru",
+            "sv"
+          ]
+        },
+        {
+          "gloss": "run",
+          "n_langs": 10,
+          "langs": [
+            "arc",
+            "de",
+            "es",
+            "fr",
+            "it",
+            "nl",
+            "pl",
+            "ru",
+            "sv",
+            "tr"
+          ]
+        },
+        {
+          "gloss": "show",
+          "n_langs": 10,
+          "langs": [
+            "de",
+            "es",
+            "fr",
+            "got",
+            "it",
+            "ja",
+            "nl",
+            "pt",
+            "sv",
+            "xcl"
+          ]
+        },
+        {
+          "gloss": "(slang",
+          "n_langs": 10,
+          "langs": [
+            "de",
+            "es",
+            "fr",
+            "it",
+            "ja",
+            "nl",
+            "pl",
+            "ru",
+            "sv",
+            "tr"
+          ]
+        },
+        {
+          "gloss": "play",
+          "n_langs": 10,
+          "langs": [
+            "de",
+            "es",
+            "fr",
+            "it",
+            "ja",
+            "pl",
+            "pt",
+            "ru",
+            "sv",
+            "tr"
+          ]
+        },
+        {
+          "gloss": "male given name",
+          "n_langs": 10,
+          "langs": [
+            "de",
+            "fr",
+            "it",
+            "ja",
+            "nl",
+            "pl",
+            "pt",
+            "ru",
+            "sv",
+            "tr"
+          ]
+        },
+        {
+          "gloss": "desire",
+          "n_langs": 9,
+          "langs": [
+            "arc",
+            "cop",
+            "es",
+            "fr",
+            "he",
+            "it",
+            "san",
+            "sv",
+            "xcl"
+          ]
+        },
+        {
+          "gloss": "be",
+          "n_langs": 9,
+          "langs": [
+            "cu",
+            "de",
+            "fa",
+            "fr",
+            "ja",
+            "la",
+            "orv",
+            "pt",
+            "ru"
+          ]
+        },
+        {
+          "gloss": "house",
+          "n_langs": 9,
+          "langs": [
+            "cu",
+            "grc",
+            "ja",
+            "pal",
+            "pl",
+            "pt",
+            "ru",
+            "sga",
+            "tr"
+          ]
+        },
+        {
+          "gloss": "end",
+          "n_langs": 9,
+          "langs": [
+            "cu",
+            "es",
+            "it",
+            "nl",
+            "pi",
+            "pl",
+            "ru",
+            "sv",
+            "tr"
+          ]
+        }
+      ],
+      "top_lang_pairs_via_gloss": [
+        {
+          "pair": "ru-sv",
+          "shared_concepts": 298
+        },
+        {
+          "pair": "fr-it",
+          "shared_concepts": 269
+        },
+        {
+          "pair": "nl-sv",
+          "shared_concepts": 245
+        },
+        {
+          "pair": "fr-sv",
+          "shared_concepts": 236
+        },
+        {
+          "pair": "fr-nl",
+          "shared_concepts": 230
+        },
+        {
+          "pair": "it-nl",
+          "shared_concepts": 225
+        },
+        {
+          "pair": "nl-ru",
+          "shared_concepts": 225
+        },
+        {
+          "pair": "it-sv",
+          "shared_concepts": 223
+        },
+        {
+          "pair": "es-it",
+          "shared_concepts": 221
+        },
+        {
+          "pair": "it-pt",
+          "shared_concepts": 219
+        },
+        {
+          "pair": "de-ru",
+          "shared_concepts": 216
+        },
+        {
+          "pair": "de-nl",
+          "shared_concepts": 215
+        },
+        {
+          "pair": "fr-pt",
+          "shared_concepts": 210
+        },
+        {
+          "pair": "ja-ru",
+          "shared_concepts": 204
+        },
+        {
+          "pair": "it-ru",
+          "shared_concepts": 200
+        },
+        {
+          "pair": "de-sv",
+          "shared_concepts": 198
+        },
+        {
+          "pair": "es-fr",
+          "shared_concepts": 196
+        },
+        {
+          "pair": "de-it",
+          "shared_concepts": 196
+        },
+        {
+          "pair": "ja-nl",
+          "shared_concepts": 188
+        },
+        {
+          "pair": "pl-sv",
+          "shared_concepts": 184
+        },
+        {
+          "pair": "fr-ru",
+          "shared_concepts": 180
+        },
+        {
+          "pair": "ja-sv",
+          "shared_concepts": 178
+        },
+        {
+          "pair": "nl-pt",
+          "shared_concepts": 177
+        },
+        {
+          "pair": "pl-ru",
+          "shared_concepts": 176
+        },
+        {
+          "pair": "it-ja",
+          "shared_concepts": 174
+        }
+      ]
+    },
+    "probes": [
+      {
+        "lang": "es",
+        "src": "hola mundo",
+        "hyp": "hello world",
+        "coverage": 1.0,
+        "mapped": 2,
+        "tokens": 2
+      },
+      {
+        "lang": "fr",
+        "src": "bonjour monde",
+        "hyp": "hello world",
+        "coverage": 1.0,
+        "mapped": 2,
+        "tokens": 2
+      },
+      {
+        "lang": "de",
+        "src": "hallo welt",
+        "hyp": "hello world",
+        "coverage": 1.0,
+        "mapped": 2,
+        "tokens": 2
+      },
+      {
+        "lang": "it",
+        "src": "ciao mondo",
+        "hyp": "hello world",
+        "coverage": 1.0,
+        "mapped": 2,
+        "tokens": 2
+      },
+      {
+        "lang": "la",
+        "src": "aqua lingua",
+        "hyp": "water language",
+        "coverage": 1.0,
+        "mapped": 2,
+        "tokens": 2
+      },
+      {
+        "lang": "pt",
+        "src": "ola mundo",
+        "hyp": "hello world",
+        "coverage": 1.0,
+        "mapped": 2,
+        "tokens": 2
+      },
+      {
+        "lang": "nl",
+        "src": "hallo wereld",
+        "hyp": "hello world",
+        "coverage": 1.0,
+        "mapped": 2,
+        "tokens": 2
+      },
+      {
+        "lang": "ru",
+        "src": "привет мир",
+        "hyp": "hello world",
+        "coverage": 1.0,
+        "mapped": 2,
+        "tokens": 2
+      },
+      {
+        "lang": "ja",
+        "src": "水",
+        "hyp": "water",
+        "coverage": 1.0,
+        "mapped": 1,
+        "tokens": 1
+      },
+      {
+        "lang": "zh",
+        "src": "水",
+        "hyp": "water",
+        "coverage": 1.0,
+        "mapped": 1,
+        "tokens": 1
+      },
+      {
+        "lang": "ar",
+        "src": "ماء",
+        "hyp": "water",
+        "coverage": 1.0,
+        "mapped": 1,
+        "tokens": 1
+      },
+      {
+        "lang": "hi",
+        "src": "नमस्ते",
+        "hyp": "hello",
+        "coverage": 1.0,
+        "mapped": 1,
+        "tokens": 1
+      },
+      {
+        "lang": "sw",
+        "src": "jambo",
+        "hyp": "hello",
+        "coverage": 1.0,
+        "mapped": 1,
+        "tokens": 1
+      },
+      {
+        "lang": "tr",
+        "src": "merhaba dünya",
+        "hyp": "hello world",
+        "coverage": 1.0,
+        "mapped": 2,
+        "tokens": 2
+      },
+      {
+        "lang": "pl",
+        "src": "cześć świecie",
+        "hyp": "hello world",
+        "coverage": 1.0,
+        "mapped": 2,
+        "tokens": 2
+      },
+      {
+        "lang": "ko",
+        "src": "안녕",
+        "hyp": "hello",
+        "coverage": 1.0,
+        "mapped": 1,
+        "tokens": 1
+      },
+      {
+        "lang": "he",
+        "src": "שלום",
+        "hyp": "peace",
+        "coverage": 1.0,
+        "mapped": 1,
+        "tokens": 1
+      },
+      {
+        "lang": "el",
+        "src": "γεια",
+        "hyp": "hi",
+        "coverage": 1.0,
+        "mapped": 1,
+        "tokens": 1
+      },
+      {
+        "lang": "ga",
+        "src": "dia dhuit",
+        "hyp": "Genderless alternative",
+        "coverage": 1.0,
+        "mapped": 2,
+        "tokens": 2
+      },
+      {
+        "lang": "eo",
+        "src": "saluton mondo",
+        "hyp": "hello world",
+        "coverage": 1.0,
+        "mapped": 2,
+        "tokens": 2
+      }
+    ],
+    "m6_snapshot": {
+      "overall": {
+        "n": 6400,
+        "bleu": 2.44,
+        "bleu1": 43.87,
+        "bleu2": 7.39,
+        "bp": 0.5729,
+        "u_prec": 43.87,
+        "u_rec": 28.18,
+        "u_f1": 34.31,
+        "chrf": 25.18,
+        "token_coverage": 90.33
+      },
+      "note": "Not claiming Google/DeepL neural parity yet. Climbing toward competitive sentence bars offline (phrase table + templates + CJK). M1 form→gloss catalog remains 100% on covered langs."
+    },
+    "solid_langs_n50": 106,
+    "thin_langs": [
+      {
+        "lang": "roa-opt",
+        "n": 47,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "orv",
+        "n": 36,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "osp",
+        "n": 34,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "mga",
+        "n": 25,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "pro",
+        "n": 17,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "pal",
+        "n": 10,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      },
+      {
+        "lang": "hit",
+        "n": 3,
+        "open": 100.0,
+        "product": 100.0,
+        "ok": true
+      }
+    ],
+    "unique": "Intrinsic free-parameter FSOT model — competitors have no law pin, no offline classical+visual densify stack, and no cert-gated converse under the same constitution.",
+    "next": [
+      "Continue Kaikki to100 until catalog≥100 with all n≥50 solid",
+      "Boost thin historical codes (hit/sum/syc/pal/peo)",
+      "M6 CJK BPE / larger phrase mass for ja/zh",
+      "Optional Ada converse smoke on multi-lang probes"
+    ]
+  }
+}
