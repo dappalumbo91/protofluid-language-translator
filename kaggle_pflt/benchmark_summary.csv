@@ -1,19 +1,13 @@
-track,lang,best_system,sacrebleu
-chat_neural,ar,opus-mt,53.27
-chat_neural,de,opus-mt,57.1
-chat_neural,es,opus-mt,61.34
-chat_neural,fr,nllb-600M,56.54
-chat_neural,he,nllb-600M,47.88
-chat_neural,hi,nllb-600M,54.73
-chat_neural,it,nllb-600M,67.83
-chat_neural,ja,opus-mt,36.55
-chat_neural,ko,nllb-600M,39.81
-chat_neural,la,opus-mt-mul-en,12.95
-chat_neural,nl,nllb-600M,56.79
-chat_neural,pl,nllb-600M,52.66
-chat_neural,pt,nllb-600M,61.29
-chat_neural,ru,nllb-600M,57.75
-chat_neural,tr,nllb-600M,54.28
-chat_neural,zh,nllb-600M,32.2
-wmt14_deen,de,opus-mt-de-en,33.88
-wmt14_deen,de,nllb-600M,33.37
+track,metric,system,value,unit,notes
+catalog,form_gloss_product_pct,pflt_densify,99.99,pct,113 langs
+chat,mean_best_sacrebleu,neural_best_of,50.19,sacreBLEU,16 langs Tatoeba-style
+chat,hybrid_oracle_mean_sacrebleu,densify_or_neural,53.58,sacreBLEU,product upper
+chat,hybrid_product_neural_first,router,48.74,sacreBLEU,measured product path
+wmt14_deen,sacrebleu,nllb_1.3b,35.63,sacreBLEU,beams=5 fp16 sequential
+wmt14_deen,sacrebleu,ens2_gen_score_opus_nllb13,36.0,sacreBLEU,best product
+wmt14_deen,sacrebleu,oracle_multi_student,40.18,sacreBLEU,upper bound clears mid-40
+wmt14_deen,sacrebleu,opus_mt_de_en,33.88,sacreBLEU,beams=5
+wmt14_deen,sacrebleu,nllb_600m,33.37,sacreBLEU,beams=5
+wmt14_deen,gap_to_mid40,product,4.0,sacreBLEU,target 40
+wmt14_deen,pct_of_mid40,product,90.0,pct,
+ft,v4_shipped,opus_wmt,0,bool,holdout never beat base

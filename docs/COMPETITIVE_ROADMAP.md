@@ -1,7 +1,7 @@
 # Competitive roadmap — accurate status vs competition
 
 **Law:** \(S=K(T_1+T_2+T_3)\) pin **D1D38A** (unchanged; never fitted to BLEU).  
-**Measured:** 2026-07-21 SOTA push (`m6_sota_push_report.json` / v0.2.0 metrics).
+**Measured:** 2026-07-22 stronger student (`m6_stronger_student_report.json` / NLLB-1.3B).
 
 ---
 
@@ -49,12 +49,15 @@ We already win parts of **A** (especially classical / offline / FSOT). Beating t
 | System | sacreBLEU | Gap to 40 mid | Gap to 48 stretch |
 |--------|----------:|--------------:|------------------:|
 | Densify-only | ~0.4 | — | — |
-| **opus-mt-de-en beams=5** | **33.88** | **−6.1** | **−14.1** |
+| opus-mt-de-en beams=5 | 33.88 | −6.1 | −14.1 |
 | NLLB-600M beams=5 | 33.37 | −6.6 | −14.6 |
+| **NLLB-1.3B beams=5** | **35.63** | **−4.4** | **−12.4** |
+| **Product ens (opus+nllb13 gen-score)** | **36.0** | **−4.0** | **−12.0** |
+| Oracle (multi-student) | **40.18** | **clears mid** | −7.8 |
 | DeepL-class mid (staged) | ~40 | 0 | — |
 | Strong commercial stretch | ~45–55 | — | 0 |
 
-**Verdict B2:** **Near mid open-MT**, **not** DeepL-class yet. This is the main gap if “beat the competition” means news fluency.
+**Verdict B2:** **90% of mid-40** with NLLB-1.3B; oracle already clears mid. Product still needs better picker / quality FT.
 
 ---
 
@@ -64,7 +67,7 @@ We already win parts of **A** (especially classical / offline / FSOT). Beating t
 S0 Dict          ████████████ DONE
 S1 Phrase        ████████████ DONE
 S2 Chat strong   ████████████ DONE  (neural ~50)
-S3 Mid news      ████████░░░░ HERE  (~34 / need ~40)
+S3 Mid news      █████████░░░ HERE  (~36 / need ~40; oracle clears)
 S4 DeepL-class   ████░░░░░░░░       (need ~45–55)
 ```
 
@@ -75,8 +78,9 @@ S4 DeepL-class   ████░░░░░░░░       (need ~45–55)
 | # | Lever | Closes | Effort | Expected gain |
 |---|-------|--------|--------|----------------|
 | **1** | **Ship hybrid router** (densify short/classical; neural long/news/CJK) | Product accuracy vs single-path | Low | Realizes measured **~53.6** chat hybrid; better UX |
-| **2** | **WMT student finetune** (opus or NLLB on WMT train; law fixed) | News −6 gap | Med–High | Often **+2–6+** sacre if done right |
-| **3** | **Stronger student** (NLLB-1.3B / more beams / length / ensembling) | News + chat CJK | Med | **+0.5–3** sacre (varies) |
+| **2** | **Learned picker on opus+nllb13** (oracle already 40.18) | News −4 gap | Med | Close product 36→~39–40 |
+| **3** | **Quality news data + careful FT** (train-holdout; short WMT FT failed) | News single hyp | High | **+1–4** if data quality holds |
+| ~~3~~ | ~~Stronger student NLLB-1.3B~~ | **DONE** (+1.75 single, product 36.0) | — | — |
 | **4** | **CJK order** always neural SPM path (no EN-dep densify for ja/zh) | ja/zh chat | Low | Lift ja/zh from ~32–37 toward EU band |
 | **5** | **FLORES** same-file public bar | Comparable claim vs NLLB papers | Blocked until Hub access | Credibility, not training |
 | **6** | **Breadth** more Kaikki langs toward 150–200 | Catalog vs Google count | Med | Count game only |

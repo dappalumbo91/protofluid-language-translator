@@ -1,0 +1,165 @@
+{
+  "built_utc": "2026-07-22T21:09:17.323940+00:00",
+  "fsot": "D1D38A fixed",
+  "path": "stronger student + careful FT (NOT 600M beam tweaks)",
+  "phase1_student": {
+    "student": {
+      "tried": [
+        "facebook/nllb-200-1.3B"
+      ],
+      "used": "facebook/nllb-200-1.3B",
+      "vram_ok": true
+    },
+    "results": {
+      "nllb13": {
+        "sacrebleu": 35.63,
+        "chrf": 61.06
+      },
+      "opus_b5": {
+        "sacrebleu": 33.88,
+        "chrf": 59.92
+      },
+      "opus_bestcfg": {
+        "sacrebleu": 33.86,
+        "chrf": 59.89
+      },
+      "nllb600": {
+        "sacrebleu": 33.37,
+        "chrf": 59.27
+      },
+      "ens_gen_score": {
+        "sacrebleu": 35.61,
+        "chrf": 61.19
+      },
+      "ens_length_mid": {
+        "sacrebleu": 34.44,
+        "chrf": 60.4
+      },
+      "ens_oracle": {
+        "sacrebleu": 40.18,
+        "chrf": 63.91
+      },
+      "ens2_gen_score": {
+        "sacrebleu": 36.0,
+        "chrf": 61.47
+      },
+      "ens2_oracle": {
+        "sacrebleu": 39.03,
+        "chrf": 63.29
+      }
+    },
+    "systems_keys": [
+      "nllb13",
+      "opus_b5",
+      "opus_bestcfg",
+      "nllb600"
+    ],
+    "best_product": {
+      "name": "ens2_gen_score",
+      "sacrebleu": 36.0
+    },
+    "oracle": 40.18,
+    "chosen_tag": "nllb13",
+    "chosen_dir": "D:\\training data\\pflt_linguistics\\13_huggingface\\models\\facebook__nllb-200-1.3B"
+  },
+  "phase2_ft": {
+    "steps_ran": 12000,
+    "base_holdout": 34.27,
+    "best_holdout": 34.27,
+    "improved": false,
+    "shipped": false,
+    "history": [
+      {
+        "step": 400,
+        "holdout_sacre": 34.21,
+        "base": 34.27
+      },
+      {
+        "step": 800,
+        "holdout_sacre": 34.04,
+        "base": 34.27
+      },
+      {
+        "step": 1200,
+        "holdout_sacre": 33.79,
+        "base": 34.27
+      },
+      {
+        "step": 1600,
+        "holdout_sacre": 33.66,
+        "base": 34.27
+      },
+      {
+        "step": 2000,
+        "holdout_sacre": 33.87,
+        "base": 34.27
+      }
+    ],
+    "path": null,
+    "test": null,
+    "elapsed_s": 459.8,
+    "lr": 1e-05,
+    "train_pairs": 200000,
+    "protocol": "train-holdout early-stop; only ship if beat base holdout",
+    "prior_v3_lesson": "WMT val 35.76 but test 33.41 — do not early-stop on WMT val alone"
+  },
+  "results": {
+    "nllb13": {
+      "sacrebleu": 35.63,
+      "chrf": 61.06
+    },
+    "opus_b5": {
+      "sacrebleu": 33.88,
+      "chrf": 59.92
+    },
+    "opus_bestcfg": {
+      "sacrebleu": 33.86,
+      "chrf": 59.89
+    },
+    "nllb600": {
+      "sacrebleu": 33.37,
+      "chrf": 59.27
+    },
+    "ens_gen_score": {
+      "sacrebleu": 35.61,
+      "chrf": 61.19
+    },
+    "ens_length_mid": {
+      "sacrebleu": 34.44,
+      "chrf": 60.4
+    },
+    "ens_oracle": {
+      "sacrebleu": 40.18,
+      "chrf": 63.91
+    },
+    "ens2_gen_score": {
+      "sacrebleu": 36.0,
+      "chrf": 61.47
+    },
+    "ens2_oracle": {
+      "sacrebleu": 39.03,
+      "chrf": 63.29
+    }
+  },
+  "best_product": {
+    "name": "ens2_gen_score",
+    "sacrebleu": 36.0
+  },
+  "oracle_sacrebleu": 40.18,
+  "gaps": {
+    "best_to_40": 4.0,
+    "best_to_48": 12.0,
+    "oracle_to_40": -0.18
+  },
+  "mid40_cleared": false,
+  "pct_of_mid40": 90.0,
+  "chat_hybrid_prior": 48.74,
+  "elapsed_s": 1428.0,
+  "priors": {
+    "best_product_was": 34.34,
+    "opus_base": 33.88,
+    "nllb600": 33.37,
+    "ft_v3_test": 33.41,
+    "oracle_was": 37.95
+  }
+}

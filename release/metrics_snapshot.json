@@ -1,6 +1,6 @@
 {
-  "version": "0.2.2",
-  "built_utc": "2026-07-22T17:10:53.455629+00:00",
+  "version": "0.2.4",
+  "built_utc": "2026-07-22T21:10:11.354459+00:00",
   "fsot": {
     "law": "S=K(T1+T2+T3)",
     "pin": "D1D38A",
@@ -186,9 +186,14 @@
       "oracle_uf1_ensemble": 37.13,
       "ft_v3_test": 33.41,
       "ft_v3_best_val": 35.76,
-      "best_product": 34.11,
-      "gap_to_40": 5.89,
-      "gap_to_48": 13.89
+      "best_product": 36.0,
+      "gap_to_40": 4.0,
+      "gap_to_48": 12.0,
+      "nllb_1.3b": 35.63,
+      "product_ens2_gen_score_opus_nllb13": 36.0,
+      "oracle_multi_student": 40.18,
+      "ft_v4_shipped": false,
+      "pct_of_mid40": 90.0
     },
     "sota_bars": {
       "chat_bleu4": 40.0,
@@ -199,8 +204,8 @@
     },
     "gaps": {
       "densify_chat_bleu4_to_40": -43.04,
-      "neural_wmt_to_40": 6.12,
-      "neural_wmt_to_48": 14.12,
+      "neural_wmt_to_40": 4.0,
+      "neural_wmt_to_48": 12.0,
       "neural_chat_mean_to_45": -5.19,
       "hybrid_mean_to_45": -8.58
     },
@@ -225,8 +230,9 @@
       "tr",
       "zh"
     ],
-    "nllb": "facebook/nllb-200-distilled-600M",
-    "mul_en": "Helsinki-NLP/opus-mt-mul-en"
+    "nllb": "facebook/nllb-200-1.3B (+ distilled-600M local)",
+    "mul_en": "Helsinki-NLP/opus-mt-mul-en",
+    "nllb_1.3b": "facebook/nllb-200-1.3B"
   },
   "links": {
     "github": "https://github.com/dappalumbo91/protofluid-language-translator",
@@ -237,8 +243,9 @@
   "honesty": {
     "deepL_parity_claimed": false,
     "google_parity_claimed": false,
-    "stage": "S3 news climb; chat competitive; mid-40 not cleared",
+    "stage": "S3 news climb 90% mid-40; NLLB-1.3B product 36.0; oracle clears 40",
     "chat_competitive": true,
-    "news_mid40": false
+    "news_mid40": false,
+    "oracle_clears_mid40": true
   }
 }

@@ -52,14 +52,20 @@ model-index:
           split: test
         metrics:
           - type: sacrebleu
+            value: 36.0
+            name: sacreBLEU (product ens opus+NLLB-1.3B gen-score)
+          - type: sacrebleu
+            value: 35.63
+            name: sacreBLEU (NLLB-200-1.3B, beams=5)
+          - type: sacrebleu
             value: 33.88
             name: sacreBLEU (opus-mt-de-en student, beams=5)
           - type: sacrebleu
             value: 33.37
             name: sacreBLEU (NLLB-200-distilled-600M, beams=5)
           - type: chrf
-            value: 59.92
-            name: chrF (opus-mt-de-en)
+            value: 61.06
+            name: chrF (NLLB-1.3B)
       - task:
           type: translation
           name: Machine Translation (chat / Tatoeba-style open-set)
@@ -77,7 +83,7 @@ model-index:
 
 # Protofluid Language Translator (PFLT) — FSOT-native
 
-**Version:** `0.2.0` · **Snapshot:** 2026-07-21  
+**Version:** `0.2.4` · **Snapshot:** 2026-07-22  
 **Author:** dappalumbo91  
 **Code:** [github.com/dappalumbo91/protofluid-language-translator](https://github.com/dappalumbo91/protofluid-language-translator)  
 **Dataset mirror:** [dappalumbo91/pflt-fsot-sample](https://huggingface.co/datasets/dappalumbo91/pflt-fsot-sample)
@@ -97,7 +103,7 @@ S = K(T_1 + T_2 + T_3)
 It is **not** “another LLM wrapper.” It is:
 
 1. **Form→gloss catalog densify** under fixed law (113 languages, near-ceiling product/open inventory)  
-2. **Neural students** (local Helsinki OPUS-MT, opus-mt-mul-en, NLLB-600M) for full-sentence fluency  
+2. **Neural students** (local Helsinki OPUS-MT, opus-mt-mul-en, NLLB-600M / **NLLB-1.3B**) for full-sentence fluency  
 3. **Hybrid path** — densify for classical/short chat; neural for long/news/CJK  
 4. **Ada/SPARK product binary** in the GitHub repo (Python = data factory)
 
@@ -107,7 +113,7 @@ It is **not** “another LLM wrapper.” It is:
 |-------|--------|
 | Google / DeepL commercial **news** SOTA | **Not claimed** |
 | Chat-domain open-set MT (Tatoeba-style) | **Competitive mid/high open MT** (~50 mean sacreBLEU) |
-| WMT14 de→en news | **Open-MT competitive** (~33.9 sacreBLEU); ~6 pts under staged DeepL mid bar (40) |
+| WMT14 de→en news | **90% of mid-40** (product **36.0** with NLLB-1.3B; oracle **40.18** clears mid) |
 | Form→gloss multi-lang catalog | **Strong / near-ceiling** (~99.99% on 113 langs) |
 | FSOT law uniqueness | **Category of one** |
 
@@ -115,7 +121,7 @@ Product densify BLEU can look extremely high when residual translation-memory te
 
 ---
 
-## Benchmarks (v0.2.0)
+## Benchmarks (v0.2.4)
 
 Protocol details and JSON: `metrics_snapshot.json` in this repo.
 
