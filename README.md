@@ -15,7 +15,7 @@ It is **not** “dictionary BLEU only.” It is meant to:
 Architecture realignment vs Physical Archive: [`docs/FSOT_ARCHIVE_REALIGNMENT.md`](docs/FSOT_ARCHIVE_REALIGNMENT.md).  
 North-star multi-metric goals (beat every bar): [`docs/NORTH_STAR_METRICS.md`](docs/NORTH_STAR_METRICS.md).  
 **Law audit (no ad-hoc scalar):** [`docs/FSOT_LAW_AUDIT.md`](docs/FSOT_LAW_AUDIT.md).  
-**Public storefront (v0.2.0):**  
+**Public storefront (v0.2.1 — full verification source on HF/Kaggle/GitHub):**  
 - Hugging Face model: [dappalumbo91/pflt-fsot](https://huggingface.co/dappalumbo91/pflt-fsot)  
 - Hugging Face dataset: [pflt-fsot-sample](https://huggingface.co/datasets/dappalumbo91/pflt-fsot-sample)  
 - Kaggle benchmarks: [damianpalumbo/pflt-fsot-benchmarks](https://www.kaggle.com/datasets/damianpalumbo/pflt-fsot-benchmarks)  

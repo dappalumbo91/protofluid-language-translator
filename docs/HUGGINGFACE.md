@@ -2,16 +2,22 @@
 
 **Account:** `dappalumbo91`  
 **GitHub:** https://github.com/dappalumbo91/protofluid-language-translator  
-**Version:** `0.2.0` (2026-07-21 SOTA snapshot)
+**Version:** `0.2.1` — **full verification source** on Hub + Kaggle (not metrics-only)
 
 ## Live on Hub
 
 | Resource | URL | Notes |
 |----------|-----|--------|
-| **Model** | https://huggingface.co/dappalumbo91/pflt-fsot | Professional card + YAML `model-index` benchmarks, Gradio `app.py` |
-| **Dataset** | https://huggingface.co/datasets/dappalumbo91/pflt-fsot-sample | Sample densify + `metrics_snapshot.json` v0.2.0 |
-| **Kaggle** | https://www.kaggle.com/datasets/damianpalumbo/pflt-fsot-benchmarks | Versioned benchmark pack (CSV + reports) |
-| **Release notes** | [`docs/RELEASE_v0.2.0.md`](RELEASE_v0.2.0.md) | Where we are + resume path to SOTA |
+| **Model (full source)** | https://huggingface.co/dappalumbo91/pflt-fsot | **~395 files**: Ada `src/`, all Python factory/M6 scripts, docs, formal, reports |
+| **Dataset (full source)** | https://huggingface.co/datasets/dappalumbo91/pflt-fsot-sample | Same verification tree + metrics |
+| **Kaggle (full source)** | https://www.kaggle.com/datasets/damianpalumbo/pflt-fsot-benchmarks | Full pack (`pflt-Ada.zip` + root `.py` + docs/formal zips) |
+| **GitHub (canonical)** | https://github.com/dappalumbo91/protofluid-language-translator | Git history; tag `v0.2.0` / `main` |
+| **Cross-verify guide** | [`docs/VERIFICATION.md`](VERIFICATION.md) | How peers reproduce claims |
+| **Release notes** | [`docs/RELEASE_v0.2.0.md`](RELEASE_v0.2.0.md) | Benchmark snapshot |
+
+### What is intentionally *not* uploaded
+
+Multi-GB densify/gold TSVs, neural weight caches, full Tatoeba/Kaikki dumps (third-party size/license). Rebuild paths are in-repo scripts.
 
 ### Gradio Space note
 
