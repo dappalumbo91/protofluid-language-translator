@@ -1,0 +1,72 @@
+{
+  "built_utc": "2026-07-22T19:58:21.343746+00:00",
+  "fsot": "D1D38A",
+  "picker_train_n": 1632,
+  "picker_train_acc": 0.5447,
+  "results": {
+    "opus": {
+      "bleu": 33.38,
+      "sacrebleu": 33.88,
+      "chrf": 59.92,
+      "n": 3003
+    },
+    "nllb": {
+      "bleu": 33.81,
+      "sacrebleu": 33.37,
+      "chrf": 59.27,
+      "n": 3003
+    },
+    "always_opus": {
+      "bleu": 33.38,
+      "sacrebleu": 33.88,
+      "chrf": 59.92,
+      "n": 3003
+    },
+    "learned_ensemble": {
+      "bleu": 34.52,
+      "sacrebleu": 34.39,
+      "chrf": 60.24,
+      "n": 3003,
+      "picks": {
+        "opus": 1545,
+        "nllb": 1458
+      },
+      "picker_train_acc": 0.5447
+    },
+    "oracle": {
+      "bleu": 38.08,
+      "sacrebleu": 37.71,
+      "chrf": 62.21,
+      "n": 3003
+    },
+    "gen_score_ensemble": {
+      "bleu": 34.38,
+      "sacrebleu": 34.37,
+      "chrf": 60.26,
+      "n": 3003,
+      "picks": {
+        "opus": 1633,
+        "nllb": 1370
+      }
+    }
+  },
+  "best_product": {
+    "name": "learned_ensemble",
+    "sacrebleu": 34.39
+  },
+  "gaps": {
+    "best_to_40": 5.61,
+    "best_to_48": 13.61,
+    "oracle_to_40": 2.29,
+    "learned_vs_opus": 0.51
+  },
+  "mid40_cleared": false,
+  "distance": {
+    "chat_hybrid": 48.74,
+    "chat_mid_bar": 45,
+    "news_best": 34.39,
+    "news_mid_bar": 40,
+    "news_stretch": 48,
+    "pct_of_news_mid": 86.0
+  }
+}
