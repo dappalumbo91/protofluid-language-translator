@@ -1,0 +1,479 @@
+{
+  "built_utc": "2026-07-18T18:18:50.295041+00:00",
+  "n_train": 69862,
+  "n_test": 7764,
+  "exact_rate": 0.02009273570324575,
+  "partial_rate": 0.23608964451313755,
+  "n_misses": 5931,
+  "taxonomy": {
+    "exact_wrong_sense": 2889,
+    "fallback_empty": 1616,
+    "ethnonym_missense": 395,
+    "near_miss_or_other": 98,
+    "garbage_translit": 1,
+    "form_echo_gloss": 1
+  },
+  "by_lang": {
+    "grc": {
+      "fallback_empty": 543,
+      "exact_wrong_sense": 1076,
+      "ethnonym_missense": 52,
+      "garbage_translit": 1
+    },
+    "la": {
+      "ethnonym_missense": 59,
+      "exact_wrong_sense": 1472,
+      "fallback_empty": 435,
+      "near_miss_or_other": 1
+    },
+    "ang": {
+      "fallback_empty": 324,
+      "exact_wrong_sense": 307,
+      "near_miss_or_other": 83,
+      "ethnonym_missense": 13
+    },
+    "en": {
+      "fallback_empty": 314,
+      "near_miss_or_other": 14,
+      "ethnonym_missense": 271,
+      "exact_wrong_sense": 34,
+      "form_echo_gloss": 1
+    }
+  },
+  "samples": {
+    "fallback_empty": [
+      {
+        "lang": "grc",
+        "word": "βεβιασμένος",
+        "gold": "forced",
+        "meanings": [
+          "narrative_flow"
+        ],
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "γαγγίλη",
+        "gold": "dewlap",
+        "meanings": [
+          "narrative_flow"
+        ],
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "γεωδαισία",
+        "gold": "land-dividing",
+        "meanings": [
+          "narrative_flow"
+        ],
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "δορατοθήκη",
+        "gold": "spear-case",
+        "meanings": [
+          "narrative_flow"
+        ],
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "ζηλότυπος",
+        "gold": "jealous",
+        "meanings": [
+          "narrative_flow"
+        ],
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "ζύγαστρον",
+        "gold": "fastenings",
+        "meanings": [
+          "narrative_flow"
+        ],
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "θύελλα",
+        "gold": "hurricane",
+        "meanings": [
+          "narrative_flow"
+        ],
+        "map_rate": 0.0
+      },
+      {
+        "lang": "grc",
+        "word": "θύσθλα",
+        "gold": "sacrifice",
+        "meanings": [
+          "narrative_flow"
+        ],
+        "map_rate": 0.0
+      }
+    ],
+    "exact_wrong_sense": [
+      {
+        "lang": "grc",
+        "word": "γλωσσίς",
+        "gold": "wryneck",
+        "meanings": [
+          "kind_of_precious_stone_resembling_a_human_tongue"
+        ],
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "γνώμων",
+        "gold": "sundial",
+        "meanings": [
+          "mind"
+        ],
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "γοητεία",
+        "gold": "witchcraft",
+        "meanings": [
+          "inflection"
+        ],
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "γράμμα",
+        "gold": "letter",
+        "meanings": [
+          "linea_alba"
+        ],
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "δίπλωσις",
+        "gold": "repetition",
+        "meanings": [
+          "something_double_the_parallel_streams_of_the_milky_way"
+        ],
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "δασύς",
+        "gold": "downy",
+        "meanings": [
+          "a_thicket"
+        ],
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "δασύτης",
+        "gold": "aspiration",
+        "meanings": [
+          "having_a_hairy_shaggy_chest"
+        ],
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "δεινός",
+        "gold": "terrible",
+        "meanings": [
+          "cowardice"
+        ],
+        "map_rate": 1.0
+      }
+    ],
+    "ethnonym_missense": [
+      {
+        "lang": "grc",
+        "word": "λειχήν",
+        "gold": "Liverwort",
+        "meanings": [
+          "to_lick_up"
+        ],
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "ἀρχιτεκτονικός",
+        "gold": "architecture",
+        "meanings": [
+          "joiners_work_carpentry"
+        ],
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "Μελχίτης",
+        "gold": "a Melchite",
+        "meanings": [
+          "black_haired"
+        ],
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "Σιντός",
+        "gold": "a Sintian",
+        "meanings": [
+          "fine_cloth_usually_linen"
+        ],
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "δήλως",
+        "gold": "Clearly, obviously",
+        "meanings": [
+          "visible"
+        ],
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "διάστημα",
+        "gold": "An interval or distance",
+        "meanings": [
+          "dilatation"
+        ],
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "καρτάζωνος",
+        "gold": "Indian rhinoceros (Rhinoceros unicornis)",
+        "meanings": [
+          "very"
+        ],
+        "map_rate": 1.0
+      },
+      {
+        "lang": "grc",
+        "word": "κριτικός",
+        "gold": "critic, grammarian, academic",
+        "meanings": [
+          "decision"
+        ],
+        "map_rate": 1.0
+      }
+    ],
+    "garbage_translit": [
+      {
+        "lang": "grc",
+        "word": "ταχέης",
+        "gold": "feminine genitive singular of τᾰχῠ́ς (tăkhŭ́s)",
+        "meanings": [
+          "t_kh_stos"
+        ],
+        "map_rate": 1.0
+      }
+    ],
+    "near_miss_or_other": [
+      {
+        "lang": "ang",
+        "word": "amænsumung",
+        "gold": "excommunication",
+        "meanings": [
+          "heritage_flow",
+          "heritage_flow"
+        ],
+        "map_rate": 0.0
+      },
+      {
+        "lang": "ang",
+        "word": "bepæcestre",
+        "gold": "harlot",
+        "meanings": [
+          "two_thirds_or_a_two_thirds_part_of_any_unit",
+          "heritage_flow"
+        ],
+        "map_rate": 0.5
+      },
+      {
+        "lang": "ang",
+        "word": "boccræft",
+        "gold": "literature",
+        "meanings": [
+          "heritage_flow",
+          "free_to_play"
+        ],
+        "map_rate": 0.5
+      },
+      {
+        "lang": "ang",
+        "word": "brægn",
+        "gold": "brain",
+        "meanings": [
+          "belarusian",
+          "heritage_flow"
+        ],
+        "map_rate": 0.5
+      },
+      {
+        "lang": "ang",
+        "word": "bænen",
+        "gold": "bone",
+        "meanings": [
+          "heritage_flow",
+          "weaving"
+        ],
+        "map_rate": 0.5
+      },
+      {
+        "lang": "ang",
+        "word": "cyþþu",
+        "gold": "knowledge",
+        "meanings": [
+          "heritage_flow",
+          "heritage_flow"
+        ],
+        "map_rate": 0.0
+      },
+      {
+        "lang": "ang",
+        "word": "cærsiht",
+        "gold": "cressy",
+        "meanings": [
+          "heritage_flow",
+          "heritage_flow"
+        ],
+        "map_rate": 0.0
+      },
+      {
+        "lang": "ang",
+        "word": "diepþu",
+        "gold": "deepness",
+        "meanings": [
+          "depth",
+          "heritage_flow"
+        ],
+        "map_rate": 0.5
+      }
+    ],
+    "form_echo_gloss": [
+      {
+        "lang": "en",
+        "word": "four oh four",
+        "gold": "a naive or clueless person",
+        "meanings": [
+          "four_o_clock",
+          "an_utterance_of_oh",
+          "four_o_clock"
+        ],
+        "map_rate": 1.0
+      }
+    ]
+  },
+  "hits_sample": [
+    {
+      "lang": "akk",
+      "word": "šumma",
+      "gold": "if",
+      "gold_mk": "if",
+      "meanings": [
+        "if"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "historical",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "san",
+      "word": "rājan",
+      "gold": "king",
+      "gold_mk": "king",
+      "meanings": [
+        "king"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "historical",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "Μωαβίτης",
+      "gold": "Moabite",
+      "gold_mk": "moabite",
+      "meanings": [
+        "moabite"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "Ναζωραῖος",
+      "gold": "Nazarene",
+      "gold_mk": "nazarene",
+      "meanings": [
+        "nazarene"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "Πελασγικός",
+      "gold": "Pelasgian",
+      "gold_mk": "pelasgian",
+      "meanings": [
+        "pelasgian"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "γυμνασία",
+      "gold": "exercise",
+      "gold_mk": "exercise",
+      "meanings": [
+        "bodily_exercises"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "κιννάβαρι",
+      "gold": "vermilion",
+      "gold_mk": "vermilion",
+      "meanings": [
+        "like_cinnabar_vermilion"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "κλέπτης",
+      "gold": "thief",
+      "gold_mk": "thief",
+      "meanings": [
+        "thief"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    }
+  ]
+}

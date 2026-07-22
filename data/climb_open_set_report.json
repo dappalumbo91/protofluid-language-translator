@@ -1,0 +1,286 @@
+{
+  "built_utc": "2026-07-18T19:21:43.904549+00:00",
+  "goal": "climb open-set toward leading classical analyze-then-gloss systems",
+  "n_train": 69895,
+  "n_test": 7735,
+  "pul_terms": 75436,
+  "paradigm_terms": 140000,
+  "sense_bank_forms": 172076,
+  "sense_bank_glosses": 340839,
+  "exact_rate": 0.020168067226890758,
+  "partial_rate": 0.2786037491919845,
+  "n_misses": 5580,
+  "miss_empty_sample": 13,
+  "miss_wrong_sample": 67,
+  "hits_sample": [
+    {
+      "lang": "akk",
+      "word": "šumma",
+      "gold": "if",
+      "gold_mk": "if",
+      "meanings": [
+        "if"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "historical",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "san",
+      "word": "rājan",
+      "gold": "king",
+      "gold_mk": "king",
+      "meanings": [
+        "king"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "historical",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "Μωαβίτης",
+      "gold": "Moabite",
+      "gold_mk": "moabite",
+      "meanings": [
+        "moabite"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "Ναζωραῖος",
+      "gold": "Nazarene",
+      "gold_mk": "nazarene",
+      "meanings": [
+        "nazarene"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "Πελασγικός",
+      "gold": "Pelasgian",
+      "gold_mk": "pelasgian",
+      "meanings": [
+        "pelasgian"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "γαγγίλη",
+      "gold": "dewlap",
+      "gold_mk": "dewlap",
+      "meanings": [
+        "dewlap"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "γυμνασία",
+      "gold": "exercise",
+      "gold_mk": "exercise",
+      "meanings": [
+        "bodily_exercises"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "θεσπέσιος",
+      "gold": "divine",
+      "gold_mk": "divine",
+      "meanings": [
+        "divine"
+      ],
+      "kind": "exact",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    }
+  ],
+  "misses_sample": [
+    {
+      "lang": "grc",
+      "word": "δορατοθήκη",
+      "gold": "spear-case",
+      "gold_mk": "spear_case",
+      "meanings": [
+        "narrative_flow"
+      ],
+      "kind": "miss",
+      "map_rate": 0.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "δοτός",
+      "gold": "granted",
+      "gold_mk": "granted",
+      "meanings": [
+        "appearing_like_the_dative_case"
+      ],
+      "kind": "miss",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "δύσθυμος",
+      "gold": "repentant",
+      "gold_mk": "repentant",
+      "meanings": [
+        "despondency_despair"
+      ],
+      "kind": "miss",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "εὐαγγελιστής",
+      "gold": "evangelist",
+      "gold_mk": "evangelist",
+      "meanings": [
+        "to_bring_or_announce_good_news"
+      ],
+      "kind": "miss",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "εὔζωνος",
+      "gold": "unencumbered",
+      "gold_mk": "unencumbered",
+      "meanings": [
+        "well_girded"
+      ],
+      "kind": "miss",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "εὔτροχος",
+      "gold": "smooth-running",
+      "gold_mk": "smooth_running",
+      "meanings": [
+        "versatile"
+      ],
+      "kind": "miss",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "ζηλότυπος",
+      "gold": "jealous",
+      "gold_mk": "jealous",
+      "meanings": [
+        "narrative_flow"
+      ],
+      "kind": "miss",
+      "map_rate": 0.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "ζυγωτός",
+      "gold": "yoked",
+      "gold_mk": "yoked",
+      "meanings": [
+        "bolt_bar"
+      ],
+      "kind": "miss",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "ζύγαστρον",
+      "gold": "fastenings",
+      "gold_mk": "fastenings",
+      "meanings": [
+        "narrative_flow"
+      ],
+      "kind": "miss",
+      "map_rate": 0.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "θέτης",
+      "gold": "mortgager",
+      "gold_mk": "mortgager",
+      "meanings": [
+        "apocopic_form"
+      ],
+      "kind": "miss",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "θεράπων",
+      "gold": "servant",
+      "gold_mk": "servant",
+      "meanings": [
+        "one_who_waits_upon_another"
+      ],
+      "kind": "miss",
+      "map_rate": 1.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    },
+    {
+      "lang": "grc",
+      "word": "θύελλα",
+      "gold": "hurricane",
+      "gold_mk": "hurricane",
+      "meanings": [
+        "narrative_flow"
+      ],
+      "kind": "miss",
+      "map_rate": 0.0,
+      "context": "mythological",
+      "S": 0.6325783360136283
+    }
+  ],
+  "baseline_ref": {
+    "original_partial": 0.1784,
+    "meta_peak_partial": 0.2318,
+    "prior_climb_partial": 0.2361
+  },
+  "delta_pp_vs_original": 10.02037491919845,
+  "delta_pp_vs_prior": 4.250374919198449
+}

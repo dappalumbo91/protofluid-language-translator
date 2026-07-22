@@ -1,0 +1,9 @@
+DIGEST 32a6ad60b733704d58990f4e5300e2d8
+F_probe
+R27:32 Stdlib.QArith.QArith <> <> lib
+def 46:53 <> golden_K
+R57:57 Stdlib.QArith.QArith_base <> Q rec
+R74:76 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+R101:108 Stdlib.QArith.QArith_base <> Qcompare def
+R112:114 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+R118:125 _probe <> golden_K def

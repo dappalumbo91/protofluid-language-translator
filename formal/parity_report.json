@@ -1,0 +1,125 @@
+{
+  "built_utc": "2026-07-18T19:14:48.969361+00:00",
+  "formula": "S = K*(T1+T2+T3)",
+  "lab_cross_verify": {
+    "lab_path": "C:\\Users\\damia\\Desktop\\gpu exparment for lean coq isabell andf star\\parity\\golden.json",
+    "lab_present": true,
+    "comparisons": [
+      {
+        "id": "phi",
+        "pflt": 1.618033988749895,
+        "lab": 1.618033988749895,
+        "abs_diff": 0.0,
+        "ok": true
+      },
+      {
+        "id": "gamma",
+        "pflt": 0.5772156649015329,
+        "lab": 0.5772156649015329,
+        "abs_diff": 0.0,
+        "ok": true
+      },
+      {
+        "id": "K",
+        "pflt": 0.4202216641606967,
+        "lab": 0.4202216641606967,
+        "abs_diff": 0.0,
+        "ok": true
+      },
+      {
+        "id": "c_eff",
+        "pflt": 0.9577022026205613,
+        "lab": 0.9577022026205613,
+        "abs_diff": 0.0,
+        "ok": true
+      },
+      {
+        "id": "p_var",
+        "pflt": 0.9579871226722757,
+        "lab": 0.9579871226722757,
+        "abs_diff": 0.0,
+        "ok": true
+      },
+      {
+        "id": "psi_con",
+        "pflt": 0.6321205588285577,
+        "lab": 0.6321205588285577,
+        "abs_diff": 0.0,
+        "ok": true
+      }
+    ],
+    "scalar_sample": {
+      "pflt_S": 0.5195106204293134,
+      "lab_S": 0.5195106204293135,
+      "abs_diff": 1.1102230246251565e-16
+    },
+    "all_ok": true
+  },
+  "authority_cross_verify": {
+    "eps": 1e-12,
+    "all_ok": true,
+    "domains": [
+      {
+        "domain": "linguistic",
+        "microscope_S": 0.6513247618848969,
+        "authority_S": 0.6513247618848969,
+        "dS": 0.0,
+        "dT1": 0.0,
+        "dT2": 0.0,
+        "dT3": 0.0,
+        "ok": true
+      },
+      {
+        "domain": "historical",
+        "microscope_S": 0.6325783360136283,
+        "authority_S": 0.6325783360136283,
+        "dS": 0.0,
+        "dT1": 0.0,
+        "dT2": 0.0,
+        "dT3": 0.0,
+        "ok": true
+      },
+      {
+        "domain": "mythological",
+        "microscope_S": 0.6325783360136283,
+        "authority_S": 0.6325783360136283,
+        "dS": 0.0,
+        "dT1": 0.0,
+        "dT2": 0.0,
+        "dT3": 0.0,
+        "ok": true
+      },
+      {
+        "domain": "quantum",
+        "microscope_S": 0.9555063001027196,
+        "authority_S": 0.9555063001027196,
+        "dS": 0.0,
+        "dT1": 0.0,
+        "dT2": 0.0,
+        "dT3": 0.0,
+        "ok": true
+      },
+      {
+        "domain": "cosmological",
+        "microscope_S": -0.5024559462100433,
+        "authority_S": -0.5024559462100433,
+        "dS": 0.0,
+        "dT1": 0.0,
+        "dT2": 0.0,
+        "dT3": 0.0,
+        "ok": true
+      }
+    ],
+    "authority": "PFLT_FSOT_2_1_aligned.compute_S_D_chaotic"
+  },
+  "backends": {
+    "mathematica": "C:\\Users\\damia\\Desktop\\pflt\\mathematica",
+    "lean": "C:\\Users\\damia\\Desktop\\FSOT-2.1-Lean",
+    "coq": "C:\\Users\\damia\\Desktop\\gpu exparment for lean coq isabell andf star\\phase1_formal_gpu\\coq",
+    "isabelle": "C:\\Users\\damia\\Desktop\\gpu exparment for lean coq isabell andf star\\phase1_formal_gpu\\isabelle",
+    "fstar": "C:\\Users\\damia\\Desktop\\gpu exparment for lean coq isabell andf star\\phase1_formal_gpu\\fstar",
+    "lab_golden": "C:\\Users\\damia\\Desktop\\gpu exparment for lean coq isabell andf star\\parity\\golden.json",
+    "pflt_golden": "C:\\Users\\damia\\Desktop\\pflt\\formal\\golden_fsot_pflt.json"
+  },
+  "all_ok": true
+}

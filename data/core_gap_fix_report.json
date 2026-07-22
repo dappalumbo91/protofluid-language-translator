@@ -1,0 +1,36 @@
+{
+  "built_utc": "2026-07-18T18:19:00.295321+00:00",
+  "story": "error-class remedies for universal open-set translator",
+  "baseline_original": {
+    "partial": 0.1784,
+    "note": "pre meta/demonym"
+  },
+  "previous_peak": {
+    "partial": 0.2318,
+    "note": "meta+demonym+seeds"
+  },
+  "now": {
+    "partial": 0.2361,
+    "exact": 0.0201,
+    "n_test": 7764,
+    "n_misses": 5931,
+    "taxonomy": {
+      "exact_wrong_sense": 2889,
+      "fallback_empty": 1616,
+      "ethnonym_missense": 395
+    }
+  },
+  "delta_pp_vs_original": 5.77,
+  "delta_pp_vs_previous_peak": 0.43,
+  "remedies": [
+    "soft sense clusters (tillage/fertilizing, cottage/sheepfold, nature/natural, ...)",
+    "token edit near-match on soft score",
+    "multi-clause gold soft match",
+    "stable multi-gloss sense_bank (alts only; primary inject stable)",
+    "EXTRA core seeds from fallback empties",
+    "Greek compound peel + participle reduplication stems",
+    "garbage: glaphur_s / a_t_os / genitive shells \u2014 NOT thirst/stench",
+    "fixed critical bug: vowel-ratio garbage was skipping thirst/stench/spring injects"
+  ],
+  "remaining": "exact_wrong_sense still largest \u2014 true polysemy when train sense != gold sense; needs multi-gloss gold inventory not more gates"
+}

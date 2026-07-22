@@ -1,0 +1,91 @@
+DIGEST afb8e4ef77bfebf66b602e3244a66c45
+FPFLTGolden
+R166:171 Stdlib.QArith.QArith <> <> lib
+def 186:193 <> golden_K
+R197:197 Stdlib.QArith.QArith_base <> Q rec
+R214:216 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+def 243:252 <> golden_phi
+R256:256 Stdlib.QArith.QArith_base <> Q rec
+R274:276 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+def 303:316 <> golden_psi_con
+R320:320 Stdlib.QArith.QArith_base <> Q rec
+R337:339 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+def 366:377 <> golden_c_eff
+R381:381 Stdlib.QArith.QArith_base <> Q rec
+R398:400 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+def 427:438 <> golden_gamma
+R442:442 Stdlib.QArith.QArith_base <> Q rec
+R459:461 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+def 546:564 <> golden_S_linguistic
+R568:568 Stdlib.QArith.QArith_base <> Q rec
+R585:587 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+def 614:632 <> golden_S_historical
+R636:636 Stdlib.QArith.QArith_base <> Q rec
+R653:655 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+def 682:702 <> golden_S_mythological
+R706:706 Stdlib.QArith.QArith_base <> Q rec
+R723:725 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+def 752:767 <> golden_S_quantum
+R771:771 Stdlib.QArith.QArith_base <> Q rec
+R788:790 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+def 817:837 <> golden_S_cosmological
+R841:841 Stdlib.QArith.QArith_base <> Q rec
+R859:861 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+prf 942:953 <> golden_K_pos
+R957:957 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R983:986 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R958:965 Stdlib.QArith.QArith_base <> Qcompare def
+R969:971 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+R975:982 PFLTGolden <> golden_K def
+R987:988 Corelib.Init.Datatypes <> Lt constr
+R1005:1012 PFLTGolden <> golden_K def
+prf 1052:1068 <> golden_phi_gt_one
+R1072:1072 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1100:1103 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1073:1080 Stdlib.QArith.QArith_base <> Qcompare def
+R1084:1086 Stdlib.QArith.QArith_base <> ::Q_scope:x_'#'_x not
+R1090:1099 PFLTGolden <> golden_phi def
+R1104:1105 Corelib.Init.Datatypes <> Lt constr
+R1122:1131 PFLTGolden <> golden_phi def
+ind 1313:1319 <> Trinary
+constr 1331:1338 <> SpinDown
+constr 1342:1351 <> Superposed
+constr 1355:1360 <> SpinUp
+scheme 1313:1319 <> Trinary_rect
+scheme 1313:1319 <> Trinary_ind
+scheme 1313:1319 <> Trinary_rec
+scheme 1313:1319 <> Trinary_sind
+def 1375:1389 <> trinary_to_bits
+R1396:1402 PFLTGolden <> Trinary ind
+binder 1392:1392 <> t:3
+R1407:1409 Corelib.Init.Datatypes <> nat ind
+R1422:1422 PFLTGolden <> t:3 var
+R1429:1436 PFLTGolden <> SpinDown constr
+R1449:1458 PFLTGolden <> Superposed constr
+R1471:1476 PFLTGolden <> SpinUp constr
+def 1504:1518 <> trinary_of_bits
+R1525:1527 Corelib.Init.Datatypes <> nat ind
+binder 1521:1521 <> n:5
+R1532:1537 Corelib.Init.Datatypes <> option ind
+R1539:1545 PFLTGolden <> Trinary ind
+R1558:1558 PFLTGolden <> n:5 var
+R1578:1581 Corelib.Init.Datatypes <> Some constr
+R1583:1590 PFLTGolden <> SpinDown constr
+R1605:1608 Corelib.Init.Datatypes <> Some constr
+R1610:1619 PFLTGolden <> Superposed constr
+R1634:1637 Corelib.Init.Datatypes <> Some constr
+R1639:1644 PFLTGolden <> SpinUp constr
+R1655:1658 Corelib.Init.Datatypes <> None constr
+prf 1674:1690 <> trinary_roundtrip
+binder 1701:1701 <> t:7
+R1739:1741 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1704:1718 PFLTGolden <> trinary_of_bits def
+R1721:1735 PFLTGolden <> trinary_to_bits def
+R1737:1737 PFLTGolden <> t:7 var
+R1742:1745 Corelib.Init.Datatypes <> Some constr
+R1747:1747 PFLTGolden <> t:7 var
+def 1809:1822 <> states_per_u64
+R1826:1828 Corelib.Init.Datatypes <> nat ind
+prf 1847:1863 <> states_per_u64_eq
+R1881:1883 Corelib.Init.Logic <> ::type_scope:x_'='_x not
+R1867:1880 PFLTGolden <> states_per_u64 def

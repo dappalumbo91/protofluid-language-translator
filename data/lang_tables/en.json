@@ -1,0 +1,40 @@
+{
+  "lang": "en",
+  "description": "English open-set extras (extend as needed)",
+  "form_sense_prefer": {
+    "temple": ["temple"],
+    "divine": ["divine"],
+    "soul": ["soul"],
+    "water": ["water"],
+    "hand": ["hand"],
+    "hands": ["hands"],
+    "latin": ["latin"],
+    "greek": ["greek"],
+    "zipf": ["zipf"],
+    "entropy": ["entropy"]
+  },
+  "seeds": [
+    {
+      "form": "temple",
+      "gloss": "temple"
+    },
+    {
+      "form": "divine",
+      "gloss": "divine"
+    },
+    {
+      "form": "soul",
+      "gloss": "soul"
+    },
+    {
+      "form": "water",
+      "gloss": "water"
+    },
+    {
+      "form": "hand",
+      "gloss": "hand"
+    }
+  ],
+  "participle_stems": [],
+  "demonym_seeds": {}
+}

@@ -1,0 +1,294 @@
+{
+  "built_utc": "2026-07-18T19:14:56.507591+00:00",
+  "formula": "S = K*(T1+T2+T3)",
+  "golden": "C:\\Users\\damia\\Desktop\\pflt\\formal\\golden_fsot_pflt.json",
+  "python": {
+    "authority": {
+      "eps": 1e-10,
+      "all_ok": true,
+      "domains": [
+        {
+          "domain": "linguistic",
+          "microscope_S": 0.6513247618848969,
+          "authority_S": 0.6513247618848969,
+          "dS": 0.0,
+          "dT1": 0.0,
+          "dT2": 0.0,
+          "dT3": 0.0,
+          "ok": true
+        },
+        {
+          "domain": "historical",
+          "microscope_S": 0.6325783360136283,
+          "authority_S": 0.6325783360136283,
+          "dS": 0.0,
+          "dT1": 0.0,
+          "dT2": 0.0,
+          "dT3": 0.0,
+          "ok": true
+        },
+        {
+          "domain": "mythological",
+          "microscope_S": 0.6325783360136283,
+          "authority_S": 0.6325783360136283,
+          "dS": 0.0,
+          "dT1": 0.0,
+          "dT2": 0.0,
+          "dT3": 0.0,
+          "ok": true
+        },
+        {
+          "domain": "quantum",
+          "microscope_S": 0.9555063001027196,
+          "authority_S": 0.9555063001027196,
+          "dS": 0.0,
+          "dT1": 0.0,
+          "dT2": 0.0,
+          "dT3": 0.0,
+          "ok": true
+        },
+        {
+          "domain": "cosmological",
+          "microscope_S": -0.5024559462100433,
+          "authority_S": -0.5024559462100433,
+          "dS": 0.0,
+          "dT1": 0.0,
+          "dT2": 0.0,
+          "dT3": 0.0,
+          "ok": true
+        }
+      ],
+      "authority": "PFLT_FSOT_2_1_aligned.compute_S_D_chaotic"
+    },
+    "lab": {
+      "lab_path": "C:\\Users\\damia\\Desktop\\gpu exparment for lean coq isabell andf star\\parity\\golden.json",
+      "lab_present": true,
+      "comparisons": [
+        {
+          "id": "phi",
+          "pflt": 1.618033988749895,
+          "lab": 1.618033988749895,
+          "abs_diff": 0.0,
+          "ok": true
+        },
+        {
+          "id": "gamma",
+          "pflt": 0.5772156649015329,
+          "lab": 0.5772156649015329,
+          "abs_diff": 0.0,
+          "ok": true
+        },
+        {
+          "id": "K",
+          "pflt": 0.4202216641606967,
+          "lab": 0.4202216641606967,
+          "abs_diff": 0.0,
+          "ok": true
+        },
+        {
+          "id": "c_eff",
+          "pflt": 0.9577022026205613,
+          "lab": 0.9577022026205613,
+          "abs_diff": 0.0,
+          "ok": true
+        },
+        {
+          "id": "p_var",
+          "pflt": 0.9579871226722757,
+          "lab": 0.9579871226722757,
+          "abs_diff": 0.0,
+          "ok": true
+        },
+        {
+          "id": "psi_con",
+          "pflt": 0.6321205588285577,
+          "lab": 0.6321205588285577,
+          "abs_diff": 0.0,
+          "ok": true
+        }
+      ],
+      "scalar_sample": {
+        "pflt_S": 0.5195106204293134,
+        "lab_S": 0.5195106204293135,
+        "abs_diff": 1.1102230246251565e-16
+      },
+      "all_ok": true
+    },
+    "fixtures": [
+      {
+        "domain": "linguistic",
+        "golden_S": 0.6513247618848969,
+        "authority_S": 0.6513247618848969,
+        "dS": 0.0,
+        "ok": true
+      },
+      {
+        "domain": "historical",
+        "golden_S": 0.6325783360136283,
+        "authority_S": 0.6325783360136283,
+        "dS": 0.0,
+        "ok": true
+      },
+      {
+        "domain": "mythological",
+        "golden_S": 0.6325783360136283,
+        "authority_S": 0.6325783360136283,
+        "dS": 0.0,
+        "ok": true
+      },
+      {
+        "domain": "quantum",
+        "golden_S": 0.9555063001027196,
+        "authority_S": 0.9555063001027196,
+        "dS": 0.0,
+        "ok": true
+      },
+      {
+        "domain": "cosmological",
+        "golden_S": -0.5024559462100433,
+        "authority_S": -0.5024559462100433,
+        "dS": 0.0,
+        "ok": true
+      }
+    ],
+    "ok": true
+  },
+  "lean": {
+    "tool": "lean",
+    "path": "C:\\Users\\damia\\Desktop\\pflt\\formal\\lean\\PFLTGoldenAsserts.lean",
+    "code": 0,
+    "print_eps": 5e-06,
+    "tags": {
+      "K": "0.420222",
+      "phi": "1.618034",
+      "psi_con": "0.632121",
+      "c_eff": "0.957702",
+      "S_linguistic": "0.651325",
+      "S_historical": "0.632578",
+      "S_mythological": "0.632578",
+      "S_quantum": "0.955506",
+      "S_cosmological": "-0.502456"
+    },
+    "comparisons": [
+      {
+        "id": "K",
+        "lean": 0.420222,
+        "golden": 0.4202216641606967,
+        "abs_diff": 3.358393033114915e-07,
+        "ok": true
+      },
+      {
+        "id": "phi",
+        "lean": 1.618034,
+        "golden": 1.618033988749895,
+        "abs_diff": 1.1250105069748884e-08,
+        "ok": true
+      },
+      {
+        "id": "psi_con",
+        "lean": 0.632121,
+        "golden": 0.6321205588285577,
+        "abs_diff": 4.4117144237798556e-07,
+        "ok": true
+      },
+      {
+        "id": "c_eff",
+        "lean": 0.957702,
+        "golden": 0.9577022026205613,
+        "abs_diff": 2.0262056121822525e-07,
+        "ok": true
+      },
+      {
+        "id": "S_linguistic",
+        "lean": 0.651325,
+        "golden": 0.6513247618848969,
+        "abs_diff": 2.381151031904949e-07,
+        "ok": true
+      },
+      {
+        "id": "S_historical",
+        "lean": 0.632578,
+        "golden": 0.6325783360136283,
+        "abs_diff": 3.360136283658832e-07,
+        "ok": true
+      },
+      {
+        "id": "S_mythological",
+        "lean": 0.632578,
+        "golden": 0.6325783360136283,
+        "abs_diff": 3.360136283658832e-07,
+        "ok": true
+      },
+      {
+        "id": "S_quantum",
+        "lean": 0.955506,
+        "golden": 0.9555063001027196,
+        "abs_diff": 3.00102719674733e-07,
+        "ok": true
+      },
+      {
+        "id": "S_cosmological",
+        "lean": -0.502456,
+        "golden": -0.5024559462100433,
+        "abs_diff": 5.37899567110145e-08,
+        "ok": true
+      }
+    ],
+    "raw_tail": "K=0.420222\nphi=1.618034\npsi_con=0.632121\nc_eff=0.957702\nS_linguistic=0.651325\nS_historical=0.632578\nS_mythological=0.632578\nS_quantum=0.955506\nS_cosmological=-0.502456",
+    "desktop_FSOT2_0": {
+      "present": true,
+      "code": 0,
+      "snippet": "C:\\Users\\damia\\Desktop\\FSOT-2.1-Lean\\FSOT2_0_Compute.lean:203:44: warning: `String.mk` has been deprecated: Use `String.ofList` instead\n\"-0.502456\"\n\"0.955506\"\n\"-0.502456\"\n\"0.955506\"",
+      "ok": true
+    },
+    "ok": true
+  },
+  "coq": {
+    "tool": "coqc",
+    "path": "C:\\Users\\damia\\Desktop\\pflt\\formal\\coq\\PFLTGolden.v",
+    "code": 0,
+    "raw_tail": "",
+    "lab_trinary": {
+      "present": true,
+      "code": 0,
+      "ok": true,
+      "raw_tail": ""
+    },
+    "ok": true
+  },
+  "isabelle": {
+    "tool": "isabelle",
+    "path": "C:\\Users\\damia\\Desktop\\pflt\\formal\\isabelle\\PFLTGolden.thy",
+    "skipped": true,
+    "reason": "isabelle not on PATH",
+    "ok": null,
+    "note": "Theory emitted; open in Isabelle/jEdit or add isabelle to PATH"
+  },
+  "fstar": {
+    "tool": "fstar",
+    "path": "C:\\Users\\damia\\Desktop\\pflt\\formal\\fstar\\PFLTGolden.fst",
+    "skipped": true,
+    "reason": "fstar not on PATH",
+    "ok": null,
+    "note": "PFLTGolden.fst emitted; install F* to typecheck"
+  },
+  "artifacts": {
+    "lean": "C:\\Users\\damia\\Desktop\\pflt\\formal\\lean\\PFLTGoldenAsserts.lean",
+    "coq": "C:\\Users\\damia\\Desktop\\pflt\\formal\\coq\\PFLTGolden.v",
+    "isabelle": "C:\\Users\\damia\\Desktop\\pflt\\formal\\isabelle\\PFLTGolden.thy",
+    "fstar": "C:\\Users\\damia\\Desktop\\pflt\\formal\\fstar\\PFLTGolden.fst",
+    "lab_golden": "C:\\Users\\damia\\Desktop\\gpu exparment for lean coq isabell andf star\\parity\\golden.json"
+  },
+  "overall_ok": true,
+  "policy": {
+    "required": [
+      "python_authority_lab_fixtures",
+      "lean_near_evals",
+      "coqc_PFLTGolden"
+    ],
+    "optional": [
+      "isabelle",
+      "fstar"
+    ]
+  }
+}

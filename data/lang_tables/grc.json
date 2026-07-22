@@ -1,0 +1,607 @@
+{
+  "lang": "grc",
+  "description": "Translation-layer tables for grc (load via lang_tables.py)",
+  "form_sense_prefer": {
+    "γνωμων": [
+      "sundial",
+      "gnomon",
+      "indicator",
+      "pointer",
+      "rule",
+      "carpenter_square"
+    ],
+    "gnomon": [
+      "sundial",
+      "gnomon",
+      "indicator",
+      "pointer"
+    ],
+    "γραμμα": [
+      "letter",
+      "writing",
+      "document",
+      "alphabet",
+      "character",
+      "epistle"
+    ],
+    "gramma": [
+      "letter",
+      "writing",
+      "document"
+    ],
+    "δεσποτης": [
+      "master",
+      "lord",
+      "despot",
+      "owner",
+      "absolute_ruler"
+    ],
+    "δεσποινα": [
+      "lady",
+      "mistress"
+    ],
+    "despotes": [
+      "master",
+      "despot",
+      "lord"
+    ],
+    "δεινος": [
+      "terrible",
+      "fearful",
+      "awesome",
+      "dreadful",
+      "clever",
+      "skilled"
+    ],
+    "deinos": [
+      "terrible",
+      "fearful",
+      "awesome"
+    ],
+    "γοητεια": [
+      "witchcraft",
+      "magic",
+      "sorcery",
+      "charm",
+      "enchantment"
+    ],
+    "γοης": [
+      "sorcerer",
+      "wizard",
+      "enchanter"
+    ],
+    "goeteia": [
+      "witchcraft",
+      "magic",
+      "sorcery"
+    ],
+    "γλωσσις": [
+      "wryneck",
+      "tongue",
+      "tonguetip",
+      "reed"
+    ],
+    "δασυς": [
+      "hairy",
+      "shaggy",
+      "thick",
+      "bushy",
+      "downy",
+      "dense"
+    ],
+    "δασυτης": [
+      "hairiness",
+      "roughness",
+      "aspiration",
+      "rough_breathing"
+    ],
+    "διπλωσις": [
+      "doubling",
+      "folding",
+      "repetition",
+      "duplication"
+    ],
+    "γεωδαισια": [
+      "land_surveying",
+      "land_dividing",
+      "geodesy",
+      "surveying"
+    ],
+    "γαγγιλη": [
+      "dewlap",
+      "ganglion",
+      "swelling",
+      "tumor"
+    ],
+    "γαγγλιον": [
+      "ganglion",
+      "tumor",
+      "swelling"
+    ],
+    "βιαζω": [
+      "force",
+      "compel",
+      "overpower",
+      "violate"
+    ],
+    "βια": [
+      "force",
+      "violence",
+      "might"
+    ],
+    "βιαιος": [
+      "forcible",
+      "violent",
+      "forced"
+    ],
+    "γραμμη": [
+      "line",
+      "stroke"
+    ],
+    "καρπος": [
+      "fruit",
+      "produce",
+      "crop",
+      "wrist",
+      "carpus"
+    ],
+    "κομητης": [
+      "comet",
+      "long_haired",
+      "meteor"
+    ],
+    "θεια": [
+      "aunt",
+      "divine",
+      "godlike"
+    ],
+    "θεσπεσιος": [
+      "divine",
+      "marvelous",
+      "wondrous",
+      "godlike"
+    ],
+    "δυσμενης": [
+      "hostile",
+      "enemy",
+      "ill_disposed",
+      "malevolent"
+    ],
+    "ζεστος": [
+      "hot",
+      "boiling",
+      "seething",
+      "warm"
+    ],
+    "κρατυς": [
+      "strong",
+      "mighty",
+      "powerful"
+    ],
+    "κληδων": [
+      "omen",
+      "omen_voice",
+      "report",
+      "rumor"
+    ],
+    "κνημις": [
+      "greave",
+      "legging",
+      "shin_guard"
+    ],
+    "καραβιον": [
+      "boat",
+      "ship",
+      "skiff"
+    ],
+    "καυλος": [
+      "stem",
+      "stalk",
+      "shaft",
+      "penis"
+    ],
+    "δοτικος": [
+      "generous",
+      "giving",
+      "dative"
+    ],
+    "δηρις": [
+      "battle",
+      "strife",
+      "contest",
+      "fight"
+    ],
+    "ευζωνος": [
+      "well_girded",
+      "unencumbered",
+      "active",
+      "nimble"
+    ],
+    "ζημια": [
+      "penalty",
+      "loss",
+      "damage",
+      "fine"
+    ],
+    "κωφος": [
+      "blunt",
+      "dull",
+      "deaf",
+      "mute"
+    ],
+    "λις": [
+      "lion"
+    ],
+    "λειτωρ": [
+      "priest",
+      "sacrificer"
+    ],
+    "λυριστης": [
+      "lyrist",
+      "harper",
+      "lyre_player"
+    ],
+    "μυωψ": [
+      "shortsighted",
+      "myopic",
+      "gadfly"
+    ],
+    "νωνυμος": [
+      "nameless",
+      "inglorious",
+      "unknown"
+    ],
+    "σαθρος": [
+      "rotten",
+      "unsound",
+      "impotent",
+      "weak"
+    ],
+    "σκευοφυλαξ": [
+      "storekeeper",
+      "keeper",
+      "custodian"
+    ],
+    "λιθοκολλα": [
+      "cement",
+      "mortar",
+      "glue"
+    ],
+    "κιχλη": [
+      "wrasse",
+      "thrush"
+    ]
+  },
+  "seeds": [
+    {
+      "form": "βιάζω",
+      "gloss": "force"
+    },
+    {
+      "form": "βία",
+      "gloss": "force"
+    },
+    {
+      "form": "βίαιος",
+      "gloss": "violent"
+    },
+    {
+      "form": "βεβιασμένος",
+      "gloss": "forced"
+    },
+    {
+      "form": "γνώμων",
+      "gloss": "sundial"
+    },
+    {
+      "form": "γνώμη",
+      "gloss": "opinion"
+    },
+    {
+      "form": "γοητεία",
+      "gloss": "witchcraft"
+    },
+    {
+      "form": "γόης",
+      "gloss": "sorcerer"
+    },
+    {
+      "form": "γλωσσίς",
+      "gloss": "wryneck"
+    },
+    {
+      "form": "γράμμα",
+      "gloss": "letter"
+    },
+    {
+      "form": "γραμμή",
+      "gloss": "line"
+    },
+    {
+      "form": "δεσπότης",
+      "gloss": "master"
+    },
+    {
+      "form": "δέσποινα",
+      "gloss": "lady"
+    },
+    {
+      "form": "δεινός",
+      "gloss": "terrible"
+    },
+    {
+      "form": "δειλία",
+      "gloss": "cowardice"
+    },
+    {
+      "form": "δασύς",
+      "gloss": "hairy"
+    },
+    {
+      "form": "δασύτης",
+      "gloss": "aspiration"
+    },
+    {
+      "form": "δίπλωσις",
+      "gloss": "doubling"
+    },
+    {
+      "form": "γεωδαισία",
+      "gloss": "surveying"
+    },
+    {
+      "form": "γαγγλίον",
+      "gloss": "ganglion"
+    },
+    {
+      "form": "ἀνάγκη",
+      "gloss": "necessity"
+    },
+    {
+      "form": "ἀναγκάζω",
+      "gloss": "compel"
+    },
+    {
+      "form": "καρπός",
+      "gloss": "fruit"
+    },
+    {
+      "form": "κομήτης",
+      "gloss": "comet"
+    },
+    {
+      "form": "θεία",
+      "gloss": "aunt"
+    },
+    {
+      "form": "δυσμενής",
+      "gloss": "hostile"
+    },
+    {
+      "form": "ζεστός",
+      "gloss": "hot"
+    },
+    {
+      "form": "κρατύς",
+      "gloss": "strong"
+    },
+    {
+      "form": "κληδών",
+      "gloss": "omen"
+    },
+    {
+      "form": "κνημίς",
+      "gloss": "greave"
+    },
+    {
+      "form": "δοτικός",
+      "gloss": "generous"
+    },
+    {
+      "form": "δῆρις",
+      "gloss": "battle"
+    },
+    {
+      "form": "ζημία",
+      "gloss": "penalty"
+    },
+    {
+      "form": "κωφός",
+      "gloss": "blunt"
+    },
+    {
+      "form": "λίς",
+      "gloss": "lion"
+    },
+    {
+      "form": "λείτωρ",
+      "gloss": "priest"
+    },
+    {
+      "form": "λυριστής",
+      "gloss": "lyrist"
+    },
+    {
+      "form": "μύωψ",
+      "gloss": "shortsighted"
+    },
+    {
+      "form": "σκευοφύλαξ",
+      "gloss": "storekeeper"
+    },
+    {
+      "form": "γνώμη",
+      "gloss": "mind"
+    },
+    {
+      "form": "γεωργία",
+      "gloss": "tillage"
+    },
+    {
+      "form": "αὔλιον",
+      "gloss": "cottage"
+    },
+    {
+      "form": "γλαυκῶπις",
+      "gloss": "bright-eyed"
+    },
+    {
+      "form": "γλαφυρός",
+      "gloss": "polished"
+    },
+    {
+      "form": "βάμβαξ",
+      "gloss": "cotton"
+    },
+    {
+      "form": "βεβιάζω",
+      "gloss": "force"
+    },
+    {
+      "form": "εἰκών",
+      "gloss": "image"
+    },
+    {
+      "form": "εἰκονοκλάστης",
+      "gloss": "iconoclast"
+    },
+    {
+      "form": "δορύ",
+      "gloss": "spear"
+    },
+    {
+      "form": "ψυχή",
+      "gloss": "soul"
+    },
+    {
+      "form": "ἰωνικός",
+      "gloss": "Ionic"
+    },
+    {
+      "form": "ὀρεκτικός",
+      "gloss": "appetitive"
+    },
+    {
+      "form": "ῥαφανίς",
+      "gloss": "radish"
+    }
+  ],
+  "participle_stems": [
+    {
+      "stem": "βιασμεν",
+      "gloss": "forced"
+    },
+    {
+      "stem": "βεβιασμεν",
+      "gloss": "forced"
+    },
+    {
+      "stem": "βιαζομεν",
+      "gloss": "forcing"
+    },
+    {
+      "stem": "ηναγκασμεν",
+      "gloss": "compelled"
+    },
+    {
+      "stem": "αναγκασμεν",
+      "gloss": "compelled"
+    },
+    {
+      "stem": "πεπραγμεν",
+      "gloss": "done"
+    },
+    {
+      "stem": "γεγραμμεν",
+      "gloss": "written"
+    },
+    {
+      "stem": "ειρημεν",
+      "gloss": "said"
+    },
+    {
+      "stem": "λελεγμεν",
+      "gloss": "said"
+    },
+    {
+      "stem": "πεποιημεν",
+      "gloss": "made"
+    },
+    {
+      "stem": "τεθνηκ",
+      "gloss": "dead"
+    },
+    {
+      "stem": "τεθνηκως",
+      "gloss": "dead"
+    }
+  ],
+  "demonym_seeds": {
+    "κρης": "cretan",
+    "κρητες": "cretan",
+    "κρητικος": "cretan",
+    "κρητη": "crete",
+    "γαλατης": "galatian",
+    "γαλαται": "galatian",
+    "ναζωραιος": "nazarene",
+    "ναζαρηνος": "nazarene",
+    "μωαβιτης": "moabite",
+    "πελασγος": "pelasgian",
+    "πελασγικος": "pelasgian",
+    "λιβυς": "libyan",
+    "λιβυκος": "libyan",
+    "αιγυπτιος": "egyptian",
+    "περσης": "persian",
+    "μηδος": "median",
+    "σκυθης": "scythian",
+    "κελτος": "celt",
+    "κελτικος": "celtic",
+    "ρωμαιος": "roman",
+    "ελλην": "greek",
+    "ελληνικος": "greek",
+    "αθηναιος": "athenian",
+    "σπαρτιατης": "spartan",
+    "θηβαιος": "theban",
+    "μακεδων": "macedonian",
+    "ιουδαιος": "jew",
+    "σαμαρειτης": "samaritan",
+    "φοινιξ": "phoenician",
+    "τροικος": "trojan",
+    "τρως": "trojan"
+  },
+  "ethnonym_suffixes": [
+    "ιώτης",
+    "ιώτου",
+    "ιώται",
+    "ίτης",
+    "ίτου",
+    "ῖται",
+    "ιτης",
+    "ιτου",
+    "αῖος",
+    "αίου",
+    "αιος",
+    "αιου",
+    "ικός",
+    "ικοῦ",
+    "ική",
+    "ικόν",
+    "ικος",
+    "ικου",
+    "ηνός",
+    "ηνοῦ",
+    "ηνος",
+    "ηνου",
+    "ώτης",
+    "ώτου",
+    "ωτης",
+    "εύς",
+    "έως",
+    "ευς",
+    "ης",
+    "ου",
+    "ος",
+    "ων",
+    "ις"
+  ]
+}

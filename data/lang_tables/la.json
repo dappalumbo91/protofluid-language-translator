@@ -1,0 +1,98 @@
+{
+  "lang": "la",
+  "description": "Translation-layer tables for la (load via lang_tables.py)",
+  "form_sense_prefer": {
+    "templum": ["temple", "shrine"],
+    "aedes": ["temple", "shrine", "house"],
+    "aqua": ["water"],
+    "manus": ["hand"],
+    "lingua": ["language", "tongue"],
+    "verbum": ["word"],
+    "deus": ["god"],
+    "dea": ["goddess"],
+    "anima": ["soul"],
+    "animus": ["soul", "mind"],
+    "rex": ["king"],
+    "urbs": ["city"],
+    "bellum": ["war"],
+    "lex": ["law"],
+    "vita": ["life"],
+    "terra": ["earth"],
+    "tempus": ["time"]
+  },
+  "seeds": [
+    {
+      "form": "aqua",
+      "gloss": "water"
+    },
+    {
+      "form": "manus",
+      "gloss": "hand"
+    },
+    {
+      "form": "lingua",
+      "gloss": "language"
+    },
+    {
+      "form": "templum",
+      "gloss": "temple"
+    },
+    {
+      "form": "verbum",
+      "gloss": "word"
+    },
+    {
+      "form": "cogo",
+      "gloss": "compel"
+    },
+    {
+      "form": "vis",
+      "gloss": "force"
+    },
+    {
+      "form": "magister",
+      "gloss": "master"
+    },
+    {
+      "form": "dominus",
+      "gloss": "master"
+    },
+    {
+      "form": "littera",
+      "gloss": "letter"
+    },
+    {
+      "form": "dirus",
+      "gloss": "terrible"
+    },
+    {
+      "form": "agricultura",
+      "gloss": "tillage"
+    },
+    {
+      "form": "mens",
+      "gloss": "mind"
+    },
+    {
+      "form": "sententia",
+      "gloss": "opinion"
+    },
+    {
+      "form": "casa",
+      "gloss": "cottage"
+    }
+  ],
+  "participle_stems": [],
+  "demonym_seeds": {},
+  "ethnonym_suffixes": [
+    "enses",
+    "ensis",
+    "anum",
+    "anus",
+    "ana",
+    "ani",
+    "icus",
+    "ica",
+    "icum"
+  ]
+}

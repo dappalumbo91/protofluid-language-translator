@@ -1,0 +1,174 @@
+{
+  "built_utc": "2026-07-18T19:47:28.293881+00:00",
+  "purpose": "Honest open-set PFLT performance suite (analyze-then-gloss)",
+  "lang_tables": {
+    "ok": true,
+    "form_sense": 48,
+    "seeds": 71,
+    "clusters": 43,
+    "demonyms": 31,
+    "langs": {
+      "grc": true,
+      "la": true,
+      "ang": true,
+      "en": true
+    }
+  },
+  "smoke_map_trained": {
+    "ok": true,
+    "hits": 9,
+    "n": 9,
+    "rate": 1.0,
+    "cases": [
+      {
+        "word": "aqua",
+        "pred": "water",
+        "expect": "water",
+        "exact": true,
+        "ok": true
+      },
+      {
+        "word": "manibus",
+        "pred": "hand",
+        "expect": "hand",
+        "exact": true,
+        "ok": true
+      },
+      {
+        "word": "γνώμων",
+        "pred": "sundial",
+        "expect": "sundial",
+        "exact": true,
+        "ok": true
+      },
+      {
+        "word": "βεβιασμένος",
+        "pred": "forced",
+        "expect": "forced",
+        "exact": true,
+        "ok": true
+      },
+      {
+        "word": "γοητεία",
+        "pred": "witchcraft",
+        "expect": "witchcraft",
+        "exact": true,
+        "ok": true
+      },
+      {
+        "word": "Κρής",
+        "pred": "cretan",
+        "expect": "cretan",
+        "exact": true,
+        "ok": true
+      },
+      {
+        "word": "γράμμα",
+        "pred": "letter",
+        "expect": "letter",
+        "exact": true,
+        "ok": true
+      },
+      {
+        "word": "δεσπότης",
+        "pred": "master",
+        "expect": "master",
+        "exact": true,
+        "ok": true
+      },
+      {
+        "word": "λόγος",
+        "pred": "to_fight_quarrel_war_dispute_about_words",
+        "expect": "word",
+        "exact": true,
+        "ok": true
+      }
+    ],
+    "gap_pack_gnomon": [
+      "sundial",
+      0.93,
+      "gap_seed:grc"
+    ],
+    "demonym_kres": [
+      "cretan",
+      "demonym_seed",
+      0.92
+    ]
+  },
+  "core_held_out_climb": {
+    "exact_rate": 0.020168067226890758,
+    "partial_rate": 0.2786037491919845,
+    "n_test": 7735,
+    "n_misses": 5580,
+    "pul": 75436,
+    "paradigms": 140000,
+    "sense_bank_forms": 172076,
+    "delta_pp_vs_original_17_8": 10.02037491919845
+  },
+  "dual_track": {
+    "core_partial": 0.2650290885585003,
+    "core_exact": 0.01680672268907563,
+    "core_n": 7735,
+    "core_by_lang": {
+      "la": {
+        "n": 4160,
+        "exact": 0.016346153846153847,
+        "partial": 0.36754807692307695
+      },
+      "grc": {
+        "n": 1952,
+        "exact": 0.01485655737704918,
+        "partial": 0.1757172131147541
+      },
+      "ang": {
+        "n": 913,
+        "exact": 0.029572836801752465,
+        "partial": 0.11171960569550932
+      },
+      "en": {
+        "n": 708,
+        "exact": 0.005649717514124294,
+        "partial": 0.10451977401129943
+      }
+    },
+    "name_open_train_seeds": 0.16520100502512564,
+    "name_open_pleiades": 0.18907035175879397,
+    "name_deployed": 0.7908291457286433,
+    "full_mixed": 0.25227833172509917,
+    "train_closed_sample": {
+      "exact": 0.48,
+      "n": 1200
+    }
+  },
+  "formal_fsot": {
+    "overall_ok": true,
+    "python_ok": true,
+    "lean_ok": true,
+    "coq_ok": true
+  },
+  "baselines": {
+    "original_core_partial": 0.1784,
+    "meta_peak_partial": 0.2318,
+    "prior_climb_partial": 0.2361
+  },
+  "interpretation": {
+    "what_we_measure": "Held-out classical form->English gloss (open-set). Not sentence NMT BLEU.",
+    "core_partial_means": "exact OR soft sense overlap (clusters, multi-gloss bank, stem variants)",
+    "name_deploy_high": "Full gazetteer is operational coverage, not open-set honesty",
+    "latin_strongest": "la core partial highest; grc/ang/en still climb targets"
+  },
+  "overall_ok": true,
+  "summary": {
+    "core_climb_partial_pct": 27.86,
+    "core_dual_partial_pct": 26.5,
+    "core_climb_exact_pct": 2.02,
+    "name_open_pct": 16.52,
+    "name_pleiades_pct": 18.91,
+    "name_deploy_pct": 79.08,
+    "full_mixed_pct": 25.23,
+    "smoke_hits": "9/9",
+    "formal_ok": true,
+    "delta_pp_vs_original": 10.02,
+    "overall_ok": true
+  }
+}

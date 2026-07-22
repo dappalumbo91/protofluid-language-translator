@@ -1,0 +1,460 @@
+{
+  "built_utc": "2026-07-21T14:47:30.469311+00:00",
+  "previous_covered": [
+    "akk",
+    "ang",
+    "ar",
+    "arc",
+    "cop",
+    "cu",
+    "egy",
+    "en",
+    "fa",
+    "frm",
+    "fro",
+    "gmh",
+    "goh",
+    "got",
+    "grc",
+    "he",
+    "hit",
+    "hy",
+    "la",
+    "non",
+    "phn",
+    "san",
+    "sga",
+    "sum",
+    "syc"
+  ],
+  "next20_requested": [
+    "xcl",
+    "uga",
+    "peo",
+    "pal",
+    "osx",
+    "osp",
+    "orv",
+    "mga",
+    "pro",
+    "roa-opt",
+    "pi"
+  ],
+  "next20_names": {
+    "xcl": "Classical Armenian",
+    "uga": "Ugaritic",
+    "peo": "Old Persian",
+    "pal": "Pahlavi/Middle Persian",
+    "osx": "Old Saxon",
+    "osp": "Old Spanish",
+    "orv": "Old East Slavic",
+    "mga": "Middle Irish",
+    "pro": "Old Occitan",
+    "roa-opt": "Old Portuguese",
+    "pi": "Pali"
+  },
+  "next20_mass_available": {
+    "xcl": 15328,
+    "uga": 1558,
+    "peo": 1054,
+    "pal": 506,
+    "osx": 4464,
+    "osp": 2684,
+    "orv": 1656,
+    "mga": 1412,
+    "pro": 1322,
+    "roa-opt": 2860,
+    "pi": 17074
+  },
+  "mined_rows_by_lang": {
+    "mga": 609,
+    "orv": 731,
+    "osp": 903,
+    "osx": 2023,
+    "pal": 209,
+    "peo": 298,
+    "pi": 5435,
+    "pro": 593,
+    "roa-opt": 1203,
+    "uga": 700,
+    "xcl": 6588
+  },
+  "catalog_size": 36,
+  "catalog": [
+    "akk",
+    "ang",
+    "ar",
+    "arc",
+    "cop",
+    "cu",
+    "egy",
+    "en",
+    "fa",
+    "frm",
+    "fro",
+    "gmh",
+    "goh",
+    "got",
+    "grc",
+    "he",
+    "hit",
+    "hy",
+    "la",
+    "mga",
+    "non",
+    "orv",
+    "osp",
+    "osx",
+    "pal",
+    "peo",
+    "phn",
+    "pi",
+    "pro",
+    "roa-opt",
+    "san",
+    "sga",
+    "sum",
+    "syc",
+    "uga",
+    "xcl"
+  ],
+  "open_overall": {
+    "partial": 0.9962,
+    "exact": 0.9941,
+    "n": 20704
+  },
+  "open_by_lang": {
+    "la": {
+      "n": 10860,
+      "partial": 0.9997,
+      "exact": 0.9973,
+      "new": false
+    },
+    "grc": {
+      "n": 3166,
+      "partial": 1.0,
+      "exact": 0.9978,
+      "new": false
+    },
+    "ang": {
+      "n": 1989,
+      "partial": 0.9955,
+      "exact": 0.9935,
+      "new": false
+    },
+    "ar": {
+      "n": 819,
+      "partial": 0.989,
+      "exact": 0.9878,
+      "new": false
+    },
+    "got": {
+      "n": 633,
+      "partial": 0.9937,
+      "exact": 0.9921,
+      "new": false
+    },
+    "he": {
+      "n": 417,
+      "partial": 0.988,
+      "exact": 0.988,
+      "new": false
+    },
+    "san": {
+      "n": 410,
+      "partial": 0.9756,
+      "exact": 0.9732,
+      "new": false
+    },
+    "non": {
+      "n": 406,
+      "partial": 0.9877,
+      "exact": 0.9852,
+      "new": false
+    },
+    "pi": {
+      "n": 251,
+      "partial": 1.0,
+      "exact": 1.0,
+      "new": true
+    },
+    "fa": {
+      "n": 240,
+      "partial": 0.9625,
+      "exact": 0.9583,
+      "new": false
+    },
+    "en": {
+      "n": 228,
+      "partial": 0.9956,
+      "exact": 0.9912,
+      "new": false
+    },
+    "sga": {
+      "n": 203,
+      "partial": 0.9704,
+      "exact": 0.9655,
+      "new": false
+    },
+    "cu": {
+      "n": 200,
+      "partial": 0.985,
+      "exact": 0.985,
+      "new": false
+    },
+    "xcl": {
+      "n": 175,
+      "partial": 1.0,
+      "exact": 0.9943,
+      "new": true
+    },
+    "egy": {
+      "n": 152,
+      "partial": 0.9934,
+      "exact": 0.9934,
+      "new": false
+    },
+    "cop": {
+      "n": 104,
+      "partial": 1.0,
+      "exact": 1.0,
+      "new": false
+    },
+    "arc": {
+      "n": 98,
+      "partial": 0.8878,
+      "exact": 0.8878,
+      "new": false
+    },
+    "osx": {
+      "n": 64,
+      "partial": 1.0,
+      "exact": 1.0,
+      "new": true
+    },
+    "akk": {
+      "n": 59,
+      "partial": 0.9661,
+      "exact": 0.9661,
+      "new": false
+    },
+    "roa-opt": {
+      "n": 47,
+      "partial": 1.0,
+      "exact": 1.0,
+      "new": true
+    },
+    "orv": {
+      "n": 36,
+      "partial": 1.0,
+      "exact": 1.0,
+      "new": true
+    },
+    "osp": {
+      "n": 34,
+      "partial": 1.0,
+      "exact": 1.0,
+      "new": true
+    },
+    "uga": {
+      "n": 30,
+      "partial": 1.0,
+      "exact": 1.0,
+      "new": true
+    },
+    "mga": {
+      "n": 25,
+      "partial": 1.0,
+      "exact": 1.0,
+      "new": true
+    },
+    "pro": {
+      "n": 17,
+      "partial": 1.0,
+      "exact": 1.0,
+      "new": true
+    },
+    "peo": {
+      "n": 15,
+      "partial": 1.0,
+      "exact": 1.0,
+      "new": true
+    },
+    "pal": {
+      "n": 10,
+      "partial": 1.0,
+      "exact": 1.0,
+      "new": true
+    },
+    "syc": {
+      "n": 9,
+      "partial": 1.0,
+      "exact": 1.0,
+      "new": false
+    },
+    "sum": {
+      "n": 4,
+      "partial": 1.0,
+      "exact": 1.0,
+      "new": false
+    },
+    "hit": {
+      "n": 3,
+      "partial": 1.0,
+      "exact": 1.0,
+      "new": false
+    }
+  },
+  "product_by_lang": {
+    "la": {
+      "n": 10860,
+      "partial": 1.0,
+      "new": false
+    },
+    "grc": {
+      "n": 3166,
+      "partial": 1.0,
+      "new": false
+    },
+    "ang": {
+      "n": 1989,
+      "partial": 1.0,
+      "new": false
+    },
+    "ar": {
+      "n": 819,
+      "partial": 1.0,
+      "new": false
+    },
+    "got": {
+      "n": 633,
+      "partial": 1.0,
+      "new": false
+    },
+    "he": {
+      "n": 417,
+      "partial": 1.0,
+      "new": false
+    },
+    "san": {
+      "n": 410,
+      "partial": 1.0,
+      "new": false
+    },
+    "non": {
+      "n": 406,
+      "partial": 1.0,
+      "new": false
+    },
+    "pi": {
+      "n": 251,
+      "partial": 1.0,
+      "new": true
+    },
+    "fa": {
+      "n": 240,
+      "partial": 1.0,
+      "new": false
+    },
+    "en": {
+      "n": 228,
+      "partial": 1.0,
+      "new": false
+    },
+    "sga": {
+      "n": 203,
+      "partial": 1.0,
+      "new": false
+    },
+    "cu": {
+      "n": 200,
+      "partial": 1.0,
+      "new": false
+    },
+    "xcl": {
+      "n": 175,
+      "partial": 1.0,
+      "new": true
+    },
+    "egy": {
+      "n": 152,
+      "partial": 1.0,
+      "new": false
+    },
+    "cop": {
+      "n": 104,
+      "partial": 1.0,
+      "new": false
+    },
+    "arc": {
+      "n": 98,
+      "partial": 1.0,
+      "new": false
+    },
+    "osx": {
+      "n": 64,
+      "partial": 1.0,
+      "new": true
+    },
+    "akk": {
+      "n": 59,
+      "partial": 1.0,
+      "new": false
+    },
+    "roa-opt": {
+      "n": 47,
+      "partial": 1.0,
+      "new": true
+    },
+    "orv": {
+      "n": 36,
+      "partial": 1.0,
+      "new": true
+    },
+    "osp": {
+      "n": 34,
+      "partial": 1.0,
+      "new": true
+    },
+    "uga": {
+      "n": 30,
+      "partial": 1.0,
+      "new": true
+    },
+    "mga": {
+      "n": 25,
+      "partial": 1.0,
+      "new": true
+    },
+    "pro": {
+      "n": 17,
+      "partial": 1.0,
+      "new": true
+    },
+    "peo": {
+      "n": 15,
+      "partial": 1.0,
+      "new": true
+    },
+    "pal": {
+      "n": 10,
+      "partial": 1.0,
+      "new": true
+    },
+    "syc": {
+      "n": 9,
+      "partial": 1.0,
+      "new": false
+    },
+    "sum": {
+      "n": 4,
+      "partial": 1.0,
+      "new": false
+    },
+    "hit": {
+      "n": 3,
+      "partial": 1.0,
+      "new": false
+    }
+  }
+}

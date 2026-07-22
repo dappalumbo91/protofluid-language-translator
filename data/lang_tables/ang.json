@@ -1,0 +1,45 @@
+{
+  "lang": "ang",
+  "description": "Translation-layer tables for ang (load via lang_tables.py)",
+  "form_sense_prefer": {},
+  "seeds": [
+    {
+      "form": "ned",
+      "gloss": "force"
+    },
+    {
+      "form": "hlaford",
+      "gloss": "lord"
+    },
+    {
+      "form": "staf",
+      "gloss": "letter"
+    },
+    {
+      "form": "mod",
+      "gloss": "mind"
+    },
+    {
+      "form": "þanc",
+      "gloss": "thought"
+    },
+    {
+      "form": "ban",
+      "gloss": "bone"
+    },
+    {
+      "form": "brægen",
+      "gloss": "brain"
+    },
+    {
+      "form": "boc",
+      "gloss": "book"
+    },
+    {
+      "form": "attor",
+      "gloss": "poison"
+    }
+  ],
+  "participle_stems": [],
+  "demonym_seeds": {}
+}

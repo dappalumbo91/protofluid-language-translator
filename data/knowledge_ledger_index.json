@@ -1,0 +1,12 @@
+{
+  "built_utc": "2026-07-18T20:40:28.845779+00:00",
+  "n_claims": 26,
+  "domains": {
+    "historical": 12,
+    "linguistic": 9,
+    "mythological": 2,
+    "quantum": 2,
+    "oceanography": 1
+  },
+  "path": "C:\\Users\\damia\\Desktop\\pflt\\data\\knowledge_ledger.jsonl"
+}
