@@ -1,0 +1,65 @@
+{
+  "built_utc": "2026-07-22T20:39:51.494173+00:00",
+  "fsot": "D1D38A fixed",
+  "lessons": [
+    "one model on GPU at a time",
+    "hyp cache on disk",
+    "progress every 25 batches",
+    "config pick on validation only"
+  ],
+  "val_opus_scores": {
+    "val_opus_b5_lp1.0": 27.42,
+    "val_opus_b5_lp0.9": 27.48,
+    "val_opus_b5_lp1.1": 27.31,
+    "val_opus_b8_lp1.0": 27.41,
+    "val_opus_b8_lp1.05": 27.38
+  },
+  "best_opus_cfg": {
+    "beams": 5,
+    "length_penalty": 0.9
+  },
+  "results": {
+    "opus_bestcfg": {
+      "sacrebleu": 33.86,
+      "chrf": 59.89
+    },
+    "opus_b5": {
+      "sacrebleu": 33.88,
+      "chrf": 59.92
+    },
+    "nllb_b5": {
+      "sacrebleu": 33.37,
+      "chrf": 59.27
+    },
+    "nllb_b8": {
+      "sacrebleu": 33.44,
+      "chrf": 59.39
+    },
+    "ens_gen_score": {
+      "sacrebleu": 34.34,
+      "chrf": 60.25
+    },
+    "ens_length_mid": {
+      "sacrebleu": 34.15,
+      "chrf": 60.14
+    },
+    "ens_oracle": {
+      "sacrebleu": 37.95,
+      "chrf": 62.38
+    }
+  },
+  "best_product": {
+    "name": "ens_gen_score",
+    "sacrebleu": 34.34
+  },
+  "oracle_sacrebleu": 37.95,
+  "gaps": {
+    "best_to_40": 5.66,
+    "best_to_48": 13.66,
+    "oracle_to_40": 2.05
+  },
+  "mid40_cleared": false,
+  "pct_of_mid40": 85.9,
+  "chat_hybrid_prior": 48.74,
+  "elapsed_s": 1829.4
+}

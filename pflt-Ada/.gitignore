@@ -17,6 +17,7 @@ data/gold_core.tsv
 data/densify.tsv
 data/m6_phrase_table.tsv
 data/m6_bigram_table.tsv
+data/hyp_cache/
 data/ltm_mulling.jsonl
 data/knowledge_ledger_ada.jsonl
 
