@@ -1,45 +1,38 @@
 # How far until competitive accuracy?
 
-**Measured 2026-07-22 (post-crash resume) · Law D1D38A**
+**Updated:** 2026-07-22T20:40:29.428556+00:00 · Law **D1D38A**
 
 ## Straight answer
 
-| Game | Competitive? | How far |
-|------|--------------|---------|
-| **A. Form→gloss catalog** | **Yes — already** | Near ceiling (~99.99% / 113 langs) |
-| **B1. Chat sentence MT** | **Yes — mid open-MT** | Hybrid **48.74** ≥ mid bar 45; ~+6 to strong (~55) |
-| **B2. News sentence MT** (DeepL-style) | **Not yet** | Best product **34.39** · gap **+5.61** to mid-40 · **+13.6** to stretch 48 |
-| **FSOT / classical offline** | **Yes — unique** | No commercial equivalent |
+| Game | Competitive? | Distance |
+|------|--------------|----------|
+| Catalog form-gloss | **Yes** | Ceiling on 113 langs |
+| Chat sentence MT | **Yes (mid)** | Hybrid **48.74** >= mid bar 45 |
+| **News / DeepL bar** | **Not yet** | Best product **34.34** · gap **5.66** to mid-40 · **13.66** to stretch 48 |
+| FSOT / classical | **Unique** | — |
 
 ### One line
 
-**Chat + catalog: competitive now.**  
-**News accuracy: ~86% of mid DeepL-class bar** — about **+6 sacreBLEU** short of mid-parity, **+14** short of top stretch.
+**Chat + catalog: competitive.**
+**News: ~85.9% of DeepL mid-bar** — still about **+5.66 sacre** short of mid-parity.
 
-\Catalog     ############ DONE
-Chat mid    ############ DONE (48.7 >= 45)
-Chat strong ##########.. +6 to ~55
-News mid40  ########.... +5.6 from product 34.4
-News 48     #####....... +13.6
-\
-## News WMT14 de→en (latest)
+## News WMT14 de-en (GPU-safe v0.2.3)
 
 | System | sacreBLEU | Gap to 40 |
 |--------|----------:|----------:|
-| opus-mt-de-en | 33.88 | 6.12 |
-| NLLB-600M | 33.37 | 6.63 |
-| Gen-score ensemble | 34.37 | 5.63 |
-| **Learned ensemble** | **34.39** | **5.61** |
-| Oracle upper | 37.71 | 2.29 |
+| Best product (ens_gen_score) | **34.34** | 5.66 |
+| Oracle multi-system | 37.95 | 2.05 |
+| opus beams=5 | 33.88 | 6.12 |
 
-Picker train acc was only **54.5%** (barely above chance) → learned pick barely beats gen-score; ~**3.3 pts** still sit in oracle headroom.
+## Timing lesson (applied)
 
-## Why the last run took ~2.4 hours
+| Before | After |
+|--------|--------|
+| Both models on GPU | One model at a time |
+| ~2.4 h dual full test | **~30 min** full sweep |
+| Silent stages | Batch ETA + hyp cache |
 
-Full WMT test (3003) × dual models × beams=5, **both models on one 12GB GPU** (~11.8GB used) → slow beam decode, not a hang.
+## Ceiling of current students
 
-## Next to close the remaining ~6 news points
-
-1. Better quality estimator / larger student (not more thin FT)
-2. Model unload between decodes for faster iteration
-3. FLORES multi-pair when unlocked
+Oracle among opus/nllb is **37.95** — still **2.05** below mid-40.
+Crossing 40 needs stronger hyps (larger student / better news training), not only better picking.
