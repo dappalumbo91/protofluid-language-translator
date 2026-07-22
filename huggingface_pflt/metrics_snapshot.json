@@ -1,6 +1,6 @@
 {
-  "version": "0.2.0",
-  "built_utc": "2026-07-21T20:00:21.709535+00:00",
+  "version": "0.2.2",
+  "built_utc": "2026-07-22T17:10:53.455629+00:00",
   "fsot": {
     "law": "S=K(T1+T2+T3)",
     "pin": "D1D38A",
@@ -180,30 +180,15 @@
       }
     },
     "wmt14_deen": {
-      "systems": {
-        "opus-mt-de-en": {
-          "n": 3003,
-          "bleu": 33.38,
-          "bleu1": 65.75,
-          "bleu2": 41.17,
-          "bp": 0.9802,
-          "u_f1": 65.1,
-          "sacrebleu": 33.88,
-          "chrf": 59.92
-        },
-        "nllb-600M": {
-          "n": 3003,
-          "bleu": 33.81,
-          "bleu1": 66.4,
-          "bleu2": 42.27,
-          "bp": 0.9545,
-          "u_f1": 64.89,
-          "sacrebleu": 33.37,
-          "chrf": 59.27
-        }
-      },
-      "best": "opus-mt-de-en",
-      "best_sacrebleu": 33.88
+      "opus_mt_de_en": 33.88,
+      "nllb_600m": 33.37,
+      "product_cross_nll_ensemble": 34.11,
+      "oracle_uf1_ensemble": 37.13,
+      "ft_v3_test": 33.41,
+      "ft_v3_best_val": 35.76,
+      "best_product": 34.11,
+      "gap_to_40": 5.89,
+      "gap_to_48": 13.89
     },
     "sota_bars": {
       "chat_bleu4": 40.0,
@@ -218,7 +203,8 @@
       "neural_wmt_to_48": 14.12,
       "neural_chat_mean_to_45": -5.19,
       "hybrid_mean_to_45": -8.58
-    }
+    },
+    "hybrid_product_neural_first_sacrebleu": 48.74
   },
   "students": {
     "opus_mt": [
@@ -251,6 +237,8 @@
   "honesty": {
     "deepL_parity_claimed": false,
     "google_parity_claimed": false,
-    "stage": "S3 mid-neural news climb; chat neural past staged bar"
+    "stage": "S3 news climb; chat competitive; mid-40 not cleared",
+    "chat_competitive": true,
+    "news_mid40": false
   }
 }

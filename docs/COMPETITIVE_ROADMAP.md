@@ -146,3 +146,17 @@ Optional next session: WMT finetune loop under densify law wrap.
 
 **Still required to beat news mid-parity (40):** better ensemble selection (~2.6 pts headroom to oracle), multi-epoch WMT FT with validation early-stop, or larger NLLB.
 
+---
+
+## 9. News push v3 (2026-07-22)
+
+| System | sacreBLEU |
+|--------|----------:|
+| Product cross-NLL ensemble | **34.11** |
+| Base opus | 33.88 |
+| FT v3 test / best val | 33.41 / 35.76 |
+| Oracle upper | 37.13 |
+| Gap product → 40 | **5.89** |
+
+Chat neural-first hybrid remains **48.74** (mid bar met).
+

@@ -1,0 +1,63 @@
+{
+  "built_utc": "2026-07-22T17:10:39.514108+00:00",
+  "fsot": "D1D38A fixed",
+  "note": "Final 3-system NLL re-score aborted after thrashing under concurrent GPU job; pre-FT ensemble + FT test fully measured.",
+  "pre_ft": {
+    "opus": 33.88,
+    "nllb": 33.37,
+    "product_cross_nll": 34.11,
+    "product_mbr_crossnll": 34.11,
+    "oracle_uf1": 37.13
+  },
+  "finetune_v3": {
+    "best_val_sacre": 35.76,
+    "test_sacre": 33.41,
+    "early_stop_step": 2500,
+    "path": "D:\\training data\\pflt_linguistics\\13_huggingface\\models\\Helsinki-NLP__opus-mt-de-en-wmt-ft-v3",
+    "history": [
+      {
+        "step": 500,
+        "val_sacre": 35.76
+      },
+      {
+        "step": 1000,
+        "val_sacre": 35.68
+      },
+      {
+        "step": 1500,
+        "val_sacre": 35.16
+      },
+      {
+        "step": 2000,
+        "val_sacre": 35.18
+      },
+      {
+        "step": 2500,
+        "val_sacre": 35.33
+      }
+    ]
+  },
+  "best_product": {
+    "name": "product_cross_nll",
+    "sacrebleu": 34.11
+  },
+  "best_single": {
+    "name": "opus-mt-de-en",
+    "sacrebleu": 33.88
+  },
+  "oracle_upper": 37.13,
+  "gaps": {
+    "product_to_40": 5.89,
+    "oracle_to_40": 2.87,
+    "single_to_40": 6.12,
+    "best_to_48": 13.89
+  },
+  "chat_hybrid_prior": 48.74,
+  "mid40_cleared": false,
+  "verdict": {
+    "chat": "competitive (48.7 hybrid)",
+    "news_product": "34.11 ensemble; not mid-parity",
+    "news_ft": "val looked good 35.76 but test 33.41 (val/test mismatch); keep base opus",
+    "path_forward": "larger student / better FT data / learned ensemble picker to close remaining ~6 sacre"
+  }
+}
