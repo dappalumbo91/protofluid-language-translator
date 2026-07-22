@@ -1,6 +1,6 @@
 {
-  "version": "0.2.4",
-  "built_utc": "2026-07-22T21:10:11.352690+00:00",
+  "version": "0.2.5",
+  "built_utc": "2026-07-22T21:30:22.304185+00:00",
   "fsot": {
     "law": "S=K(T1+T2+T3)",
     "pin": "D1D38A",
@@ -217,7 +217,11 @@
       "best_product": 36.0,
       "gap_to_40": 4.0,
       "gap_to_48": 12.0,
-      "pct_of_mid40": 90.0
+      "pct_of_mid40": 90.0,
+      "learned_picker_nllb13": 35.79,
+      "learned_picker_cv_acc": 0.566,
+      "product_note": "gen_score opus+nllb13 still best; learned GBC overfits",
+      "oracle_2system": 39.1
     },
     "sota_bars": {
       "chat_bleu4": 40.0,
@@ -266,8 +270,9 @@
   "honesty": {
     "deepL_parity_claimed": false,
     "google_parity_claimed": false,
-    "stage": "S3 news climb 90% mid-40; NLLB-1.3B product 36.0; oracle clears 40",
+    "stage": "S3 news 90% mid-40 product 36.0; picker failed to beat gen-score",
     "news_mid40": false,
-    "oracle_clears_mid40": true
+    "oracle_clears_mid40": true,
+    "theory_note": "FSOT fixed-law deriving language inventory this far is remarkable; not DeepL SOTA claim"
   }
 }

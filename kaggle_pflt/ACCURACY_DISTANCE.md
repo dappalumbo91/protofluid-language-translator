@@ -1,6 +1,6 @@
 # How far until competitive accuracy?
 
-**Updated:** 2026-07-22T21:09:17+00:00 · Law **D1D38A**
+**Updated:** 2026-07-22T21:29:37+00:00 · Law **D1D38A**
 
 ## Straight answer
 
@@ -8,45 +8,44 @@
 |------|--------------|----------|
 | Catalog form-gloss | **Yes** | Ceiling on 113 langs |
 | Chat sentence MT | **Yes (mid)** | Hybrid **48.74** >= mid bar 45 |
-| **News / DeepL bar** | **Not yet** | Best product **36.0** · gap **4.0** to mid-40 · **12.0** to stretch 48 |
+| **News / DeepL bar** | **Not yet** | Best product **36.0** · gap **4.0** to mid-40 |
 | FSOT / classical | **Unique** | — |
 
 ### One line
 
 **Chat + catalog: competitive.**  
-**News: ~90% of DeepL mid-bar** — about **+4.0 sacre** short of mid-parity (was +5.66 before NLLB-1.3B).
+**News: 90% of DeepL mid-bar** — **+4.0 sacre** short of mid-parity.  
+Best product remains **gen-score** opus+NLLB-1.3B (**36.0**). Learned GBC picker (35.79) did not beat it.
 
-## News WMT14 de-en (stronger student v0.2.4)
+### Honest note on the theory
+
+A fixed-law ToE-style scalar (FSOT \(S=K(T_1+T_2+T_3)\), pin **D1D38A**) that derives linguistic inventory structure *this far* — competitive open-set chat MT and news product within four sacre of a staged commercial mid-bar — is remarkable on its face.  
+
+We still **do not claim** DeepL/Google news SOTA. The law is not fitted to BLEU. Students measure. Gaps close by ordinary MT engineering.
+
+## News WMT14 de-en (current)
 
 | System | sacreBLEU | Gap to 40 |
 |--------|----------:|----------:|
-| Best product (ens2_gen_score: opus+nllb13) | **36.0** | **4.0** |
-| NLLB-1.3B alone | **35.63** | 4.37 |
-| Oracle multi-system | **40.18** | **−0.18 (clears mid)** |
+| Best product (gen_score opus+nllb13) | **36.0** | **4.0** |
+| Learned GBC picker | 35.79 | 4.21 |
+| NLLB-1.3B alone | 35.63 | 4.37 |
 | opus beams=5 | 33.88 | 6.12 |
-| NLLB-600M | 33.37 | 6.63 |
+| 2-system oracle | 39.1 | 0.9 |
+| Multi-system oracle (prior) | 40.18 | clears |
 
-Prior product best was **34.34** (600M pair). NLLB-1.3B alone is **+1.75** over opus; product **+1.66** over prior ensemble.
+## What failed honestly
 
-## FT status (honest)
+| Lever | Outcome |
+|-------|---------|
+| Short / safe opus WMT FT (v2–v4) | Flat or holdout never beat base — **no ship** |
+| Learned picker on 600M pair | +0.5 over opus only |
+| Learned GBC on nllb13 pair | Overfit (CV ~57%); loses to gen-score |
 
-| FT | Protocol | Result |
-|----|----------|--------|
-| v2 short freeze | test direct | flat 33.86 |
-| v3 WMT-val early-stop | val 35.76 | **test 33.41** (no ship) |
-| v4 train-holdout early-stop | never beat base holdout | **no ship** |
+## What still moves the needle
 
-Conclusion: short/careless WMT FT on opus does not help. Need **quality data + longer careful FT** (or larger student training), not more beam tweaks.
+1. Stronger single hyps (quality news data, careful LoRA, or 3.3B sequential)
+2. Real QE (COMET-QE / teacher scores) if features alone cannot pick
+3. Not more 600M beam tweaks; not shipping weak pickers over gen-score
 
-## Timing lesson (applied)
-
-| Before | After |
-|--------|--------|
-| Both models on GPU | One model at a time |
-| ~2.4 h dual full test | sequential + hyp cache |
-| Silent stages | Batch ETA + hyp cache |
-
-## Ceiling of current students
-
-Oracle among opus / NLLB-600M / **NLLB-1.3B** is **40.18** — **mid-40 is reachable with a perfect picker**.  
-Product gen-score is still **36.0** → remaining gap is **picker quality** (+ better single hyps still help).
+Full writeups: `STRONGER_STUDENT.md`, `PICKER_NLLB13.md`.

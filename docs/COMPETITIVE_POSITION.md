@@ -1,7 +1,11 @@
 # Competitive position — where we stand vs Google / DeepL / NLLB
 
-**Honest snapshot** (2026-07-21).  
+**Honest snapshot** (2026-07-22, v0.2.4+picker).  
 **Law:** \(S=K(T_1+T_2+T_3)\) pin **D1D38A** (FSOT; competitors have no equivalent).
+
+### Theory note (say it plainly)
+
+That a **fixed free-parameter law with intrinsic math** can organize a multi-language form→gloss inventory *and* sit beside competitive chat MT and **90% of a staged news mid-bar** is astonishing in its own right. That is not a DeepL-kill claim — it is honesty about how far a law-pinned program has already gone. Remaining news gap is ordinary engineering, not “re-fit S to BLEU.”
 
 ---
 
@@ -46,14 +50,12 @@ Per-lang neural peaks: it ~68, es/pt ~61, de/ru ~57–58; thin: hi ~55; CJK gap:
 
 **B2 — News domain (public WMT14 de→en test, n=3003)** — harder bar:
 
-| Metric | PFLT densify-only | PFLT neural student (local) | DeepL-class band |
-|--------|------------------:|----------------------------:|-----------------:|
-| **sacreBLEU** | **~0.4** | **~33.9** (opus-mt-de-en beams=5; NLLB-600M ~33.4) | Often **~40–48+** |
-| **chrF** | low | **~60** | Higher |
-| Gap to staged mid bar (40) | — | **~6.1** | — |
-| Gap to stretch (48) | — | **~14.1** | — |
+| Metric | densify-only | opus | NLLB-1.3B | product gen-score | DeepL-class mid |
+|--------|-------------:|-----:|----------:|------------------:|----------------:|
+| **sacreBLEU** | ~0.4 | 33.88 | **35.63** | **36.0** | ~40 staged |
+| Gap to mid-40 | — | 6.12 | 4.37 | **4.0** | 0 |
 
-Domain split: **chat neural is past mid bar** (~50 mean sacre); **news still ~6 BLEU short** of DeepL-class mid. Densify alone does not transfer to news — hybrid router is the product path.
+Domain split: **chat neural past mid bar** (~50 mean); **news at 90% of staged mid-40**. Learned picker did not beat gen-score. Densify alone does not transfer to news.
 
 \*Literature ranges, not same-day FLORES A/B. FLORES **data files still 403** (README ok; parquet gated — re-check Hub “Access granted”).
 

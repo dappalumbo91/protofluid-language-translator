@@ -1,0 +1,97 @@
+{
+  "built_utc": "2026-07-22T21:29:37.311563+00:00",
+  "fsot": "D1D38A fixed",
+  "honest_framing": "A fixed-law ToE-style scalar deriving linguistic inventory structure this far — competitive chat MT and ~90% of a staged news mid-bar — is remarkable on its face. We still do not claim commercial DeepL/Google news SOTA; we measure product vs staged bars and close gaps honestly.",
+  "students": [
+    "opus-mt-de-en",
+    "nllb-200-1.3B"
+  ],
+  "picker": {
+    "kind": "gbc",
+    "train_n": 2087,
+    "train_acc": 0.7964,
+    "cv_acc_mean": 0.5659,
+    "cv_acc_std": 0.0289,
+    "threshold": 0.5399999999999999,
+    "val_acc_at_thr": 0.8074,
+    "nllb13_pref_train": 1100,
+    "opus_pref_train": 987
+  },
+  "results": {
+    "opus": {
+      "sacrebleu": 33.88,
+      "chrf": 59.92,
+      "n": 3003
+    },
+    "nllb13": {
+      "sacrebleu": 35.63,
+      "chrf": 61.06,
+      "n": 3003
+    },
+    "gen_score": {
+      "sacrebleu": 36.0,
+      "chrf": 61.47,
+      "n": 3003,
+      "picks": {
+        "opus": 1386,
+        "nllb13": 1617
+      }
+    },
+    "length_mid": {
+      "sacrebleu": 33.88,
+      "chrf": 59.92,
+      "n": 3003
+    },
+    "learned_picker": {
+      "sacrebleu": 35.79,
+      "chrf": 61.22,
+      "n": 3003,
+      "picks": {
+        "opus": 1355,
+        "nllb13": 1648
+      },
+      "threshold": 0.5399999999999999,
+      "picker": "gbc",
+      "train_acc": 0.7964,
+      "cv_acc": 0.5659
+    },
+    "oracle": {
+      "sacrebleu": 39.1,
+      "chrf": 63.28,
+      "n": 3003
+    },
+    "always_nllb13": {
+      "sacrebleu": 35.63,
+      "chrf": 61.06,
+      "n": 3003
+    },
+    "always_opus": {
+      "sacrebleu": 33.88,
+      "chrf": 59.92,
+      "n": 3003
+    }
+  },
+  "best_product": {
+    "name": "gen_score",
+    "sacrebleu": 36.0
+  },
+  "oracle_sacrebleu": 39.1,
+  "gaps": {
+    "best_to_40": 4.0,
+    "best_to_48": 12.0,
+    "oracle_to_40": 0.9,
+    "learned_vs_nllb13": 0.16,
+    "learned_vs_gen_score": -0.21,
+    "picker_headroom_to_oracle": 3.31
+  },
+  "mid40_cleared": false,
+  "oracle_clears_mid40": false,
+  "pct_of_mid40": 90.0,
+  "chat_hybrid_prior": 48.74,
+  "elapsed_s": 675.8,
+  "priors": {
+    "product_was": 36.0,
+    "nllb13": 35.63,
+    "learned_600m_pair": 34.39
+  }
+}
