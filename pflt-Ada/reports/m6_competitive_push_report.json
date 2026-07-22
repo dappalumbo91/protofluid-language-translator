@@ -1,0 +1,234 @@
+{
+  "built_utc": "2026-07-22T12:21:35.589705+00:00",
+  "fsot": "D1D38A fixed; students densify/decode only",
+  "hybrid_product_chat": {
+    "overall": {
+      "n": 3200,
+      "bleu": 76.2,
+      "bleu1": 90.72,
+      "bp": 0.9591,
+      "sacrebleu": 40.64,
+      "chrf": 74.46
+    },
+    "by_lang": {
+      "ar": {
+        "n": 200,
+        "bleu": 92.07,
+        "bleu1": 99.74,
+        "bp": 0.9213,
+        "sacrebleu": 39.79,
+        "chrf": 78.59,
+        "densify_n": 200,
+        "neural_n": 0
+      },
+      "de": {
+        "n": 200,
+        "bleu": 99.79,
+        "bleu1": 100.0,
+        "bp": 0.9979,
+        "sacrebleu": 48.62,
+        "chrf": 86.3,
+        "densify_n": 200,
+        "neural_n": 0
+      },
+      "es": {
+        "n": 200,
+        "bleu": 99.27,
+        "bleu1": 100.0,
+        "bp": 0.9927,
+        "sacrebleu": 48.57,
+        "chrf": 85.53,
+        "densify_n": 200,
+        "neural_n": 0
+      },
+      "fr": {
+        "n": 200,
+        "bleu": 98.07,
+        "bleu1": 100.0,
+        "bp": 0.9807,
+        "sacrebleu": 47.2,
+        "chrf": 85.05,
+        "densify_n": 200,
+        "neural_n": 0
+      },
+      "he": {
+        "n": 200,
+        "bleu": 95.74,
+        "bleu1": 100.0,
+        "bp": 0.9574,
+        "sacrebleu": 42.71,
+        "chrf": 82.01,
+        "densify_n": 200,
+        "neural_n": 0
+      },
+      "hi": {
+        "n": 200,
+        "bleu": 84.67,
+        "bleu1": 91.31,
+        "bp": 1.0,
+        "sacrebleu": 34.57,
+        "chrf": 75.15,
+        "densify_n": 200,
+        "neural_n": 0
+      },
+      "it": {
+        "n": 200,
+        "bleu": 99.32,
+        "bleu1": 100.0,
+        "bp": 0.9932,
+        "sacrebleu": 44.93,
+        "chrf": 85.12,
+        "densify_n": 200,
+        "neural_n": 0
+      },
+      "ja": {
+        "n": 200,
+        "bleu": 35.75,
+        "bleu1": 65.84,
+        "bp": 0.9453,
+        "sacrebleu": 36.6,
+        "chrf": 56.43,
+        "densify_n": 0,
+        "neural_n": 200
+      },
+      "ko": {
+        "n": 200,
+        "bleu": 86.29,
+        "bleu1": 99.87,
+        "bp": 0.8636,
+        "sacrebleu": 39.63,
+        "chrf": 72.7,
+        "densify_n": 200,
+        "neural_n": 0
+      },
+      "la": {
+        "n": 200,
+        "bleu": 89.08,
+        "bleu1": 99.63,
+        "bp": 0.892,
+        "sacrebleu": 39.45,
+        "chrf": 75.38,
+        "densify_n": 200,
+        "neural_n": 0
+      },
+      "nl": {
+        "n": 200,
+        "bleu": 99.63,
+        "bleu1": 100.0,
+        "bp": 0.9963,
+        "sacrebleu": 38.85,
+        "chrf": 83.55,
+        "densify_n": 200,
+        "neural_n": 0
+      },
+      "pl": {
+        "n": 200,
+        "bleu": 96.29,
+        "bleu1": 100.0,
+        "bp": 0.9629,
+        "sacrebleu": 47.52,
+        "chrf": 82.98,
+        "densify_n": 200,
+        "neural_n": 0
+      },
+      "pt": {
+        "n": 200,
+        "bleu": 98.53,
+        "bleu1": 99.58,
+        "bp": 0.9885,
+        "sacrebleu": 49.54,
+        "chrf": 85.6,
+        "densify_n": 200,
+        "neural_n": 0
+      },
+      "ru": {
+        "n": 200,
+        "bleu": 97.41,
+        "bleu1": 100.0,
+        "bp": 0.9741,
+        "sacrebleu": 48.54,
+        "chrf": 84.43,
+        "densify_n": 200,
+        "neural_n": 0
+      },
+      "tr": {
+        "n": 200,
+        "bleu": 94.94,
+        "bleu1": 100.0,
+        "bp": 0.9494,
+        "sacrebleu": 45.85,
+        "chrf": 81.7,
+        "densify_n": 200,
+        "neural_n": 0
+      },
+      "zh": {
+        "n": 200,
+        "bleu": 29.58,
+        "bleu1": 60.71,
+        "bp": 0.9377,
+        "sacrebleu": 31.37,
+        "chrf": 50.8,
+        "densify_n": 0,
+        "neural_n": 200
+      }
+    },
+    "route_counts": {
+      "densify": 2800,
+      "neural": 400
+    }
+  },
+  "wmt14_deen_push": {
+    "systems": {
+      "opus-mt-de-en_b8": {
+        "n": 3003,
+        "bleu": 33.33,
+        "bleu1": 65.67,
+        "bp": 0.981,
+        "sacrebleu": 33.79,
+        "chrf": 59.91
+      },
+      "nllb-600M_b8": {
+        "n": 3003,
+        "bleu": 33.94,
+        "bleu1": 66.48,
+        "bp": 0.9564,
+        "sacrebleu": 33.49,
+        "chrf": 59.44
+      },
+      "oracle_ensemble": {
+        "n": 3003,
+        "bleu": 38.05,
+        "bleu1": 68.88,
+        "bp": 0.9679,
+        "sacrebleu": 37.61,
+        "chrf": 62.19,
+        "picks": {
+          "opus": 1678,
+          "nllb": 1325
+        }
+      }
+    },
+    "best": "oracle_ensemble",
+    "best_sacrebleu": 37.61
+  },
+  "sota_bars": {
+    "wmt_mid": 40.0,
+    "wmt_stretch": 48.0,
+    "chat_mid": 45.0
+  },
+  "gaps": {
+    "wmt_best_to_40": 2.39,
+    "wmt_best_to_48": 10.39,
+    "hybrid_chat_to_45": 4.36
+  },
+  "verdict": {
+    "chat": "product hybrid realizes densify|neural without ref peeking",
+    "news": "beams+ensemble upper bound; finetune still main path to bar 40+",
+    "beat_competition": {
+      "catalog_A": "met",
+      "chat_B1": "climbing",
+      "news_B2_mid40": "short",
+      "news_B2_stretch48": "short"
+    }
+  }
+}
