@@ -131,3 +131,18 @@ Optional next session: WMT finetune loop under densify law wrap.
 
 **Insight:** Beams alone do not close news. **Dual-student ensemble** recovers ~+3.7 sacre toward bar 40 without finetune. Remaining ~2.4 points need quality model upgrade or WMT finetune.
 
+---
+
+## 8. Beat levers run (2026-07-22)
+
+| Lever | Result | Clears bar? |
+|-------|-------:|:------------|
+| L2 Neural-first hybrid chat | **48.74** sacre | **Yes** (≥45) |
+| L1 Product NLL ensemble WMT | **34.54** | No (gap 5.46 to 40) |
+| L1 Oracle ensemble upper | **37.13** | No (gap 2.87) |
+| L3 Aggressive FT | 32.2 | No (regressed) |
+| L3b Safe FT freeze-enc | 33.86 | No (flat) |
+| Base opus-mt-de-en | 33.88 | No |
+
+**Still required to beat news mid-parity (40):** better ensemble selection (~2.6 pts headroom to oracle), multi-epoch WMT FT with validation early-stop, or larger NLLB.
+

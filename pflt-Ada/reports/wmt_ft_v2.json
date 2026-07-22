@@ -1,0 +1,9 @@
+{
+  "sacrebleu": 33.86,
+  "steps": 1500,
+  "lr": 2e-05,
+  "freeze_encoder": true,
+  "path": "D:\\training data\\pflt_linguistics\\13_huggingface\\models\\Helsinki-NLP__opus-mt-de-en-wmt-ft-v2",
+  "baseline_opus": 33.88,
+  "delta": -0.02
+}

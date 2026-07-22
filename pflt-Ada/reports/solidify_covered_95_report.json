@@ -1,8 +1,428 @@
 {
-  "built_utc": "2026-07-21T14:35:32.588183+00:00",
-  "target": 95,
-  "all_covered_langs_ge_95": true,
-  "open_overall": 99.98,
-  "product_overall": 100.0,
-  "note": "Multi-sense: match if prediction soft-matches ANY gold sense for the form."
+  "built_utc": "2026-07-21T15:03:11.097081+00:00",
+  "target": 0.95,
+  "all_covered_langs_ge_95": false,
+  "open_overall": {
+    "partial": 0.6504,
+    "exact": 0.6298,
+    "n": 121792
+  },
+  "by_lang": [
+    {
+      "lang": "ko",
+      "n": 14646,
+      "open_partial": 0.5156,
+      "open_exact": 0.4975,
+      "product_partial": 0.5259,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "la",
+      "n": 10860,
+      "open_partial": 0.9841,
+      "open_exact": 0.9804,
+      "product_partial": 0.9869,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "pl",
+      "n": 8037,
+      "open_partial": 0.414,
+      "open_exact": 0.3661,
+      "product_partial": 0.4064,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "sv",
+      "n": 6452,
+      "open_partial": 0.4654,
+      "open_exact": 0.445,
+      "product_partial": 0.4619,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "ja",
+      "n": 6342,
+      "open_partial": 0.5435,
+      "open_exact": 0.5287,
+      "product_partial": 0.5544,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "de",
+      "n": 6002,
+      "open_partial": 0.6126,
+      "open_exact": 0.5935,
+      "product_partial": 0.6096,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "hi",
+      "n": 5731,
+      "open_partial": 0.5537,
+      "open_exact": 0.5369,
+      "product_partial": 0.5636,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "ru",
+      "n": 5564,
+      "open_partial": 0.6091,
+      "open_exact": 0.5893,
+      "product_partial": 0.6104,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "it",
+      "n": 5428,
+      "open_partial": 0.5787,
+      "open_exact": 0.5643,
+      "product_partial": 0.5754,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "tr",
+      "n": 5162,
+      "open_partial": 0.7319,
+      "open_exact": 0.7212,
+      "product_partial": 0.7354,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "es",
+      "n": 5028,
+      "open_partial": 0.5623,
+      "open_exact": 0.5412,
+      "product_partial": 0.5577,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "pi",
+      "n": 4765,
+      "open_partial": 0.8355,
+      "open_exact": 0.7782,
+      "product_partial": 0.8449,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "ca",
+      "n": 4619,
+      "open_partial": 0.6369,
+      "open_exact": 0.6146,
+      "product_partial": 0.6307,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "fr",
+      "n": 4566,
+      "open_partial": 0.5852,
+      "open_exact": 0.5585,
+      "product_partial": 0.5753,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "pt",
+      "n": 4356,
+      "open_partial": 0.6166,
+      "open_exact": 0.5836,
+      "product_partial": 0.6162,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "nl",
+      "n": 4305,
+      "open_partial": 0.6938,
+      "open_exact": 0.6718,
+      "product_partial": 0.6899,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "vi",
+      "n": 4079,
+      "open_partial": 0.6298,
+      "open_exact": 0.6109,
+      "product_partial": 0.634,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "id",
+      "n": 3814,
+      "open_partial": 0.6744,
+      "open_exact": 0.6366,
+      "product_partial": 0.6749,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "grc",
+      "n": 3166,
+      "open_partial": 1.0,
+      "open_exact": 0.9978,
+      "product_partial": 1.0,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "egy",
+      "n": 2044,
+      "open_partial": 0.6409,
+      "open_exact": 0.6164,
+      "product_partial": 0.6414,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "ang",
+      "n": 1989,
+      "open_partial": 0.9643,
+      "open_exact": 0.9618,
+      "product_partial": 0.9824,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "ar",
+      "n": 819,
+      "open_partial": 0.9707,
+      "open_exact": 0.9695,
+      "product_partial": 0.9878,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "got",
+      "n": 633,
+      "open_partial": 0.9716,
+      "open_exact": 0.97,
+      "product_partial": 0.9842,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "akk",
+      "n": 544,
+      "open_partial": 0.5864,
+      "open_exact": 0.5754,
+      "product_partial": 0.5882,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "he",
+      "n": 417,
+      "open_partial": 0.964,
+      "open_exact": 0.964,
+      "product_partial": 0.9904,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "san",
+      "n": 410,
+      "open_partial": 0.9,
+      "open_exact": 0.8951,
+      "product_partial": 0.9171,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "non",
+      "n": 406,
+      "open_partial": 0.8966,
+      "open_exact": 0.8941,
+      "product_partial": 0.9409,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "fa",
+      "n": 240,
+      "open_partial": 0.9792,
+      "open_exact": 0.975,
+      "product_partial": 0.95,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "en",
+      "n": 228,
+      "open_partial": 0.9912,
+      "open_exact": 0.9868,
+      "product_partial": 0.9912,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "sga",
+      "n": 203,
+      "open_partial": 0.8867,
+      "open_exact": 0.8818,
+      "product_partial": 0.9458,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "cu",
+      "n": 200,
+      "open_partial": 0.95,
+      "open_exact": 0.95,
+      "product_partial": 0.96,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "xcl",
+      "n": 175,
+      "open_partial": 1.0,
+      "open_exact": 0.9943,
+      "product_partial": 1.0,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "cop",
+      "n": 104,
+      "open_partial": 1.0,
+      "open_exact": 1.0,
+      "product_partial": 1.0,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "arc",
+      "n": 98,
+      "open_partial": 1.0,
+      "open_exact": 1.0,
+      "product_partial": 0.8878,
+      "open_ok": true,
+      "product_ok": false
+    },
+    {
+      "lang": "uga",
+      "n": 96,
+      "open_partial": 0.8854,
+      "open_exact": 0.8854,
+      "product_partial": 0.8854,
+      "open_ok": false,
+      "product_ok": false
+    },
+    {
+      "lang": "osx",
+      "n": 64,
+      "open_partial": 0.9844,
+      "open_exact": 0.9844,
+      "product_partial": 1.0,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "roa-opt",
+      "n": 47,
+      "open_partial": 0.9787,
+      "open_exact": 0.9787,
+      "product_partial": 1.0,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "orv",
+      "n": 36,
+      "open_partial": 1.0,
+      "open_exact": 1.0,
+      "product_partial": 1.0,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "osp",
+      "n": 34,
+      "open_partial": 0.9118,
+      "open_exact": 0.9118,
+      "product_partial": 1.0,
+      "open_ok": false,
+      "product_ok": true
+    },
+    {
+      "lang": "mga",
+      "n": 25,
+      "open_partial": 1.0,
+      "open_exact": 1.0,
+      "product_partial": 1.0,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "pro",
+      "n": 17,
+      "open_partial": 0.8824,
+      "open_exact": 0.8824,
+      "product_partial": 1.0,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "peo",
+      "n": 15,
+      "open_partial": 1.0,
+      "open_exact": 1.0,
+      "product_partial": 1.0,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "pal",
+      "n": 10,
+      "open_partial": 1.0,
+      "open_exact": 1.0,
+      "product_partial": 1.0,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "syc",
+      "n": 9,
+      "open_partial": 1.0,
+      "open_exact": 1.0,
+      "product_partial": 1.0,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "sum",
+      "n": 4,
+      "open_partial": 0.75,
+      "open_exact": 0.75,
+      "product_partial": 1.0,
+      "open_ok": true,
+      "product_ok": true
+    },
+    {
+      "lang": "hit",
+      "n": 3,
+      "open_partial": 1.0,
+      "open_exact": 1.0,
+      "product_partial": 1.0,
+      "open_ok": true,
+      "product_ok": true
+    }
+  ],
+  "runtime_sec": 46.75,
+  "policy": "Covered languages solidify to >=95% open+product; Egyptian depth push continues after bar holds."
 }
