@@ -1,0 +1,103 @@
+{
+  "built_utc": "2026-07-23T23:35:41.247462+00:00",
+  "mission": "FSOT associate sound+vision+meaning under seed law",
+  "formula": "S = K*(T1+T2+T3) per aspect; S_assoc=(S_m + S_a/\u03c6 + S_v/\u03c6\u00b2)/2",
+  "pin": "D1D38A",
+  "pin_ok": true,
+  "authority_path": "I:\\FSOT-Physical-Archive\\02_FSOT-2.1-Lean-Full\\vendor\\fsot_compute.py",
+  "aspects": {
+    "meaning": {
+      "domain": "Biology",
+      "D_eff": 12.0
+    },
+    "acoustic": {
+      "domain": "Acoustics",
+      "D_eff": 10.0,
+      "note": "sound/vibration/frequency"
+    },
+    "visual": {
+      "domain": "Optics",
+      "D_eff": 10.0,
+      "note": "written form / symbolism surface"
+    }
+  },
+  "association": "golden partition 1+1/\u03c6+1/\u03c6\u00b2=2",
+  "no_free_parameters": true,
+  "n": 3003,
+  "mean_S_assoc": 0.6297078575830802,
+  "results": {
+    "FSOT_product_associate": {
+      "sacrebleu": 36.64,
+      "chrf": 61.83,
+      "note": "argmax multi-aspect S_assoc"
+    },
+    "student_gen_max": {
+      "sacrebleu": 36.79,
+      "note": "NLLB-3.3B gen baseline"
+    }
+  },
+  "best_product": {
+    "name": "FSOT_product_associate",
+    "sacrebleu": 36.64
+  },
+  "gap_to_DeepL_mid40": 3.36,
+  "gap_to_student_gen": 0.15,
+  "samples": [
+    {
+      "i": 0,
+      "S": 0.9401374844608691,
+      "S_m": 1.205626677880589,
+      "S_a": 1.0609270270029725,
+      "S_v": 0.04963616712357276,
+      "pick": "Gutach: Even more safety for pedestrians",
+      "same_gen": false
+    },
+    {
+      "i": 1,
+      "S": 0.8820999444039644,
+      "S_m": 1.1651409011705622,
+      "S_a": 0.8176722889746606,
+      "S_v": 0.24533523568080218,
+      "pick": "They are less than 100 metres apart: on Tuesday in Gutach, the new B 33 pedestrian lamp wa",
+      "same_gen": true
+    },
+    {
+      "i": 2,
+      "S": 0.7772855544264611,
+      "S_m": 1.0158034743736273,
+      "S_a": 0.6986737515577485,
+      "S_v": 0.2800341020373367,
+      "pick": "Two plants so close together, was it intentional or a prank?",
+      "same_gen": false
+    },
+    {
+      "i": 500,
+      "S": 0.8388313492628925,
+      "S_m": 1.105557283403336,
+      "S_a": 0.9114599092737311,
+      "S_v": 0.02301830935064675,
+      "pick": "Lawyers must maintain the highest standards of integrity and instill trust and confidence ",
+      "same_gen": true
+    },
+    {
+      "i": 1500,
+      "S": 0.9487034029440388,
+      "S_m": 1.1825630151764275,
+      "S_a": 1.0817265929369895,
+      "S_v": 0.12121494682324475,
+      "pick": "On the way, the mail can run through several other servers on the Internet.",
+      "same_gen": true
+    },
+    {
+      "i": 2500,
+      "S": 0.9237889401329135,
+      "S_m": 1.1762125707925983,
+      "S_a": 1.0483503887067036,
+      "S_v": 0.061390638021894164,
+      "pick": "BI thanked the donors for the paint and all the helpers.",
+      "same_gen": false
+    }
+  ],
+  "elapsed_s": 8.83,
+  "honesty": "Associates archive Acoustics + Optics + Biology under \u03c6 partition. Meaning/understanding primary; sound secondary; visual tertiary. No free-fit. No Qwen. Students = candidates only."
+}
