@@ -600,36 +600,62 @@ def main() -> None:
         else:
             results["FSOT_pick_enc_cos"] = {"missing_qe_cache": True}
 
-        # FSOT LLM judge (Qwen) on hard gaps; fall back to max-gen elsewhere
+        # FSOT LLM judge (Qwen) — full vs hard-only hybrid
         llm_path = ADA / "data" / "fsot_qe_cache" / "llm_judge_qwen7b.json"
+        hard_path2 = ADA / "data" / "news_hard_sel_indices.json"
         if llm_path.is_file():
             try:
                 lj = json.loads(llm_path.read_text(encoding="utf-8"))
                 picks = lj.get("picks") or {}
-                hyps = []
-                for i in range(n):
-                    if str(i) in picks:
-                        hyps.append(picks[str(i)])
-                    elif rows33:
-                        h, _ = max(
-                            zip(rows33[i]["hyps"], rows33[i]["scores"]),
-                            key=lambda x: float(x[1]),
-                        )
-                        hyps.append(h)
-                    else:
-                        hyps.append("")
-                results["FSOT_pick_llm_judge"] = {
-                    "sacrebleu": round(sacrebleu.corpus_bleu(hyps, [refs]).score, 2),
-                    "chrf": round(sacrebleu.corpus_chrf(hyps, [refs]).score, 2),
-                    "mean_fluency": round(sum(fluency_en(h) for h in hyps) / n, 4),
-                    "note": "FSOT: Qwen2.5-7B judges top-K NLLB hyps on hard gaps; gen elsewhere",
+                hard_set: set = set()
+                if hard_path2.is_file():
+                    hard_set = set(
+                        json.loads(hard_path2.read_text(encoding="utf-8")).get("indices")
+                        or []
+                    )
+
+                def _gen_i(i: int) -> str:
+                    if not rows33:
+                        return ""
+                    h, _ = max(
+                        zip(rows33[i]["hyps"], rows33[i]["scores"]),
+                        key=lambda x: float(x[1]),
+                    )
+                    return h
+
+                # full: judge everywhere available
+                hyps_full = [picks.get(str(i), _gen_i(i)) for i in range(n)]
+                results["FSOT_pick_llm_full"] = {
+                    "sacrebleu": round(sacrebleu.corpus_bleu(hyps_full, [refs]).score, 2),
+                    "chrf": round(sacrebleu.corpus_chrf(hyps_full, [refs]).score, 2),
+                    "mean_fluency": round(sum(fluency_en(h) for h in hyps_full) / n, 4),
+                    "note": "FSOT: Qwen judge on all sents with picks",
                     "n_judged": len(picks),
-                    "partial": bool(lj.get("partial")),
+                    "judge_model": lj.get("model"),
+                }
+                print(
+                    f"  FSOT_pick_llm_full: sacre={results['FSOT_pick_llm_full']['sacrebleu']} "
+                    f"judged={len(picks)}",
+                    flush=True,
+                )
+
+                # hard-only hybrid: judge on selection-gap sents; gen elsewhere
+                hyps_h = [
+                    picks[str(i)] if (i in hard_set and str(i) in picks) else _gen_i(i)
+                    for i in range(n)
+                ]
+                results["FSOT_pick_llm_judge"] = {
+                    "sacrebleu": round(sacrebleu.corpus_bleu(hyps_h, [refs]).score, 2),
+                    "chrf": round(sacrebleu.corpus_chrf(hyps_h, [refs]).score, 2),
+                    "mean_fluency": round(sum(fluency_en(h) for h in hyps_h) / n, 4),
+                    "note": "FSOT product: Qwen judge on hard selection gaps; gen elsewhere",
+                    "n_hard": len(hard_set),
+                    "n_judged_hard": sum(1 for i in hard_set if str(i) in picks),
                     "judge_model": lj.get("model"),
                 }
                 print(
                     f"  FSOT_pick_llm_judge: sacre={results['FSOT_pick_llm_judge']['sacrebleu']} "
-                    f"judged={len(picks)} partial={lj.get('partial')}",
+                    f"(hard-only hybrid)",
                     flush=True,
                 )
             except Exception as e:

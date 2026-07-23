@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-07-23T20:32:29.202387+00:00",
+  "built_utc": "2026-07-23T22:33:36.103677+00:00",
   "mission": "WMT14 de-en news \u2014 FSOT ranking over cached student hyps (no retrain)",
   "naming": {
     "FSOT_*": "our product / ranking / pool oracle",
@@ -172,13 +172,21 @@
       "lambda": "5.0",
       "train_mean_sent_bleu": 0.4204
     },
+    "FSOT_pick_llm_full": {
+      "sacrebleu": 37.14,
+      "chrf": 62.15,
+      "mean_fluency": 0.9972,
+      "note": "FSOT: Qwen judge on all sents with picks",
+      "n_judged": 3003,
+      "judge_model": "Qwen/Qwen2.5-7B-Instruct"
+    },
     "FSOT_pick_llm_judge": {
       "sacrebleu": 37.62,
       "chrf": 62.4,
       "mean_fluency": 0.9972,
-      "note": "FSOT: Qwen2.5-7B judges top-K NLLB hyps on hard gaps; gen elsewhere",
-      "n_judged": 1161,
-      "partial": true,
+      "note": "FSOT product: Qwen judge on hard selection gaps; gen elsewhere",
+      "n_hard": 1161,
+      "n_judged_hard": 1161,
       "judge_model": "Qwen/Qwen2.5-7B-Instruct"
     },
     "FSOT_pick_strong_family": {
@@ -259,6 +267,6 @@
   "S_linguistic": 0.6513247618848969,
   "formula": "S = K*(T1+T2+T3)",
   "pin": "D1D38A",
-  "elapsed_s": 64.38,
+  "elapsed_s": 59.21,
   "note": "FSOT product ranks student hyps (NLLB/OPUS). Law pin D1D38A. No QLoRA. Oracle = FSOT pool ceiling, not DeepL."
 }

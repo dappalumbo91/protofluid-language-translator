@@ -1,6 +1,6 @@
 # FSOT news de→en (cached students) — climb toward DeepL mid-40
 
-**Built:** 2026-07-23T20:32:29.202387+00:00  
+**Built:** 2026-07-23T22:33:36.103677+00:00  
 **Set:** WMT14 de-en test n=3003  
 **FSOT best product:** **37.62** (`FSOT_pick_llm_judge`)  
 **Gap → DeepL mid-40:** **2.38**  
@@ -26,6 +26,7 @@
 | FSOT_pick_gen_len | 36.78 | 61.89 | 0.9972 |
 | FSOT_pick_gen_mbr | 36.66 | 61.84 | 0.9971 |
 | FSOT_pick_hardset | 36.82 | 61.92 | 0.9972 |
+| FSOT_pick_llm_full | 37.14 | 62.15 | 0.9972 |
 | FSOT_pick_llm_judge | 37.62 | 62.4 | 0.9972 |
 | FSOT_pick_mbr | 36.65 | 61.83 | 0.997 |
 | FSOT_pick_mbr_top8 | 36.65 | 61.83 | 0.997 |

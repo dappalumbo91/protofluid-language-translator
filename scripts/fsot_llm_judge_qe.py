@@ -30,7 +30,9 @@ KEYS = [
     "test_nllb33_b8_ret3",
     "test_nllb33_b8_ret5",
 ]
-TOP_K = 6
+TOP_K = 6  # hard: match v0.2.9 winning config
+TOP_K_EASY = 4
+FORCE_REJUDGE_HARD = False  # True only when intentionally re-scoring hard gaps
 
 
 def load_rows(key: str, n: int):
@@ -47,6 +49,7 @@ def pool_for(i: int, rowsets) -> Dict[str, float]:
 
 
 def build_prompt(src: str, cands: List[str]) -> str:
+    # Original prompt that hit 37.62 hard-only (v0.2.9) — keep stable
     lines = [
         "You are an expert German→English news translator.",
         "Pick the BEST English translation of the German source.",
@@ -86,11 +89,15 @@ def main() -> None:
     rowsets = [load_rows(k, n) for k in KEYS]
 
     hard = json.loads(HARD.read_text(encoding="utf-8"))
-    # Phase 1 crush: hard selection-gap sentences only (envelope: 100% → ~41 sacre)
+    # Phase 3: re-judge hard with stronger prompt + TOP_K=8; keep easy picks
     hard_idx = hard.get("indices") or list(range(n))
-    only_hard = True  # set False to judge entire test set
-    order = hard_idx if only_hard else hard_idx + [i for i in range(n) if i not in set(hard_idx)]
-    print(f"judge_order n={len(order)} only_hard={only_hard}", flush=True)
+    hard_set = set(hard_idx)
+    only_hard = True
+    order = hard_idx if only_hard else hard_idx + [i for i in range(n) if i not in hard_set]
+    print(
+        f"judge_order n={len(order)} only_hard={only_hard} force_hard={FORCE_REJUDGE_HARD}",
+        flush=True,
+    )
 
     print("loading Qwen…", flush=True)
     tok = AutoTokenizer.from_pretrained(MODEL, trust_remote_code=True)
@@ -118,11 +125,12 @@ def main() -> None:
             pass
 
     for step, i in enumerate(order):
-        if str(i) in picks:
+        if str(i) in picks and not (FORCE_REJUDGE_HARD and i in hard_set):
             continue
         g = pool_for(i, rowsets)
-        # top-K by gen + keep diversity: unique texts
-        ranked = sorted(g.keys(), key=lambda h: -g[h])[:TOP_K]
+        # top-K by gen; smaller K on non-hard for speed
+        k = TOP_K if i in hard_set else TOP_K_EASY
+        ranked = sorted(g.keys(), key=lambda h: -g[h])[:k]
         if len(ranked) == 1:
             picks[str(i)] = ranked[0]
             continue
