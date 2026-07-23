@@ -1,0 +1,102 @@
+{
+  "built_utc": "2026-07-23T23:43:21.987237+00:00",
+  "mission": "FSOT multi-D_eff language \u2014 spectrum from archive domains",
+  "formula": "S=K(T1+T2+T3) at each table D_eff; associate via \u03c6 spectrum or max_D",
+  "pin": "D1D38A",
+  "pin_ok": true,
+  "authority_path": "I:\\FSOT-Physical-Archive\\02_FSOT-2.1-Lean-Full\\vendor\\fsot_compute.py",
+  "spectrum": [
+    {
+      "domain": "Acoustics",
+      "D_eff": 10.0
+    },
+    {
+      "domain": "Quantum_Optics",
+      "D_eff": 11.0
+    },
+    {
+      "domain": "Biology",
+      "D_eff": 12.0
+    },
+    {
+      "domain": "Neuroscience",
+      "D_eff": 14.0
+    },
+    {
+      "domain": "Psychology",
+      "D_eff": 16.0
+    },
+    {
+      "domain": "Sociology",
+      "D_eff": 18.0
+    }
+  ],
+  "domain_win_counts": {
+    "Acoustics": 2583,
+    "Quantum_Optics": 0,
+    "Biology": 0,
+    "Neuroscience": 0,
+    "Psychology": 0,
+    "Sociology": 420
+  },
+  "no_free_parameters": true,
+  "n": 3003,
+  "mean_S_maxD": 0.6465911106718761,
+  "mean_S_spectrum": 0.6413390531677584,
+  "results": {
+    "FSOT_product_maxD": {
+      "sacrebleu": 36.77,
+      "note": "argmax max_D S(D) \u2014 hyp lives in best dimensional regime"
+    },
+    "FSOT_product_spectrum": {
+      "sacrebleu": 36.77,
+      "note": "argmax golden spectrum \u03a3 S(D_i)/\u03c6^i"
+    },
+    "FSOT_product_biology_D": {
+      "sacrebleu": 36.77,
+      "note": "argmax S at Biology D_eff only"
+    },
+    "student_gen_max": {
+      "sacrebleu": 36.79,
+      "note": "NLLB-3.3B gen baseline"
+    }
+  },
+  "best_product": {
+    "name": "FSOT_product_biology_D",
+    "sacrebleu": 36.77
+  },
+  "gap_to_DeepL_mid40": 3.23,
+  "gap_to_student_gen": 0.02,
+  "samples": [
+    {
+      "i": 0,
+      "S_maxD": 0.9311577397102855,
+      "win_domain": "Acoustics",
+      "S_spec": 0.9287397906618168,
+      "pick": "Gutach: Even more safety for pedestrians"
+    },
+    {
+      "i": 1,
+      "S_maxD": 1.0254870901860813,
+      "win_domain": "Acoustics",
+      "S_spec": 1.0246055278458,
+      "pick": "They are less than 100 metres apart: on Tuesday in Gutach, the new B 33 pedestri"
+    },
+    {
+      "i": 1000,
+      "S_maxD": 0.7994260260161286,
+      "win_domain": "Acoustics",
+      "S_spec": 0.7986340605954271,
+      "pick": "Tragedy in Uruguay: Boys kill playmates with machetes"
+    },
+    {
+      "i": 2000,
+      "S_maxD": 0.8188941876651935,
+      "win_domain": "Acoustics",
+      "S_spec": 0.817323835409931,
+      "pick": "The conflict has forced some two million people to flee the country."
+    }
+  ],
+  "elapsed_s": 13.51,
+  "honesty": "D_eff values only from archive DOMAINS table. Different language aspects live at different D like physics domains. No free-fit D. No LLM."
+}
