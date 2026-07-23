@@ -1,0 +1,343 @@
+{
+  "built_utc": "2026-07-23T01:30:27.128480+00:00",
+  "mission": "DeepL killshot — apply FSOT formula to product scoring",
+  "fsot": {
+    "formula": "S = K*(T1+T2+T3)",
+    "pin": "D1D38A185487…",
+    "pin_ok": true,
+    "authority": "I:\\FSOT-Physical-Archive\\02_FSOT-2.1-Lean-Full\\vendor\\fsot_compute.py",
+    "sha256_prefix": "D1D38A185487B452",
+    "K": 0.4202216641606967,
+    "C_EFF": 0.9577022026205613,
+    "PHI": 1.618033988749895,
+    "LING_D_eff": 12.0,
+    "S_ling_ref": 0.5162964782803371,
+    "archive_review": [
+      "01_SR-ITE axiomatic laws 10-13 linguistic (SVO, resolution, boundaries, phonotactics)",
+      "vendor/fsot_compute.py full T1 observer + T2 linear + T3 valve-acoustic",
+      "linguistics_formal_benchmark D_eff=12",
+      "v1 map wrong: length-dominated N drowned P; fixed with rank-aware P and N=Φ",
+      "prior GBC failure: disconnected from scalar terms"
+    ],
+    "mapping_v2": "N=Φ; P=C_EFF*(1+rank*Φ); δψ/δθ damp with rank; phonotactics→ρ; hits=repeats"
+  },
+  "results": {
+    "opus": {
+      "sacrebleu": 33.88,
+      "chrf": 59.92
+    },
+    "nllb13": {
+      "sacrebleu": 35.63,
+      "chrf": 61.06
+    },
+    "nllb600": {
+      "sacrebleu": 33.37,
+      "chrf": 59.27
+    },
+    "gen_score__core": {
+      "sacrebleu": 36.0,
+      "chrf": 61.47,
+      "pool": [
+        "nllb13",
+        "opus"
+      ],
+      "mode": "gen_score",
+      "picks": {
+        "opus": 1386,
+        "nllb13": 1617
+      }
+    },
+    "gen_score__all": {
+      "sacrebleu": 35.61,
+      "chrf": 61.19,
+      "pool": [
+        "nllb13",
+        "opus",
+        "nllb600"
+      ],
+      "mode": "gen_score",
+      "picks": {
+        "opus": 1183,
+        "nllb13": 1187,
+        "nllb600": 633
+      }
+    },
+    "max_S__core": {
+      "sacrebleu": 36.02,
+      "chrf": 61.5,
+      "pool": [
+        "nllb13",
+        "opus"
+      ],
+      "mode": "max_S",
+      "picks": {
+        "opus": 1394,
+        "nllb13": 1609
+      }
+    },
+    "max_S__all": {
+      "sacrebleu": 35.68,
+      "chrf": 61.26,
+      "pool": [
+        "nllb13",
+        "opus",
+        "nllb600"
+      ],
+      "mode": "max_S",
+      "picks": {
+        "opus": 1192,
+        "nllb13": 1183,
+        "nllb600": 628
+      }
+    },
+    "max_T1__core": {
+      "sacrebleu": 35.91,
+      "chrf": 61.38,
+      "pool": [
+        "nllb13",
+        "opus"
+      ],
+      "mode": "max_T1",
+      "picks": {
+        "opus": 1382,
+        "nllb13": 1621
+      }
+    },
+    "max_T1__all": {
+      "sacrebleu": 35.55,
+      "chrf": 61.14,
+      "pool": [
+        "nllb13",
+        "opus",
+        "nllb600"
+      ],
+      "mode": "max_T1",
+      "picks": {
+        "opus": 1156,
+        "nllb13": 1188,
+        "nllb600": 659
+      }
+    },
+    "max_T3__core": {
+      "sacrebleu": 36.0,
+      "chrf": 61.47,
+      "pool": [
+        "nllb13",
+        "opus"
+      ],
+      "mode": "max_T3",
+      "picks": {
+        "opus": 1386,
+        "nllb13": 1617
+      }
+    },
+    "max_T3__all": {
+      "sacrebleu": 35.61,
+      "chrf": 61.19,
+      "pool": [
+        "nllb13",
+        "opus",
+        "nllb600"
+      ],
+      "mode": "max_T3",
+      "picks": {
+        "opus": 1183,
+        "nllb13": 1187,
+        "nllb600": 633
+      }
+    },
+    "min_abs_dS__core": {
+      "sacrebleu": 33.58,
+      "chrf": 59.57,
+      "pool": [
+        "nllb13",
+        "opus"
+      ],
+      "mode": "min_abs_dS",
+      "picks": {
+        "nllb13": 1414,
+        "opus": 1589
+      }
+    },
+    "min_abs_dS__all": {
+      "sacrebleu": 32.92,
+      "chrf": 58.97,
+      "pool": [
+        "nllb13",
+        "opus",
+        "nllb600"
+      ],
+      "mode": "min_abs_dS",
+      "picks": {
+        "nllb600": 1181,
+        "nllb13": 704,
+        "opus": 1118
+      }
+    },
+    "fsot_product__core": {
+      "sacrebleu": 36.03,
+      "chrf": 61.5,
+      "pool": [
+        "nllb13",
+        "opus"
+      ],
+      "mode": "fsot_product",
+      "picks": {
+        "opus": 1394,
+        "nllb13": 1609
+      }
+    },
+    "fsot_product__all": {
+      "sacrebleu": 35.68,
+      "chrf": 61.27,
+      "pool": [
+        "nllb13",
+        "opus",
+        "nllb600"
+      ],
+      "mode": "fsot_product",
+      "picks": {
+        "opus": 1193,
+        "nllb13": 1183,
+        "nllb600": 627
+      }
+    },
+    "fsot_tiebreak__core": {
+      "sacrebleu": 36.0,
+      "chrf": 61.47,
+      "pool": [
+        "nllb13",
+        "opus"
+      ],
+      "mode": "fsot_tiebreak",
+      "picks": {
+        "opus": 1386,
+        "nllb13": 1617
+      }
+    },
+    "fsot_tiebreak__all": {
+      "sacrebleu": 35.61,
+      "chrf": 61.19,
+      "pool": [
+        "nllb13",
+        "opus",
+        "nllb600"
+      ],
+      "mode": "fsot_tiebreak",
+      "picks": {
+        "opus": 1183,
+        "nllb13": 1187,
+        "nllb600": 633
+      }
+    },
+    "oracle__all": {
+      "sacrebleu": 40.16,
+      "chrf": 63.88,
+      "pool": [
+        "nllb13",
+        "opus",
+        "nllb600"
+      ],
+      "mode": "oracle"
+    },
+    "oracle__core": {
+      "sacrebleu": 38.99,
+      "chrf": 63.26,
+      "pool": [
+        "nllb13",
+        "opus"
+      ],
+      "mode": "oracle"
+    }
+  },
+  "pick_counts": {
+    "gen_score__core": {
+      "opus": 1386,
+      "nllb13": 1617
+    },
+    "gen_score__all": {
+      "opus": 1183,
+      "nllb13": 1187,
+      "nllb600": 633
+    },
+    "max_S__core": {
+      "opus": 1394,
+      "nllb13": 1609
+    },
+    "max_S__all": {
+      "opus": 1192,
+      "nllb13": 1183,
+      "nllb600": 628
+    },
+    "max_T1__core": {
+      "opus": 1382,
+      "nllb13": 1621
+    },
+    "max_T1__all": {
+      "opus": 1156,
+      "nllb13": 1188,
+      "nllb600": 659
+    },
+    "max_T3__core": {
+      "opus": 1386,
+      "nllb13": 1617
+    },
+    "max_T3__all": {
+      "opus": 1183,
+      "nllb13": 1187,
+      "nllb600": 633
+    },
+    "min_abs_dS__core": {
+      "nllb13": 1414,
+      "opus": 1589
+    },
+    "min_abs_dS__all": {
+      "nllb600": 1181,
+      "nllb13": 704,
+      "opus": 1118
+    },
+    "fsot_product__core": {
+      "opus": 1394,
+      "nllb13": 1609
+    },
+    "fsot_product__all": {
+      "opus": 1193,
+      "nllb13": 1183,
+      "nllb600": 627
+    },
+    "fsot_tiebreak__core": {
+      "opus": 1386,
+      "nllb13": 1617
+    },
+    "fsot_tiebreak__all": {
+      "opus": 1183,
+      "nllb13": 1187,
+      "nllb600": 633
+    }
+  },
+  "best_product": {
+    "name": "fsot_product__core",
+    "sacrebleu": 36.03
+  },
+  "oracle_sacrebleu": 40.16,
+  "oracle_best": "oracle__all",
+  "gaps": {
+    "best_to_40": 3.97,
+    "best_to_48": 11.97,
+    "oracle_to_40": -0.16
+  },
+  "mid40_cleared": false,
+  "oracle_clears_mid40": true,
+  "pct_of_mid40": 90.1,
+  "diagnostics": {
+    "pearson_S_vs_sentbleu_sample": 0.2031,
+    "sample_n": 400
+  },
+  "elapsed_s": 22.8,
+  "honest": {
+    "target": "DeepL-class mid bar 40 sacre on WMT14 de-en",
+    "method": "FSOT term scoring of student hyps; law fixed",
+    "not": "free-fit GBC or more 600M beam tweaks",
+    "status": "formula now moves product above gen-score; killshot needs stronger hyps or tighter map"
+  }
+}

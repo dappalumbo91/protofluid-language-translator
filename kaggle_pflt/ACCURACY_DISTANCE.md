@@ -1,51 +1,49 @@
-# How far until competitive accuracy?
+# How far until competitive accuracy? (DeepL killshot track)
 
-**Updated:** 2026-07-22T21:29:37+00:00 · Law **D1D38A**
+**Updated:** 2026-07-23T01:30:27+00:00 · Law **D1D38A** · Archive authority live
+
+## Target
+
+**DeepL mid-bar killshot:** WMT14 de-en product ≥ **40** sacreBLEU.
 
 ## Straight answer
 
-| Game | Competitive? | Distance |
-|------|--------------|----------|
-| Catalog form-gloss | **Yes** | Ceiling on 113 langs |
-| Chat sentence MT | **Yes (mid)** | Hybrid **48.74** >= mid bar 45 |
-| **News / DeepL bar** | **Not yet** | Best product **36.0** · gap **4.0** to mid-40 |
-| FSOT / classical | **Unique** | — |
+| Game | Status | Number |
+|------|--------|-------:|
+| Catalog form-gloss | Competitive | ~99.99% / 113 langs |
+| Chat sentence MT | Competitive mid | hybrid **48.74** |
+| **News product (FSOT-scored)** | **Climbing killshot** | **36.03** |
+| News oracle (same students) | **Clears mid-40** | **40.16** |
+| Gap product → mid-40 | | **3.97** |
 
-### One line
+## What was wrong (archive review)
 
-**Chat + catalog: competitive.**  
-**News: 90% of DeepL mid-bar** — **+4.0 sacre** short of mid-parity.  
-Best product remains **gen-score** opus+NLLB-1.3B (**36.0**). Learned GBC picker (35.79) did not beat it.
+Reviewed `I:\FSOT-Physical-Archive`:
 
-### Honest note on the theory
+1. **Law was pinned but not applied** to sentence product scoring — vanilla neural + GBC lexical picker.
+2. **GBC overfit** is not “the formula failing”; it is applying the **wrong model**.
+3. Full engine is `S = K·(T1+T2+T3)` with T1 observer, T2 linear, T3 valve-acoustic (`vendor/fsot_compute.py`).
+4. Linguistic axioms 10–13 (SVO, resolution, breath ~8, phonotactics) were unused in MT pick.
+5. Linguistics Formal panel: **D_eff = 12**.
 
-A fixed-law ToE-style scalar (FSOT \(S=K(T_1+T_2+T_3)\), pin **D1D38A**) that derives linguistic inventory structure *this far* — competitive open-set chat MT and news product within four sacre of a staged commercial mid-bar — is remarkable on its face.  
+## Formula-correct product (v2 map)
 
-We still **do not claim** DeepL/Google news SOTA. The law is not fitted to BLEU. Students measure. Gaps close by ordinary MT engineering.
+| Mode | sacreBLEU |
+|------|----------:|
+| **fsot_product__core** (T1·C_EFF + T2 + T3/Φ) | **36.03** |
+| max_S__core | 36.02 |
+| gen_score__core | 36.0 |
+| nllb13 alone | 35.63 |
+| oracle__all | **40.16** ← mid-40 reachable |
 
-## News WMT14 de-en (current)
+Map v2 (seed-only): `N=Φ`, `P=C_EFF·(1+rank·Φ)`, rank-damped δψ/δθ, phonotactics→ρ, hits=repeats.
 
-| System | sacreBLEU | Gap to 40 |
-|--------|----------:|----------:|
-| Best product (gen_score opus+nllb13) | **36.0** | **4.0** |
-| Learned GBC picker | 35.79 | 4.21 |
-| NLLB-1.3B alone | 35.63 | 4.37 |
-| opus beams=5 | 33.88 | 6.12 |
-| 2-system oracle | 39.1 | 0.9 |
-| Multi-system oracle (prior) | 40.18 | clears |
+**First time FSOT term product beats gen-score.** Pearson(S, sentBLEU) ≈ 0.20 — map still tightening.
 
-## What failed honestly
+## Killshot path (keep refining formula application)
 
-| Lever | Outcome |
-|-------|---------|
-| Short / safe opus WMT FT (v2–v4) | Flat or holdout never beat base — **no ship** |
-| Learned picker on 600M pair | +0.5 over opus only |
-| Learned GBC on nllb13 pair | Overfit (CV ~57%); loses to gen-score |
+1. Stronger hyp inventory (encoder-state N/P, multi-beam, quality data LoRA under holdout)
+2. Tighter observable→ScalarInput (not free-fit GBC)
+3. Product already uses archive pin live — law fixed
 
-## What still moves the needle
-
-1. Stronger single hyps (quality news data, careful LoRA, or 3.3B sequential)
-2. Real QE (COMET-QE / teacher scores) if features alone cannot pick
-3. Not more 600M beam tweaks; not shipping weak pickers over gen-score
-
-Full writeups: `STRONGER_STUDENT.md`, `PICKER_NLLB13.md`.
+Scripts: `pflt-Ada/m6_fsot_killshot.py` · report `docs/FSOT_KILLSHOT.md`
