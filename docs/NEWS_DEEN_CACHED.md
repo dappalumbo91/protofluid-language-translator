@@ -1,10 +1,10 @@
 # FSOT news de→en (cached students) — climb toward DeepL mid-40
 
-**Built:** 2026-07-23T18:59:56.010076+00:00  
+**Built:** 2026-07-23T20:32:29.202387+00:00  
 **Set:** WMT14 de-en test n=3003  
-**FSOT best product:** **36.8** (`FSOT_pick_hardset`)  
-**Gap → DeepL mid-40:** **3.2**  
-**Gap → FSOT_oracle_pool:** **9.32** (selection headroom)  
+**FSOT best product:** **37.62** (`FSOT_pick_llm_judge`)  
+**Gap → DeepL mid-40:** **2.38**  
+**Gap → FSOT_oracle_pool:** **8.5** (selection headroom)  
 **FSOT_oracle_pool:** 46.12  
 **Pin D1D38A · S=K(T1+T2+T3):** True · S=0.6513247618848969
 
@@ -21,8 +21,15 @@
 | FSOT_family_then_gen | 36.78 | 61.9 | 0.9972 |
 | FSOT_oracle_pool | 46.12 | 67.54 |  |
 | FSOT_pick_consensus | 36.76 | 61.89 | 0.9972 |
+| FSOT_pick_enc_cos | 36.39 | 61.86 | 0.9972 |
+| FSOT_pick_gen_enc | 36.51 | 61.91 | 0.9973 |
 | FSOT_pick_gen_len | 36.78 | 61.89 | 0.9972 |
-| FSOT_pick_hardset | 36.8 | 61.91 | 0.9972 |
+| FSOT_pick_gen_mbr | 36.66 | 61.84 | 0.9971 |
+| FSOT_pick_hardset | 36.82 | 61.92 | 0.9972 |
+| FSOT_pick_llm_judge | 37.62 | 62.4 | 0.9972 |
+| FSOT_pick_mbr | 36.65 | 61.83 | 0.997 |
+| FSOT_pick_mbr_top8 | 36.65 | 61.83 | 0.997 |
+| FSOT_pick_mbr_uniform | 36.62 | 61.81 | 0.997 |
 | FSOT_pick_strong_family | 36.79 | 61.9 | 0.9972 |
 | FSOT_product_gen | 36.79 | 61.9 | 0.9972 |
 | diag_cross_student_gen_naive | 36.51 | 61.86 | 0.9968 |

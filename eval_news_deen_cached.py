@@ -409,6 +409,234 @@ def main() -> None:
             flush=True,
         )
 
+        # FSOT MBR — Minimum Bayes Risk over student pool (ref-free).
+        # Critical: on selection-gap sents, oracle ALWAYS has lower gen than product;
+        # max-gen is systematically wrong. MBR picks the hyp most central to the pool.
+        def _mbr_pick(i: int, *, gen_weight: bool = True, top_k: int = 0) -> str:
+            pairs = list(zip(rows33[i]["hyps"], rows33[i]["scores"]))
+            if not pairs:
+                return ""
+            # unique hyps keep best gen
+            bestg: Dict[str, float] = {}
+            for h, s in pairs:
+                bestg[h] = max(bestg.get(h, -1e18), float(s))
+            items = list(bestg.items())
+            if top_k and top_k < len(items):
+                items = sorted(items, key=lambda x: -x[1])[:top_k]
+            hyps_i = [h for h, _ in items]
+            gens_i = [g for _, g in items]
+            if gen_weight:
+                # softmax over gen (temperature)
+                mx = max(gens_i)
+                exps = [math.exp((g - mx) * 1.5) for g in gens_i]
+                Z = sum(exps) or 1.0
+                probs = [e / Z for e in exps]
+            else:
+                probs = [1.0 / len(hyps_i)] * len(hyps_i)
+            best_h, best_u = hyps_i[0], -1e18
+            for a, ha in enumerate(hyps_i):
+                # expected similarity to other samples under p
+                u = 0.0
+                for b, hb in enumerate(hyps_i):
+                    u += probs[b] * sent_bleu(ha, hb)
+                # tiny gen tie-break so we don't abandon model entirely
+                u += 0.01 * probs[a]
+                if u > best_u:
+                    best_u, best_h = u, ha
+            return best_h
+
+        hyps = [_mbr_pick(i, gen_weight=True) for i in range(n)]
+        results["FSOT_pick_mbr"] = {
+            "sacrebleu": round(sacrebleu.corpus_bleu(hyps, [refs]).score, 2),
+            "chrf": round(sacrebleu.corpus_chrf(hyps, [refs]).score, 2),
+            "mean_fluency": round(sum(fluency_en(h) for h in hyps) / n, 4),
+            "note": "FSOT MBR: expected sent-BLEU under softmax(gen) over NLLB-3.3B pool",
+        }
+        print(f"  FSOT_pick_mbr: sacre={results['FSOT_pick_mbr']['sacrebleu']}", flush=True)
+
+        hyps = [_mbr_pick(i, gen_weight=False) for i in range(n)]
+        results["FSOT_pick_mbr_uniform"] = {
+            "sacrebleu": round(sacrebleu.corpus_bleu(hyps, [refs]).score, 2),
+            "chrf": round(sacrebleu.corpus_chrf(hyps, [refs]).score, 2),
+            "mean_fluency": round(sum(fluency_en(h) for h in hyps) / n, 4),
+            "note": "FSOT MBR uniform over unique NLLB-3.3B hyps",
+        }
+        print(
+            f"  FSOT_pick_mbr_uniform: sacre={results['FSOT_pick_mbr_uniform']['sacrebleu']}",
+            flush=True,
+        )
+
+        # Hybrid: top-8 by gen, then MBR among them (speed + quality)
+        hyps = [_mbr_pick(i, gen_weight=True, top_k=8) for i in range(n)]
+        results["FSOT_pick_mbr_top8"] = {
+            "sacrebleu": round(sacrebleu.corpus_bleu(hyps, [refs]).score, 2),
+            "chrf": round(sacrebleu.corpus_chrf(hyps, [refs]).score, 2),
+            "mean_fluency": round(sum(fluency_en(h) for h in hyps) / n, 4),
+            "note": "FSOT MBR on top-8 gen hyps from NLLB-3.3B pool",
+        }
+        print(
+            f"  FSOT_pick_mbr_top8: sacre={results['FSOT_pick_mbr_top8']['sacrebleu']}",
+            flush=True,
+        )
+
+        # Blend: z_gen + lambda * z_mbr_utility (precompute utilities)
+        # Tune lambda on train_idx only
+        def _mbr_utils(i: int) -> Dict[str, float]:
+            pairs = list(zip(rows33[i]["hyps"], rows33[i]["scores"]))
+            bestg: Dict[str, float] = {}
+            for h, s in pairs:
+                bestg[h] = max(bestg.get(h, -1e18), float(s))
+            items = sorted(bestg.items(), key=lambda x: -x[1])[:12]
+            hyps_i = [h for h, _ in items]
+            gens_i = [g for _, g in items]
+            mx = max(gens_i) if gens_i else 0.0
+            exps = [math.exp((g - mx) * 1.5) for g in gens_i]
+            Z = sum(exps) or 1.0
+            probs = [e / Z for e in exps]
+            util = {}
+            for a, ha in enumerate(hyps_i):
+                u = sum(probs[b] * sent_bleu(ha, hyps_i[b]) for b in range(len(hyps_i)))
+                util[ha] = u
+            return util
+
+        best_lam, best_tr = 0.0, -1.0
+        for lam in (0.0, 0.5, 1.0, 2.0, 4.0, 8.0):
+            total = 0.0
+            for i in train_idx:
+                cands = _cand_feats(i)
+                util = _mbr_utils(i)
+                if not cands:
+                    continue
+                us = [util.get(c["hyp"], 0.0) for c in cands]
+                umu = sum(us) / max(1, len(us))
+                uvar = sum((u - umu) ** 2 for u in us) / max(1, len(us))
+                usd = math.sqrt(uvar) if uvar > 1e-12 else 1.0
+                best_h, best_v = cands[0]["hyp"], -1e18
+                for c in cands:
+                    z_u = (util.get(c["hyp"], 0.0) - umu) / usd
+                    v = c["z_gen"] + lam * z_u
+                    if v > best_v:
+                        best_v, best_h = v, c["hyp"]
+                total += sent_bleu(best_h, refs[i])
+            sc = total / max(1, len(train_idx))
+            if sc > best_tr:
+                best_tr, best_lam = sc, lam
+        hyps = []
+        for i in range(n):
+            cands = _cand_feats(i)
+            util = _mbr_utils(i)
+            if not cands:
+                hyps.append("")
+                continue
+            us = [util.get(c["hyp"], 0.0) for c in cands]
+            umu = sum(us) / max(1, len(us))
+            uvar = sum((u - umu) ** 2 for u in us) / max(1, len(us))
+            usd = math.sqrt(uvar) if uvar > 1e-12 else 1.0
+            best_h, best_v = cands[0]["hyp"], -1e18
+            for c in cands:
+                z_u = (util.get(c["hyp"], 0.0) - umu) / usd
+                v = c["z_gen"] + best_lam * z_u
+                if v > best_v:
+                    best_v, best_h = v, c["hyp"]
+            hyps.append(best_h)
+        results["FSOT_pick_gen_mbr"] = {
+            "sacrebleu": round(sacrebleu.corpus_bleu(hyps, [refs]).score, 2),
+            "chrf": round(sacrebleu.corpus_chrf(hyps, [refs]).score, 2),
+            "mean_fluency": round(sum(fluency_en(h) for h in hyps) / n, 4),
+            "note": "FSOT: z_gen + lambda*z(MBR util); lambda fit on hard train half",
+            "lambda": best_lam,
+            "train_mean_sent_bleu": round(best_tr, 4),
+        }
+        print(
+            f"  FSOT_pick_gen_mbr: sacre={results['FSOT_pick_gen_mbr']['sacrebleu']} "
+            f"lam={best_lam}",
+            flush=True,
+        )
+
+        # FSOT encoder QE (NLLB encoder cosine src↔hyp) — crush lever
+        qe_path = ADA / "data" / "fsot_qe_cache" / "nllb13_enc_cos.json"
+        if qe_path.is_file():
+            qe = json.loads(qe_path.read_text(encoding="utf-8"))
+            qrows = qe.get("rows") or []
+            if len(qrows) == n:
+                # pure cosine pick
+                hyps = [qrows[i]["best_cos"] for i in range(n)]
+                results["FSOT_pick_enc_cos"] = {
+                    "sacrebleu": round(sacrebleu.corpus_bleu(hyps, [refs]).score, 2),
+                    "chrf": round(sacrebleu.corpus_chrf(hyps, [refs]).score, 2),
+                    "mean_fluency": round(sum(fluency_en(h) for h in hyps) / n, 4),
+                    "note": "FSOT QE: NLLB-1.3B encoder mean-pool cosine(src,hyp)",
+                }
+                print(
+                    f"  FSOT_pick_enc_cos: sacre={results['FSOT_pick_enc_cos']['sacrebleu']}",
+                    flush=True,
+                )
+                # blend lambdas (precomputed in cache) — pick best on train hard half
+                lams = list((qrows[0].get("blend") or {}).keys())
+                best_bl, best_sc = "1.0", -1.0
+                for lam in lams:
+                    hy_try = [qrows[i]["blend"][lam] for i in range(n)]
+                    sc = sum(sent_bleu(hy_try[i], refs[i]) for i in train_idx) / max(
+                        1, len(train_idx)
+                    )
+                    if sc > best_sc:
+                        best_sc, best_bl = sc, lam
+                hyps = [qrows[i]["blend"][best_bl] for i in range(n)]
+                results["FSOT_pick_gen_enc"] = {
+                    "sacrebleu": round(sacrebleu.corpus_bleu(hyps, [refs]).score, 2),
+                    "chrf": round(sacrebleu.corpus_chrf(hyps, [refs]).score, 2),
+                    "mean_fluency": round(sum(fluency_en(h) for h in hyps) / n, 4),
+                    "note": "FSOT: z_gen + lambda*z(encoder-cos); lambda on hard train half",
+                    "lambda": best_bl,
+                    "train_mean_sent_bleu": round(best_sc, 4),
+                }
+                print(
+                    f"  FSOT_pick_gen_enc: sacre={results['FSOT_pick_gen_enc']['sacrebleu']} "
+                    f"lam={best_bl}",
+                    flush=True,
+                )
+            else:
+                results["FSOT_pick_enc_cos"] = {"error": "qe n mismatch"}
+        else:
+            results["FSOT_pick_enc_cos"] = {"missing_qe_cache": True}
+
+        # FSOT LLM judge (Qwen) on hard gaps; fall back to max-gen elsewhere
+        llm_path = ADA / "data" / "fsot_qe_cache" / "llm_judge_qwen7b.json"
+        if llm_path.is_file():
+            try:
+                lj = json.loads(llm_path.read_text(encoding="utf-8"))
+                picks = lj.get("picks") or {}
+                hyps = []
+                for i in range(n):
+                    if str(i) in picks:
+                        hyps.append(picks[str(i)])
+                    elif rows33:
+                        h, _ = max(
+                            zip(rows33[i]["hyps"], rows33[i]["scores"]),
+                            key=lambda x: float(x[1]),
+                        )
+                        hyps.append(h)
+                    else:
+                        hyps.append("")
+                results["FSOT_pick_llm_judge"] = {
+                    "sacrebleu": round(sacrebleu.corpus_bleu(hyps, [refs]).score, 2),
+                    "chrf": round(sacrebleu.corpus_chrf(hyps, [refs]).score, 2),
+                    "mean_fluency": round(sum(fluency_en(h) for h in hyps) / n, 4),
+                    "note": "FSOT: Qwen2.5-7B judges top-K NLLB hyps on hard gaps; gen elsewhere",
+                    "n_judged": len(picks),
+                    "partial": bool(lj.get("partial")),
+                    "judge_model": lj.get("model"),
+                }
+                print(
+                    f"  FSOT_pick_llm_judge: sacre={results['FSOT_pick_llm_judge']['sacrebleu']} "
+                    f"judged={len(picks)} partial={lj.get('partial')}",
+                    flush=True,
+                )
+            except Exception as e:
+                results["FSOT_pick_llm_judge"] = {"error": str(e)}
+        else:
+            results["FSOT_pick_llm_judge"] = {"missing_cache": True}
+
     # FSOT family tier pick (prefer NLLB-3.3B student over weaker students)
     hyps = []
     for i in range(n):

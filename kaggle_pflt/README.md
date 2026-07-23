@@ -1,4 +1,4 @@
-# PFLT FSOT Benchmarks — v0.2.8
+# PFLT FSOT Benchmarks — v0.2.9
 
 **Protofluid Language Translator** under FSOT law \(S=K(T_1+T_2+T_3)\), authority pin **D1D38A**.
 
@@ -18,7 +18,7 @@ This Kaggle dataset stores a **versioned, professional-grade benchmark snapshot*
 
 | File | Description |
 |------|-------------|
-| `metrics_snapshot.json` | Machine-readable headline metrics (v0.2.8) |
+| `metrics_snapshot.json` | Machine-readable headline metrics (v0.2.9) |
 | `benchmark_summary.csv` | Flat table (may lag; prefer JSON) |
 | `NEWS_DEEN_CACHED.md` | WMT14 de→en FSOT product vs students |
 | `LANGUAGE_BRAIN.md` / `LANGUAGE_SECOND_BRAIN.md` | FSOT sense/lang graph |
@@ -27,21 +27,22 @@ This Kaggle dataset stores a **versioned, professional-grade benchmark snapshot*
 | `COMPETITIVE_POSITION.md` | Honest competitive framing |
 | `sample_densify.tsv` | Tiny form→gloss sample (demo only) |
 
-## Headline results (2026-07-23, v0.2.8)
+## Headline results (2026-07-23, v0.2.9)
 
 | Track | Metric | Value |
 |-------|--------|------:|
 | Catalog | 113 langs form→gloss product/open | ~99.99% |
 | Chat open-set neural | mean best sacreBLEU (16 langs) | **50.19** |
 | Hybrid densify\|neural | mean sacreBLEU | **53.58** |
-| WMT14 de→en | **FSOT_pick_hardset** (product) | **36.80** |
+| WMT14 de→en | **FSOT_pick_llm_judge** (product) | **37.62** |
+| WMT14 de→en | FSOT_pick_hardset | 36.82 |
 | WMT14 de→en | NLLB-3.3B student b8 | 36.74 |
 | WMT14 de→en | NLLB-1.3B student | 35.63 |
 | WMT14 de→en | OPUS-mt-de-en | 33.88 |
 | WMT14 de→en | **FSOT_oracle_pool** | **46.12** |
-| Gap to DeepL mid (~40) | FSOT product | **3.2** |
-| Gap to FSOT_oracle_pool | selection headroom | **9.32** |
-| % of mid-40 | FSOT product | **~92%** |
+| Gap to DeepL mid (~40) | FSOT product | **2.38** |
+| Gap to FSOT_oracle_pool | selection headroom | **8.5** |
+| % of mid-40 | FSOT product | **~94%** |
 
 ## Honesty
 

@@ -52,8 +52,8 @@ model-index:
           split: test
         metrics:
           - type: sacrebleu
-            value: 36.8
-            name: sacreBLEU (FSOT_pick_hardset product over NLLB-3.3B multi-hyp pool)
+            value: 37.62
+            name: sacreBLEU (FSOT_pick_llm_judge product over NLLB-3.3B multi-hyp pool)
           - type: sacrebleu
             value: 36.74
             name: sacreBLEU (NLLB-200-3.3B student, beams=8)

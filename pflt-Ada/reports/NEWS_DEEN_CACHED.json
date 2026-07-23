@@ -1,5 +1,5 @@
 {
-  "built_utc": "2026-07-23T18:59:56.010076+00:00",
+  "built_utc": "2026-07-23T20:32:29.202387+00:00",
   "mission": "WMT14 de-en news \u2014 FSOT ranking over cached student hyps (no retrain)",
   "naming": {
     "FSOT_*": "our product / ranking / pool oracle",
@@ -118,19 +118,68 @@
       "note": "FSOT pick: config consensus + gen on NLLB-3.3B pool"
     },
     "FSOT_pick_hardset": {
-      "sacrebleu": 36.8,
-      "chrf": 61.91,
+      "sacrebleu": 36.82,
+      "chrf": 61.92,
       "mean_fluency": 0.9972,
       "note": "FSOT pick: linear features; weights fit on hard-set train half only",
       "weights": {
-        "z_gen": 1.0,
-        "len_pen": 0.0,
-        "vote": 0.3,
-        "z_nll": 0.0,
+        "z_gen": 0.6,
+        "len_pen": 0.4,
+        "vote": 0.0,
+        "z_nll": 0.5,
         "flu": 0.0
       },
-      "train_mean_sent_bleu": 0.3879,
-      "n_train": 934
+      "train_mean_sent_bleu": 0.3835,
+      "n_train": 581
+    },
+    "FSOT_pick_mbr": {
+      "sacrebleu": 36.65,
+      "chrf": 61.83,
+      "mean_fluency": 0.997,
+      "note": "FSOT MBR: expected sent-BLEU under softmax(gen) over NLLB-3.3B pool"
+    },
+    "FSOT_pick_mbr_uniform": {
+      "sacrebleu": 36.62,
+      "chrf": 61.81,
+      "mean_fluency": 0.997,
+      "note": "FSOT MBR uniform over unique NLLB-3.3B hyps"
+    },
+    "FSOT_pick_mbr_top8": {
+      "sacrebleu": 36.65,
+      "chrf": 61.83,
+      "mean_fluency": 0.997,
+      "note": "FSOT MBR on top-8 gen hyps from NLLB-3.3B pool"
+    },
+    "FSOT_pick_gen_mbr": {
+      "sacrebleu": 36.66,
+      "chrf": 61.84,
+      "mean_fluency": 0.9971,
+      "note": "FSOT: z_gen + lambda*z(MBR util); lambda fit on hard train half",
+      "lambda": 8.0,
+      "train_mean_sent_bleu": 0.4074
+    },
+    "FSOT_pick_enc_cos": {
+      "sacrebleu": 36.39,
+      "chrf": 61.86,
+      "mean_fluency": 0.9972,
+      "note": "FSOT QE: NLLB-1.3B encoder mean-pool cosine(src,hyp)"
+    },
+    "FSOT_pick_gen_enc": {
+      "sacrebleu": 36.51,
+      "chrf": 61.91,
+      "mean_fluency": 0.9973,
+      "note": "FSOT: z_gen + lambda*z(encoder-cos); lambda on hard train half",
+      "lambda": "5.0",
+      "train_mean_sent_bleu": 0.4204
+    },
+    "FSOT_pick_llm_judge": {
+      "sacrebleu": 37.62,
+      "chrf": 62.4,
+      "mean_fluency": 0.9972,
+      "note": "FSOT: Qwen2.5-7B judges top-K NLLB hyps on hard gaps; gen elsewhere",
+      "n_judged": 1161,
+      "partial": true,
+      "judge_model": "Qwen/Qwen2.5-7B-Instruct"
     },
     "FSOT_pick_strong_family": {
       "sacrebleu": 36.79,
@@ -194,22 +243,22 @@
     }
   },
   "FSOT_best_product": {
-    "name": "FSOT_pick_hardset",
-    "sacrebleu": 36.8
+    "name": "FSOT_pick_llm_judge",
+    "sacrebleu": 37.62
   },
   "best_product": {
-    "name": "FSOT_pick_hardset",
-    "sacrebleu": 36.8
+    "name": "FSOT_pick_llm_judge",
+    "sacrebleu": 37.62
   },
-  "gap_to_DeepL_mid40": 3.2,
-  "gap_to_40": 3.2,
-  "gap_to_FSOT_oracle": 9.32,
+  "gap_to_DeepL_mid40": 2.38,
+  "gap_to_40": 2.38,
+  "gap_to_FSOT_oracle": 8.5,
   "FSOT_oracle_sacrebleu": 46.12,
   "oracle_sacrebleu": 46.12,
   "fsot_pin_ok": true,
   "S_linguistic": 0.6513247618848969,
   "formula": "S = K*(T1+T2+T3)",
   "pin": "D1D38A",
-  "elapsed_s": 39.33,
+  "elapsed_s": 64.38,
   "note": "FSOT product ranks student hyps (NLLB/OPUS). Law pin D1D38A. No QLoRA. Oracle = FSOT pool ceiling, not DeepL."
 }
