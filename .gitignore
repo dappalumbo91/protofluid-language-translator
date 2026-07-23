@@ -65,3 +65,11 @@ A Proto-Fluid Language Translator Grok.pdf*
 .env.*
 *.pem
 credentials.json
+
+# Local neural hyp / feat caches (multi-GB)
+pflt-Ada/data/hyp_cache/
+pflt-Ada/data/fsot_feat_cache/
+dist/
+data/expanded_gold_next20.jsonl
+data/math_microscope/
+

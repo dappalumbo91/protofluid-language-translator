@@ -1,0 +1,37 @@
+# Language `peo`
+
+gold_rows: ?
+
+## Linked senses (sample)
+
+- `𐏎` → [[god]]
+- `𐏋` → [[king]]
+- `𐏏` → [[earth]]
+- `𐎱𐎡𐎫𐎠` → [[father]]
+- `𐎶𐎠𐎫𐎠` → [[mother]]
+- `𐎱𐎠𐎭` → [[foot]]
+- `𐎠𐎿𐎶𐎠` → [[sky]]
+- `𐎭𐎿𐎫` → [[hand]]
+- `𐎶𐎼𐎫𐎡𐎹` → [[man]]
+- `𐎠𐎿𐎶𐎴` → [[sky]]
+- `𐏀𐎴` → [[man]]
+- `𐎣𐎢𐎳` → [[mountain]]
+- `𐎠𐎰𐎥` → [[stone]]
+- `𐎠𐎿𐎴` → [[stone]]
+- `𐎠𐎡𐎺` → [[one]]
+- `𐎶𐎴𐏃` → [[mind]]
+- `𐎼𐎢𐎨𐏃` → [[day]]
+- `𐏃𐎡𐎴𐎠` → [[enemy]]
+- `𐎭𐎼𐎹` → [[sea]]
+- `𐎱𐎿𐎫𐎡` → [[foot]]
+- `𐎰𐎼𐎭` → [[year]]
+- `𐎧𐏁𐎱` → [[night]]
+- `(w)r̥šā` → [[man]]
+- `Māhiš` → [[moon]]
+- `haxā` → [[friend]]
+- `vahuš` → [[good]]
+- `rauxšnā` → [[light]]
+- `mānā` → [[house]]
+- `𐎭𐎢𐏁𐎫𐎠` → [[friend]]
+- `rauxšnah` → [[light]]
+- `Naryasanhah` → [[name]]

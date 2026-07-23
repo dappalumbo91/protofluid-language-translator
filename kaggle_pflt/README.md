@@ -1,6 +1,8 @@
-# PFLT FSOT Benchmarks — v0.2.4
+# PFLT FSOT Benchmarks — v0.2.8
 
 **Protofluid Language Translator** under FSOT law \(S=K(T_1+T_2+T_3)\), authority pin **D1D38A**.
+
+**Naming:** **FSOT_*** = our product / ranking / pool oracle · **NLLB/OPUS** = competitor students · **DeepL** = external bar.
 
 This Kaggle dataset stores a **versioned, professional-grade benchmark snapshot** so results can be parked and resumed without re-running multi-hour GPU evals.
 
@@ -16,46 +18,42 @@ This Kaggle dataset stores a **versioned, professional-grade benchmark snapshot*
 
 | File | Description |
 |------|-------------|
-| `metrics_snapshot.json` | Machine-readable headline metrics + per-lang neural sacreBLEU |
-| `benchmark_summary.csv` | Flat table: chat neural + WMT14 de-en |
-| `STRONGER_STUDENT.md` | NLLB-1.3B + careful FT report |
-| `ACCURACY_DISTANCE.md` | Distance to competitive bars |
-| `DEEPL_CLOSE.md` | News mid-bar close status |
-| `M6_SOTA_PUSH.md` | Earlier SOTA push report |
-| `COMPETITIVE_POSITION.md` | Honest competitive framing vs Google/DeepL/NLLB |
-| `RELEASE_v0.2.0.md` | Release notes + resume checklist |
+| `metrics_snapshot.json` | Machine-readable headline metrics (v0.2.8) |
+| `benchmark_summary.csv` | Flat table (may lag; prefer JSON) |
+| `NEWS_DEEN_CACHED.md` | WMT14 de→en FSOT product vs students |
+| `LANGUAGE_BRAIN.md` / `LANGUAGE_SECOND_BRAIN.md` | FSOT sense/lang graph |
+| `VISION_SENSE_IDENTITY.md` | Vision lock (form→sense→form) |
+| `MEASUREMENT_2026-07-23.md` | Ada/SPARK + sense measurement |
+| `COMPETITIVE_POSITION.md` | Honest competitive framing |
 | `sample_densify.tsv` | Tiny form→gloss sample (demo only) |
 
-## Headline results (2026-07-22, v0.2.4)
+## Headline results (2026-07-23, v0.2.8)
 
 | Track | Metric | Value |
 |-------|--------|------:|
-| Catalog | 113 langs form→gloss product | ~99.99% |
+| Catalog | 113 langs form→gloss product/open | ~99.99% |
 | Chat open-set neural | mean best sacreBLEU (16 langs) | **50.19** |
 | Hybrid densify\|neural | mean sacreBLEU | **53.58** |
-| Hybrid product neural-first | sacreBLEU | **48.74** |
-| WMT14 de→en | **NLLB-1.3B** sacreBLEU | **35.63** |
-| WMT14 de→en | **product ens opus+nllb13** | **36.0** |
-| WMT14 de→en | oracle multi-student | **40.18** (clears mid) |
-| WMT14 de→en | opus-mt-de-en | 33.88 |
-| WMT14 de→en | NLLB-600M | 33.37 |
-| Gap to staged DeepL mid (40) | product sacre points | **4.0** |
-| % of mid-40 | product | **90%** |
-
-## Protocol (HF-aligned)
-
-- **WMT14** `wmt/wmt14` de-en test, n=3003, sacreBLEU, beams=5  
-- **Chat:** Tatoeba-style held sample, best of local OPUS-MT / mul-en / NLLB  
-- Students densify/decode only; law pin fixed  
-- GPU-safe: one model on GPU at a time; hyp cache on disk  
+| WMT14 de→en | **FSOT_pick_hardset** (product) | **36.80** |
+| WMT14 de→en | NLLB-3.3B student b8 | 36.74 |
+| WMT14 de→en | NLLB-1.3B student | 35.63 |
+| WMT14 de→en | OPUS-mt-de-en | 33.88 |
+| WMT14 de→en | **FSOT_oracle_pool** | **46.12** |
+| Gap to DeepL mid (~40) | FSOT product | **3.2** |
+| Gap to FSOT_oracle_pool | selection headroom | **9.32** |
+| % of mid-40 | FSOT product | **~92%** |
 
 ## Honesty
 
 - Commercial DeepL/Google **news** SOTA is **not claimed**.  
-- Product densify BLEU can include residual TM templates (product ceiling).  
-- Fair open-set chat = neural numbers above.  
-- Short WMT FT (v2–v4) did **not** beat base opus on test/holdout — not shipped.  
+- FSOT news product **ranks** student multi-hyp pools (NLLB/OPUS); it does **not** claim from-scratch replacement of Meta’s NLLB weights.  
+- Small edge over NLLB-3.3B single beam is **real under protocol** and **must not be oversold** as “FSOT alone is a 3.3B MT model.”  
+- Catalog form→gloss and classical/sense identity are **different games** where FSOT is strong/unique.  
 - FLORES not included (Hub data gated).  
+
+## Scientific standing (one paragraph)
+
+This is **measured, offline, protocol-bound systems work** with a pinned scalar law and public numbers—not vibes. Beating a strong open student **slightly via ranking** is incremental engineering success; owning a **113-lang densify catalog + sense interlingua + SPARK/law pin** is the distinctive scientific claim. Neither is delusion. Overclaiming would be.
 
 ## License
 

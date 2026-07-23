@@ -1,0 +1,36 @@
+{
+  "built_utc": "2026-07-23T18:53:20.126343+00:00",
+  "counts": {
+    "modern_labels": 1241,
+    "bindings_sense": 2090,
+    "senses_from_si": 253,
+    "prefer_rows": 177,
+    "wrong_sense": 30,
+    "asjp_accepted": 30,
+    "asjp_n_proposals": 320,
+    "asjp_n_accepted": 142,
+    "claims": 26,
+    "catalog_langs": 113,
+    "catalog_size": 113,
+    "catalog_all_ge_95": true,
+    "catalog_open_overall": 99.99,
+    "gold_core_langs": 20,
+    "fsot_law_S": 0.6513247618848969,
+    "fsot_authority_ok": true,
+    "fsot_domain_nodes": 44,
+    "fsot_lang_pathways": 126,
+    "fsot_sense_certs": 296,
+    "fsot_family_couplings": 10,
+    "gold_core_bindings": 5393
+  },
+  "n_nodes": 7906,
+  "n_edges": 23193,
+  "by_kind": {
+    "sense": 296,
+    "form": 7378,
+    "language": 126,
+    "note": 80,
+    "claim": 26
+  },
+  "pin_note": "FSOT pin D1D38A external; brain densifies knowledge only"
+}

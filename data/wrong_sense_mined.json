@@ -1,0 +1,532 @@
+{
+  "gold_n": 177,
+  "scan_counts": {
+    "ok": 316,
+    "mismatch": 247
+  },
+  "mismatch_unique_forms": 71,
+  "la_prefer_updated": 2,
+  "sense_prefer_tsv_rows": 177,
+  "top_wrong": [
+    {
+      "form": "gnomon",
+      "gold": "sundial",
+      "densify_top": [
+        [
+          "gnomon",
+          7
+        ]
+      ]
+    },
+    {
+      "form": "via",
+      "gold": "road",
+      "densify_top": [
+        [
+          "via",
+          4
+        ],
+        [
+          "you",
+          1
+        ],
+        [
+          "highway",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "pes",
+      "gold": "foot",
+      "densify_top": [
+        [
+          "peso (any of multiple currencies)",
+          2
+        ],
+        [
+          "name of the latin script letter p/p.",
+          2
+        ],
+        [
+          "tempo_pace_time",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "magister",
+      "gold": "master",
+      "densify_top": [
+        [
+          "alternative form of mǣġester",
+          2
+        ],
+        [
+          "magister",
+          2
+        ],
+        [
+          "teacher_instructor_educator_of_children_tutor_pe",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "terra",
+      "gold": "earth",
+      "densify_top": [
+        [
+          "land",
+          3
+        ],
+        [
+          "ground",
+          1
+        ],
+        [
+          "third-person singular past historic of terrer",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "homo",
+      "gold": "man",
+      "densify_top": [
+        [
+          "homo (homosexual)",
+          2
+        ],
+        [
+          "gay",
+          2
+        ],
+        [
+          "homosexual",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "gramma",
+      "gold": "letter",
+      "densify_top": [
+        [
+          "gram (unit of mass)",
+          2
+        ],
+        [
+          "gram_unit_of_mass",
+          1
+        ],
+        [
+          "alternative form of grammo: gram",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "patrem",
+      "gold": "father",
+      "densify_top": [
+        [
+          "patr",
+          2
+        ],
+        [
+          "floor",
+          1
+        ],
+        [
+          "palate (roof of the mouth)",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "ψυχή",
+      "gold": "soul",
+      "densify_top": [
+        [
+          "person",
+          2
+        ],
+        [
+          "(synecdochic) person",
+          1
+        ],
+        [
+          "butterfly",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "anima",
+      "gold": "soul",
+      "densify_top": [
+        [
+          "third-person singular present indicative",
+          2
+        ],
+        [
+          "air_breath",
+          1
+        ],
+        [
+          "alternative form of ame",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "vis",
+      "gold": "force",
+      "densify_top": [
+        [
+          "face",
+          2
+        ],
+        [
+          "see (visually)",
+          1
+        ],
+        [
+          "hang",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "corpus",
+      "gold": "body",
+      "densify_top": [
+        [
+          "corpus (a collection of writings)",
+          2
+        ],
+        [
+          "corpus",
+          1
+        ],
+        [
+          "corpus (collection of writings)",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "filia",
+      "gold": "daughter",
+      "densify_top": [
+        [
+          "third-person singular present indicative",
+          2
+        ],
+        [
+          "philia",
+          1
+        ],
+        [
+          "branch (location of an organisation with several",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "cor",
+      "gold": "heart",
+      "densify_top": [
+        [
+          "color / colour",
+          1
+        ],
+        [
+          "verbal noun of fo·ceird",
+          1
+        ],
+        [
+          "horn (musical instrument used to produce sound)",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "dea",
+      "gold": "goddess",
+      "densify_top": [
+        [
+          "name of the latin script letter d/d.",
+          1
+        ],
+        [
+          "abbreviation of diethanolamine",
+          1
+        ],
+        [
+          "female given name from latin",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "mens",
+      "gold": "mind",
+      "densify_top": [
+        [
+          "necklace",
+          1
+        ],
+        [
+          "men",
+          1
+        ],
+        [
+          "lie (say something untrue)",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "mons",
+      "gold": "mountain",
+      "densify_top": [
+        [
+          "world",
+          1
+        ],
+        [
+          "mons",
+          1
+        ],
+        [
+          "sandy soil",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "animus",
+      "gold": "soul",
+      "densify_top": [
+        [
+          "bravado",
+          2
+        ],
+        [
+          "animus (the masculine aspect of the feminine psy",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "montem",
+      "gold": "mountain",
+      "densify_top": [
+        [
+          "mns",
+          2
+        ],
+        [
+          "go up",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "mare",
+      "gold": "sea",
+      "densify_top": [
+        [
+          "betina kuda",
+          1
+        ],
+        [
+          "mare (evil spirit thought to torment people in t",
+          1
+        ],
+        [
+          "evil",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "dies",
+      "gold": "day",
+      "densify_top": [
+        [
+          "die",
+          1
+        ],
+        [
+          "alternative form of dieses",
+          1
+        ],
+        [
+          "suckle",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "amor",
+      "gold": "love",
+      "densify_top": [
+        [
+          "type of bird (e.g. thrush or bunting)",
+          1
+        ],
+        [
+          "surname",
+          1
+        ],
+        [
+          "cupid",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "vita",
+      "gold": "life",
+      "densify_top": [
+        [
+          "know",
+          1
+        ],
+        [
+          "vita (hagiography)",
+          1
+        ],
+        [
+          "definite singular",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "caput",
+      "gold": "head",
+      "densify_top": [
+        [
+          "physical_life",
+          1
+        ],
+        [
+          "circa",
+          1
+        ],
+        [
+          "that which is located above",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "luna",
+      "gold": "moon",
+      "densify_top": [
+        [
+          "a_city_in_etruria_situated_on_the_left_bank_of_t",
+          1
+        ],
+        [
+          "natural satellite",
+          1
+        ],
+        [
+          "luna",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "sol",
+      "gold": "sun",
+      "densify_top": [
+        [
+          "alone",
+          1
+        ],
+        [
+          "only",
+          1
+        ],
+        [
+          "sol (a musical note)",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "soul",
+      "gold": "soul",
+      "densify_top": [
+        [
+          "alternative form of sol",
+          1
+        ],
+        [
+          "seoul (the capital city of south korea)",
+          1
+        ],
+        [
+          "post-1990 spelling of soûl",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "lingua",
+      "gold": "language",
+      "densify_top": [
+        [
+          "tongue (flexible muscular organ in the mouth)",
+          1
+        ],
+        [
+          "tongue",
+          1
+        ],
+        [
+          "pre-reform spelling (used until 1943 in brazil a",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "verbum",
+      "gold": "word",
+      "densify_top": [
+        [
+          "verb",
+          2
+        ],
+        [
+          "dated form of verb (“verb”)",
+          1
+        ]
+      ]
+    },
+    {
+      "form": "mors",
+      "gold": "death",
+      "densify_top": [
+        [
+          "bit",
+          1
+        ],
+        [
+          "first-person singular present indicative",
+          1
+        ],
+        [
+          "walrus (arctic mammal)",
+          1
+        ]
+      ]
+    }
+  ]
+}

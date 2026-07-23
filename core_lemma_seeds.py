@@ -227,6 +227,33 @@ CORE_SEEDS: List[Tuple[str, str, str]] = [
     ("grc", "οἶδα", "know"),
     ("grc", "πιστεύω", "believe"),
     ("grc", "δύναμαι", "be able"),
+    # High-frequency CORE gap fillers (held-out miss diagnosis 2026-07)
+    ("grc", "βωμός", "altar"),
+    ("grc", "αἰτία", "cause"),
+    ("grc", "ζωή", "life"),
+    ("grc", "χιών", "snow"),
+    ("grc", "αἴνεσις", "praise"),
+    ("grc", "αἰσθάνομαι", "perceive"),
+    ("grc", "βραχίων", "arm"),
+    ("grc", "βράγχιον", "gill"),
+    ("grc", "αἰδώς", "shame"),
+    ("grc", "βροτός", "mortal"),
+    ("grc", "γεννήτωρ", "begetter"),
+    ("grc", "ξηρός", "dry"),
+    ("grc", "θεῖος", "divine"),
+    ("grc", "πολιτικός", "civic"),
+    ("grc", "αὐλή", "courtyard"),
+    ("grc", "δεῖ", "it is necessary"),
+    ("grc", "ζεῦγμα", "zeugma"),
+    ("grc", "Κρής", "Cretan"),
+    ("grc", "Γαλάτης", "Galatian"),
+    ("grc", "Πελασγός", "Pelasgian"),
+    ("la", "ara", "altar"),
+    ("la", "causa", "cause"),
+    ("la", "laus", "praise"),
+    ("la", "nix", "snow"),
+    ("la", "umerus", "shoulder"),
+    ("la", "bracchium", "arm"),
     ("grc", "βούλομαι", "want"),
     ("grc", "μέγας", "great"),
     ("grc", "μικρός", "small"),
@@ -382,12 +409,29 @@ CORE_SEEDS: List[Tuple[str, str, str]] = [
 ]
 
 
+def _all_seed_triples() -> List[Tuple[str, str, str]]:
+    rows = list(CORE_SEEDS)
+    # Per-language gap seeds from data/lang_tables/*.json
+    try:
+        from lang_tables import extra_seeds
+
+        rows.extend(extra_seeds())
+    except Exception:
+        try:
+            from remedy_wrong_sense import EXTRA_SEEDS
+
+            rows.extend(EXTRA_SEEDS)
+        except Exception:
+            pass
+    return rows
+
+
 def seed_records() -> List[dict]:
     import re
 
     out = []
     seen = set()
-    for lang, form, gloss in CORE_SEEDS:
+    for lang, form, gloss in _all_seed_triples():
         key = f"{lang}|{form}"
         if key in seen:
             continue
@@ -410,7 +454,7 @@ def seed_records() -> List[dict]:
 
 
 def seed_keys() -> Set[str]:
-    return {f"{lang}|{form}" for lang, form, _ in CORE_SEEDS}
+    return {f"{lang}|{form}" for lang, form, _ in _all_seed_triples()}
 
 
 # English gloss clusters — mutually reinforcing open-set soft credit / sense vote

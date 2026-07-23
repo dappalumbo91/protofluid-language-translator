@@ -52,20 +52,23 @@ model-index:
           split: test
         metrics:
           - type: sacrebleu
-            value: 36.0
-            name: sacreBLEU (product ens opus+NLLB-1.3B gen-score)
+            value: 36.8
+            name: sacreBLEU (FSOT_pick_hardset product over NLLB-3.3B multi-hyp pool)
+          - type: sacrebleu
+            value: 36.74
+            name: sacreBLEU (NLLB-200-3.3B student, beams=8)
+          - type: sacrebleu
+            value: 46.12
+            name: sacreBLEU (FSOT_oracle_pool — selection ceiling)
           - type: sacrebleu
             value: 35.63
             name: sacreBLEU (NLLB-200-1.3B, beams=5)
           - type: sacrebleu
             value: 33.88
-            name: sacreBLEU (opus-mt-de-en student, beams=5)
+            name: sacreBLEU (OPUS-mt-de-en student, beams=5)
           - type: sacrebleu
             value: 33.37
             name: sacreBLEU (NLLB-200-distilled-600M, beams=5)
-          - type: chrf
-            value: 61.06
-            name: chrF (NLLB-1.3B)
       - task:
           type: translation
           name: Machine Translation (chat / Tatoeba-style open-set)
@@ -83,10 +86,12 @@ model-index:
 
 # Protofluid Language Translator (PFLT) — FSOT-native
 
-**Version:** `0.2.4` · **Snapshot:** 2026-07-22  
+**Version:** `0.2.8` · **Snapshot:** 2026-07-23  
 **Author:** dappalumbo91  
 **Code:** [github.com/dappalumbo91/protofluid-language-translator](https://github.com/dappalumbo91/protofluid-language-translator)  
 **Dataset mirror:** [dappalumbo91/pflt-fsot-sample](https://huggingface.co/datasets/dappalumbo91/pflt-fsot-sample)
+
+**Naming:** **FSOT_*** = our product/ranking · **NLLB/OPUS** = competitor student generators · **DeepL** = external bar only.
 
 ---
 
@@ -102,10 +107,11 @@ S = K(T_1 + T_2 + T_3)
 
 It is **not** “another LLM wrapper.” It is:
 
-1. **Form→gloss catalog densify** under fixed law (113 languages, near-ceiling product/open inventory)  
-2. **Neural students** (local Helsinki OPUS-MT, opus-mt-mul-en, NLLB-600M / **NLLB-1.3B**) for full-sentence fluency  
-3. **Hybrid path** — densify for classical/short chat; neural for long/news/CJK  
-4. **Ada/SPARK product binary** in the GitHub repo (Python = data factory)
+1. **Form→gloss catalog densify** under fixed law (**113** languages, near-ceiling product/open inventory)  
+2. **FSOT Language Second Brain** — form↔sense↔language graph + FSOT pathway edges  
+3. **Neural students** (OPUS-MT, NLLB-600M / 1.3B / **3.3B**) for full-sentence fluency  
+4. **FSOT ranking** over student multi-hyp pools (not from-scratch NMT weights)  
+5. **Ada/SPARK product binary** in the GitHub repo (Python = data factory)
 
 ### Honest claims (read first)
 
@@ -113,15 +119,17 @@ It is **not** “another LLM wrapper.” It is:
 |-------|--------|
 | Google / DeepL commercial **news** SOTA | **Not claimed** |
 | Chat-domain open-set MT (Tatoeba-style) | **Competitive mid/high open MT** (~50 mean sacreBLEU) |
-| WMT14 de→en news | **90% of mid-40** (product **36.0** with NLLB-1.3B; oracle **40.18** clears mid) |
-| Form→gloss multi-lang catalog | **Strong / near-ceiling** (~99.99% on 113 langs) |
-| FSOT law uniqueness | **Category of one** |
+| WMT14 de→en **FSOT product** | **36.80** (`FSOT_pick_hardset`) · ~**92%** of DeepL mid-40 |
+| vs **NLLB-3.3B** single beam | FSOT product **edges** multi-hyp ranking (**36.80** vs **36.74**) — students still generate |
+| **FSOT_oracle_pool** (selection ceiling) | **46.12** — headroom is ranking, not more beams alone |
+| Form→gloss multi-lang catalog | **Strong / near-ceiling** (~99.99% on **113** langs) |
+| FSOT law uniqueness | **Category of one** (pinned \(S=K(T_1+T_2+T_3)\)) |
 
 Product densify BLEU can look extremely high when residual translation-memory templates are installed for known chat — that is a **product ceiling**, not open-set generalization. Fair open-set bars are the **neural student** numbers below.
 
 ---
 
-## Benchmarks (v0.2.4)
+## Benchmarks (v0.2.8)
 
 Protocol details and JSON: `metrics_snapshot.json` in this repo.
 
@@ -167,13 +175,22 @@ Best of local students per language, ≤200 sentences/lang, **beams=5**, sacreBL
 
 ### B2 — News (WMT14 German→English test, n=3003)
 
-| System | sacreBLEU | BLEU-4 | chrF |
-|--------|----------:|-------:|-----:|
-| **Helsinki-NLP/opus-mt-de-en** (student, beams=5) | **33.88** | 33.38 | 59.92 |
-| facebook/nllb-200-distilled-600M (beams=5) | 33.37 | 33.81 | 59.27 |
-| Staged DeepL-class mid bar | 40.0 | — | — |
-| Stretch SOTA bar | 48.0 | — | — |
-| **Gap to 40 / 48** | **6.12 / 14.12** | — | — |
+| System | Owner | sacreBLEU |
+|--------|--------|----------:|
+| **FSOT_pick_hardset** (product) | **FSOT** | **36.80** |
+| FSOT_product_gen | **FSOT** | 36.79 |
+| NLLB-200-3.3B (beams=8) | Meta student | 36.74 |
+| NLLB-200-3.3B (beams=5) | Meta student | 36.69 |
+| NLLB-200-1.3B (beams=5) | Meta student | 35.63 |
+| OPUS-mt-de-en (beams=5) | Helsinki student | 33.88 |
+| NLLB-600M distilled | Meta student | 33.37 |
+| **FSOT_oracle_pool** | **FSOT** ceiling | **46.12** |
+| DeepL-class mid bar | external | ~40 |
+| Stretch SOTA bar | external | ~48 |
+| Gap FSOT product → DeepL mid-40 | | **3.2** |
+| Gap FSOT product → FSOT_oracle_pool | selection | **9.32** |
+
+See `NEWS_DEEN_CACHED.md`, `LANGUAGE_SECOND_BRAIN.md`, `metrics_snapshot.json`.
 
 ### Stage ladder
 

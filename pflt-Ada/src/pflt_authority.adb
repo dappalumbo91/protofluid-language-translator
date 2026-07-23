@@ -2,13 +2,26 @@ package body PFLT_Authority
   with SPARK_Mode => On
 is
 
-   function Pad48 (S : String) return String is
-      R : String (1 .. 48) := (others => ' ');
-      N : constant Natural := Natural'Min (S'Length, 48);
+   subtype Note_Str is String (1 .. 48);
+
+   function Pad48 (S : String) return Note_Str
+     with Global => null
+   is
+      R : Note_Str := (others => ' ');
+      N : Natural;
    begin
-      if N > 0 then
-         R (1 .. N) := S (S'First .. S'First + N - 1);
+      if S'Length = 0 then
+         return R;
       end if;
+      if S'Length >= 48 then
+         N := 48;
+      else
+         N := S'Length;
+      end if;
+      --  Copy with bounds safe for any String slice
+      for I in 1 .. N loop
+         R (I) := S (S'First + (I - 1));
+      end loop;
       return R;
    end Pad48;
 

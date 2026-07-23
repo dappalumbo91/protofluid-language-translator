@@ -2,23 +2,259 @@
   "lang": "la",
   "description": "Translation-layer tables for la (load via lang_tables.py)",
   "form_sense_prefer": {
-    "templum": ["temple", "shrine"],
-    "aedes": ["temple", "shrine", "house"],
-    "aqua": ["water"],
-    "manus": ["hand"],
-    "lingua": ["language", "tongue"],
-    "verbum": ["word"],
-    "deus": ["god"],
-    "dea": ["goddess"],
-    "anima": ["soul"],
-    "animus": ["soul", "mind"],
-    "rex": ["king"],
-    "urbs": ["city"],
-    "bellum": ["war"],
-    "lex": ["law"],
-    "vita": ["life"],
-    "terra": ["earth"],
-    "tempus": ["time"]
+    "templum": [
+      "temple",
+      "shrine"
+    ],
+    "aedes": [
+      "temple",
+      "shrine",
+      "house"
+    ],
+    "aqua": [
+      "water"
+    ],
+    "manus": [
+      "hand"
+    ],
+    "lingua": [
+      "language",
+      "tongue"
+    ],
+    "verbum": [
+      "word"
+    ],
+    "deus": [
+      "god"
+    ],
+    "dea": [
+      "goddess"
+    ],
+    "anima": [
+      "soul"
+    ],
+    "animus": [
+      "soul",
+      "mind"
+    ],
+    "rex": [
+      "king"
+    ],
+    "urbs": [
+      "city"
+    ],
+    "bellum": [
+      "war"
+    ],
+    "lex": [
+      "law"
+    ],
+    "vita": [
+      "life"
+    ],
+    "terra": [
+      "earth"
+    ],
+    "tempus": [
+      "time"
+    ],
+    "sol": [
+      "sun"
+    ],
+    "solem": [
+      "sun"
+    ],
+    "mater": [
+      "mother"
+    ],
+    "matrem": [
+      "mother"
+    ],
+    "mors": [
+      "death"
+    ],
+    "mortem": [
+      "death"
+    ],
+    "pater": [
+      "father"
+    ],
+    "patrem": [
+      "father"
+    ],
+    "luna": [
+      "moon"
+    ],
+    "dies": [
+      "day"
+    ],
+    "nox": [
+      "night"
+    ],
+    "noctem": [
+      "night"
+    ],
+    "annus": [
+      "year"
+    ],
+    "domus": [
+      "house"
+    ],
+    "mons": [
+      "mountain"
+    ],
+    "montem": [
+      "mountain"
+    ],
+    "caelum": [
+      "sky"
+    ],
+    "ignis": [
+      "fire"
+    ],
+    "mare": [
+      "sea"
+    ],
+    "flumen": [
+      "river"
+    ],
+    "homo": [
+      "man"
+    ],
+    "mulier": [
+      "woman"
+    ],
+    "puer": [
+      "boy"
+    ],
+    "filius": [
+      "son"
+    ],
+    "filia": [
+      "daughter"
+    ],
+    "amicus": [
+      "friend"
+    ],
+    "hostis": [
+      "enemy"
+    ],
+    "populus": [
+      "people"
+    ],
+    "pax": [
+      "peace"
+    ],
+    "amor": [
+      "love"
+    ],
+    "sanguis": [
+      "blood"
+    ],
+    "cor": [
+      "heart"
+    ],
+    "oculus": [
+      "eye"
+    ],
+    "pes": [
+      "foot"
+    ],
+    "caput": [
+      "head"
+    ],
+    "corpus": [
+      "body"
+    ],
+    "vox": [
+      "voice"
+    ],
+    "nomen": [
+      "name"
+    ],
+    "locus": [
+      "place"
+    ],
+    "via": [
+      "road"
+    ],
+    "agricultura": [
+      "agriculture",
+      "tillage"
+    ],
+    "casa": [
+      "house",
+      "cottage"
+    ],
+    "cogo": [
+      "compel"
+    ],
+    "deinos": [
+      "terrible"
+    ],
+    "despotes": [
+      "master"
+    ],
+    "dirus": [
+      "terrible"
+    ],
+    "divine": [
+      "divine"
+    ],
+    "dominus": [
+      "master"
+    ],
+    "entropy": [
+      "entropy"
+    ],
+    "gnomon": [
+      "sundial"
+    ],
+    "goeteia": [
+      "witchcraft"
+    ],
+    "gramma": [
+      "letter"
+    ],
+    "greek": [
+      "greek"
+    ],
+    "hand": [
+      "hand"
+    ],
+    "hands": [
+      "hands"
+    ],
+    "latin": [
+      "latin"
+    ],
+    "littera": [
+      "letter"
+    ],
+    "magister": [
+      "master"
+    ],
+    "mens": [
+      "mind"
+    ],
+    "sententia": [
+      "opinion"
+    ],
+    "soul": [
+      "soul"
+    ],
+    "temple": [
+      "temple"
+    ],
+    "vis": [
+      "force"
+    ],
+    "water": [
+      "water"
+    ],
+    "zipf": [
+      "zipf"
+    ]
   },
   "seeds": [
     {

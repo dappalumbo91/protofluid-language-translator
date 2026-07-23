@@ -1,0 +1,198 @@
+# PFLT Language Second Brain
+
+Built: `2026-07-23T18:53:20.126343+00:00`
+
+Machine graph: `data/language_brain/nodes.jsonl` + `edges.jsonl`
+
+## Core senses
+
+- [[water]] — 54 langs
+- [[one]] — 53 langs
+- [[house]] — 53 langs
+- [[eye]] — 53 langs
+- [[blood]] — 53 langs
+- [[two]] — 52 langs
+- [[night]] — 52 langs
+- [[man]] — 52 langs
+- [[head]] — 52 langs
+- [[hand]] — 52 langs
+- [[name]] — 51 langs
+- [[heart]] — 51 langs
+- [[fire]] — 51 langs
+- [[day]] — 51 langs
+- [[three]] — 50 langs
+- [[king]] — 50 langs
+- [[good]] — 50 langs
+- [[god]] — 50 langs
+- [[father]] — 50 langs
+- [[dog]] — 50 langs
+- [[woman]] — 49 langs
+- [[tree]] — 49 langs
+- [[stone]] — 49 langs
+- [[mother]] — 49 langs
+- [[light]] — 49 langs
+- [[friend]] — 49 langs
+- [[earth]] — 49 langs
+- [[river]] — 48 langs
+- [[old]] — 48 langs
+- [[sea]] — 47 langs
+- [[new]] — 47 langs
+- [[mountain]] — 47 langs
+- [[foot]] — 47 langs
+- [[fish]] — 47 langs
+- [[bird]] — 47 langs
+- [[word]] — 46 langs
+- [[sun]] — 46 langs
+- [[small]] — 46 langs
+- [[moon]] — 46 langs
+- [[life]] — 45 langs
+- [[enemy]] — 45 langs
+- [[bread]] — 45 langs
+- [[year]] — 44 langs
+- [[death]] — 44 langs
+- [[body]] — 44 langs
+- [[cold]] — 43 langs
+- [[sky]] — 42 langs
+- [[child]] — 42 langs
+- [[bad]] — 42 langs
+- [[cat]] — 41 langs
+- [[road]] — 39 langs
+- [[people]] — 39 langs
+- [[hot]] — 38 langs
+- [[dark]] — 38 langs
+- [[soul]] — 37 langs
+- [[mind]] — 37 langs
+- [[language]] — 36 langs
+- [[big]] — 36 langs
+- [[meat]] — 35 langs
+- [[path]] — 34 langs
+- [[cell]] — 25 langs
+
+## Languages
+
+- [[af]]
+- [[akk]]
+- [[alacatlatzala_mixtec]]
+- [[am]]
+- [[ang]]
+- [[ar]]
+- [[arc]]
+- [[az]]
+- [[baygo]]
+- [[baygo_2]]
+- [[be]]
+- [[bg]]
+- [[bn]]
+- [[ca]]
+- [[ceb]]
+- [[chuka]]
+- [[cop]]
+- [[cosoltepec_mixtec]]
+- [[cs]]
+- [[cu]]
+- [[cy]]
+- [[da]]
+- [[de]]
+- [[deccan]]
+- [[egy]]
+- [[el]]
+- [[en]]
+- [[enm]]
+- [[eo]]
+- [[es]]
+- [[et]]
+- [[eu]]
+- [[fa]]
+- [[fi]]
+- [[fr]]
+- [[frm]]
+- [[fro]]
+- [[ga]]
+- [[gd]]
+- [[gikuyu_2]]
+- [[gl]]
+- [[gmh]]
+- [[goh]]
+- [[got]]
+- [[grc]]
+- [[gu]]
+- [[ha]]
+- [[haw]]
+- [[he]]
+- [[hi]]
+- [[hit]]
+- [[hu]]
+- [[hy]]
+- [[id]]
+- [[is]]
+- [[it]]
+- [[ja]]
+- [[jv]]
+- [[ka]]
+- [[kk]]
+- [[km]]
+- [[ko]]
+- [[la]]
+- [[lt]]
+- [[lv]]
+- [[mga]]
+- [[mk]]
+- [[ml]]
+- [[mn]]
+- [[mr]]
+- [[ms]]
+- [[my]]
+- [[nb]]
+- [[ne]]
+- [[nl]]
+- [[nn]]
+- [[non]]
+- [[nyalgulgule]]
+- [[oc]]
+- [[orv]]
+- [[osp]]
+- [[osx]]
+- [[pa]]
+- [[pal]]
+- [[peo]]
+- [[phn]]
+- [[pi]]
+- [[pl]]
+- [[pro]]
+- [[ps]]
+- [[pt]]
+- [[qu]]
+- [[ro]]
+- [[roa-opt]]
+- [[ru]]
+- [[san]]
+- [[san_francisco_sayultepec_mixtec]]
+- [[san_jeronimo_xayacatlan_mixtec]]
+- [[santiago_cacaloxtepec_mixtec]]
+- [[sga]]
+- [[sh]]
+- [[si]]
+- [[sk]]
+- [[sl]]
+- [[so]]
+- [[sq]]
+- [[sum]]
+- [[sv]]
+- [[sw]]
+- [[syc]]
+- [[ta]]
+- [[te]]
+- [[th]]
+- [[tl]]
+- [[tr]]
+- [[uga]]
+- [[uk]]
+- [[ur]]
+- [[varhadi_nagpuri]]
+- [[vi]]
+- [[xcl]]
+- [[xh]]
+- [[yi]]
+- [[yo]]
+- [[zh]]
+- [[zu]]

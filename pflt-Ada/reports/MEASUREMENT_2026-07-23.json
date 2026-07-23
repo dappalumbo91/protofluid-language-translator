@@ -1,0 +1,307 @@
+{
+  "built_utc": "2026-07-23T12:11:59Z",
+  "product": "Protofluid Ada/SPARK V6 + sense interlingua",
+  "law": {
+    "pin_ok": true,
+    "sha256": "D1D38A185487B452E470AC68ECE2EB45AEB1CA9CE25FC9BF9564C19633FFBE70",
+    "S_linguistic": 0.6513247618848969,
+    "authority": "archive_D1D38A"
+  },
+  "sense_smoke": {
+    "passed": 10,
+    "total": 10,
+    "pct": 100.0
+  },
+  "water_identity_matrix": {
+    "ok": 30,
+    "total": 30,
+    "pct": 100.0,
+    "cases": [
+      {
+        "src": "en",
+        "tgt": "la",
+        "in": "water",
+        "out": "aqua",
+        "ok": true
+      },
+      {
+        "src": "en",
+        "tgt": "de",
+        "in": "water",
+        "out": "wasser",
+        "ok": true
+      },
+      {
+        "src": "en",
+        "tgt": "fr",
+        "in": "water",
+        "out": "eau",
+        "ok": true
+      },
+      {
+        "src": "en",
+        "tgt": "es",
+        "in": "water",
+        "out": "agua",
+        "ok": true
+      },
+      {
+        "src": "en",
+        "tgt": "grc",
+        "in": "water",
+        "out": "ὕδωρ",
+        "ok": true
+      },
+      {
+        "src": "la",
+        "tgt": "en",
+        "in": "aqua",
+        "out": "water",
+        "ok": true
+      },
+      {
+        "src": "la",
+        "tgt": "de",
+        "in": "aqua",
+        "out": "wasser",
+        "ok": true
+      },
+      {
+        "src": "la",
+        "tgt": "fr",
+        "in": "aqua",
+        "out": "eau",
+        "ok": true
+      },
+      {
+        "src": "la",
+        "tgt": "es",
+        "in": "aqua",
+        "out": "agua",
+        "ok": true
+      },
+      {
+        "src": "la",
+        "tgt": "grc",
+        "in": "aqua",
+        "out": "ὕδωρ",
+        "ok": true
+      },
+      {
+        "src": "de",
+        "tgt": "en",
+        "in": "Wasser",
+        "out": "water",
+        "ok": true
+      },
+      {
+        "src": "de",
+        "tgt": "la",
+        "in": "Wasser",
+        "out": "aqua",
+        "ok": true
+      },
+      {
+        "src": "de",
+        "tgt": "fr",
+        "in": "Wasser",
+        "out": "eau",
+        "ok": true
+      },
+      {
+        "src": "de",
+        "tgt": "es",
+        "in": "Wasser",
+        "out": "agua",
+        "ok": true
+      },
+      {
+        "src": "de",
+        "tgt": "grc",
+        "in": "Wasser",
+        "out": "ὕδωρ",
+        "ok": true
+      },
+      {
+        "src": "fr",
+        "tgt": "en",
+        "in": "eau",
+        "out": "water",
+        "ok": true
+      },
+      {
+        "src": "fr",
+        "tgt": "la",
+        "in": "eau",
+        "out": "aqua",
+        "ok": true
+      },
+      {
+        "src": "fr",
+        "tgt": "de",
+        "in": "eau",
+        "out": "wasser",
+        "ok": true
+      },
+      {
+        "src": "fr",
+        "tgt": "es",
+        "in": "eau",
+        "out": "agua",
+        "ok": true
+      },
+      {
+        "src": "fr",
+        "tgt": "grc",
+        "in": "eau",
+        "out": "ὕδωρ",
+        "ok": true
+      },
+      {
+        "src": "es",
+        "tgt": "en",
+        "in": "agua",
+        "out": "water",
+        "ok": true
+      },
+      {
+        "src": "es",
+        "tgt": "la",
+        "in": "agua",
+        "out": "aqua",
+        "ok": true
+      },
+      {
+        "src": "es",
+        "tgt": "de",
+        "in": "agua",
+        "out": "wasser",
+        "ok": true
+      },
+      {
+        "src": "es",
+        "tgt": "fr",
+        "in": "agua",
+        "out": "eau",
+        "ok": true
+      },
+      {
+        "src": "es",
+        "tgt": "grc",
+        "in": "agua",
+        "out": "ὕδωρ",
+        "ok": true
+      },
+      {
+        "src": "grc",
+        "tgt": "en",
+        "in": "ὕδωρ",
+        "out": "water",
+        "ok": true
+      },
+      {
+        "src": "grc",
+        "tgt": "la",
+        "in": "ὕδωρ",
+        "out": "aqua",
+        "ok": true
+      },
+      {
+        "src": "grc",
+        "tgt": "de",
+        "in": "ὕδωρ",
+        "out": "wasser",
+        "ok": true
+      },
+      {
+        "src": "grc",
+        "tgt": "fr",
+        "in": "ὕδωρ",
+        "out": "eau",
+        "ok": true
+      },
+      {
+        "src": "grc",
+        "tgt": "es",
+        "in": "ὕδωρ",
+        "out": "agua",
+        "ok": true
+      }
+    ]
+  },
+  "sense_stats": {
+    "n_senses": 240,
+    "n_form_bindings": 861,
+    "n_index_keys": 816,
+    "langs": [
+      "ang",
+      "ar",
+      "de",
+      "en",
+      "es",
+      "fr",
+      "grc",
+      "he",
+      "it",
+      "ja",
+      "la",
+      "nl",
+      "pl",
+      "pt",
+      "ru",
+      "sv",
+      "zh"
+    ]
+  },
+  "ada_open_set": {
+    "n": 8000,
+    "exact": 7804,
+    "soft": 13,
+    "miss": 183,
+    "exact_rate": 0.9755,
+    "partial_rate": 0.977125,
+    "store_entries": 11943799,
+    "elapsed_s": 359.6
+  },
+  "ada_product": {
+    "n": 8000,
+    "exact": 7161,
+    "soft": 25,
+    "miss": 814,
+    "exact_rate": 0.895125,
+    "partial_rate": 0.89825,
+    "store_entries": 14165729,
+    "elapsed_s": 914.9
+  },
+  "competitors": {
+    "note": "Different games; honest split",
+    "game_A_form_gloss": {
+      "PFLT_open_set_partial": 97.71,
+      "PFLT_product_partial": 89.83,
+      "PFLT_catalog_lang_count": 113,
+      "Google_Translate_lang_count_approx": 249,
+      "NLLB_lang_count_approx": 200,
+      "DeepL_lang_count_approx": "30-100",
+      "winner_on_form_gloss_inventory": "PFLT (near-ceiling offline densify)",
+      "winner_on_lang_breadth": "Google / NLLB"
+    },
+    "game_B_sentence_mt": {
+      "PFLT_chat_neural_mean_sacre": 50.19,
+      "PFLT_wmt14_deen_best_product": 36.95,
+      "NLLB_1.3B_wmt14_deen": 35.63,
+      "NLLB_3.3B_wmt14_deen_top1": 36.74,
+      "DeepL_class_mid_bar": 40.0,
+      "Google_literature_wmt14_deen_approx": "35-40 class",
+      "winner_on_news_sentence_fluency": "DeepL / large commercial MT (still ahead)",
+      "PFLT_unique": "FSOT pin D1D38A, classical/visual, offline densify, SPARK law core"
+    }
+  },
+  "goals": {
+    "open_set_partial_ge_70": true,
+    "product_partial_ge_90": false,
+    "product_gap_to_90": 0.175,
+    "sense_smoke_100": true,
+    "live_pin_d1d38a": true
+  },
+  "elapsed_measure_s": 0.07
+}

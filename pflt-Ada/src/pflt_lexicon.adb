@@ -102,6 +102,97 @@ is
          return Pad_Gloss ("fire");
       elsif F = "ventus" then
          return Pad_Gloss ("wind");
+      --  Sense-prefer (beat densify polysemy drift)
+      elsif F = "sol" or else F = "solem" then
+         return Pad_Gloss ("sun");
+      elsif F = "mater" or else F = "matrem" then
+         return Pad_Gloss ("mother");
+      elsif F = "mors" or else F = "mortem" then
+         return Pad_Gloss ("death");
+      elsif F = "pater" or else F = "patrem" then
+         return Pad_Gloss ("father");
+      elsif F = "dies" then
+         return Pad_Gloss ("day");
+      elsif F = "nox" or else F = "noctem" then
+         return Pad_Gloss ("night");
+      elsif F = "annus" then
+         return Pad_Gloss ("year");
+      elsif F = "domus" then
+         return Pad_Gloss ("house");
+      elsif F = "mons" or else F = "montem" then
+         return Pad_Gloss ("mountain");
+      elsif F = "puer" then
+         return Pad_Gloss ("boy");
+      elsif F = "amicus" then
+         return Pad_Gloss ("friend");
+      elsif F = "hostis" then
+         return Pad_Gloss ("enemy");
+      elsif F = "populus" then
+         return Pad_Gloss ("people");
+      elsif F = "urbs" then
+         return Pad_Gloss ("city");
+      elsif F = "bellum" then
+         return Pad_Gloss ("war");
+      elsif F = "caelum" then
+         return Pad_Gloss ("sky");
+      elsif F = "flumen" then
+         return Pad_Gloss ("river");
+      elsif F = "sanguis" then
+         return Pad_Gloss ("blood");
+      elsif F = "cor" then
+         return Pad_Gloss ("heart");
+      elsif F = "oculus" then
+         return Pad_Gloss ("eye");
+      elsif F = "pes" or else F = "pedem" then
+         return Pad_Gloss ("foot");
+      elsif F = "caput" then
+         return Pad_Gloss ("head");
+      elsif F = "corpus" then
+         return Pad_Gloss ("body");
+      elsif F = "vox" then
+         return Pad_Gloss ("voice");
+      elsif F = "nomen" then
+         return Pad_Gloss ("name");
+      elsif F = "tempus" then
+         return Pad_Gloss ("time");
+      elsif F = "locus" then
+         return Pad_Gloss ("place");
+      elsif F = "homo" then
+         return Pad_Gloss ("man");
+      elsif F = "mulier" then
+         return Pad_Gloss ("woman");
+      elsif F = "dea" then
+         return Pad_Gloss ("goddess");
+      elsif F = "filius" then
+         return Pad_Gloss ("son");
+      elsif F = "filia" then
+         return Pad_Gloss ("daughter");
+      elsif F = "via" then
+         return Pad_Gloss ("road");
+      elsif F = "sun" then
+         return Pad_Gloss ("sun");
+      elsif F = "mother" then
+         return Pad_Gloss ("mother");
+      elsif F = "death" then
+         return Pad_Gloss ("death");
+      elsif F = "father" then
+         return Pad_Gloss ("father");
+      elsif F = "homo" then
+         return Pad_Gloss ("man");
+      elsif F = "corpus" then
+         return Pad_Gloss ("body");
+      elsif F = "anima" then
+         return Pad_Gloss ("soul");
+      elsif F = "vis" then
+         return Pad_Gloss ("force");
+      elsif F = "magister" then
+         return Pad_Gloss ("master");
+      elsif F = "via" then
+         return Pad_Gloss ("road");
+      elsif F = "agricultura" then
+         return Pad_Gloss ("agriculture");
+      elsif F = "gramma" then
+         return Pad_Gloss ("letter");
       else
          return Empty;
       end if;

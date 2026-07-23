@@ -1,28 +1,41 @@
 # Protofluid Language Translator (PFLT)
 
-**Protofluid Language Translator** — a **universal translator intelligence** surface under **FSOT 2.1 law**.
+**Protofluid Language Translator** — a **universal translator of meaning** under **FSOT 2.1 law**.
 
-It is **not** “dictionary BLEU only.” It is meant to:
+> Surface forms are labels. **Sense is identity.**  
+> *aqua* ≡ *water* ≡ *Wasser* ≡ *ὕδωρ* → one symbol: `SENSE_water`.  
+> A cat is a cat; a cell is a cell — the word changes, the meaning does not.
 
-1. **Translate** fluid language surfaces (historical → modern, multi-script)  
-2. **Converse / relay** what was translated  
-3. **Incorporate** claims into a growing **knowledge ledger**  
-4. Ground every act in the FSOT seed scalar \(S = K(T_1+T_2+T_3)\) as the **factual base**
+It is **not** an NMT/QLoRA product and **not** “dictionary BLEU only.” It:
 
-**Law authority:** archive-pinned `fsot_compute.py` (SHA256 `D1D38A…`) via `fsot_law_bridge.py`.  
-**Not** an LLM as translation or truth core. Morph/lexicon is the **language surface**; FSOT is the **constitution**.
+1. **Maps form → sense → form** across languages (direct meaning)  
+2. **Composes structure** under FSOT domain frames (later: physics → narrative)  
+3. **Converses / relays** and **ledgers** knowledge without rewriting law  
+4. **Certifies** every act with pinned \(S = K(T_1+T_2+T_3)\) (pin **D1D38A**)
 
-Architecture realignment vs Physical Archive: [`docs/FSOT_ARCHIVE_REALIGNMENT.md`](docs/FSOT_ARCHIVE_REALIGNMENT.md).  
-North-star multi-metric goals (beat every bar): [`docs/NORTH_STAR_METRICS.md`](docs/NORTH_STAR_METRICS.md).  
-**Law audit (no ad-hoc scalar):** [`docs/FSOT_LAW_AUDIT.md`](docs/FSOT_LAW_AUDIT.md).  
-**Public storefront (v0.2.1 — full verification source on HF/Kaggle/GitHub):**  
-- Hugging Face model: [dappalumbo91/pflt-fsot](https://huggingface.co/dappalumbo91/pflt-fsot)  
-- Hugging Face dataset: [pflt-fsot-sample](https://huggingface.co/datasets/dappalumbo91/pflt-fsot-sample)  
-- Kaggle benchmarks: [damianpalumbo/pflt-fsot-benchmarks](https://www.kaggle.com/datasets/damianpalumbo/pflt-fsot-benchmarks)  
-- Release notes: [`docs/RELEASE_v0.2.0.md`](docs/RELEASE_v0.2.0.md) · HF packaging: [`docs/HUGGINGFACE.md`](docs/HUGGINGFACE.md)  
-- Competitive position: [`docs/COMPETITIVE_POSITION.md`](docs/COMPETITIVE_POSITION.md) · SOTA report: [`docs/M6_SOTA_PUSH.md`](docs/M6_SOTA_PUSH.md)
+**Law authority:** `I:\FSOT-Physical-Archive\...\vendor\fsot_compute.py` via `fsot_law_bridge.py`.  
+**Not** an LLM as translation or truth core.
 
-Fast climb: [`docs/FAST_CLIMB.md`](docs/FAST_CLIMB.md) · Accuracy dual-metric: [`docs/ACCURACY_PUSH.md`](docs/ACCURACY_PUSH.md).
+### Fast path (seconds — the real product path)
+
+```powershell
+python pflt_sense_translate.py --smoke
+python pflt_sense_translate.py "aqua manus lingua" --src la --tgt en
+python pflt_sense_translate.py "water" --src en --tgt de
+python language_brain.py all   # second brain: sense graph + hole map + vault
+```
+
+| Doc | Role |
+|-----|------|
+| [`docs/VISION_SENSE_IDENTITY.md`](docs/VISION_SENSE_IDENTITY.md) | **Vision lock** (read first) |
+| [`docs/LANGUAGE_SECOND_BRAIN.md`](docs/LANGUAGE_SECOND_BRAIN.md) | Connective sense/lang graph + Obsidian vault |
+| [`docs/FSOT_ARCHIVE_REALIGNMENT.md`](docs/FSOT_ARCHIVE_REALIGNMENT.md) | Archive architecture map |
+| [`docs/FSOT_LAW_AUDIT.md`](docs/FSOT_LAW_AUDIT.md) | No ad-hoc scalar |
+| [`docs/NORTH_STAR_METRICS.md`](docs/NORTH_STAR_METRICS.md) | Multi-metric goals |
+
+**Public storefront:** [HF pflt-fsot](https://huggingface.co/dappalumbo91/pflt-fsot) · [dataset](https://huggingface.co/datasets/dappalumbo91/pflt-fsot-sample) · [Kaggle](https://www.kaggle.com/datasets/damianpalumbo/pflt-fsot-benchmarks)
+
+> **Note:** `pflt-Ada/m6_fsot_killshot*.py` NMT/QLoRA scripts are **off-mission** historical experiments. Do not run them as the default product path.
 
 ### Shipping product: **Ada/SPARK** ([`pflt-Ada/`](pflt-Ada/))
 
@@ -57,6 +70,7 @@ Large packs (`gold_core.tsv`, `train_mass.tsv`, `densify.tsv`) are **not** in gi
 
 ## Features
 
+- **Sense interlingua** — `sense_interlingua.py` / `pflt_sense_translate.py`: form→`SENSE_*`→form (vision lock)  
 - **Converse + knowledge** — `protofluid_converse.py`: pathway → translate → law scalar → archive+ledger relay → append ledger  
 - **Law bridge** — `fsot_law_bridge.py` pins Physical Archive `fsot_compute` (D1D38A)  
 - **Knowledge ledger** — `knowledge_ledger.py` append-only claims (domain + S + authority)  

@@ -1,0 +1,1999 @@
+{
+  "built_utc": "2026-07-23T13:32:37.967748+00:00",
+  "mission": "Large accuracy + fluency battery (sense identity + PFLT surface)",
+  "protocol": {
+    "exact": "normalized string equality to gold English gloss",
+    "soft": "substring / token recall≥0.5 / stem-4 / phrase token F1 proxy",
+    "fluency": "0–1 heuristic: penalize unresolved shells, junk, non-alpha, dumps",
+    "not_used": "NMT, QLoRA, BLEU as primary product score"
+  },
+  "counts": {
+    "curated_single": 84,
+    "curated_phrases": 25,
+    "heldout_sample": 3000,
+    "form_sense_sample": 1500,
+    "sense_heldout_eval": 2000,
+    "pflt_heldout_eval": 2000,
+    "densify_index_size": 2000000,
+    "densify_heldout_eval": 3000
+  },
+  "tracks": {
+    "sense_curated_single": {
+      "n": 84,
+      "exact": 84,
+      "soft": 84,
+      "miss": 0,
+      "exact_rate": 1.0,
+      "soft_rate": 1.0,
+      "miss_rate": 0.0,
+      "mean_fluency": 1.0,
+      "by_tag": {
+        "core": {
+          "exact": 59,
+          "soft": 59,
+          "n": 59
+        },
+        "modern": {
+          "exact": 17,
+          "soft": 17,
+          "n": 17
+        },
+        "identity": {
+          "exact": 8,
+          "soft": 8,
+          "n": 8
+        }
+      },
+      "examples_miss": [],
+      "examples_ok": [
+        {
+          "form": "aqua",
+          "lang": "la",
+          "gold": "water",
+          "pred": "water",
+          "sense": "SENSE_water",
+          "fluency": 1.0
+        },
+        {
+          "form": "manus",
+          "lang": "la",
+          "gold": "hand",
+          "pred": "hand",
+          "sense": "SENSE_hand",
+          "fluency": 1.0
+        },
+        {
+          "form": "lingua",
+          "lang": "la",
+          "gold": "language",
+          "pred": "language",
+          "sense": "SENSE_language",
+          "fluency": 1.0
+        },
+        {
+          "form": "verbum",
+          "lang": "la",
+          "gold": "word",
+          "pred": "word",
+          "sense": "SENSE_word",
+          "fluency": 1.0
+        },
+        {
+          "form": "deus",
+          "lang": "la",
+          "gold": "god",
+          "pred": "god",
+          "sense": "SENSE_god",
+          "fluency": 1.0
+        },
+        {
+          "form": "dea",
+          "lang": "la",
+          "gold": "goddess",
+          "pred": "goddess",
+          "sense": "SENSE_goddess",
+          "fluency": 1.0
+        },
+        {
+          "form": "rex",
+          "lang": "la",
+          "gold": "king",
+          "pred": "king",
+          "sense": "SENSE_king",
+          "fluency": 1.0
+        },
+        {
+          "form": "urbs",
+          "lang": "la",
+          "gold": "city",
+          "pred": "city",
+          "sense": "SENSE_city",
+          "fluency": 1.0
+        },
+        {
+          "form": "bellum",
+          "lang": "la",
+          "gold": "war",
+          "pred": "war",
+          "sense": "SENSE_war",
+          "fluency": 1.0
+        },
+        {
+          "form": "pax",
+          "lang": "la",
+          "gold": "peace",
+          "pred": "peace",
+          "sense": "SENSE_peace",
+          "fluency": 1.0
+        }
+      ],
+      "track": "sense_curated_single"
+    },
+    "sense_curated_phrases": {
+      "n": 25,
+      "exact": 25,
+      "soft": 25,
+      "miss": 0,
+      "exact_rate": 1.0,
+      "soft_rate": 1.0,
+      "miss_rate": 0.0,
+      "mean_fluency": 1.0,
+      "by_tag": {
+        "phrase": {
+          "exact": 25,
+          "soft": 25,
+          "n": 25
+        }
+      },
+      "examples_miss": [],
+      "examples_ok": [
+        {
+          "text": "aqua manus",
+          "src": "la",
+          "gold": "water hand",
+          "pred_meanings": "water hand",
+          "pred_forms": "water hand",
+          "token_f1": 1.0,
+          "exact_rate_tokens": 1.0,
+          "fluency": 1.0,
+          "S": 0.6513247618848969
+        },
+        {
+          "text": "aqua lingua manus",
+          "src": "la",
+          "gold": "water language hand",
+          "pred_meanings": "water language hand",
+          "pred_forms": "water language hand",
+          "token_f1": 1.0,
+          "exact_rate_tokens": 1.0,
+          "fluency": 1.0,
+          "S": 0.6513247618848969
+        },
+        {
+          "text": "sol luna terra",
+          "src": "la",
+          "gold": "sun moon earth",
+          "pred_meanings": "sun moon earth",
+          "pred_forms": "sun moon earth",
+          "token_f1": 1.0,
+          "exact_rate_tokens": 1.0,
+          "fluency": 1.0,
+          "S": 0.6513247618848969
+        },
+        {
+          "text": "vita mors",
+          "src": "la",
+          "gold": "life death",
+          "pred_meanings": "life death",
+          "pred_forms": "life death",
+          "token_f1": 1.0,
+          "exact_rate_tokens": 1.0,
+          "fluency": 1.0,
+          "S": 0.6513247618848969
+        },
+        {
+          "text": "pater mater filius",
+          "src": "la",
+          "gold": "father mother son",
+          "pred_meanings": "father mother son",
+          "pred_forms": "father mother son",
+          "token_f1": 1.0,
+          "exact_rate_tokens": 1.0,
+          "fluency": 1.0,
+          "S": 0.6513247618848969
+        },
+        {
+          "text": "rex urbs bellum",
+          "src": "la",
+          "gold": "king city war",
+          "pred_meanings": "king city war",
+          "pred_forms": "king city war",
+          "token_f1": 1.0,
+          "exact_rate_tokens": 1.0,
+          "fluency": 1.0,
+          "S": 0.6513247618848969
+        },
+        {
+          "text": "deus dea templum",
+          "src": "la",
+          "gold": "god goddess temple",
+          "pred_meanings": "god goddess temple",
+          "pred_forms": "god goddess temple",
+          "token_f1": 1.0,
+          "exact_rate_tokens": 1.0,
+          "fluency": 1.0,
+          "S": 0.6513247618848969
+        },
+        {
+          "text": "ignis aqua terra",
+          "src": "la",
+          "gold": "fire water earth",
+          "pred_meanings": "fire water earth",
+          "pred_forms": "fire water earth",
+          "token_f1": 1.0,
+          "exact_rate_tokens": 1.0,
+          "fluency": 1.0,
+          "S": 0.6513247618848969
+        },
+        {
+          "text": "lex ius pax",
+          "src": "la",
+          "gold": "law law peace",
+          "pred_meanings": "law law peace",
+          "pred_forms": "law law peace",
+          "token_f1": 1.0,
+          "exact_rate_tokens": 1.0,
+          "fluency": 1.0,
+          "S": 0.6513247618848969
+        },
+        {
+          "text": "nomen verbum lingua",
+          "src": "la",
+          "gold": "name word language",
+          "pred_meanings": "name word language",
+          "pred_forms": "name word language",
+          "token_f1": 1.0,
+          "exact_rate_tokens": 1.0,
+          "fluency": 1.0,
+          "S": 0.6513247618848969
+        }
+      ],
+      "track": "sense_curated_phrases"
+    },
+    "sense_heldout_2k": {
+      "n": 2000,
+      "exact": 0,
+      "soft": 1,
+      "miss": 1999,
+      "exact_rate": 0.0,
+      "soft_rate": 0.0005,
+      "miss_rate": 0.9995,
+      "mean_fluency": 0.4503,
+      "by_tag": {
+        "heldout": {
+          "miss": 1999,
+          "n": 2000,
+          "soft": 1
+        }
+      },
+      "examples_miss": [
+        {
+          "form": "써시면",
+          "lang": "ko",
+          "gold": "chop",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "grêlon",
+          "lang": "fr",
+          "gold": "hailstone",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "安康",
+          "lang": "vi",
+          "gold": "chữ Hán form of an khang",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "accorporant",
+          "lang": "la",
+          "gold": "accorpor",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "dijudicantor",
+          "lang": "la",
+          "gold": "djdic",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "کَرتے ہیں",
+          "lang": "ur",
+          "gold": "do",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "destruí",
+          "lang": "es",
+          "gold": "destroy",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "사라지시기",
+          "lang": "ko",
+          "gold": "vanish",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "yðr",
+          "lang": "non",
+          "gold": "second-person dual pronoun",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "εμποράκος",
+          "lang": "grc",
+          "gold": "diminutive of έμπορος (émporos) or έμπορας (émpo",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "plurais",
+          "lang": "gl",
+          "gold": "plural",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "hitowi",
+          "lang": "pl",
+          "gold": "(music) hit (a success",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "mittimini",
+          "lang": "la",
+          "gold": "mitt",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "notasen",
+          "lang": "es",
+          "gold": "note (make a written record of and/or purposeful",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "horripilares",
+          "lang": "ca",
+          "gold": "horrify",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "lebih kemayu",
+          "lang": "id",
+          "gold": "effeminate",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "onstæpum",
+          "lang": "ang",
+          "gold": "onstpe",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "będzie lubiło",
+          "lang": "pl",
+          "gold": "like (to have positive emotions for",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "burlándote",
+          "lang": "es",
+          "gold": "outwit",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "પતંગિયાંએ",
+          "lang": "gu",
+          "gold": "butterfly",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "desencadenaven",
+          "lang": "ca",
+          "gold": "unleash",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "ανακαταλήφθηκα",
+          "lang": "grc",
+          "gold": "anakatalamvnomai",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "kʰännʌn",
+          "lang": "ne",
+          "gold": "eat",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "einem urinalen",
+          "lang": "de",
+          "gold": "urine",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "pl-decl-noun-m-in",
+          "lang": "pl",
+          "gold": "Urals",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        }
+      ],
+      "examples_ok": [],
+      "track": "sense_heldout_2k"
+    },
+    "sense_form_sense_1k": {
+      "n": 1000,
+      "exact": 0,
+      "soft": 3,
+      "miss": 997,
+      "exact_rate": 0.0,
+      "soft_rate": 0.003,
+      "miss_rate": 0.997,
+      "mean_fluency": 0.4597,
+      "by_tag": {
+        "form_sense": {
+          "miss": 997,
+          "n": 1000,
+          "soft": 3
+        }
+      },
+      "examples_miss": [
+        {
+          "form": "Κυνικός",
+          "lang": null,
+          "gold": "doglike",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "κυρ",
+          "lang": null,
+          "gold": "main",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "λιμοκτονίη",
+          "lang": null,
+          "gold": "fasting",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "πολύτροπος",
+          "lang": null,
+          "gold": "nutritious",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "συμβόλαιος",
+          "lang": null,
+          "gold": "intercourse",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "τελει",
+          "lang": null,
+          "gold": "last",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "χρωματικός",
+          "lang": null,
+          "gold": "colored",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "ἰχθυοθηρητήρ",
+          "lang": null,
+          "gold": "fisherman",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "οξυ",
+          "lang": null,
+          "gold": "cleverness",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "Δεκεμβρίους",
+          "lang": null,
+          "gold": "december",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "αὔω",
+          "lang": null,
+          "gold": "dry",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "clepes",
+          "lang": null,
+          "gold": "steal",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "πεισομένοις",
+          "lang": null,
+          "gold": "future,middle,participle,skh",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "basiem",
+          "lang": null,
+          "gold": "first,person,singular,present,passive,subjunctive",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "χια",
+          "lang": null,
+          "gold": "feminine,nominative,vocative,plural",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "salutaris",
+          "lang": null,
+          "gold": "safety,security",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "abdicatus",
+          "lang": null,
+          "gold": "depose,second,person,plural,present,active,imperative,abdic",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "agit",
+          "lang": null,
+          "gold": "second,person,singular,present,active,indicative",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "debuisset",
+          "lang": null,
+          "gold": "first,person,singular,pluperfect,active,subjunctive",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "insomnia",
+          "lang": null,
+          "gold": "sleeplessness",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "appendo",
+          "lang": null,
+          "gold": "first,person,singular,perfect,active,indicative,append",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "compareo",
+          "lang": null,
+          "gold": "appearing,first,person,singular,present,passive,subjunctive,compar",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "lotus",
+          "lang": null,
+          "gold": "urine,piss",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "duim",
+          "lang": null,
+          "gold": "third,person,singular,present,active,subjunctive",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        },
+        {
+          "form": "transiens",
+          "lang": null,
+          "gold": "piercing",
+          "pred": "unresolved",
+          "sense": null,
+          "fluency": 0.45
+        }
+      ],
+      "examples_ok": [],
+      "track": "sense_form_sense_1k"
+    },
+    "pflt_curated_single": {
+      "n": 84,
+      "exact": 84,
+      "soft": 84,
+      "miss": 0,
+      "exact_rate": 1.0,
+      "soft_rate": 1.0,
+      "miss_rate": 0.0,
+      "mean_fluency": 1.0,
+      "by_tag": {
+        "core": {
+          "exact": 59,
+          "soft": 59,
+          "n": 59
+        },
+        "modern": {
+          "exact": 17,
+          "soft": 17,
+          "n": 17
+        },
+        "identity": {
+          "exact": 8,
+          "soft": 8,
+          "n": 8
+        }
+      },
+      "examples_miss": [],
+      "examples_ok": [
+        {
+          "form": "aqua",
+          "gold": "water",
+          "pred": "water",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "manus",
+          "gold": "hand",
+          "pred": "hand",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "lingua",
+          "gold": "language",
+          "pred": "language",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "verbum",
+          "gold": "word",
+          "pred": "word",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "deus",
+          "gold": "god",
+          "pred": "god",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "dea",
+          "gold": "goddess",
+          "pred": "goddess",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "rex",
+          "gold": "king",
+          "pred": "king",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "urbs",
+          "gold": "city",
+          "pred": "city",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "bellum",
+          "gold": "war",
+          "pred": "war",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "pax",
+          "gold": "peace",
+          "pred": "peace",
+          "exact_map": true,
+          "fluency": 1.0
+        }
+      ],
+      "track": "pflt_curated_single"
+    },
+    "pflt_curated_phrases": {
+      "n": 25,
+      "exact": 25,
+      "soft": 25,
+      "miss": 0,
+      "exact_rate": 1.0,
+      "soft_rate": 1.0,
+      "miss_rate": 0.0,
+      "mean_fluency": 1.0,
+      "by_tag": {
+        "phrase": {
+          "exact": 25,
+          "soft": 25,
+          "n": 25
+        }
+      },
+      "examples_miss": [],
+      "examples_ok": [
+        {
+          "text": "aqua manus",
+          "gold": "water hand",
+          "pred": "water hand",
+          "translation": "flowing_water flowing_hand [FSOT 2.1 fluid translation].",
+          "map_rate": 1.0,
+          "token_f1": 1.0,
+          "fluency": 1.0,
+          "S": 0.6325783360136283
+        },
+        {
+          "text": "aqua lingua manus",
+          "gold": "water language hand",
+          "pred": "water language hand",
+          "translation": "flowing_water flowing_language flowing_hand [FSOT 2.1 fluid translation].",
+          "map_rate": 1.0,
+          "token_f1": 1.0,
+          "fluency": 1.0,
+          "S": 0.6325783360136283
+        },
+        {
+          "text": "sol luna terra",
+          "gold": "sun moon earth",
+          "pred": "sun moon earth",
+          "translation": "flowing_sun flowing_moon flowing_earth [FSOT 2.1 fluid translation].",
+          "map_rate": 1.0,
+          "token_f1": 1.0,
+          "fluency": 1.0,
+          "S": 0.6325783360136283
+        },
+        {
+          "text": "vita mors",
+          "gold": "life death",
+          "pred": "life death",
+          "translation": "flowing_life flowing_death [FSOT 2.1 fluid translation].",
+          "map_rate": 1.0,
+          "token_f1": 1.0,
+          "fluency": 1.0,
+          "S": 0.6325783360136283
+        },
+        {
+          "text": "pater mater filius",
+          "gold": "father mother son",
+          "pred": "father mother son",
+          "translation": "flowing_father flowing_mother flowing_son [FSOT 2.1 fluid translation].",
+          "map_rate": 1.0,
+          "token_f1": 1.0,
+          "fluency": 1.0,
+          "S": 0.6325783360136283
+        },
+        {
+          "text": "rex urbs bellum",
+          "gold": "king city war",
+          "pred": "king city war",
+          "translation": "flowing_king flowing_city flowing_war [FSOT 2.1 fluid translation].",
+          "map_rate": 1.0,
+          "token_f1": 1.0,
+          "fluency": 1.0,
+          "S": 0.6325783360136283
+        },
+        {
+          "text": "deus dea templum",
+          "gold": "god goddess temple",
+          "pred": "god goddess temple",
+          "translation": "flowing_god flowing_goddess flowing_temple [FSOT 2.1 fluid translation].",
+          "map_rate": 1.0,
+          "token_f1": 1.0,
+          "fluency": 1.0,
+          "S": 0.6325783360136283
+        },
+        {
+          "text": "ignis aqua terra",
+          "gold": "fire water earth",
+          "pred": "fire water earth",
+          "translation": "flowing_fire flowing_water flowing_earth [FSOT 2.1 fluid translation].",
+          "map_rate": 1.0,
+          "token_f1": 1.0,
+          "fluency": 1.0,
+          "S": 0.6325783360136283
+        },
+        {
+          "text": "lex ius pax",
+          "gold": "law law peace",
+          "pred": "law law peace",
+          "translation": "flowing_law flowing_law flowing_peace [FSOT 2.1 fluid translation].",
+          "map_rate": 1.0,
+          "token_f1": 1.0,
+          "fluency": 1.0,
+          "S": 0.6325783360136283
+        },
+        {
+          "text": "nomen verbum lingua",
+          "gold": "name word language",
+          "pred": "name word language",
+          "translation": "flowing_name flowing_word flowing_language [FSOT 2.1 fluid translation].",
+          "map_rate": 1.0,
+          "token_f1": 1.0,
+          "fluency": 1.0,
+          "S": 0.6325783360136283
+        }
+      ],
+      "track": "pflt_curated_phrases"
+    },
+    "pflt_heldout_2k_seed_only": {
+      "n": 2000,
+      "exact": 11,
+      "soft": 48,
+      "miss": 1952,
+      "exact_rate": 0.0055,
+      "soft_rate": 0.024,
+      "miss_rate": 0.976,
+      "mean_fluency": 0.513,
+      "by_tag": {
+        "heldout": {
+          "miss": 1952,
+          "n": 2000,
+          "soft": 48,
+          "exact": 11
+        }
+      },
+      "examples_miss": [
+        {
+          "form": "써시면",
+          "gold": "chop",
+          "pred": "narrative_flow",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "grêlon",
+          "gold": "hailstone",
+          "pred": "narrative_flow",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "安康",
+          "gold": "chữ Hán form of an khang",
+          "pred": "narrative_flow",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "accorporant",
+          "gold": "accorpor",
+          "pred": "to_fit_or_join_to_incorporate",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "dijudicantor",
+          "gold": "djdic",
+          "pred": "judging_deciding_determining",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "کَرتے ہیں",
+          "gold": "do",
+          "pred": "narrative_flow",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "사라지시기",
+          "gold": "vanish",
+          "pred": "narrative_flow",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "yðr",
+          "gold": "second-person dual pronoun",
+          "pred": "narrative_flow",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "εμποράκος",
+          "gold": "diminutive of έμπορος (émporos) or έμπορας (émpo",
+          "pred": "merchant_trader",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "plurais",
+          "gold": "plural",
+          "pred": "unresolved",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "hitowi",
+          "gold": "(music) hit (a success",
+          "pred": "unresolved",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "mittimini",
+          "gold": "mitt",
+          "pred": "unresolved",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "notasen",
+          "gold": "note (make a written record of and/or purposeful",
+          "pred": "unresolved",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "horripilares",
+          "gold": "horrify",
+          "pred": "unresolved",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "lebih kemayu",
+          "gold": "effeminate",
+          "pred": "unresolved",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "onstæpum",
+          "gold": "onstpe",
+          "pred": "entrance_ingress",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "będzie lubiło",
+          "gold": "like (to have positive emotions for",
+          "pred": "narrative_flow",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "burlándote",
+          "gold": "outwit",
+          "pred": "narrative_flow",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "પતંગિયાંએ",
+          "gold": "butterfly",
+          "pred": "narrative_flow",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "desencadenaven",
+          "gold": "unleash",
+          "pred": "unresolved",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "ανακαταλήφθηκα",
+          "gold": "anakatalamvnomai",
+          "pred": "heritage_flow",
+          "exact_map": false,
+          "fluency": 1.0
+        },
+        {
+          "form": "kʰännʌn",
+          "gold": "eat",
+          "pred": "narrative_flow",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "einem urinalen",
+          "gold": "urine",
+          "pred": "unresolved",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "pl-decl-noun-m-in",
+          "gold": "Urals",
+          "pred": "unresolved",
+          "exact_map": false,
+          "fluency": 0.45
+        },
+        {
+          "form": "beni",
+          "gold": "mortal wound",
+          "pred": "unresolved",
+          "exact_map": false,
+          "fluency": 0.45
+        }
+      ],
+      "examples_ok": [
+        {
+          "form": "impingere",
+          "gold": "imping",
+          "pred": "imping",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "adoptaverim",
+          "gold": "adopt",
+          "pred": "adopt",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "amphibologiarum",
+          "gold": "amphibologia",
+          "pred": "amphibologia",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "intrinsic phase",
+          "gold": "intrinsic_phase",
+          "pred": "intrinsic_phase",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "neutrony",
+          "gold": "neutron",
+          "pred": "neutron",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "physical flux",
+          "gold": "physical_flux",
+          "pred": "physical_flux",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "Marlene",
+          "gold": "female given name",
+          "pred": "female_given_name",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "aurabamur",
+          "gold": "aur",
+          "pred": "aur",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "amputarentur",
+          "gold": "amput",
+          "pred": "amput",
+          "exact_map": true,
+          "fluency": 1.0
+        },
+        {
+          "form": "εξομολόγηση",
+          "gold": "confession",
+          "pred": "confession",
+          "exact_map": true,
+          "fluency": 1.0
+        }
+      ],
+      "track": "pflt_heldout_2k_seed_only"
+    },
+    "densify_curated": {
+      "n": 84,
+      "exact": 61,
+      "soft": 65,
+      "miss": 19,
+      "exact_rate": 0.7262,
+      "soft_rate": 0.7738,
+      "miss_rate": 0.2262,
+      "mean_fluency": 0.9935,
+      "by_tag": {
+        "core": {
+          "exact": 51,
+          "soft": 53,
+          "n": 59,
+          "miss": 6
+        },
+        "modern": {
+          "miss": 7,
+          "n": 17,
+          "exact": 8,
+          "soft": 10
+        },
+        "identity": {
+          "exact": 2,
+          "soft": 2,
+          "n": 8,
+          "miss": 6
+        }
+      },
+      "examples_miss": [
+        {
+          "form": "dea",
+          "gold": "goddess",
+          "pred": "name of the Latin script letter D/d.",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "domus",
+          "gold": "house",
+          "pred": "peace",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "via",
+          "gold": "road",
+          "pred": "you",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "cor",
+          "gold": "heart",
+          "pred": "color / colour",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "pes",
+          "gold": "foot",
+          "pred": "peso (any of multiple currencies)",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "χείρ",
+          "gold": "hand",
+          "pred": "arm (portion of the upper human appendage from t",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "Wasser",
+          "gold": "water",
+          "pred": "a_surname",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "Sonne",
+          "gold": "sun",
+          "pred": "contraction of so eine (“such a”) (so",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "Zelle",
+          "gold": "cell",
+          "pred": "zeal",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "eau",
+          "gold": "water",
+          "pred": "alternative form of ǣ",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "main",
+          "gold": "hand",
+          "pred": "gamble",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "mano",
+          "gold": "hand",
+          "pred": "schoolyard pick",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "gato",
+          "gold": "cat",
+          "pred": "cake",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "cat",
+          "gold": "cat",
+          "pred": "paint (substance)",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "cell",
+          "gold": "cell",
+          "pred": "church",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "sun",
+          "gold": "sun",
+          "pred": "slide",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "fire",
+          "gold": "fire",
+          "pred": "become",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "life",
+          "gold": "life",
+          "pred": "die",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "law",
+          "gold": "law",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        }
+      ],
+      "examples_ok": [
+        {
+          "form": "aqua",
+          "gold": "water",
+          "pred": "water",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "manus",
+          "gold": "hand",
+          "pred": "hand",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "lingua",
+          "gold": "language",
+          "pred": "language",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "verbum",
+          "gold": "word",
+          "pred": "word",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "deus",
+          "gold": "god",
+          "pred": "god",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "rex",
+          "gold": "king",
+          "pred": "king",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "urbs",
+          "gold": "city",
+          "pred": "city",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "bellum",
+          "gold": "war",
+          "pred": "war",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "pax",
+          "gold": "peace",
+          "pred": "peace",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "vita",
+          "gold": "life",
+          "pred": "life",
+          "fluency": 1.0,
+          "hit": true
+        }
+      ],
+      "track": "densify_curated"
+    },
+    "densify_heldout_3k": {
+      "n": 3000,
+      "exact": 1405,
+      "soft": 1651,
+      "miss": 1349,
+      "exact_rate": 0.4683,
+      "soft_rate": 0.5503,
+      "miss_rate": 0.4497,
+      "mean_fluency": 0.8871,
+      "by_tag": {
+        "heldout": {
+          "exact": 1405,
+          "soft": 1651,
+          "n": 3000,
+          "miss": 1349
+        }
+      },
+      "examples_miss": [
+        {
+          "form": "کَرتے ہیں",
+          "gold": "do",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "notasen",
+          "gold": "note (make a written record of and/or purposeful",
+          "pred": "(reflexive) to show",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "horripilares",
+          "gold": "horrify",
+          "pred": "second-person singular preterite indicative of h",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "będzie lubiło",
+          "gold": "like (to have positive emotions for",
+          "pred": "like (to get pleasure from)",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "burlándote",
+          "gold": "outwit",
+          "pred": "circumvent",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "પતંગિયાંએ",
+          "gold": "butterfly",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "kʰännʌn",
+          "gold": "eat",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "pl-decl-noun-m-in",
+          "gold": "Urals",
+          "pred": "crane (machinery)",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "pantu",
+          "gold": "verse",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "pl-decl-noun-m-in",
+          "gold": "Manchester (name of several towns and cities in ",
+          "pred": "crane (machinery)",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "sonariáu",
+          "gold": "call (to name or refer to)",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "食べぬ",
+          "gold": "make a living",
+          "pred": "eat or drink",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "temani",
+          "gold": "you (plural and polite form)",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "serenàssimo",
+          "gold": "reassure",
+          "pred": "sleep in the open",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "màtàlân",
+          "gold": "mattress",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "o/ā-stem",
+          "gold": "raw",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "складъ",
+          "gold": "supply",
+          "pred": "dump",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "हामीहरूले",
+          "gold": "he",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "dergelijks",
+          "gold": "such",
+          "pred": "of that kind",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "absislərimizi",
+          "gold": "abscissa",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "incapacitis",
+          "gold": "make someone incapable of doing something",
+          "pred": "(law) to declare someone a conservatee",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "참",
+          "gold": "support",
+          "pred": "be handcuffed",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "شُيُوخُ",
+          "gold": "old man",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "𒆠⫽𒉘",
+          "gold": "love",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "saṇatthaṃ",
+          "gold": "kind of hemp",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        }
+      ],
+      "examples_ok": [
+        {
+          "form": "써시면",
+          "gold": "chop",
+          "pred": "chop",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "grêlon",
+          "gold": "hailstone",
+          "pred": "hailstone",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "安康",
+          "gold": "chữ Hán form of an khang",
+          "pred": "chữ Hán form of an khang",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "accorporant",
+          "gold": "accorpor",
+          "pred": "accorpor",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "dijudicantor",
+          "gold": "djdic",
+          "pred": "djdic",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "destruí",
+          "gold": "destroy",
+          "pred": "destroy",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "사라지시기",
+          "gold": "vanish",
+          "pred": "vanish",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "yðr",
+          "gold": "second-person dual pronoun",
+          "pred": "second-person dual pronoun",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "εμποράκος",
+          "gold": "diminutive of έμπορος (émporos) or έμπορας (émpo",
+          "pred": "diminutive of έμπορος (émporos) or έμπορας (émpo",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "plurais",
+          "gold": "plural",
+          "pred": "plural",
+          "fluency": 1.0,
+          "hit": true
+        }
+      ],
+      "track": "densify_heldout_3k"
+    },
+    "densify_form_sense_1.5k": {
+      "n": 1500,
+      "exact": 21,
+      "soft": 299,
+      "miss": 1201,
+      "exact_rate": 0.014,
+      "soft_rate": 0.1993,
+      "miss_rate": 0.8007,
+      "mean_fluency": 0.9476,
+      "by_tag": {
+        "form_sense": {
+          "exact": 21,
+          "soft": 299,
+          "n": 1500,
+          "miss": 1201
+        }
+      },
+      "examples_miss": [
+        {
+          "form": "κυρ",
+          "gold": "main",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "λιμοκτονίη",
+          "gold": "fasting",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "πολύτροπος",
+          "gold": "nutritious",
+          "pred": "various",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "συμβόλαιος",
+          "gold": "intercourse",
+          "pred": "of or concerning contracts",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "τελει",
+          "gold": "last",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "χρωματικός",
+          "gold": "colored",
+          "pred": "chromatic",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "οξυ",
+          "gold": "cleverness",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "Δεκεμβρίους",
+          "gold": "december",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "αὔω",
+          "gold": "dry",
+          "pred": "shout",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "clepes",
+          "gold": "steal",
+          "pred": "clep",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "πεισομένοις",
+          "gold": "future,middle,participle,skh",
+          "pred": "peismenos",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "basiem",
+          "gold": "first,person,singular,present,passive,subjunctive",
+          "pred": "bare",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "χια",
+          "gold": "feminine,nominative,vocative,plural",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "salutaris",
+          "gold": "safety,security",
+          "pred": "healthy",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "abdicatus",
+          "gold": "depose,second,person,plural,present,active,imperative,abdic",
+          "pred": "abolished",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "agit",
+          "gold": "second,person,singular,present,active,indicative",
+          "pred": "ag",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "debuisset",
+          "gold": "first,person,singular,pluperfect,active,subjunctive",
+          "pred": "dbe",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "appendo",
+          "gold": "first,person,singular,perfect,active,indicative,append",
+          "pred": "weigh out",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "compareo",
+          "gold": "appearing,first,person,singular,present,passive,subjunctive,compar",
+          "pred": "be present",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "lotus",
+          "gold": "urine,piss",
+          "pred": "elegant",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "transiens",
+          "gold": "piercing",
+          "pred": "traversing",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "κλυω",
+          "gold": "aorist,active,participle",
+          "pred": "unresolved",
+          "fluency": 0.45,
+          "hit": false
+        },
+        {
+          "form": "axis",
+          "gold": "alliance,coalition",
+          "pred": "axis (vertebra)",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "arsi",
+          "gold": "arson",
+          "pred": "plow (to prepare (land) for sowing by using a pl",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "desiccate",
+          "gold": "remove,moisture,from",
+          "pred": "dsicc",
+          "fluency": 1.0,
+          "hit": true
+        }
+      ],
+      "examples_ok": [
+        {
+          "form": "Κυνικός",
+          "gold": "doglike",
+          "pred": "doglike",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "ἰχθυοθηρητήρ",
+          "gold": "fisherman",
+          "pred": "fisherman",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "insomnia",
+          "gold": "sleeplessness",
+          "pred": "sleeplessness",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "niobium",
+          "gold": "niobium",
+          "pred": "niobium",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "accommodate",
+          "gold": "suitably",
+          "pred": "suitably",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "slim",
+          "gold": "slime",
+          "pred": "slime",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "ate",
+          "gold": "oat",
+          "pred": "oat",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "focus",
+          "gold": "altar",
+          "pred": "altar",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "war",
+          "gold": "seaweed",
+          "pred": "seaweed",
+          "fluency": 1.0,
+          "hit": true
+        },
+        {
+          "form": "spell",
+          "gold": "story",
+          "pred": "story",
+          "fluency": 1.0,
+          "hit": true
+        }
+      ],
+      "track": "densify_form_sense_1.5k"
+    }
+  },
+  "headline": {
+    "sense_curated_exact_pct": 100.0,
+    "sense_curated_soft_pct": 100.0,
+    "sense_phrase_soft_pct": 100.0,
+    "sense_phrase_mean_fluency": 1.0,
+    "sense_heldout_soft_pct": 0.05,
+    "pflt_curated_exact_pct": 100.0,
+    "pflt_curated_soft_pct": 100.0,
+    "pflt_phrase_soft_pct": 100.0,
+    "pflt_phrase_mean_fluency": 1.0,
+    "pflt_heldout_seed_soft_pct": 2.4,
+    "densify_curated_soft_pct": 77.38,
+    "densify_heldout_soft_pct": 55.03,
+    "densify_heldout_exact_pct": 46.83,
+    "densify_heldout_mean_fluency": 0.8871,
+    "densify_form_sense_soft_pct": 19.93,
+    "ada_open_set_partial_pct": 97.71,
+    "ada_product_partial_pct": 89.83,
+    "queries_total_approx": 9802
+  },
+  "prior_ada_eval": {
+    "open_set_partial": 0.9771,
+    "product_partial": 0.8983,
+    "open_set_exact": 0.9755,
+    "product_exact": 0.8951,
+    "n": 8000,
+    "note": "Ada binary eval 2026-07-23 (train_mass / gold+densify)"
+  },
+  "elapsed_s": 52.71
+}

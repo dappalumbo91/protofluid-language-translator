@@ -5,6 +5,7 @@ with Ada.Strings.Hash;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with Ada.Text_IO;
 with PFLT_Gloss_Quality;
+with PFLT_Lexicon;
 
 package body PFLT_Store is
 
@@ -251,6 +252,8 @@ package body PFLT_Store is
       C  : Maps.Cursor;
       Best : Unbounded_String := Null_Unbounded_String;
       Best_S : Long_Float := 0.0;
+      Pref : constant PFLT_Lexicon.Gloss_Result :=
+        PFLT_Lexicon.Map_Token (Fl);
 
       procedure Consider (Key : String) is
          Cc : Maps.Cursor;
@@ -270,6 +273,10 @@ package body PFLT_Store is
    begin
       if F'Length = 0 then
          return "";
+      end if;
+      --  Hard sense-prefer seeds always win over densify polysemy
+      if Pref.Found and then Pref.Gloss_Last > 0 then
+         return Pref.Gloss (1 .. Pref.Gloss_Last);
       end if;
       Consider (F);
       Consider (Fl);
@@ -411,14 +418,64 @@ package body PFLT_Store is
       end if;
    end Join;
 
+   procedure Force_Pair (Key, Val : String) is
+      --  Always overwrite (sense-prefer table beats densify score ties).
+      K  : constant String := Strip (Key);
+      V0 : constant String := Strip (Val);
+      V  : constant String := PFLT_Gloss_Quality.Clean_Gloss (V0);
+      Kl : constant String := To_Lower (K);
+   begin
+      if K'Length = 0 or else V'Length = 0 then
+         return;
+      end if;
+      Table.Include (K, V);
+      Table.Include (Kl, V);
+      Index_Form (Kl);
+   end Force_Pair;
+
+   function Load_Sense_Prefer (Path : String) return Natural is
+      use Ada.Text_IO;
+      F : File_Type;
+      N : Natural := 0;
+   begin
+      if not Ada.Directories.Exists (Path) then
+         return 0;
+      end if;
+      Open (F, In_File, Path);
+      while not End_Of_File (F) loop
+         declare
+            Line : constant String := Get_Line (F);
+            Tab  : Natural := 0;
+         begin
+            for I in Line'Range loop
+               if Line (I) = ASCII.HT then
+                  Tab := I;
+                  exit;
+               end if;
+            end loop;
+            if Tab > Line'First and then Tab < Line'Last then
+               Force_Pair
+                 (Line (Line'First .. Tab - 1), Line (Tab + 1 .. Line'Last));
+               N := N + 1;
+            end if;
+         end;
+      end loop;
+      Close (F);
+      return N;
+   end Load_Sense_Prefer;
+
    procedure Load_Default_Packs
      (Densify_N : out Natural; Gold_N : out Natural)
    is
       R : constant String := To_String (Data_Root_U);
+      Prefer_N : Natural;
    begin
-      --  Gold first (mass inventory), densify last so preferred product senses win.
+      --  Gold first, densify next, sense-prefer last (absolute sense authority).
       Gold_N    := Load_Gold_TSV (Join (R, "gold_core.tsv"));
       Densify_N := Load_TSV_Map (Join (R, "densify.tsv"));
+      Prefer_N  := Load_Sense_Prefer (Join (R, "sense_prefer.tsv"));
+      --  Prefer count not returned separately; folds into densify footprint.
+      Densify_N := Densify_N + Prefer_N;
    end Load_Default_Packs;
 
    function Load_Open_Set_Train return Natural is

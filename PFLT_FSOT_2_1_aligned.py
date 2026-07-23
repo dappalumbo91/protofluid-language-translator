@@ -514,13 +514,18 @@ class PFLT:
         load_classical: bool = True,
         load_domain_lexica: bool = True,
         enable_gapfill: bool = True,
+        enable_math_trace: bool = False,
     ) -> None:
         self.pul_terms = _build_lexicon()
         # Separate glyph catalog so Gardiner S8 cannot overwrite cosmological s8
         self.hieroglyph_terms: Dict[str, str] = {}
         self._domain_lexica: Dict[str, Dict[str, str]] = {}
         self.enable_gapfill = enable_gapfill
+        # When True, translate() always attaches microscope panel + failure logs for misses
+        self.enable_math_trace = enable_math_trace
         self._gapfill_cache: Dict[str, Any] = {}
+        # form → alternate content senses (multi-gloss inject)
+        self.sense_bank: Dict[str, List[str]] = {}
         if load_historical:
             self.inject_historical_gold(include_candidates=False)
         if load_classical:
@@ -664,13 +669,41 @@ class PFLT:
         hits = 0
         if key in FSOT21_DOMAINS:
             hits = int(FSOT21_DOMAINS[key].get("recent_hits") or 0)
-        return compute_S_D_chaotic(
+        # Prefer archive-pinned FSOT law scalar (Protofluid law spine) when available
+        local = compute_S_D_chaotic(
             D_eff=float(p["D_eff"]),
             observed=bool(p["observed"]),
             delta_psi=float(p.get("delta_psi", 0.8)),
             delta_theta=float(p.get("delta_theta", 1.0)),
             recent_hits=float(hits),
         )
+        try:
+            from fsot_law_bridge import compute_law_scalar
+
+            ls = compute_law_scalar(
+                domain=key,
+                D_eff=float(p["D_eff"]),
+                observed=bool(p["observed"]),
+                delta_psi=float(p.get("delta_psi", 0.8)),
+                delta_theta=float(p.get("delta_theta", 1.0)),
+                recent_hits=float(hits),
+            )
+            if ls.authority_ok or ls.authority.startswith("archive"):
+                return ScalarPanel(
+                    S=ls.S,
+                    T1=ls.T1,
+                    T2=ls.T2,
+                    T3=ls.T3,
+                    quirk_mod=local.quirk_mod,
+                    growth=local.growth,
+                    D_eff=ls.D_eff,
+                    observed=ls.observed,
+                    delta_psi=ls.delta_psi,
+                    delta_theta=ls.delta_theta,
+                )
+        except Exception:
+            pass
+        return local
 
     def list_domains(self, limit: int = 50) -> List[str]:
         """Sample of available FSOT 2.1 + PFLT contexts."""
@@ -786,6 +819,16 @@ class PFLT:
         return [t for t in tokens if t]
 
     def _infer_mapping(self, token: str, context: str) -> str:
+        # Prefer explicit unresolved over fake soft shells when token is empty/junk.
+        # Soft shells remain only as last-resort domain color for true open-set forms
+        # that survived map_token (classical stems, etc.).
+        try:
+            from converse_refine import looks_junk_token
+
+            if looks_junk_token(token or ""):
+                return "unresolved"
+        except Exception:
+            pass
         fallback = {
             "biological": "life_process",
             "genomic": "life_process",
@@ -807,12 +850,19 @@ class PFLT:
             "neural": "consciousness_signal",
             "metabolic": "energy_process",
         }
+        # Short unknown ASCII with no lexicon hit → unresolved (not narrative_flow)
+        t = (token or "").strip()
+        if t.isascii() and 3 <= len(t) <= 24 and not any(c.isdigit() for c in t):
+            # if never seen in lexicon, mark unresolved rather than invent shell
+            if t.lower() not in self.pul_terms and t not in self.pul_terms:
+                return "unresolved"
         return fallback.get(context, "generic_dynamics")
 
     def map_token(self, token: str, context: str) -> Tuple[str, bool]:
         """
         Return (meaning, mapped_exact).
         Priority:
+          0) junk / English pass-through (skip gapfill invent)
           1) domain registry (shared symbols, context-aware)
           2) per-domain starter lexicon (FSOT 2.1 atlas domains)
           3) glyph catalog (glyph contexts / Unicode only)
@@ -826,6 +876,42 @@ class PFLT:
             resolve_domain_symbol = None  # type: ignore
 
         key = token.lower()
+        # Protofluid product: refuse adversarial junk; pass English content identity
+        # so gapfill does not invent "time" for temple or "narrative_flow" for zzzxq.
+        try:
+            from converse_refine import (
+                EN_CONTENT_PASS,
+                EN_STOP,
+                looks_junk_token,
+            )
+
+            if looks_junk_token(key):
+                return "unresolved", False
+            # bare numbers / S-claims — never gapfill (latency + false invent)
+            if key.replace(".", "", 1).replace("-", "", 1).isdigit() or re.fullmatch(
+                r"[+-]?\d+\.?\d*", key
+            ):
+                return key, True
+            if key in EN_CONTENT_PASS:
+                return EN_CONTENT_PASS[key], True
+            if key in EN_STOP:
+                return key, True  # identity — closed class, not open-set invent
+            if key in {"exactly", "exactly", "says", "must", "claim", "claimed"}:
+                return key, True
+        except Exception:
+            pass
+        # Sense interlingua first: form → SENSE_id → English meaning head
+        # (aqua ≡ water ≡ ὕδωρ). No NMT. Expand graph via bind/seeds only.
+        try:
+            from sense_interlingua import SenseInterlingua
+
+            if not hasattr(self, "_sense_ix") or self._sense_ix is None:
+                self._sense_ix = SenseInterlingua()
+            hit = self._sense_ix.resolve_form(token, None)
+            if hit is not None and hit.confidence >= 0.9:
+                return hit.canonical_en, True
+        except Exception:
+            pass
         if resolve_domain_symbol is not None:
             hit = resolve_domain_symbol(token, context)
             if hit is not None:
@@ -855,12 +941,79 @@ class PFLT:
                 return self.hieroglyph_terms[key], True
             if token.upper() in self.hieroglyph_terms:
                 return self.hieroglyph_terms[token.upper()], True
+        # Lexicon / paradigm hits — reject meta/garbage so open-set can recover
+        # Keep train primary meaning stable (sense_bank alts used only for soft-score later)
+        def _try_lex(meaning: str, form_key: str = "") -> Optional[Tuple[str, bool]]:
+            try:
+                from meaning_clean import (
+                    is_garbage_meaning,
+                    is_meta_meaning,
+                    resolve_meaning,
+                )
+            except Exception:
+                return (meaning, True)
+            if not meaning:
+                return None
+            if not is_meta_meaning(meaning) and not is_garbage_meaning(meaning):
+                # multi-gloss: form-prefer then domain-rank among bank senses
+                sb = getattr(self, "sense_bank", None) or {}
+                bank = list(sb.get(form_key) or [])
+                if meaning not in bank:
+                    bank = [meaning] + bank
+                try:
+                    from gap_pack import pick_preferred_sense
+
+                    pref = pick_preferred_sense(token or form_key, bank, context=context)
+                    if pref:
+                        return (pref, True)
+                except Exception:
+                    pass
+                if len(bank) >= 2:
+                    try:
+                        from domain_sense import pick_sense
+
+                        picked = pick_sense(bank[:10], context)
+                        if picked:
+                            return (picked, True)
+                    except Exception:
+                        pass
+                return (meaning, True)
+            # meta/garbage primary: try form-prefer before fallthrough
+            try:
+                from gap_pack import resolve_gap
+
+                ghit = resolve_gap(
+                    token,
+                    self.pul_terms,
+                    getattr(self, "sense_bank", None),
+                    context=context,
+                )
+                if ghit is not None and ghit[1] >= 0.84:
+                    return (ghit[0], True)
+            except Exception:
+                pass
+            cleaned = resolve_meaning(meaning, self.pul_terms)
+            if (
+                cleaned
+                and cleaned != meaning
+                and not is_meta_meaning(cleaned)
+                and not is_garbage_meaning(cleaned)
+            ):
+                return (cleaned, True)
+            return None  # fall through to gap-fill / morph
+
         if key in self.pul_terms:
-            return self.pul_terms[key], True
+            hit = _try_lex(self.pul_terms[key], key)
+            if hit is not None:
+                return hit
         if token in self.pul_terms:
-            return self.pul_terms[token], True
+            hit = _try_lex(self.pul_terms[token], token)
+            if hit is not None:
+                return hit
         if token.upper() in self.pul_terms:
-            return self.pul_terms[token.upper()], True
+            hit = _try_lex(self.pul_terms[token.upper()], token.upper())
+            if hit is not None:
+                return hit
         # Diacritic-folded lookup (Latin macrons / Greek accents)
         ff = ""
         try:
@@ -868,18 +1021,19 @@ class PFLT:
 
             ff = fold_form(token)
             if ff and ff in self.pul_terms:
-                return self.pul_terms[ff], True
+                hit = _try_lex(self.pul_terms[ff], ff)
+                if hit is not None:
+                    return hit
         except Exception:
             pass
         # Finite paradigm table hits (kept separate from pul_terms so gap-fill stays fast)
         pterms = getattr(self, "paradigm_terms", None) or {}
         if pterms:
-            if token in pterms:
-                return pterms[token], True
-            if key in pterms:
-                return pterms[key], True
-            if ff and ff in pterms:
-                return pterms[ff], True
+            for cand in (token, key, ff):
+                if cand and cand in pterms:
+                    hit = _try_lex(pterms[cand], cand)
+                    if hit is not None:
+                        return hit
 
         # Proper names / places: gazetteer + historical contacts (NOT morphology)
         # Names are unique entities; edit-distance neighbors invent false glosses.
@@ -910,6 +1064,21 @@ class PFLT:
             except Exception:
                 pass
 
+        # Gap pack before general gapfill (empty / polysemy residuals)
+        try:
+            from gap_pack import resolve_gap
+
+            ghit = resolve_gap(
+                token,
+                self.pul_terms,
+                getattr(self, "sense_bank", None),
+                context=context,
+            )
+            if ghit is not None and ghit[1] >= 0.84:
+                return ghit[0], True
+        except Exception:
+            pass
+
         # Open-set: Rosetta concept lookup then edit-distance gap-fill
         if self.enable_gapfill and context in {
             "historical",
@@ -919,6 +1088,14 @@ class PFLT:
             "administrative",
         }:
             filled = self._gapfill_token(token, context)
+            if filled is not None:
+                try:
+                    from meaning_clean import is_garbage_meaning, is_meta_meaning
+
+                    if is_meta_meaning(filled) or is_garbage_meaning(filled):
+                        filled = None
+                except Exception:
+                    pass
             if filled is not None:
                 return filled, True
 
@@ -964,7 +1141,100 @@ class PFLT:
                     self._rev_lex = dict(self.pul_terms)
                     self._rev_lex_size = len(self.pul_terms)
 
-        # 1) Declension-class first (4th-decl manu- stems beat greedy man- strip)
+        # Sequential gap-fill (high recall) with form-sim gates + multi-sense on conflict
+        from gapfill_student import edit_sim as _esim
+        from sense_vote import SenseCand, vote_senses
+
+        # 0-gap) Climb gap pack: participles, form-sense, residual seeds
+        try:
+            from gap_pack import resolve_gap
+
+            ghit = resolve_gap(
+                token,
+                getattr(self, "_rev_lex", self.pul_terms),
+                getattr(self, "sense_bank", None),
+                context=context,
+            )
+            if ghit is not None and ghit[1] >= 0.84:
+                self._gapfill_cache[cache_key] = ghit[0]
+                return ghit[0]
+        except Exception:
+            pass
+
+        def _accept(meaning: str, donor: str, score: float, method: str, min_sim: float) -> Optional[str]:
+            try:
+                from meaning_clean import is_garbage_meaning, is_meta_meaning
+
+                if is_meta_meaning(meaning) or is_garbage_meaning(meaning):
+                    return None
+            except Exception:
+                pass
+            if method.startswith("demonym_seed") or method.startswith("rosetta"):
+                return meaning
+            sim = _esim(token, donor) if donor else 1.0
+            # high-confidence morph: trust score (recall); weak score needs form_sim
+            if score >= 0.90:
+                return meaning
+            if score >= 0.84 and sim >= min_sim * 0.9:
+                return meaning
+            if sim < min_sim:
+                return None
+            return meaning
+
+        # 0) Ethnonym / demonym peel
+        if lang in {"la", "lat", "grc", "el"}:
+            try:
+                from demonym_resolve import demonym_resolve
+
+                ehit = demonym_resolve(
+                    token, getattr(self, "_rev_lex", self.pul_terms), lang=lang
+                )
+                if ehit is not None and ehit[2] >= 0.72:
+                    got = _accept(ehit[0], token, ehit[2], "demonym_seed", 0.0)
+                    if got:
+                        self._gapfill_cache[cache_key] = got
+                        return got
+            except Exception:
+                pass
+
+        # 0b) Greek/Latin compound peel → residual lemma in train (εἰκονοκλάστης)
+        if lang in {"grc", "el", "la", "lat"} and len(token) >= 8:
+            try:
+                from remedy_wrong_sense import greek_compound_peel
+                from reverse_morph import reverse_resolve
+
+                rev = getattr(self, "_rev_lex", self.pul_terms)
+                for stem in greek_compound_peel(token):
+                    if stem in rev:
+                        got = _accept(rev[stem], stem, 0.86, "compound_peel", 0.0)
+                        if got:
+                            self._gapfill_cache[cache_key] = got
+                            return got
+                    for end in ("ος", "ης", "η", "ον", "ις", "εύς", "us", "um", "a", "is", "or"):
+                        cand = stem + end
+                        if cand in rev:
+                            got = _accept(rev[cand], cand, 0.84, "compound_lemma", 0.40)
+                            if got:
+                                self._gapfill_cache[cache_key] = got
+                                return got
+                    # reverse-morph the residual stem as if it were the surface form
+                    rhit = reverse_resolve(
+                        stem,
+                        rev,
+                        lang=lang,
+                        prefix_index=getattr(self, "_rev_prefix", None),
+                        min_score=0.82,
+                        min_sim_lemma=0.48,
+                    )
+                    if rhit is not None and rhit[2] >= 0.82:
+                        got = _accept(rhit[0], rhit[1], rhit[2], "compound_rev", 0.45)
+                        if got:
+                            self._gapfill_cache[cache_key] = got
+                            return got
+            except Exception:
+                pass
+
+        # 1) Declension-class first
         if lang in {"la", "lat", "grc", "el"}:
             try:
                 from declension_tables import declension_resolve
@@ -973,12 +1243,14 @@ class PFLT:
                     token, getattr(self, "_rev_lex", self.pul_terms), lang=lang, context=context
                 )
                 if dhit is not None and dhit[2] >= 0.84:
-                    self._gapfill_cache[cache_key] = dhit[0]
-                    return dhit[0]
+                    got = _accept(dhit[0], dhit[1], dhit[2], dhit[3] if len(dhit) > 3 else "decl", 0.48)
+                    if got:
+                        self._gapfill_cache[cache_key] = got
+                        return got
             except Exception:
                 pass
 
-        # 1b) Reverse morphology: strip endings → known lemma
+        # 1b) Reverse morphology (multi-sense reweight inside reverse_resolve)
         if lang in {"grc", "el", "ang", "oe", "la", "lat"}:
             try:
                 from reverse_morph import reverse_resolve
@@ -1001,14 +1273,24 @@ class PFLT:
                         lang=lang,
                         prefix_index=getattr(self, "_rev_prefix", None),
                     )
-                thr = 0.84 if lang in {"la", "lat"} else 0.80
+                thr = 0.84 if lang in {"la", "lat"} else 0.78
+                if lang in {"ang", "oe"}:
+                    thr = 0.76
                 if hit is not None and hit[2] >= thr:
-                    self._gapfill_cache[cache_key] = hit[0]
-                    return hit[0]
+                    got = _accept(hit[0], hit[1], hit[2], hit[3] if len(hit) > 3 else "rev", 0.48)
+                    if got:
+                        self._gapfill_cache[cache_key] = got
+                        return got
+                # weaker morph for empty-fallback climb (still form-gated in _accept)
+                if hit is not None and hit[2] >= 0.72:
+                    got = _accept(hit[0], hit[1], hit[2], "rev_weak", 0.55)
+                    if got:
+                        self._gapfill_cache[cache_key] = got
+                        return got
             except Exception:
                 pass
 
-        # 1c) Whitaker-style prefix peel → residual lemma in train lexicon
+        # 1c) Whitaker-style prefix peel
         if lang in {"la", "lat", "grc", "el", "ang", "oe"}:
             try:
                 from prefix_analyze import prefix_resolve
@@ -1017,12 +1299,14 @@ class PFLT:
                     token, getattr(self, "_rev_lex", self.pul_terms), lang=lang
                 )
                 if phit is not None and phit[2] >= 0.84:
-                    self._gapfill_cache[cache_key] = phit[0]
-                    return phit[0]
+                    got = _accept(phit[0], phit[1] if len(phit) > 1 else token, phit[2], "prefix", 0.55)
+                    if got:
+                        self._gapfill_cache[cache_key] = got
+                        return got
             except Exception:
                 pass
 
-        # 1d) Lemma-sense index: majority content gloss on shared stem (train only)
+        # 1d) Lemma-sense index with multi-sense domain + vote on conflict
         if lang in {"la", "lat", "grc", "el", "ang", "oe"}:
             try:
                 from lemma_index import LemmaSenseIndex
@@ -1038,34 +1322,45 @@ class PFLT:
                     self._lemma_idx_size = len(self.pul_terms)
                 lhit = self._lemma_idx.resolve(token, lang=lang)
                 if lhit is not None and lhit.score >= 0.80:
-                    # if stem has multiple senses, domain-rank
                     senses = list(
                         self._lemma_idx.stem_senses.get(lhit.donor_stem, {}).keys()
                     )
+                    meaning = lhit.meaning
                     if len(senses) > 1:
-                        picked = pick_sense(senses, context)
-                        if picked:
-                            self._gapfill_cache[cache_key] = picked
-                            return picked
-                    self._gapfill_cache[cache_key] = lhit.meaning
-                    return lhit.meaning
+                        # multi-sense vote among train-supported glosses
+                        sc = [
+                            SenseCand(s, lhit.donor_stem, lhit.score, "lemma_sense", 0.55)
+                            for s in senses[:6]
+                        ]
+                        voted = vote_senses(token, sc, context=context, min_score=0.60)
+                        if voted is not None:
+                            meaning = voted[0]
+                        else:
+                            picked = pick_sense(senses, context)
+                            if picked:
+                                meaning = picked
+                    got = _accept(meaning, lhit.donor_stem, lhit.score, "lemma_sense", 0.45)
+                    if got:
+                        self._gapfill_cache[cache_key] = got
+                        return got
             except Exception:
                 pass
 
-        # 2) Open-set booster: stem / n-gram / Rosetta (cached per lang)
+        # 2) Open-set booster
         try:
             from open_set_boost import OpenSetBooster
 
             if not hasattr(self, "_open_boosters"):
                 self._open_boosters = {}
-            # Gold-only booster (paradigm hits already exact-mapped above)
             bkey = f"{lang}:{len(self.pul_terms)}"
             if bkey not in self._open_boosters:
                 self._open_boosters[bkey] = OpenSetBooster(self.pul_terms, lang_hint=lang)
             hit = self._open_boosters[bkey].resolve(token)
-            if hit is not None and hit.score >= 0.48:
-                self._gapfill_cache[cache_key] = hit.meaning
-                return hit.meaning
+            if hit is not None and hit.score >= 0.55:
+                got = _accept(hit.meaning, hit.donor or token, hit.score, hit.method, 0.48)
+                if got:
+                    self._gapfill_cache[cache_key] = got
+                    return got
         except Exception:
             pass
 
@@ -1085,8 +1380,10 @@ class PFLT:
             hit = self._rosetta.resolve(token, lang_hints=hints)
             if hit is not None:
                 meaning, concept, _ = hit
-                self._gapfill_cache[cache_key] = meaning
-                return meaning
+                got = _accept(meaning, token, 0.80, "rosetta", 0.0)
+                if got:
+                    self._gapfill_cache[cache_key] = got
+                    return got
         except Exception:
             pass
 
@@ -1191,17 +1488,30 @@ class PFLT:
         *,
         include_audio: bool = False,
         speak_lang: str = "en",
+        math_trace: Optional[bool] = None,
+        math_trace_failures: Optional[bool] = None,
     ) -> Dict[str, Any]:
+        """
+        Translate under FSOT 2.1 domain scalar.
+
+        math_trace: when True (or PFLT(enable_math_trace=True)), attach full microscope
+          pathway for the domain (S=K(T1+T2+T3) step list).
+        math_trace_failures: when True, miss/inexact tokens write granular failure
+          JSON under data/math_microscope/ (defaults to same as math_trace — off
+          during bulk eval so disk stays clean).
+        """
         tokens = self.tokenize(input_data, context=context)
         meanings: List[str] = []
         exact_hits = 0
         resolution_trace: List[str] = []
+        token_exact: List[bool] = []
         for tok in tokens:
             meaning, exact = self.map_token(tok, context)
             meanings.append(meaning)
+            token_exact.append(exact)
             if exact:
                 exact_hits += 1
-            resolution_trace.append(f"{tok}->{meaning}")
+            resolution_trace.append(f"{tok}->{meaning}" + ("" if exact else " [inferred]"))
         panel = self.domain_scalar(context)
         # Optional: fluid_tongue uses its own deeper domain routing for S
         synth_ctx = "fluid_tongue" if target_lang == "fluid_tongue" else context
@@ -1237,6 +1547,57 @@ class PFLT:
                 "Lean/NeuroLab parity; domain-aware; 400+ FSOT scientific domains routable."
             ),
         }
+
+        do_trace = self.enable_math_trace if math_trace is None else math_trace
+        # Fail logs default off unless explicitly requested or full math_trace is on
+        if math_trace_failures is None:
+            math_trace_failures = do_trace
+        want_fail_logs = bool(math_trace_failures) and any(not e for e in token_exact)
+        if do_trace or want_fail_logs:
+            try:
+                from fsot_math_microscope import (
+                    pathway_summary,
+                    trace_domain,
+                    write_failure_math_log,
+                )
+
+                tr = trace_domain(context if context in DOMAIN_PARAMS else "linguistic")
+                path_sum = pathway_summary(tr)
+                if do_trace:
+                    out["math_microscope"] = {
+                        "formula": path_sum["formula"],
+                        "domain": path_sum["domain"],
+                        "panel": path_sum["panel"],
+                        "pathway": path_sum["pathway"],
+                        "layer_counts": path_sum["layer_counts"],
+                        "mathematica": "mathematica/FSOT_PFLT_Microscope.wl",
+                        "formal_golden": "formal/golden_fsot_pflt.json",
+                        "note": (
+                            "Granular S=K(T1+T2+T3) trace. Cross-verify with "
+                            "Isabelle/Coq/Lean/F* via formal/parity_report.json."
+                        ),
+                    }
+                fail_paths: List[str] = []
+                if want_fail_logs:
+                    for tok, meaning, exact in zip(tokens, meanings, token_exact):
+                        if exact:
+                            continue
+                        fp = write_failure_math_log(
+                            domain=tr.domain,
+                            token=tok,
+                            meaning=meaning,
+                            exact=exact,
+                            resolution="inferred_fallback",
+                            input_text=input_data,
+                            export_wl=False,  # domain .wl already from main / first call
+                        )
+                        fail_paths.append(str(fp))
+                    if fail_paths:
+                        out["math_failure_logs"] = fail_paths
+                        out["math_failure_count"] = len(fail_paths)
+            except Exception as e:
+                out["math_microscope_error"] = str(e)
+
         if include_audio:
             try:
                 from audio_articulation import articulate

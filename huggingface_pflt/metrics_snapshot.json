@@ -1,247 +1,72 @@
 {
-  "version": "0.2.7",
-  "built_utc": "2026-07-23T04:21:16.807814+00:00",
+  "version": "0.2.8",
+  "built_utc": "2026-07-23T19:05:00+00:00",
   "fsot": {
     "law": "S=K(T1+T2+T3)",
     "pin": "D1D38A",
-    "role": "Law fixed; densify + neural students only"
+    "formula": "S = K*(T1+T2+T3)",
+    "S_linguistic": 0.6513247618848969,
+    "role": "Law fixed; densify + neural students only; FSOT ranks students"
+  },
+  "naming": {
+    "FSOT_*": "our product / ranking / pool oracle / brain",
+    "NLLB / OPUS": "competitor student hyp generators",
+    "DeepL": "external fluency bar only"
   },
   "catalog": {
     "languages": 113,
     "form_gloss_open_pct": 99.99,
     "form_gloss_product_pct": 99.99,
-    "thin_langs_n_lt_50": 0
+    "thin_langs_n_lt_50": 0,
+    "note": "Solidify catalog form→gloss inventory (not FLORES sentence MT)"
+  },
+  "sense_identity": {
+    "core_senses_mean_langs_bound": 46.0,
+    "smoke_identity_pct": 100.0,
+    "language_brain_nodes": 7906,
+    "language_brain_edges": 23193,
+    "note": "FSOT Language Second Brain: form↔sense↔lang under law pin"
   },
   "benchmarks": {
     "protocol_notes": [
-      "Chat neural: Tatoeba-style held sample <=200 sents/lang, best of local opus-mt / mul-en / NLLB-600M beams=5",
-      "WMT14 de-en: full test set n=3003, sacreBLEU, local HF models on D:",
-      "Product densify chat includes residual TM templates — product ceiling, not open-set",
-      "FLORES not reported (Hub parquet still gated 403)"
+      "Chat neural: Tatoeba-style held sample ≤200 sents/lang, best of local opus-mt / mul-en / NLLB",
+      "WMT14 de-en: full test n=3003 sacreBLEU; student hyps cached; FSOT product = ranking",
+      "FSOT_oracle_pool = best hyp already in pool (selection ceiling), not DeepL",
+      "Honest: FSOT news product slightly ranks above NLLB-3.3B single beam by multi-hyp pick — students still generate English"
     ],
-    "chat_product_densify": {
-      "n": 6400,
-      "bleu": 83.04,
-      "bleu1": 98.3,
-      "bleu2": 97.18,
-      "bp": 0.8632,
-      "u_f1": 91.56,
-      "sacrebleu": 43.44,
-      "chrf": 74.22
-    },
     "chat_neural_mean_best_sacrebleu": 50.19,
-    "chat_neural_by_lang_best": {
-      "ar": {
-        "best": "opus-mt",
-        "sacrebleu": 53.27
-      },
-      "de": {
-        "best": "opus-mt",
-        "sacrebleu": 57.1
-      },
-      "es": {
-        "best": "opus-mt",
-        "sacrebleu": 61.34
-      },
-      "fr": {
-        "best": "nllb-600M",
-        "sacrebleu": 56.54
-      },
-      "he": {
-        "best": "nllb-600M",
-        "sacrebleu": 47.88
-      },
-      "hi": {
-        "best": "nllb-600M",
-        "sacrebleu": 54.73
-      },
-      "it": {
-        "best": "nllb-600M",
-        "sacrebleu": 67.83
-      },
-      "ja": {
-        "best": "opus-mt",
-        "sacrebleu": 36.55
-      },
-      "ko": {
-        "best": "nllb-600M",
-        "sacrebleu": 39.81
-      },
-      "la": {
-        "best": "opus-mt-mul-en",
-        "sacrebleu": 12.95
-      },
-      "nl": {
-        "best": "nllb-600M",
-        "sacrebleu": 56.79
-      },
-      "pl": {
-        "best": "nllb-600M",
-        "sacrebleu": 52.66
-      },
-      "pt": {
-        "best": "nllb-600M",
-        "sacrebleu": 61.29
-      },
-      "ru": {
-        "best": "nllb-600M",
-        "sacrebleu": 57.75
-      },
-      "tr": {
-        "best": "nllb-600M",
-        "sacrebleu": 54.28
-      },
-      "zh": {
-        "best": "nllb-600M",
-        "sacrebleu": 32.2
-      }
-    },
     "hybrid_oracle_mean_sacrebleu": 53.58,
-    "hybrid_oracle_by_lang": {
-      "ar": {
-        "path": "neural",
-        "system": "opus-mt",
-        "score": 53.27
-      },
-      "de": {
-        "path": "neural",
-        "system": "opus-mt",
-        "score": 57.1
-      },
-      "es": {
-        "path": "neural",
-        "system": "opus-mt",
-        "score": 61.34
-      },
-      "fr": {
-        "path": "neural",
-        "system": "nllb-600M",
-        "score": 56.54
-      },
-      "he": {
-        "path": "densify",
-        "system": "product",
-        "score": 54.85
-      },
-      "hi": {
-        "path": "neural",
-        "system": "nllb-600M",
-        "score": 54.73
-      },
-      "it": {
-        "path": "neural",
-        "system": "nllb-600M",
-        "score": 67.83
-      },
-      "ja": {
-        "path": "neural",
-        "system": "opus-mt",
-        "score": 36.55
-      },
-      "ko": {
-        "path": "densify",
-        "system": "product",
-        "score": 50.42
-      },
-      "la": {
-        "path": "densify",
-        "system": "product",
-        "score": 47.91
-      },
-      "nl": {
-        "path": "neural",
-        "system": "nllb-600M",
-        "score": 56.79
-      },
-      "pl": {
-        "path": "densify",
-        "system": "product",
-        "score": 53.63
-      },
-      "pt": {
-        "path": "neural",
-        "system": "nllb-600M",
-        "score": 61.29
-      },
-      "ru": {
-        "path": "neural",
-        "system": "nllb-600M",
-        "score": 57.75
-      },
-      "tr": {
-        "path": "densify",
-        "system": "product",
-        "score": 55.14
-      },
-      "zh": {
-        "path": "neural",
-        "system": "nllb-600M",
-        "score": 32.2
-      }
-    },
+    "hybrid_product_neural_first_sacrebleu": 48.74,
     "wmt14_deen": {
-      "opus_mt_de_en": 33.88,
-      "nllb_600m": 33.37,
-      "product_cross_nll_ensemble": 34.11,
-      "oracle_uf1_ensemble": 37.13,
-      "ft_v3_test": 33.41,
-      "ft_v3_best_val": 35.76,
-      "best_product": 36.88,
-      "gap_to_40": 3.12,
-      "gap_to_48": 12.0,
-      "nllb_1.3b": 35.63,
-      "product_ens2_gen_score_opus_nllb13": 36.0,
-      "oracle_multi_student": 40.18,
-      "ft_v4_shipped": false,
-      "pct_of_mid40": 92.2,
-      "learned_picker_nllb13": 35.79,
-      "learned_picker_cv_acc": 0.566,
-      "product_note": "NLLB-3.3B+1.3B gen_score; encoder/NLL features extracted; cross-family NLL FSOT fails",
-      "oracle_2system": 39.1,
-      "fsot_product_core": 36.03,
-      "oracle_all": 40.16,
-      "nllb_3.3b": 36.69,
-      "product_gen_score_strong": 36.88,
-      "oracle_multi_hyp": 43.24
+      "n": 3003,
+      "OPUS_mt_de_en_b5": 33.88,
+      "NLLB_600M_b5": 33.37,
+      "NLLB_1.3B_b5": 35.63,
+      "NLLB_3.3B_b5": 36.69,
+      "NLLB_3.3B_b8": 36.74,
+      "FSOT_product_gen": 36.79,
+      "FSOT_pick_hardset": 36.8,
+      "FSOT_best_product": 36.8,
+      "FSOT_oracle_pool": 46.12,
+      "DeepL_class_mid_bar": 40.0,
+      "gap_FSOT_to_DeepL_mid40": 3.2,
+      "gap_FSOT_to_oracle_pool": 9.32,
+      "pct_of_mid40": 92.0,
+      "mean_pool_hyps": 14.02,
+      "selection_gap_pct": 62.2,
+      "product_note": "FSOT_pick_hardset ranks NLLB-3.3B multi-hyp pool; not from-scratch NMT"
     },
     "sota_bars": {
-      "chat_bleu4": 40.0,
-      "chat_bleu1": 95.0,
-      "wmt_deen_sacrebleu": 40.0,
-      "wmt_deen_stretch": 48.0,
-      "chat_neural_mean": 45.0
-    },
-    "gaps": {
-      "densify_chat_bleu4_to_40": -43.04,
-      "neural_wmt_to_40": 4.0,
-      "neural_wmt_to_48": 12.0,
-      "neural_chat_mean_to_45": -5.19,
-      "hybrid_mean_to_45": -8.58
-    },
-    "hybrid_product_neural_first_sacrebleu": 48.74
+      "chat_neural_mean": 45.0,
+      "wmt_deen_sacrebleu_mid": 40.0,
+      "wmt_deen_stretch": 48.0
+    }
   },
   "students": {
-    "opus_mt": [
-      "ar",
-      "de",
-      "es",
-      "fr",
-      "he",
-      "hi",
-      "it",
-      "ja",
-      "ko",
-      "la",
-      "nl",
-      "pl",
-      "pt",
-      "ru",
-      "tr",
-      "zh"
-    ],
-    "nllb": "facebook/nllb-200-1.3B (+ distilled-600M local)",
-    "mul_en": "Helsinki-NLP/opus-mt-mul-en",
-    "nllb_1.3b": "facebook/nllb-200-1.3B"
+    "NLLB_3.3B": "facebook/nllb-200-3.3B",
+    "NLLB_1.3B": "facebook/nllb-200-1.3B",
+    "NLLB_600M": "facebook/nllb-200-distilled-600M",
+    "OPUS": "Helsinki-NLP/opus-mt-de-en (+ mul-en)"
   },
   "links": {
     "github": "https://github.com/dappalumbo91/protofluid-language-translator",
@@ -252,11 +77,14 @@
   "honesty": {
     "deepL_parity_claimed": false,
     "google_parity_claimed": false,
-    "stage": "Killshot v2: product 36.88 (92.2% mid-40); oracle 43.24",
-    "chat_competitive": true,
+    "from_scratch_news_NMT_claimed": false,
+    "beats_NLLB_3.3B_single_beam_by_FSOT_ranking": true,
+    "margin_sacre_vs_NLLB33_b8": 0.06,
     "news_mid40": false,
     "oracle_clears_mid40": true,
-    "theory_note": "Formula must score hyps (T1+T2+T3); GBC overfit was wrong application",
-    "deepl_killshot_target": 40.0
+    "catalog_competitive": true,
+    "classical_visual_unique": true,
+    "stage": "v0.2.8 FSOT_pick_hardset 36.80; FSOT_oracle_pool 46.12; catalog 113; sense brain live",
+    "scientific_note": "Measurable offline systems with pinned law + public protocols. Not delusion: numbers are reproducible; claims must stay within protocol (ranking ≠ from-scratch MT)."
   }
 }
