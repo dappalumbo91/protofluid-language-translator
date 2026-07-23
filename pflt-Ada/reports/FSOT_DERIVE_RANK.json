@@ -1,102 +1,120 @@
 {
-  "built_utc": "2026-07-23T23:23:24.559258+00:00",
-  "mission": "FSOT-derived rank \u2014 archive S=K(T1+T2+T3) ONLY",
+  "built_utc": "2026-07-23T23:31:02.256508+00:00",
+  "mission": "FSOT seed-only linguistics domain rank",
   "formula": "S = K*(T1+T2+T3)",
   "pin": "D1D38A",
   "pin_ok": true,
   "authority_path": "I:\\FSOT-Physical-Archive\\02_FSOT-2.1-Lean-Full\\vendor\\fsot_compute.py",
-  "K": 0.4202216641606967,
-  "PHI": 1.618033988749895,
-  "C_EFF": 0.9577022026205613,
-  "D_eff_linguistic": 12.0,
+  "seeds_used": {
+    "K": 0.4202216641606967,
+    "PHI": 1.618033988749895,
+    "E": 2.718281828459045,
+    "C_EFF": 0.9577022026205613,
+    "GAMMA": 0.5772156649015329,
+    "D_eff_domain": 12.0,
+    "domain_delta_psi": 0.08,
+    "domain_delta_theta": 1.0,
+    "breath_target": 4.398272389447946,
+    "golden_split_w_nll": 0.6180339887498949,
+    "golden_split_w_gen": 0.38196601125010515
+  },
+  "no_free_parameters": true,
+  "no_llm_judge": true,
   "n": 3003,
-  "mean_S": 0.660844452281959,
-  "agree_S_vs_gen_pct": 36.73,
+  "mean_S": 0.7355770371150036,
+  "agree_S_vs_gen_pct": 81.78,
   "results": {
     "FSOT_product_S": {
-      "sacrebleu": 36.4,
-      "chrf": 61.69,
-      "note": "argmax S=K(T1+T2+T3) within NLLB-3.3B multi-hyp"
+      "sacrebleu": 36.83,
+      "chrf": 61.93,
+      "note": "argmax archive S under seed-only map"
     },
     "FSOT_product_lin": {
-      "sacrebleu": 36.43,
-      "note": "argmax T1*C_EFF+T2+T3/PHI (seed constants only)"
+      "sacrebleu": 36.85,
+      "note": "argmax T1*C_EFF+T2+T3/PHI (seed constants)"
     },
     "student_gen_max": {
       "sacrebleu": 36.79,
-      "note": "NLLB-3.3B max gen \u2014 student baseline, NOT FSOT product"
+      "note": "NLLB-3.3B gen \u2014 student baseline NOT product"
     }
   },
   "best_product": {
     "name": "FSOT_product_lin",
-    "sacrebleu": 36.43
+    "sacrebleu": 36.85
   },
-  "gap_to_DeepL_mid40": 3.57,
-  "elapsed_s": 5.19,
+  "gap_to_DeepL_mid40": 3.15,
+  "gap_to_student_gen": -0.06,
+  "puzzle_study": {
+    "n_clear_gold": 1344,
+    "mean_S_when_hyp_good": 0.8159725971868903,
+    "mean_S_when_hyp_worst": 0.7030231342730047,
+    "mean_T1_good": 0.3831771584789129,
+    "mean_T1_worst": 0.29187385771560104,
+    "note": "When a candidate already aligns with gold (sb\u22650.45), observe its panel. Good hyps should show higher S than worst in same pool if the map is right. No free-fit \u2014 diagnostic for arranging seeds only.",
+    "S_separation": 0.11294946291388563
+  },
   "samples": [
     {
       "i": 0,
-      "S": 1.1453860838552952,
-      "T1": 0.8836011105353818,
-      "T2": 1.8420700805084214,
-      "T3": 1.1854440614233069e-16,
-      "pick": "Gutach: Even more safety for pedestrians",
-      "same_as_gen": false
+      "S": 1.205626677880589,
+      "T1": 1.0497554756756473,
+      "T2": 1.8192700427696513,
+      "T3": 1.55696567838791e-16,
+      "pick_S": "Gutach: Even more safety for pedestrians",
+      "gold_best_same": false,
+      "gen_same": false
     },
     {
       "i": 1,
-      "S": 0.8578762282249937,
-      "T1": -0.260072038022308,
-      "T2": 2.3015570479358702,
-      "T3": 1.2414467794719687e-16,
-      "pick": "They are less than 100 metres apart: on Tuesday in Gutach, the new B 33 pedestrian lamp was put into",
-      "same_as_gen": false
+      "S": 1.1651409011705622,
+      "T1": 0.4769314396266487,
+      "T2": 2.2957502199391024,
+      "T3": 1.575366071489228e-16,
+      "pick_S": "They are less than 100 metres apart: on Tuesday in Gutach, the new B 33 pedestrian lamp wa",
+      "gold_best_same": false,
+      "gen_same": true
     },
     {
       "i": 2,
-      "S": 0.8404086445685206,
-      "T1": -0.5480598486905846,
-      "T2": 2.5479773118872,
-      "T3": 1.1289352006511766e-16,
-      "pick": "Two plants so close together, was it intentional or a prank?",
-      "same_as_gen": false
-    },
-    {
-      "i": 100,
-      "S": 1.122264155822977,
-      "T1": 0.8544929602888091,
-      "T2": 1.816155060832283,
-      "T3": 1.3646367755023851e-16,
-      "pick": "Officials at the Metropolitan Transportation Commission for the San Francisco Bay Area said that Con",
-      "same_as_gen": true
+      "S": 1.0756557182039406,
+      "T1": 0.08729586051782248,
+      "T2": 2.4724382273292043,
+      "T3": 1.5134299991694827e-16,
+      "pick_S": "Two facilities so close together, was it intentional or a prank?",
+      "gold_best_same": false,
+      "gen_same": true
     },
     {
       "i": 500,
-      "S": 0.9735158789468525,
-      "T1": 0.6030291122112359,
-      "T2": 1.7136431633394387,
-      "T3": 1.368613159061889e-16,
-      "pick": "Lawyers must maintain the highest standards of integrity and instill trust and confidence in the pub",
-      "same_as_gen": true
+      "S": 1.105557283403336,
+      "T1": 0.9052164710699122,
+      "T2": 1.7256742651596233,
+      "T3": 1.6166352979209623e-16,
+      "pick_S": "Lawyers must maintain the highest standards of integrity and instill trust and confidence ",
+      "gold_best_same": true,
+      "gen_same": true
     },
     {
-      "i": 1000,
-      "S": 1.0066194401535287,
-      "T1": 0.31305975779428286,
-      "T2": 2.082388944651929,
-      "T3": 1.236645603305014e-16,
-      "pick": "Tragedy in Uruguay: Boys kill their playmates with machetes",
-      "same_as_gen": false
+      "i": 1500,
+      "S": 1.1825630151764275,
+      "T1": 0.8620049068218865,
+      "T2": 1.9521360954949392,
+      "T3": 1.5974069930632986e-16,
+      "pick_S": "On the way, the mail can run through several other servers on the Internet.",
+      "gold_best_same": false,
+      "gen_same": true
     },
     {
-      "i": 2000,
-      "S": 1.1847045237255835,
-      "T1": 0.964400782360083,
-      "T2": 1.8548363602365001,
-      "T3": 1.3737385358866973e-16,
-      "pick": "The conflict has forced an estimated two million people to flee the country.",
-      "same_as_gen": false
+      "i": 2500,
+      "S": 1.1762125707925983,
+      "T1": 1.0173493436631005,
+      "T2": 1.7816795287341196,
+      "T3": 1.5596052193858444e-16,
+      "pick_S": "BI thanked the donors for the paint and all the helpers.",
+      "gold_best_same": false,
+      "gen_same": false
     }
   ],
-  "honesty": "Candidates from NLLB students; ranking is archive FSOT scalar only. No Qwen. K not free-fit. Pin D1D38A."
+  "elapsed_s": 5.4,
+  "honesty": "No free-fit. No Qwen. Ranks are scale-free. Domain D_eff from archive table. Students only supply candidates. Formula ranks. If product is below student gen, refine seed arrangement \u2014 do not add knobs."
 }
