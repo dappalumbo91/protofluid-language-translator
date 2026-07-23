@@ -1,6 +1,6 @@
 {
-  "version": "0.2.6",
-  "built_utc": "2026-07-23T01:30:50.405760+00:00",
+  "version": "0.2.7",
+  "built_utc": "2026-07-23T04:21:16.809752+00:00",
   "fsot": {
     "law": "S=K(T1+T2+T3)",
     "pin": "D1D38A",
@@ -214,16 +214,19 @@
       "ft_v3_test": 33.41,
       "ft_v3_best_val": 35.76,
       "ft_v4_shipped": false,
-      "best_product": 36.03,
-      "gap_to_40": 3.97,
+      "best_product": 36.88,
+      "gap_to_40": 3.12,
       "gap_to_48": 12.0,
-      "pct_of_mid40": 90.1,
+      "pct_of_mid40": 92.2,
       "learned_picker_nllb13": 35.79,
       "learned_picker_cv_acc": 0.566,
-      "product_note": "FSOT term scoring beats gen-score; pin D1D38A live",
+      "product_note": "NLLB-3.3B+1.3B gen_score; encoder/NLL features extracted; cross-family NLL FSOT fails",
       "oracle_2system": 39.1,
       "fsot_product_core": 36.03,
-      "oracle_all": 40.16
+      "oracle_all": 40.16,
+      "nllb_3.3b": 36.69,
+      "product_gen_score_strong": 36.88,
+      "oracle_multi_hyp": 43.24
     },
     "sota_bars": {
       "chat_bleu4": 40.0,
@@ -272,7 +275,7 @@
   "honesty": {
     "deepL_parity_claimed": false,
     "google_parity_claimed": false,
-    "stage": "DeepL killshot track: FSOT product 36.03; oracle 40.16 clears mid",
+    "stage": "Killshot v2: product 36.88 (92.2% mid-40); oracle 43.24",
     "news_mid40": false,
     "oracle_clears_mid40": true,
     "theory_note": "Formula must score hyps (T1+T2+T3); GBC overfit was wrong application",
