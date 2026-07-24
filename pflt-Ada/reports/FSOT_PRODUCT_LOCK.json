@@ -1,0 +1,17 @@
+{
+  "built_utc": "2026-07-24T00:38:08.354235+00:00",
+  "methodology": "docs/FSOT_INTRINSIC_METHODOLOGY.md",
+  "formula": "S = K*(T1+T2+T3)",
+  "pin": "D1D38A",
+  "pin_ok": true,
+  "authority_path": "I:\\FSOT-Physical-Archive\\02_FSOT-2.1-Lean-Full\\vendor\\fsot_compute.py",
+  "product_name": "FSOT_C_ac_S",
+  "sacrebleu": 36.9,
+  "separation": 0.12004,
+  "student_gen_max": 36.79,
+  "beats_student": true,
+  "gap_to_DeepL_mid40": 3.1,
+  "gap_to_student_gen": -0.11,
+  "source_report": "pflt-Ada/reports/FSOT_SEED_PUSH.json",
+  "rule": "Students supply candidates; FSOT ranks with seeds only; no free params; no LLM product ranker"
+}

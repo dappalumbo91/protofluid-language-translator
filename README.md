@@ -23,11 +23,13 @@ python pflt_sense_translate.py --smoke
 python pflt_sense_translate.py "aqua manus lingua" --src la --tgt en
 python pflt_sense_translate.py "water" --src en --tgt de
 python language_brain.py all   # second brain: sense graph + hole map + vault
+python -u scripts\fsot_automate_pipeline.py --update-metrics  # FSOT seed product rank
 ```
 
 | Doc | Role |
 |-----|------|
 | [`docs/VISION_SENSE_IDENTITY.md`](docs/VISION_SENSE_IDENTITY.md) | **Vision lock** (read first) |
+| [`docs/FSOT_INTRINSIC_METHODOLOGY.md`](docs/FSOT_INTRINSIC_METHODOLOGY.md) | **Intrinsic seed ranking method** (no free params) |
 | [`docs/LANGUAGE_SECOND_BRAIN.md`](docs/LANGUAGE_SECOND_BRAIN.md) | Connective sense/lang graph + Obsidian vault |
 | [`docs/FSOT_ARCHIVE_REALIGNMENT.md`](docs/FSOT_ARCHIVE_REALIGNMENT.md) | Archive architecture map |
 | [`docs/FSOT_LAW_AUDIT.md`](docs/FSOT_LAW_AUDIT.md) | No ad-hoc scalar |

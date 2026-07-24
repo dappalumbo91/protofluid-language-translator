@@ -1,11 +1,12 @@
 {
   "version": "0.3.0",
-  "built_utc": "2026-07-24T00:15:18.079200+00:00",
+  "built_utc": "2026-07-24T00:38:08.355738+00:00",
   "fsot": {
     "law": "S=K(T1+T2+T3)",
     "pin": "D1D38A",
-    "product": "FSOT_C_ac_S seed acoustic-tilt argmax S",
-    "role": "Intrinsic seed ranking only; students supply candidates"
+    "product": "FSOT_C_ac_S",
+    "role": "Intrinsic seed ranking; students supply candidates only",
+    "methodology": "docs/FSOT_INTRINSIC_METHODOLOGY.md"
   },
   "naming": {
     "FSOT_*": "our product / ranking / pool oracle / brain",
@@ -53,11 +54,13 @@
       "pct_of_mid40": 94.05,
       "mean_pool_hyps": 14.02,
       "selection_gap_pct": 62.2,
-      "product_note": "FSOT seed map C (acoustic-tilt) at Acoustics D_eff=10; argmax S=K(T1+T2+T3); no free params no LLM",
+      "product_note": "FSOT_C_ac_S via FSOT seed methodology; pin D1D38A; no free params; no LLM ranker",
       "FSOT_pick_llm_judge": 37.62,
       "FSOT_product_C_ac_S": 36.9,
       "NLLB_3.3B_gen_max": 36.79,
-      "gap_FSOT_beats_student": -0.11
+      "gap_FSOT_beats_student": -0.11,
+      "FSOT_C_ac_S": 36.9,
+      "gap_FSOT_to_student_gen": -0.11
     },
     "sota_bars": {
       "chat_neural_mean": 45.0,
@@ -87,7 +90,7 @@
     "oracle_clears_mid40": true,
     "catalog_competitive": true,
     "classical_visual_unique": true,
-    "stage": "v0.3.0 FSOT_C_ac_S 36.90 beats NLLB-3.3B gen 36.79 by +0.11 intrinsic only",
+    "stage": "FSOT_C_ac_S sacre=36.9; student_gen=36.79; methodology locked",
     "scientific_note": "Measurable offline systems with pinned law + public protocols. Not delusion: numbers are reproducible; claims must stay within protocol (ranking \u2260 from-scratch MT).",
     "intrinsic_math_only": true
   }
