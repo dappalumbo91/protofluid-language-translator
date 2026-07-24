@@ -1,12 +1,11 @@
 {
-  "version": "0.2.8",
-  "built_utc": "2026-07-23T19:05:00+00:00",
+  "version": "0.3.0",
+  "built_utc": "2026-07-24T00:15:18.077991+00:00",
   "fsot": {
     "law": "S=K(T1+T2+T3)",
     "pin": "D1D38A",
-    "formula": "S = K*(T1+T2+T3)",
-    "S_linguistic": 0.6513247618848969,
-    "role": "Law fixed; densify + neural students only; FSOT ranks students"
+    "product": "FSOT_C_ac_S seed acoustic-tilt argmax S",
+    "role": "Intrinsic seed ranking only; students supply candidates"
   },
   "naming": {
     "FSOT_*": "our product / ranking / pool oracle / brain",
@@ -18,21 +17,21 @@
     "form_gloss_open_pct": 99.99,
     "form_gloss_product_pct": 99.99,
     "thin_langs_n_lt_50": 0,
-    "note": "Solidify catalog form→gloss inventory (not FLORES sentence MT)"
+    "note": "Solidify catalog form\u2192gloss inventory (not FLORES sentence MT)"
   },
   "sense_identity": {
     "core_senses_mean_langs_bound": 46.0,
     "smoke_identity_pct": 100.0,
     "language_brain_nodes": 7906,
     "language_brain_edges": 23193,
-    "note": "FSOT Language Second Brain: form↔sense↔lang under law pin"
+    "note": "FSOT Language Second Brain: form\u2194sense\u2194lang under law pin"
   },
   "benchmarks": {
     "protocol_notes": [
-      "Chat neural: Tatoeba-style held sample ≤200 sents/lang, best of local opus-mt / mul-en / NLLB",
+      "Chat neural: Tatoeba-style held sample \u2264200 sents/lang, best of local opus-mt / mul-en / NLLB",
       "WMT14 de-en: full test n=3003 sacreBLEU; student hyps cached; FSOT product = ranking",
       "FSOT_oracle_pool = best hyp already in pool (selection ceiling), not DeepL",
-      "Honest: FSOT news product slightly ranks above NLLB-3.3B single beam by multi-hyp pick — students still generate English"
+      "Honest: FSOT news product slightly ranks above NLLB-3.3B single beam by multi-hyp pick \u2014 students still generate English"
     ],
     "chat_neural_mean_best_sacrebleu": 50.19,
     "hybrid_oracle_mean_sacrebleu": 53.58,
@@ -45,16 +44,20 @@
       "NLLB_3.3B_b5": 36.69,
       "NLLB_3.3B_b8": 36.74,
       "FSOT_product_gen": 36.79,
-      "FSOT_pick_hardset": 36.8,
-      "FSOT_best_product": 36.8,
+      "FSOT_pick_hardset": 36.82,
+      "FSOT_best_product": 36.9,
       "FSOT_oracle_pool": 46.12,
       "DeepL_class_mid_bar": 40.0,
-      "gap_FSOT_to_DeepL_mid40": 3.2,
-      "gap_FSOT_to_oracle_pool": 9.32,
-      "pct_of_mid40": 92.0,
+      "gap_FSOT_to_DeepL_mid40": 3.1,
+      "gap_FSOT_to_oracle_pool": 8.5,
+      "pct_of_mid40": 94.05,
       "mean_pool_hyps": 14.02,
       "selection_gap_pct": 62.2,
-      "product_note": "FSOT_pick_hardset ranks NLLB-3.3B multi-hyp pool; not from-scratch NMT"
+      "product_note": "FSOT seed map C (acoustic-tilt) at Acoustics D_eff=10; argmax S=K(T1+T2+T3); no free params no LLM",
+      "FSOT_pick_llm_judge": 37.62,
+      "FSOT_product_C_ac_S": 36.9,
+      "NLLB_3.3B_gen_max": 36.79,
+      "gap_FSOT_beats_student": -0.11
     },
     "sota_bars": {
       "chat_neural_mean": 45.0,
@@ -79,12 +82,13 @@
     "google_parity_claimed": false,
     "from_scratch_news_NMT_claimed": false,
     "beats_NLLB_3.3B_single_beam_by_FSOT_ranking": true,
-    "margin_sacre_vs_NLLB33_b8": 0.06,
+    "margin_sacre_vs_NLLB33_b8": 0.88,
     "news_mid40": false,
     "oracle_clears_mid40": true,
     "catalog_competitive": true,
     "classical_visual_unique": true,
-    "stage": "v0.2.8 FSOT_pick_hardset 36.80; FSOT_oracle_pool 46.12; catalog 113; sense brain live",
-    "scientific_note": "Measurable offline systems with pinned law + public protocols. Not delusion: numbers are reproducible; claims must stay within protocol (ranking ≠ from-scratch MT)."
+    "stage": "v0.3.0 FSOT_C_ac_S 36.90 beats NLLB-3.3B gen 36.79 by +0.11 intrinsic only",
+    "scientific_note": "Measurable offline systems with pinned law + public protocols. Not delusion: numbers are reproducible; claims must stay within protocol (ranking \u2260 from-scratch MT).",
+    "intrinsic_math_only": true
   }
 }

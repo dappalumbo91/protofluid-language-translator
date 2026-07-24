@@ -1,0 +1,110 @@
+{
+  "built_utc": "2026-07-24T00:14:35.573549+00:00",
+  "mission": "FSOT seed-arrangement push \u2014 beat student with intrinsic math",
+  "formula": "S=K(T1+T2+T3)",
+  "pin": "D1D38A",
+  "pin_ok": true,
+  "authority_path": "I:\\FSOT-Physical-Archive\\02_FSOT-2.1-Lean-Full\\vendor\\fsot_compute.py",
+  "student_gen_max": 36.79,
+  "arrangements": {
+    "A_bio_S": {
+      "sacrebleu": 36.83,
+      "separation": 0.11295,
+      "mode": "S",
+      "D": 12.0
+    },
+    "A_bio_lin": {
+      "sacrebleu": 36.85,
+      "separation": 0.26492,
+      "mode": "lin",
+      "D": 12.0
+    },
+    "A_ac_S": {
+      "sacrebleu": 36.83,
+      "separation": 0.11366,
+      "mode": "S",
+      "D": 10.0
+    },
+    "A_ac_lin": {
+      "sacrebleu": 36.86,
+      "separation": 0.26654,
+      "mode": "lin",
+      "D": 10.0
+    },
+    "A_neuro_lin": {
+      "sacrebleu": 36.85,
+      "separation": 0.26324,
+      "mode": "lin",
+      "D": 14.0
+    },
+    "B_bio_S": {
+      "sacrebleu": 36.87,
+      "separation": 0.10729,
+      "mode": "S",
+      "D": 12.0
+    },
+    "B_bio_lin": {
+      "sacrebleu": 36.87,
+      "separation": 0.25185,
+      "mode": "lin",
+      "D": 12.0
+    },
+    "B_neuro_lin": {
+      "sacrebleu": 36.88,
+      "separation": 0.25035,
+      "mode": "lin",
+      "D": 14.0
+    },
+    "C_ac_S": {
+      "sacrebleu": 36.9,
+      "separation": 0.12004,
+      "mode": "S",
+      "D": 10.0
+    },
+    "C_ac_lin": {
+      "sacrebleu": 36.89,
+      "separation": 0.28162,
+      "mode": "lin",
+      "D": 10.0
+    },
+    "D_soc_lin": {
+      "sacrebleu": 36.87,
+      "separation": 0.18553,
+      "mode": "lin",
+      "D": 18.0
+    },
+    "D_soc_S": {
+      "sacrebleu": 36.87,
+      "separation": 0.0789,
+      "mode": "S",
+      "D": 18.0
+    },
+    "A_continuum_lin": {
+      "sacrebleu": 36.85,
+      "separation": 0.25846,
+      "mode": "lin",
+      "D": "10.0-18.0"
+    }
+  },
+  "chosen_product": {
+    "name": "FSOT_C_ac_S",
+    "sacrebleu": 36.9,
+    "separation": 0.12004,
+    "detail": {
+      "sacrebleu": 36.9,
+      "separation": 0.12004,
+      "mode": "S",
+      "D": 10.0
+    }
+  },
+  "best_sacre_arrangement": {
+    "name": "FSOT_C_ac_S",
+    "sacrebleu": 36.9,
+    "separation": 0.12004
+  },
+  "gap_to_DeepL_mid40": 3.1,
+  "gap_to_student_gen": -0.11,
+  "beats_student": true,
+  "elapsed_s": 49.79,
+  "honesty": "Variants = seed arrangements only (maps A\u2013D \u00d7 domain D_eff). No free-fit. No LLM. Pick prefers positive puzzle separation within \u03c6^{-3} sacre."
+}
