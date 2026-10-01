@@ -6,7 +6,7 @@
 **PRODUCT:** 99.99%
 **All langs ≥95%:** True
 
-Large downloads remain on `D:\training data\pflt_linguistics\12_kaikki_downloads` — not GitHub.
+Large downloads remain on `<local folder, not included in repo: training data/pflt_linguistics/12_kaikki_downloads>` — not GitHub.
 Shipping path: Ada `pflt_main.exe` + rebuilt local packs.
 
 ## Per-language (n≥20)

@@ -1,7 +1,7 @@
 # Archive linguistics → fluency push
 
 **Built:** 2026-07-21T18:27:13.540369+00:00
-**Archive:** `I:\FSOT-Physical-Archive\02_FSOT-2.1-Lean-Full`
+**Archive:** `FSOT-2.1-Lean`
 **Pin:** D1D38A ok=True
 
 ## How to use FSOT mathematics (re-asserted)

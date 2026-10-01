@@ -11,7 +11,7 @@
 ## Fast path (use this)
 
 ```powershell
-cd C:\Users\damia\Desktop\pflt\pflt-Ada
+cd pflt-Ada
 .\fast_climb.ps1
 # or:
 python -u fast_climb.py --target 0.70

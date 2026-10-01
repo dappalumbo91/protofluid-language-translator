@@ -87,7 +87,7 @@ sol luna terra vita mors pater mater
 ## Reproduce
 
 ```powershell
-cd C:\Users\damia\Desktop\pflt
+cd protofluid-language-translator
 python -u eval_news_deen_cached.py
 python -u scripts\analyze_news_oracle_gap.py
 

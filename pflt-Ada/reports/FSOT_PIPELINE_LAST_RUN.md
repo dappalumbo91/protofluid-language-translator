@@ -23,7 +23,7 @@
 ## Reproduce
 
 ```powershell
-cd C:\Users\damia\Desktop\pflt
+cd protofluid-language-translator
 python -u scripts\fsot_automate_pipeline.py --update-metrics
 ```
 

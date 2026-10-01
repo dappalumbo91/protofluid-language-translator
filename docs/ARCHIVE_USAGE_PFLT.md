@@ -1,6 +1,6 @@
 # Using the FSOT Physical Archive for PFLT
 
-**Master:** `I:\FSOT-Physical-Archive\02_FSOT-2.1-Lean-Full` (I: definitive; GitHub is sync-from-I)
+**Master:** `FSOT-2.1-Lean` (I: definitive; GitHub is sync-from-I)
 
 ## Always
 

@@ -1,6 +1,6 @@
 # Ada ↔ FSOT Physical Archive + sensory + gap-fill (V6)
 
-**Archive master:** `I:\FSOT-Physical-Archive`  
+**Archive master:** `<local folder, not included in repo: FSOT-Physical-Archive>`  
 **Product binary:** `pflt-Ada/bin/pflt_main.exe` (Ada-primary **V6**)
 
 ---
@@ -34,7 +34,7 @@ Formula still `S=K*(T1+T2+T3)`; golden linguistic S≈0.651324761885.
 ## Data export
 
 ```powershell
-cd C:\Users\damia\Desktop\pflt\pflt-Ada
+cd pflt-Ada
 python export_atlas_for_ada.py   # domain_atlas + anchors + unet sample hyp
 python export_data_for_ada.py    # densify/gold/train_mass
 alr build
@@ -62,7 +62,7 @@ alr build
 ## Architecture (students vs law)
 
 ```
-I:\FSOT-Physical-Archive  (constitution)
+<local folder, not included in repo: FSOT-Physical-Archive>  (constitution)
    vendor/fsot_compute.py  --LIVE SHA256 D1D38A-->  Ada kernel pin
    linguistics_derivations --> anchors.tsv --> cert gate
    domain catalog 402      --> domain_atlas.tsv --> atlas route

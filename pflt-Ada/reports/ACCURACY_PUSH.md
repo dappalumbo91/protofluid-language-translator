@@ -54,7 +54,7 @@ It does **not** yet claim modern sentence BLEU (DeepL/Google’s headline metric
 ## Commands
 
 ```powershell
-cd C:\Users\damia\Desktop\pflt\pflt-Ada
+cd pflt-Ada
 python accuracy_push.py
 alr build
 .\bin\pflt_main.exe eval-product   # competitor-class inventory accuracy

@@ -13,7 +13,7 @@ It is **not** an NMT/QLoRA product and **not** “dictionary BLEU only.” It:
 3. **Converses / relays** and **ledgers** knowledge without rewriting law  
 4. **Certifies** every act with pinned \(S = K(T_1+T_2+T_3)\) (pin **D1D38A**)
 
-**Law authority:** `I:\FSOT-Physical-Archive\...\vendor\fsot_compute.py` via `fsot_law_bridge.py`.  
+**Law authority:** `<local file, not included in repo: fsot_compute.py>` via `fsot_law_bridge.py`.  
 **Not** an LLM as translation or truth core.
 
 ### Fast path (seconds — the real product path)
@@ -51,7 +51,7 @@ alr build
 .\bin\pflt_main.exe eval-product # shipping inventory accuracy
 .\bin\pflt_main.exe eval         # open-set morph stress
 .\bin\pflt_main.exe converse "aqua lingua manus"
-.\bin\pflt_main.exe archive      # live D1D38A pin of I:\ FSOT archive
+.\bin\pflt_main.exe archive      # live D1D38A pin of <local drive> FSOT archive
 ```
 
 | Track (Ada) | Meaning | Approx. (latest) |
@@ -187,7 +187,7 @@ waveform_synth.py          # SAPI / formant WAV
 data/                      # small reports + seed indices (large gold gitignored)
 ```
 
-Large gold/gazetteer files are **gitignored** and rebuilt with mine/ingest scripts or stored on your training drive (default under `D:\training data\pflt_linguistics\` in local configs).
+Large gold/gazetteer files are **gitignored** and rebuilt with mine/ingest scripts or stored on your training drive (default under `<local folder, not included in repo: training data/pflt_linguistics>` in local configs).
 
 ## Data policy
 

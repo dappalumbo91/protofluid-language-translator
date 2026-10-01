@@ -80,10 +80,10 @@ Cached hyps only + within-family FSOT-cal ranking (`eval_news_deen_cached.py`):
 ## Reproduce
 
 ```powershell
-cd C:\Users\damia\Desktop\pflt\pflt-Ada
+cd pflt-Ada
 alr build
 .\bin\pflt_main.exe converse "aqua lingua manus sol luna terra vita mors pater mater"
 
-cd C:\Users\damia\Desktop\pflt
+cd protofluid-language-translator
 python -u eval_news_deen_cached.py
 ```

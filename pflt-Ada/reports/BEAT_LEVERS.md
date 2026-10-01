@@ -22,7 +22,7 @@
 | avg loss last 100 | 2.1199 |
 | **WMT test sacreBLEU** | **32.2** |
 | chrF | 58.85 |
-| path | `D:\training data\pflt_linguistics\13_huggingface\models\Helsinki-NLP__opus-mt-de-en-wmt-ft` |
+| path | `<local folder, not included in repo: training data/pflt_linguistics/13_huggingface/models/Helsinki-NLP__opus-mt-de-en-wmt-ft>` |
 
 ## L2 — Neural-first hybrid chat
 

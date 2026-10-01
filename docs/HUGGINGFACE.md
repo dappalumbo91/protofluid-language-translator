@@ -35,4 +35,4 @@ The Space-ready files live in-repo under `huggingface_pflt/` (`app.py`, `require
 
 - Ada binary + multi-GB densify/gold: **not** on HF  
 - Game drive Kaikki/Tatoeba: **D:** only  
-- Law master: `I:\FSOT-Physical-Archive\...\vendor\fsot_compute.py` pin **D1D38A**  
+- Law master: `<local file, not included in repo: fsot_compute.py>` pin **D1D38A**  

@@ -2,7 +2,7 @@
 
 **Pivot (2026-07):** Python is **data factory only** (export gold/densify).  
 **Ada/SPARK** is the shipping product binary (`pflt-Ada/bin/pflt_main.exe`).  
-**Law master:** `I:\FSOT-Physical-Archive` (pin D1D38A). Sensory students: vision + audio (V5).
+**Law master:** `<local folder, not included in repo: FSOT-Physical-Archive>` (pin D1D38A). Sensory students: vision + audio (V5).
 
 Ada forced quality rules Python bulk inject hid. V4 encodes competitive train mass.
 
@@ -48,7 +48,7 @@ Eval is held-out forms absent from train_keys, classical-weighted (la 55% / grc 
 ## Commands
 
 ```powershell
-cd C:\Users\damia\Desktop\pflt\pflt-Ada
+cd pflt-Ada
 python export_data_for_ada.py   # quality densify + gold + train_mass + eval
 alr build
 .\bin\pflt_main.exe eval
