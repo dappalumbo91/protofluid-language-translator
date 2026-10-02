@@ -14,6 +14,18 @@ Usage:
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parents[1]
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import argparse
 import json
 import re
@@ -28,7 +40,7 @@ ROOT = Path(__file__).resolve().parents[1]
 FORMAL = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
-LEAN_SRC = Path(r"C:\Users\damia\Desktop\FSOT-2.1-Lean\FSOT2_0_Compute.lean")
+LEAN_SRC = _fsot_local_path('FSOT_2_1_LEAN_ROOT', '../FSOT-2.1-Lean') / 'FSOT2_0_Compute.lean'
 LAB_COQ = Path(
     r"C:\Users\damia\Desktop\gpu exparment for lean coq isabell andf star\phase1_formal_gpu\coq\Trinary.v"
 )
@@ -38,9 +50,7 @@ LAB_ISABELLE = Path(
 LAB_FSTAR = Path(
     r"C:\Users\damia\Desktop\gpu exparment for lean coq isabell andf star\phase1_formal_gpu\fstar\FSOTGpuBoot.fst"
 )
-LAB_GOLDEN = Path(
-    r"C:\Users\damia\Desktop\gpu exparment for lean coq isabell andf star\parity\golden.json"
-)
+LAB_GOLDEN = _fsot_local_path('FSOT_GPU_ROOT', '../FSOT-GPU') / 'parity' / 'golden.json'
 
 
 def near(a: float, b: float, eps: float) -> bool:

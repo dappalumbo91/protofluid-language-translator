@@ -13,6 +13,18 @@ Writes: reports/m6_beat_levers_report.json, reports/BEAT_LEVERS.md
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parents[1]
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import math
 import re
@@ -25,11 +37,9 @@ ADA = Path(__file__).resolve().parent
 DATA = ADA / "data"
 REP = ADA / "reports"
 REP.mkdir(parents=True, exist_ok=True)
-MODELS = Path(r"D:\training data\pflt_linguistics\13_huggingface\models")
+MODELS = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '13_huggingface' / 'models'
 FT_OUT = MODELS / "Helsinki-NLP__opus-mt-de-en-wmt-ft"
-CACHE = Path(
-    r"D:\training data\pflt_linguistics\03_parallel_corpora\tatoeba\m6_pairs_cache.jsonl"
-)
+CACHE = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '03_parallel_corpora' / 'tatoeba' / 'm6_pairs_cache.jsonl'
 
 TOKEN_RE = re.compile(r"[\w'-]+", re.UNICODE)
 CJK_RE = re.compile(r"[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]")

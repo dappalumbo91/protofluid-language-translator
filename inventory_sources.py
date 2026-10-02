@@ -2,13 +2,25 @@
 """Inventory local FSOT linguistic data available for PFLT historical-first work."""
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import sqlite3
 from collections import Counter
 from pathlib import Path
 
-DICT = Path(r"C:\Users\damia\Desktop\Dictionary")
-LING = Path(r"C:\Users\damia\Desktop\FSOT linguistics")
+DICT = _fsot_local_path('FSOT_LOCAL_DATA', 'data_external/local') / 'Dictionary'
+LING = _fsot_local_path('FSOT_LOCAL_DATA', 'data_external/local') / 'FSOT linguistics'
 
 
 def main() -> None:

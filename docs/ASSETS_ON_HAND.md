@@ -5,7 +5,7 @@
 
 ## Downloaded (game drive D:)
 
-Root: `D:\training data\pflt_linguistics\13_huggingface\models\`
+Root: `<local folder, not included in repo: training data/pflt_linguistics/13_huggingface/models>`
 
 | Model | Size (approx) | Role |
 |-------|---------------|------|
@@ -20,7 +20,7 @@ Root: `D:\training data\pflt_linguistics\13_huggingface\models\`
 | `Helsinki-NLP/opus-mt-mul-en` | ~0.6 GB | Multi→EN fallback |
 
 Also: OPUS Books + WMT14 via HF datasets cache under `13_huggingface\`.  
-Tatoeba parallel: `D:\...\03_parallel_corpora\tatoeba\`.  
+Tatoeba parallel: `<local folder, not included in repo: 03_parallel_corpora/tatoeba>`.  
 Archive linguistics priors: `pflt-Ada/data/archive_linguistics\`.
 
 ## Still blocked (you must act once)

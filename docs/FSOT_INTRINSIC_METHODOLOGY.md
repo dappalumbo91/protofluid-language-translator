@@ -1,7 +1,7 @@
 # FSOT Intrinsic Language Methodology
 
 **Status:** operational (v0.3.0+)  
-**Authority:** `I:\FSOT-Physical-Archive\02_FSOT-2.1-Lean-Full\vendor\fsot_compute.py`  
+**Authority:** `FSOT-2.1-Lean/vendor/fsot_compute.py`  
 **Pin:** **D1D38A** (SHA-256 of archive `fsot_compute.py`)  
 **Formula:** \(S = K(T_1 + T_2 + T_3)\)
 
@@ -138,7 +138,7 @@ Current map families in code (`scripts/fsot_seed_push.py`):
 One command:
 
 ```powershell
-cd C:\Users\damia\Desktop\pflt
+cd protofluid-language-translator
 python -u scripts\fsot_automate_pipeline.py
 ```
 
@@ -174,7 +174,7 @@ What it does:
 
 | Asset | Path |
 |-------|------|
-| Law | `I:\FSOT-Physical-Archive\...\vendor\fsot_compute.py` |
+| Law | `<local file, not included in repo: fsot_compute.py>` |
 | Hyp caches | `pflt-Ada/data/hyp_cache/test_nllb33_*.json` |
 | Features | `pflt-Ada/data/fsot_feat_cache/feat_nllb33_v3.json` (or v2) |
 | WMT14 | Hugging Face `datasets` load `wmt/wmt14` de-en test |

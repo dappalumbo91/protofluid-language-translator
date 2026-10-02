@@ -9,9 +9,21 @@ FSOT law stays master. HF supplies:
 
 Eval remains held-out Tatoeba cache (m6_pairs_cache.jsonl) unless --flores path provided.
 
-Storage: D:\\training data\\pflt_linguistics\\13_huggingface\\
+Storage: $FSOT_TRAINING_DATA/pflt_linguistics/13_huggingface
 """
 from __future__ import annotations
+
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parents[1]
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
 
 import json
 import math
@@ -27,13 +39,11 @@ DATA = ADA / "data"
 REP = ADA / "reports"
 REP.mkdir(parents=True, exist_ok=True)
 
-HF_HOME = Path(r"D:\training data\pflt_linguistics\13_huggingface")
+HF_HOME = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '13_huggingface'
 HF_HOME.mkdir(parents=True, exist_ok=True)
 os.environ.setdefault("HF_HOME", str(HF_HOME))
 
-CACHE_EVAL = Path(
-    r"D:\training data\pflt_linguistics\03_parallel_corpora\tatoeba\m6_pairs_cache.jsonl"
-)
+CACHE_EVAL = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '03_parallel_corpora' / 'tatoeba' / 'm6_pairs_cache.jsonl'
 PHRASE_U = DATA / "m6_phrase_table.tsv"
 PHRASE_BI = DATA / "m6_bigram_table.tsv"
 ORDER_TAB = DATA / "m6_order_hints.tsv"  # src_lang \t pattern notes
@@ -137,12 +147,8 @@ def load_opus_pairs() -> list[tuple[str, str, str]]:
 
 def load_tatoeba_train_extra(max_per: int = 30_000) -> list[tuple[str, str, str]]:
     """Extra mass from already-extracted Tatoeba (exclude eval IDs)."""
-    sent = Path(
-        r"D:\training data\pflt_linguistics\03_parallel_corpora\tatoeba\extracted\sentences.csv"
-    )
-    link = Path(
-        r"D:\training data\pflt_linguistics\03_parallel_corpora\tatoeba\extracted\links.csv"
-    )
+    sent = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '03_parallel_corpora' / 'tatoeba' / 'extracted' / 'sentences.csv'
+    link = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '03_parallel_corpora' / 'tatoeba' / 'extracted' / 'links.csv'
     if not sent.exists() or not link.exists():
         return []
     eval_ids: set[int] = set()

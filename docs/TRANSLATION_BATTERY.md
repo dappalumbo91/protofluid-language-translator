@@ -160,7 +160,7 @@ Query: `aqua lingua manus sol luna terra vita mors pater mater`
 ## Reproduce
 
 ```powershell
-cd C:\Users\damia\Desktop\pflt
+cd protofluid-language-translator
 python -u eval_translation_battery.py
 cd pflt-Ada
 .\bin\pflt_main.exe converse "aqua lingua manus sol luna terra vita mors pater mater"

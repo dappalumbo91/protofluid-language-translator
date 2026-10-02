@@ -51,7 +51,7 @@
 
 ## Storage policy
 
-- HF cache / downloads → `D:\training data\pflt_linguistics\13_huggingface\`  
+- HF cache / downloads → `<local folder, not included in repo: training data/pflt_linguistics/13_huggingface>`  
 - Full models **not** on GitHub  
 - Hub model card only: sample densify + metrics  
 

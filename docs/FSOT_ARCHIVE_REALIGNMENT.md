@@ -1,7 +1,7 @@
 # PFLT ↔ FSOT Physical Archive — Realignment Brief
 
 **Date:** 2026-07-18  
-**Authority reviewed:** `I:\FSOT-Physical-Archive` (definitive master)  
+**Authority reviewed:** `<local folder, not included in repo: FSOT-Physical-Archive>` (definitive master)  
 **Purpose:** Correct the product mission of Desktop `pflt` after deep archive review.
 
 ---
@@ -54,7 +54,7 @@ From `02_FSOT-2.1-Lean-Full` thesis + philosophy spine + `vendor/fsot_compute.py
 ## 3. Full architecture map (archive layers)
 
 ```
-I:\FSOT-Physical-Archive
+<local folder, not included in repo: FSOT-Physical-Archive>
 │
 ├── 02_FSOT-2.1-Lean-Full          ← LAW / CONSTITUTION (canonical hub)
 │   ├── vendor/fsot_compute.py     ← numeric authority (D1D38A)

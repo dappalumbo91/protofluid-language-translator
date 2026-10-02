@@ -7,9 +7,21 @@ has process vocabulary under PFLT (expand later with lab corpora).
 
 Output:
   data/domain_lexica.json
-  D:\\training data\\...\\domain_lexica.json
+  $FSOT_TRAINING_DATA/.../domain_lexica.json
 """
 from __future__ import annotations
+
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
 
 import json
 import re
@@ -17,9 +29,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List
 
-CATALOG = Path(r"C:\Users\damia\Desktop\pflt\data\fsot_domain_catalog.json")
-OUT = Path(r"C:\Users\damia\Desktop\pflt\data\domain_lexica.json")
-DRIVE = Path(r"D:\training data\pflt_linguistics\08_rosetta_fsot\domain_lexica.json")
+CATALOG = _REPO_ROOT / 'data' / 'fsot_domain_catalog.json'
+OUT = _REPO_ROOT / 'data' / 'domain_lexica.json'
+DRIVE = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '08_rosetta_fsot' / 'domain_lexica.json'
 
 # Shared process stems (FSOT narrative style)
 STEMS = [

@@ -82,7 +82,7 @@ is
          --  Shipping path: densify + full gold_core (competitor-class inventory)
          PFLT_Store.Clear;
          PFLT_Store.Set_Data_Root
-           ("C:\Users\damia\Desktop\pflt\pflt-Ada\data");
+           ("data");
          PFLT_Store.Load_Default_Packs (Densify_N, Gold_N);
          Train_N := PFLT_Store.Count;
       else

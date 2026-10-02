@@ -4,7 +4,7 @@ Breadth batch 2 — more Kaikki languages onto the game drive (not GitHub).
 
 Goal: expand catalog toward any-language translator (beat Google/NLLB breadth).
 Downloads only to:
-  D:\\training data\\pflt_linguistics\\12_kaikki_downloads\\
+  $FSOT_TRAINING_DATA/pflt_linguistics/12_kaikki_downloads
 
 Optional --ingest merges into pflt-Ada local packs (gold_core / train / eval / densify).
 """

@@ -10,6 +10,18 @@ Authority: PFLT_FSOT_2_1_aligned.compute_S_D_chaotic (mpmath dps=50).
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import math
 import re
@@ -423,7 +435,7 @@ def export_golden_for_formal(
         "fixtures": fixtures,
         "formal_backends": {
             "lean": {
-                "path_hint": r"C:\Users\damia\Desktop\FSOT-2.1-Lean",
+                "path_hint": r"FSOT-2.1-Lean",
                 "entry": "FSOT2_0.compute_S_D_chaotic / FSOT.Scalar",
                 "check": "compare S,T1,T2,T3 within eps_f64",
             },
@@ -448,7 +460,7 @@ def export_golden_for_formal(
                 "check": "FSOTDiff[] vs FSOTPythonPanel",
             },
         },
-        "lab_parity_hint": r"C:\Users\damia\Desktop\gpu exparment for lean coq isabell andf star\parity\golden.json",
+        "lab_parity_hint": r"FSOT-GPU/parity/golden.json",
     }
     path = path or FORMAL_DIR / "golden_fsot_pflt.json"
     path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
@@ -457,9 +469,7 @@ def export_golden_for_formal(
 
 def compare_to_lab_golden(lab_path: Optional[Path] = None) -> Dict[str, Any]:
     """Cross-check key constants against GPU-lab golden.json if present."""
-    lab_path = lab_path or Path(
-        r"C:\Users\damia\Desktop\gpu exparment for lean coq isabell andf star\parity\golden.json"
-    )
+    lab_path = lab_path or _fsot_local_path('FSOT_GPU_ROOT', '../FSOT-GPU') / 'parity' / 'golden.json'
     ours = {s.id: s.value for s in trace_constants()}
     report: Dict[str, Any] = {
         "lab_path": str(lab_path),
@@ -638,8 +648,8 @@ def write_failure_math_log(
         "math_full": tr.to_dict(),
         "formal_cross_verify": {
             "golden": str(FORMAL_DIR / "golden_fsot_pflt.json"),
-            "lab_parity": r"C:\Users\damia\Desktop\gpu exparment for lean coq isabell andf star\parity\golden.json",
-            "lean_hint": r"C:\Users\damia\Desktop\FSOT-2.1-Lean",
+            "lab_parity": r"FSOT-GPU/parity/golden.json",
+            "lean_hint": r"FSOT-2.1-Lean",
             "coq_hint": r"C:\Users\damia\Desktop\gpu exparment for lean coq isabell andf star\phase1_formal_gpu\coq",
             "isabelle_hint": r"C:\Users\damia\Desktop\gpu exparment for lean coq isabell andf star\phase1_formal_gpu\isabelle",
             "fstar_hint": r"C:\Users\damia\Desktop\gpu exparment for lean coq isabell andf star\phase1_formal_gpu\fstar",
@@ -784,11 +794,11 @@ def write_formal_parity_report() -> Path:
         "authority_cross_verify": auth,
         "backends": {
             "mathematica": str(MATHEMATICA_DIR),
-            "lean": r"C:\Users\damia\Desktop\FSOT-2.1-Lean",
+            "lean": r"FSOT-2.1-Lean",
             "coq": r"C:\Users\damia\Desktop\gpu exparment for lean coq isabell andf star\phase1_formal_gpu\coq",
             "isabelle": r"C:\Users\damia\Desktop\gpu exparment for lean coq isabell andf star\phase1_formal_gpu\isabelle",
             "fstar": r"C:\Users\damia\Desktop\gpu exparment for lean coq isabell andf star\phase1_formal_gpu\fstar",
-            "lab_golden": r"C:\Users\damia\Desktop\gpu exparment for lean coq isabell andf star\parity\golden.json",
+            "lab_golden": r"FSOT-GPU/parity/golden.json",
             "pflt_golden": str(FORMAL_DIR / "golden_fsot_pflt.json"),
         },
         "all_ok": bool(lab.get("all_ok")) and bool(auth.get("all_ok")),

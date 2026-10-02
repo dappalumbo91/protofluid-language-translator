@@ -7,7 +7,7 @@
 ## Quick start
 
 ```powershell
-cd C:\Users\damia\Desktop\pflt
+cd protofluid-language-translator
 python language_brain.py all          # build + hole map + climb + Obsidian vault
 python language_brain.py query water
 python language_brain.py holes --min-langs 20

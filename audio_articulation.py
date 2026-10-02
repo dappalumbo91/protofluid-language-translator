@@ -12,6 +12,18 @@ Optional later: *link* to external clips if present — never require waveforms.
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import re
 from dataclasses import asdict, dataclass, field
@@ -21,11 +33,9 @@ from typing import Any, Dict, List, Optional
 
 from PFLT_FSOT_2_1_aligned import DOMAIN_PARAMS, compute_S_D_chaotic
 
-PHOIBLE = Path(
-    r"D:\training data\pflt_linguistics\05_phonology_vocal\phoible\phoible.csv"
-)
-OUT = Path(r"D:\training data\pflt_linguistics\05_phonology_vocal")
-PFLT_DATA = Path(r"C:\Users\damia\Desktop\pflt\data")
+PHOIBLE = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '05_phonology_vocal' / 'phoible' / 'phoible.csv'
+OUT = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '05_phonology_vocal'
+PFLT_DATA = _REPO_ROOT / 'data'
 
 STARTER_G2P: Dict[str, Dict[str, str]] = {
     "en": {
@@ -118,8 +128,8 @@ def _load_dictionary_ipa() -> Dict[str, str]:
     if _DICT_IPA is not None:
         return _DICT_IPA
     paths = [
-        Path(r"C:\Users\damia\Desktop\pflt\data\dictionary_ipa_lexicon.json"),
-        Path(r"D:\training data\pflt_linguistics\05_phonology_vocal\dictionary_ipa_lexicon.json"),
+        _REPO_ROOT / 'data' / 'dictionary_ipa_lexicon.json',
+        _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '05_phonology_vocal' / 'dictionary_ipa_lexicon.json',
     ]
     for p in paths:
         if p.exists():
@@ -189,9 +199,7 @@ def articulate(
         try:
             from waveform_synth import synthesize_waveform
 
-            out_dir = wav_dir or Path(
-                r"D:\training data\pflt_linguistics\05_phonology_vocal\waveforms"
-            )
+            out_dir = wav_dir or _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '05_phonology_vocal' / 'waveforms'
             # Keep ASCII-safe filenames; transliterate Greek so paths aren't grc__.wav
             try:
                 from open_set_boost import grc_to_latin

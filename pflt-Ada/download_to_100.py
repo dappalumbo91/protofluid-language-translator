@@ -3,7 +3,7 @@
 Fill gaps toward ~100 language codes under FSOT.
 
 Downloads missing Kaikki postprocessed JSONL dumps to the game drive only:
-  D:\\training data\\pflt_linguistics\\12_kaikki_downloads\\
+  $FSOT_TRAINING_DATA/pflt_linguistics/12_kaikki_downloads
 
 Then ingests into local Ada packs (gold/train/eval/densify) and can solidify
 via push_universal.

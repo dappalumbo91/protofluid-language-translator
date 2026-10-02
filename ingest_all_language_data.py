@@ -18,13 +18,25 @@ Sources (offline, no paid APIs):
 Writes:
   data/expanded_gold.jsonl
   data/expanded_gold_report.json
-  D:/training data/pflt_linguistics/01_historical_gold/expanded_gold.jsonl (if drive present)
+  $FSOT_TRAINING_DATA/pflt_linguistics/01_historical_gold/expanded_gold.jsonl (if drive present)
 
 Usage:
   python ingest_all_language_data.py
   python ingest_all_language_data.py --with-asjp
 """
 from __future__ import annotations
+
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
 
 import argparse
 import csv
@@ -37,8 +49,8 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
-DRIVE = Path(r"D:\training data\pflt_linguistics\01_historical_gold")
-ASJP = Path(r"D:\training data\pflt_linguistics\02_cognate_lineage\asjp\forms.csv")
+DRIVE = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '01_historical_gold'
+ASJP = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '02_cognate_lineage' / 'asjp' / 'forms.csv'
 POOL = DRIVE / "classical_grc_la_pool.jsonl"
 OUT = DATA / "expanded_gold.jsonl"
 REPORT = DATA / "expanded_gold_report.json"

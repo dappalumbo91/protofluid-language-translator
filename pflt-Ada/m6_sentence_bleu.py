@@ -3,7 +3,7 @@
 M6 — Modern sentence quality (BLEU-style head-to-head bars).
 
 Uses Tatoeba parallel sentences (CC-BY) already on the game drive:
-  D:\\training data\\pflt_linguistics\\03_parallel_corpora\\tatoeba\\
+  $FSOT_TRAINING_DATA/pflt_linguistics/03_parallel_corpora/tatoeba
 
 Decoder (honest product path today):
   Word-by-word form→gloss via densify + train_mass lexicon + progressive peels
@@ -25,6 +25,18 @@ honest form-gloss sentence bars under FSOT offline product path.
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parents[1]
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import importlib.util
 import json
 import math
@@ -39,7 +51,7 @@ DATA = ADA / "data"
 REP = ADA / "reports"
 REP.mkdir(parents=True, exist_ok=True)
 
-TATOEBA = Path(r"D:\training data\pflt_linguistics\03_parallel_corpora\tatoeba")
+TATOEBA = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '03_parallel_corpora' / 'tatoeba'
 SENT_TAR = TATOEBA / "sentences.tar.bz2"
 LINK_TAR = TATOEBA / "links.tar.bz2"
 EXTRACT = TATOEBA / "extracted"
@@ -498,7 +510,7 @@ def main() -> None:
         "",
         report["honest_note"],
         "",
-        "Large corpora stay on `D:\\training data\\pflt_linguistics` — not GitHub.",
+        "Large corpora stay on `$FSOT_TRAINING_DATA/pflt_linguistics` — not GitHub.",
         "",
         "## Overall",
         "",

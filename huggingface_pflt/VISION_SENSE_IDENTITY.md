@@ -1,7 +1,7 @@
 # Vision lock — Protofluid Language Translator
 
 **Date:** 2026-07-23  
-**Authority:** `I:\FSOT-Physical-Archive` · pin **D1D38A** · `vendor/fsot_compute.py`
+**Authority:** `<local folder, not included in repo: FSOT-Physical-Archive>` · pin **D1D38A** · `vendor/fsot_compute.py`
 
 ---
 
@@ -71,7 +71,7 @@ That path is **off-mission**. It is not how FSOT math is meant to solve translat
 ## Fast path (must stay seconds)
 
 ```powershell
-cd C:\Users\damia\Desktop\pflt
+cd protofluid-language-translator
 python pflt_sense_translate.py --smoke
 python pflt_sense_translate.py "aqua manus lingua" --src la --tgt en
 python pflt_sense_translate.py "water" --src en --tgt de
@@ -106,4 +106,4 @@ BLEU may be a secondary surface check. It is **not** the definition of success.
 
 - Archive realignment: [`FSOT_ARCHIVE_REALIGNMENT.md`](FSOT_ARCHIVE_REALIGNMENT.md)  
 - Law audit: [`FSOT_LAW_AUDIT.md`](FSOT_LAW_AUDIT.md)  
-- Founding materials: `I:\FSOT-Physical-Archive\06_Founding-Archives\` · PFLT PDFs  
+- Founding materials: `<local folder, not included in repo: FSOT-Physical-Archive/06_Founding-Archives>` · PFLT PDFs  

@@ -179,7 +179,7 @@ def write_run_summary(
         "## Reproduce",
         "",
         "```powershell",
-        "cd C:\\Users\\damia\\Desktop\\pflt",
+        "cd .",
         "python -u scripts\\fsot_automate_pipeline.py --update-metrics",
         "```",
         "",

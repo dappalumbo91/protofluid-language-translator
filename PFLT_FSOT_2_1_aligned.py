@@ -17,6 +17,18 @@ No ad-hoc damping (exp(-η)/m_pl). Modulation prefixes derive only from sign/mag
 
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import re
 from dataclasses import dataclass, asdict
@@ -91,7 +103,7 @@ def compute_S_D_chaotic(
     Canonical FSOT 2.1 scalar: S = K (T1 + T2 + T3).
 
     Matches structure of:
-      - I:/FSOT-Physical-Archive/02_FSOT-2.1-Lean-Full/FSOT/Scalar.lean
+      - FSOT-2.1-Lean/FSOT/Scalar.lean
       - Desktop/FSOT NeuroLab/fsot_compute.py compute_scalar
     """
     N_m, P_m, D_m = mpf(N), mpf(P), mpf(D_eff)
@@ -173,11 +185,11 @@ DOMAIN_PARAMS: Dict[str, Dict[str, Any]] = {
 def _load_fsot21_domain_catalog() -> Dict[str, Dict[str, Any]]:
     """
     Load full FSOT 2.1 domain atlas routing (400+ scientific domains).
-    Built by build_fsot_domain_catalog.py from I:\\FSOT-Physical-Archive.
+    Built by build_fsot_domain_catalog.py from $FSOT_ARCHIVE_ROOT.
     """
     candidates = [
         Path(__file__).resolve().parent / "data" / "fsot_domain_catalog.json",
-        Path(r"D:\training data\pflt_linguistics\08_rosetta_fsot\fsot_domain_catalog.json"),
+        _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '08_rosetta_fsot' / 'fsot_domain_catalog.json',
     ]
     for path in candidates:
         if not path.exists():
@@ -575,7 +587,7 @@ class PFLT:
         """
         candidates = [
             Path(__file__).resolve().parent / "data" / "hieroglyph_pflt_lexicon.json",
-            Path(r"D:\training data\pflt_linguistics\10_visual_scripts\hieroglyph_egyptian\hieroglyph_pflt_lexicon.json"),
+            _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '10_visual_scripts' / 'hieroglyph_egyptian' / 'hieroglyph_pflt_lexicon.json',
         ]
         for path in candidates:
             if not path.exists():
@@ -605,8 +617,8 @@ class PFLT:
             Path(__file__).resolve().parent / "data" / "classical_full_trained_lexicon.json",
             Path(__file__).resolve().parent / "data" / "dictionary_classical_lexicon.json",
             Path(__file__).resolve().parent / "data" / "classical_grc_la_lexicon.json",
-            Path(r"D:\training data\pflt_linguistics\01_historical_gold\classical_full_trained_lexicon.json"),
-            Path(r"D:\training data\pflt_linguistics\01_historical_gold\classical_grc_la_lexicon.json"),
+            _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '01_historical_gold' / 'classical_full_trained_lexicon.json',
+            _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '01_historical_gold' / 'classical_grc_la_lexicon.json',
         ]
         before = len(self.pul_terms)
         loaded = 0
@@ -633,7 +645,7 @@ class PFLT:
         """Load per-domain starter lexica (build_domain_lexica.py) for 400+ FSOT domains."""
         candidates = [
             Path(__file__).resolve().parent / "data" / "domain_lexica.json",
-            Path(r"D:\training data\pflt_linguistics\08_rosetta_fsot\domain_lexica.json"),
+            _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '08_rosetta_fsot' / 'domain_lexica.json',
         ]
         for path in candidates:
             if not path.exists():

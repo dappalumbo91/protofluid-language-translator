@@ -13,6 +13,18 @@ Data:
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import hashlib
 import json
 import re
@@ -26,7 +38,7 @@ from held_out_classical import score
 from gapfill_student import GapFillStudent
 
 DATA = Path(__file__).resolve().parent / "data"
-DRIVE = Path(r"D:\training data\pflt_linguistics\01_historical_gold")
+DRIVE = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '01_historical_gold'
 
 FOCUS = {"grc", "la", "lat", "ang", "akk", "sum", "san", "hit", "en"}
 

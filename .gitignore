@@ -73,3 +73,6 @@ dist/
 data/expanded_gold_next20.jsonl
 data/math_microscope/
 
+
+# Local external data (see FSOT_* env vars); never committed
+data_external/

@@ -1,7 +1,7 @@
 # FSOT law audit — linguistics / translation path
 
 **Date:** 2026-07-21  
-**Archive master:** `I:\FSOT-Physical-Archive\02_FSOT-2.1-Lean-Full\vendor\fsot_compute.py`  
+**Archive master:** `FSOT-2.1-Lean/vendor/fsot_compute.py`  
 **Product:** Ada/SPARK `pflt_main.exe` + Python data factory  
 
 ## Authority pin

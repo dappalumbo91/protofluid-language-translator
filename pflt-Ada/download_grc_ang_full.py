@@ -7,7 +7,7 @@ Kaikki page paths keep spaces; JSONL filenames DROP spaces:
   /dictionary/Old%20English/kaikki.org-dictionary-OldEnglish.jsonl
 
 All files stay on the game drive (not GitHub):
-  D:\\training data\\pflt_linguistics\\12_kaikki_downloads\\
+  $FSOT_TRAINING_DATA/pflt_linguistics/12_kaikki_downloads
 
 Pass --ingest to merge into pflt-Ada local packs.
 """

@@ -8,11 +8,23 @@ Strategy:
      core signs (Segoe UI Historic / Noto Sans Egyptian Hieroglyphs / fallback).
 
 Outputs under:
-  D:\\training data\\pflt_linguistics\\10_visual_scripts\\hieroglyph_egyptian\\images\\
+  $FSOT_TRAINING_DATA/pflt_linguistics/10_visual_scripts/hieroglyph_egyptian/images
     synthetic/{gardiner_or_codepoint}/*.png
     labels.jsonl  — {path, gardiner, unicode, meaning}
 """
 from __future__ import annotations
+
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
 
 import json
 import random
@@ -22,12 +34,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-ROOT = Path(r"D:\training data\pflt_linguistics\10_visual_scripts\hieroglyph_egyptian")
+ROOT = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '10_visual_scripts' / 'hieroglyph_egyptian'
 IMG = ROOT / "images"
 SYN = IMG / "synthetic"
 LEX = ROOT / "hieroglyph_pflt_lexicon.json"
 GOLD = ROOT / "hieroglyph_unikemet_gold.jsonl"
-UNIKEMET = Path(r"D:\training data\pflt_linguistics\10_visual_scripts\unicode_refs\Unikemet.txt")
+UNIKEMET = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '10_visual_scripts' / 'unicode_refs' / 'Unikemet.txt'
 
 
 def parse_core_signs(limit: int = 200) -> List[Dict[str, str]]:

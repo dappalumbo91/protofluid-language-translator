@@ -1,6 +1,6 @@
 # Next 20 languages — download + ingest (game drive)
 
-**Download root:** `D:\training data\pflt_linguistics\12_kaikki_downloads`
+**Download root:** `<local folder, not included in repo: training data/pflt_linguistics/12_kaikki_downloads>`
 **Built:** 2026-07-21T15:02:11.138148+00:00
 **Catalog size now:** 52
 

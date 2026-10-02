@@ -3,7 +3,7 @@
 **Ada-primary path.** Python tree is a data factory (`export_data_for_ada.py`);  
 this binary is the product: law + lexicon + morph + vision + audio + converse.
 
-**Law master:** `I:\FSOT-Physical-Archive` (canonical `fsot_compute.py` pin **D1D38A**).
+**Law master:** `<local folder, not included in repo: FSOT-Physical-Archive>` (canonical `fsot_compute.py` pin **D1D38A**).
 
 | Layer | Status (V6) |
 |--------|-------------|
@@ -25,7 +25,7 @@ this binary is the product: law + lexicon + morph + vision + audio + converse.
 ## Commands
 
 ```powershell
-cd C:\Users\damia\Desktop\pflt\pflt-Ada
+cd pflt-Ada
 python export_data_for_ada.py
 alr build
 .\bin\pflt_main.exe eval

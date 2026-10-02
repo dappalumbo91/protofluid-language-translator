@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 ADA = Path(__file__).resolve().parent / "data"
 ARCHIVE_LING = Path(
-    r"I:\FSOT-Physical-Archive\02_FSOT-2.1-Lean-Full"
+    r"FSOT-2.1-Lean"
     r"\vendor\linguistics\linguistics_derivations.json"
 )
 

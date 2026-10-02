@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-23  
 **Product:** Ada/SPARK `pflt_main.exe` V6 + Python sense interlingua (data factory)  
-**Law:** \(S=K(T_1+T_2+T_3)\) pin **D1D38A** live from `I:\FSOT-Physical-Archive`
+**Law:** \(S=K(T_1+T_2+T_3)\) pin **D1D38A** live from `<local folder, not included in repo: FSOT-Physical-Archive>`
 
 JSON twin: [`MEASUREMENT_2026-07-23.json`](MEASUREMENT_2026-07-23.json)
 
@@ -131,7 +131,7 @@ On the **Ada shipping product**, form→gloss open-set is **excellent (97.7%)** 
 ## Commands to reproduce
 
 ```powershell
-cd C:\Users\damia\Desktop\pflt\pflt-Ada
+cd pflt-Ada
 alr build
 .\bin\pflt_main.exe archive
 .\bin\pflt_main.exe eval
@@ -139,6 +139,6 @@ alr build
 alr exec -- gnatprove -P pflt_ada.gpr --level=2 --report=statistics `
   -u pflt_constants.ads pflt_scalar.adb pflt_domains.adb pflt_authority.adb pflt_lexicon.adb
 
-cd C:\Users\damia\Desktop\pflt
+cd protofluid-language-translator
 python pflt_sense_translate.py --smoke
 ```

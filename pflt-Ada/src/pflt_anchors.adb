@@ -202,7 +202,7 @@ is
    begin
       Dummy :=
         Load
-          ("C:\Users\damia\Desktop\pflt\pflt-Ada\data\linguistics_anchors.tsv");
+          ("data/linguistics_anchors.tsv");
    end Load_Default;
 
 end PFLT_Anchors;

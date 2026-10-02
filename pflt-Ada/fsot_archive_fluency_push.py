@@ -3,7 +3,7 @@
 Archive-grounded fluency push under FSOT.
 
 Pulls linguistics priors from:
-  I:/FSOT-Physical-Archive/02_FSOT-2.1-Lean-Full/vendor/linguistics/
+  FSOT-2.1-Lean/vendor/linguistics
 
 and applies them as *surface densify / decode constraints* — never as free
 parameters that rewrite K or T1–T3 law terms.
@@ -18,6 +18,18 @@ Key archive anchors used:
 Authority pin remains D1D38A from vendor/fsot_compute.py.
 """
 from __future__ import annotations
+
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parents[1]
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
 
 import csv
 import json
@@ -37,14 +49,12 @@ ARCH_OUT = DATA / "archive_linguistics"
 REP.mkdir(parents=True, exist_ok=True)
 ARCH_OUT.mkdir(parents=True, exist_ok=True)
 
-ARCHIVE = Path(r"I:\FSOT-Physical-Archive\02_FSOT-2.1-Lean-Full")
+ARCHIVE = _fsot_local_path('FSOT_2_1_LEAN_ROOT', '../FSOT-2.1-Lean')
 LING_VENDOR = ARCHIVE / "vendor" / "linguistics"
 FSOT_COMPUTE = ARCHIVE / "vendor" / "fsot_compute.py"
 PIN_JSON = ARCHIVE / "vendor" / "fsot_compute_AUTHORITY_PIN.json"
 
-CACHE_EVAL = Path(
-    r"D:\training data\pflt_linguistics\03_parallel_corpora\tatoeba\m6_pairs_cache.jsonl"
-)
+CACHE_EVAL = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '03_parallel_corpora' / 'tatoeba' / 'm6_pairs_cache.jsonl'
 PHRASE_U = DATA / "m6_phrase_table.tsv"
 PHRASE_BI = DATA / "m6_bigram_table.tsv"
 

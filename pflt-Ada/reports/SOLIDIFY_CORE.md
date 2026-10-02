@@ -52,7 +52,7 @@ Do **not** inject held-out eval forms into train (that inflates partials dishone
 ## Reproduce
 
 ```powershell
-cd C:\Users\damia\Desktop\pflt\pflt-Ada
+cd pflt-Ada
 python solidify_core_langs.py
 python climb_partials.py
 alr build

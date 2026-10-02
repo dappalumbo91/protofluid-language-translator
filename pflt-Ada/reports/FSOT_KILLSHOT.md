@@ -14,7 +14,7 @@
 | D_eff arbitrary | Linguistics Formal **D_eff=12** from archive benchmark |
 | Linguistic axioms unused | Phonotactics, breath length ~8, punctuation → δθ / ρ |
 
-Authority: `I:\FSOT-Physical-Archive\02_FSOT-2.1-Lean-Full\vendor\fsot_compute.py`
+Authority: `FSOT-2.1-Lean/vendor/fsot_compute.py`
 
 ## Distance
 

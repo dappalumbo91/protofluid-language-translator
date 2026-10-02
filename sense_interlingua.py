@@ -8,7 +8,7 @@ Mission (vision lock):
   A cat is a cat; a cell is a cell. FSOT law frames the act; it is not NMT.
 
 Authority:
-  I:\\FSOT-Physical-Archive\\02_FSOT-2.1-Lean-Full\\vendor\\fsot_compute.py
+  FSOT-2.1-Lean/vendor/fsot_compute.py
   pin D1D38A — read-only via fsot_law_bridge. No free scalar knobs.
 
 This module does NOT:

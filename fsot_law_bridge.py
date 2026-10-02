@@ -3,7 +3,7 @@
 FSOT 2.1 law bridge for the Protofluid Language Translator.
 
 Law authority (physical archive):
-  I:\\FSOT-Physical-Archive\\02_FSOT-2.1-Lean-Full\\vendor\\fsot_compute.py
+  FSOT-2.1-Lean/vendor/fsot_compute.py
   SHA256 D1D38A185487B452E470AC68ECE2EB45AEB1CA9CE25FC9BF9564C19633FFBE70
 
 This module:
@@ -16,6 +16,18 @@ Nothing here rewrites FSOT law. Conversation / knowledge layers may *read* S onl
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import hashlib
 import importlib.util
 import sys
@@ -27,9 +39,9 @@ from typing import Any, Dict, Optional
 AUTHORITY_SHA256 = "D1D38A185487B452E470AC68ECE2EB45AEB1CA9CE25FC9BF9564C19633FFBE70"
 
 ARCHIVE_COMPUTE_CANDIDATES = [
-    Path(r"I:\FSOT-Physical-Archive\02_FSOT-2.1-Lean-Full\vendor\fsot_compute.py"),
-    Path(r"C:\Users\damia\Desktop\FSOT-2.1-Lean\FSOT-2.1-Lean-main\FSOT-2.1-Lean-main\vendor\fsot_compute.py"),
-    Path(r"C:\Users\damia\Desktop\FSOT document update\fsot_compute.py"),
+    _fsot_local_path('FSOT_2_1_LEAN_ROOT', '../FSOT-2.1-Lean') / 'vendor' / 'fsot_compute.py',
+    _fsot_local_path('FSOT_2_1_LEAN_ROOT', '../FSOT-2.1-Lean') / 'vendor' / 'fsot_compute.py',
+    _fsot_local_path('FSOT_LOCAL_DATA', 'data_external/local') / 'FSOT document update' / 'fsot_compute.py',
 ]
 
 

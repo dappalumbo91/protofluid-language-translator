@@ -6,11 +6,23 @@ Policy (accuracy-first):
   - Prefer short, clean English gloss heads (not full essay definitions)
   - Cap per language for quality control; write full candidate pool separately
   - Promote high-confidence simple glosses into historical gold format
-  - Merge into D:\\training data\\pflt_linguistics\\01_historical_gold
+  - Merge into $FSOT_TRAINING_DATA/pflt_linguistics/01_historical_gold
 
 Does not invent meanings. Sources are Wiktionary-derived Dictionary DB entries.
 """
 from __future__ import annotations
+
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
 
 import json
 import re
@@ -20,9 +32,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-DICT_DB = Path(r"C:\Users\damia\Desktop\Dictionary\data\dictionary.db")
-OUT_DRIVE = Path(r"D:\training data\pflt_linguistics\01_historical_gold")
-OUT_PFLT = Path(r"C:\Users\damia\Desktop\pflt\data")
+DICT_DB = _fsot_local_path('FSOT_LOCAL_DATA', 'data_external/local') / 'Dictionary' / 'data' / 'dictionary.db'
+OUT_DRIVE = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '01_historical_gold'
+OUT_PFLT = _REPO_ROOT / 'data'
 
 # How many high-quality pairs to promote per language into active gold
 PROMOTE_LIMIT = {

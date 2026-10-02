@@ -9,6 +9,18 @@ Focus langs: la, grc, ang, akk, sum, san, hit, cop, egy, he, arc, fro, goh, non,
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import re
 import sqlite3
@@ -19,7 +31,7 @@ from typing import Any, Dict, List, Set
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
-DB = Path(r"C:\Users\damia\Desktop\Dictionary\data\dictionary.db")
+DB = _fsot_local_path('FSOT_LOCAL_DATA', 'data_external/local') / 'Dictionary' / 'data' / 'dictionary.db'
 OUT = DATA / "dictionary_db_mined_gold.jsonl"
 REPORT = DATA / "dictionary_db_mine_report.json"
 

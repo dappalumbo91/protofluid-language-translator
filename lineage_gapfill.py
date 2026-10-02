@@ -11,11 +11,23 @@ Idea:
 This is NOT free neural MT. Proposals stay Tier B until multi-source promotion.
 
 Inputs:
-  D:\\training data\\pflt_linguistics\\02_cognate_lineage\\asjp\\forms.csv
-  D:\\training data\\pflt_linguistics\\02_cognate_lineage\\asjp\\languages.csv
-  D:\\training data\\pflt_linguistics\\02_cognate_lineage\\asjp\\parameters.csv
+  $FSOT_TRAINING_DATA/pflt_linguistics/02_cognate_lineage/asjp/forms.csv
+  $FSOT_TRAINING_DATA/pflt_linguistics/02_cognate_lineage/asjp/languages.csv
+  $FSOT_TRAINING_DATA/pflt_linguistics/02_cognate_lineage/asjp/parameters.csv
 """
 from __future__ import annotations
+
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
 
 import csv
 import json
@@ -29,9 +41,9 @@ from typing import Any, Dict, List, Optional, Set, Tuple
 
 from PFLT_FSOT_2_1_aligned import compute_S_D_chaotic
 
-ASJP = Path(r"D:\training data\pflt_linguistics\02_cognate_lineage\asjp")
-OUT = Path(r"D:\training data\pflt_linguistics\09_ml_checkpoints\lineage")
-PFLT_OUT = Path(r"C:\Users\damia\Desktop\pflt\data")
+ASJP = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '02_cognate_lineage' / 'asjp'
+OUT = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '09_ml_checkpoints' / 'lineage'
+PFLT_OUT = _REPO_ROOT / 'data'
 
 
 def norm_form(s: str) -> str:

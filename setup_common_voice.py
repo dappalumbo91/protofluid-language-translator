@@ -7,18 +7,30 @@ Creates folder layout + download instructions + a tiny synthetic demo
 so the audio path is testable offline.
 
 Layout:
-  D:\\training data\\pflt_linguistics\\05_phonology_vocal\\common_voice\\
+  $FSOT_TRAINING_DATA/pflt_linguistics/05_phonology_vocal/common_voice
     README_DOWNLOAD.md
     en/  es/  fr/  ...  (place CV clips here)
     demo_manifest.json
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path(r"D:\training data\pflt_linguistics\05_phonology_vocal\common_voice")
+ROOT = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '05_phonology_vocal' / 'common_voice'
 LANGS = ["en", "es", "fr", "de", "it", "pt", "la"]  # la often sparse; modern first
 
 
@@ -73,7 +85,7 @@ Full CV packs are multi-GB per language — download when ready; the **contract 
     (ROOT / "demo_manifest.json").write_text(
         json.dumps(manifest, indent=2), encoding="utf-8"
     )
-    (Path(r"C:\Users\damia\Desktop\pflt\data") / "common_voice_manifest.json").write_text(
+    (_REPO_ROOT / 'data' / "common_voice_manifest.json").write_text(
         json.dumps(manifest, indent=2), encoding="utf-8"
     )
     print(json.dumps(manifest, indent=2))

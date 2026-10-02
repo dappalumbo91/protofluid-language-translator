@@ -774,7 +774,7 @@ def main() -> None:
 ## Reproduce
 
 ```powershell
-cd C:\\Users\\damia\\Desktop\\pflt
+cd .
 python -u eval_translation_battery.py
 ```
 

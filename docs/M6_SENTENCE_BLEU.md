@@ -16,7 +16,7 @@ Intrinsic free-parameter FSOT model: translation is a surface of law-backed inte
 
 Not claiming Google/DeepL neural parity yet. Climbing toward competitive sentence bars offline (phrase table + templates + CJK). M1 form→gloss catalog remains 100% on covered langs.
 
-Corpora on `D:\training data\pflt_linguistics` — not GitHub.
+Corpora on `<local folder, not included in repo: training data/pflt_linguistics>` — not GitHub.
 
 ## Overall (Tatoeba src→en, n=6400 held-out)
 

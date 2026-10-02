@@ -101,9 +101,9 @@ begin
    Put_Line ("====================================================");
 
    PFLT_Store.Set_Data_Root
-     ("C:\Users\damia\Desktop\pflt\pflt-Ada\data");
+     ("data");
    PFLT_Ledger.Set_Path
-     ("C:\Users\damia\Desktop\pflt\pflt-Ada\data\knowledge_ledger_ada.jsonl");
+     ("data/knowledge_ledger_ada.jsonl");
    PFLT_LTM.Load_Default_Path;
 
    if Argc >= 1 then
@@ -177,7 +177,7 @@ begin
                  ("LTM episodes_this_session="
                   & Natural'Image (PFLT_LTM.Episode_Count));
                Put_Line
-                 ("path=C:\Users\damia\Desktop\pflt\pflt-Ada\data\"
+                 ("path=data/"
                   & "ltm_mulling.jsonl");
                Put_Line ("usage: ltm recall KEYWORD");
             end if;
@@ -186,7 +186,7 @@ begin
             declare
                Ev : constant PFLT_Eval.Eval_Report :=
                  PFLT_Eval.Run_Sample
-                   ("C:\Users\damia\Desktop\pflt\pflt-Ada\data\eval_sample.tsv");
+                   ("data/eval_sample.tsv");
             begin
                PFLT_Eval.Print_Report (Ev);
                return;
@@ -195,7 +195,7 @@ begin
             declare
                Ev : constant PFLT_Eval.Eval_Report :=
                  PFLT_Eval.Run_Sample
-                   ("C:\Users\damia\Desktop\pflt\pflt-Ada\data\eval_sample.tsv",
+                   ("data/eval_sample.tsv",
                     8000,
                     PFLT_Eval.Product);
             begin
@@ -215,7 +215,7 @@ begin
                         Path : constant String :=
                           (if Argc >= 3 then Ada.Command_Line.Argument (3)
                            else
-                             "C:\Users\damia\Desktop\pflt\pflt-Ada\data\"
+                             "data/"
                              & "unet_hypotheses_sample.tsv");
                         Img  : constant String :=
                           (if Argc >= 4 then Ada.Command_Line.Argument (4)
