@@ -8,7 +8,7 @@ Archive review finding:
   Overfit pickers fail because they are not the scalar engine.
 
 This script:
-  1. Loads authority fsot_compute from I:\\FSOT-Physical-Archive
+  1. Loads authority fsot_compute from $FSOT_ARCHIVE_ROOT
   2. Maps (src, hyp, gen_score) → full ScalarInput (all terms)
   3. Scores hyps with S, T1, T2, T3 (observer / linear / valve-acoustic)
   4. Selects product hyp by FSOT modes (no free-fit coefficients)
@@ -18,6 +18,18 @@ Law: never rewritten. Students only provide hyp inventory.
 Linguistics domain: D_eff=12 from linguistics_formal_benchmark.json (archive).
 """
 from __future__ import annotations
+
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parents[1]
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
 
 import hashlib
 import json
@@ -35,9 +47,7 @@ CACHE = ADA / "data" / "hyp_cache"
 REP.mkdir(exist_ok=True)
 CACHE.mkdir(parents=True, exist_ok=True)
 
-ARCHIVE_COMPUTE = Path(
-    r"I:\FSOT-Physical-Archive\02_FSOT-2.1-Lean-Full\vendor\fsot_compute.py"
-)
+ARCHIVE_COMPUTE = _fsot_local_path('FSOT_2_1_LEAN_ROOT', '../FSOT-2.1-Lean') / 'vendor' / 'fsot_compute.py'
 PIN = "D1D38A185487B452E470AC68ECE2EB45AEB1CA9CE25FC9BF9564C19633FFBE70"
 # Linguistics Formal panel (archive data/linguistics_formal_benchmark.json)
 LING_D_EFF = 12.0
@@ -264,7 +274,7 @@ def split_terms(mod, s_in) -> tuple[float, float, float, float]:
 def main():
     t0 = time.perf_counter()
     log("=== FSOT DeepL killshot — formula-correct product scoring ===")
-    log("Review: I:\\FSOT-Physical-Archive — apply S=K(T1+T2+T3) to hyps, not GBC")
+    log("Review: $FSOT_ARCHIVE_ROOT — apply S=K(T1+T2+T3) to hyps, not GBC")
 
     mod, digest, pin_ok = load_authority()
     C_EFF = float(mod.C_EFF)

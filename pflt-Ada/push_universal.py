@@ -223,7 +223,7 @@ def main() -> None:
         "all_langs_ge_95": len(weak) == 0,
         "weak": weak,
         "by_lang": rows_out,
-        "data_policy": "Large Kaikki dumps stay on D:\\training data; git has code only",
+        "data_policy": "Large Kaikki dumps stay on $FSOT_TRAINING_DATA; git has code only",
         "next": [
             "Unknown-script progressive morph (already in Ada Resolve_Progressive)",
             "Sentence-level pairs (M6) after form-gloss holds",
@@ -243,7 +243,7 @@ def main() -> None:
         f"**PRODUCT:** {report['product_overall']}%",
         f"**All langs ≥95%:** {report['all_langs_ge_95']}",
         "",
-        "Large downloads remain on `D:\\training data\\pflt_linguistics\\12_kaikki_downloads` — not GitHub.",
+        "Large downloads remain on `$FSOT_TRAINING_DATA/pflt_linguistics/12_kaikki_downloads` — not GitHub.",
         "Shipping path: Ada `pflt_main.exe` + rebuilt local packs.",
         "",
         "## Per-language (n≥20)",

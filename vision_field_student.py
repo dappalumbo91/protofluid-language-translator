@@ -10,6 +10,18 @@ Waveform audio is out of scope here (and not preferred for speech either).
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
@@ -25,8 +37,8 @@ from fsot_multilayer_vision import (
 )
 from PFLT_FSOT_2_1_aligned import PFLT
 
-OUT = Path(r"D:\training data\pflt_linguistics\10_visual_scripts\hieroglyph_egyptian\images\fsot_multilayer")
-PFLT_DATA = Path(r"C:\Users\damia\Desktop\pflt\data")
+OUT = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '10_visual_scripts' / 'hieroglyph_egyptian' / 'images' / 'fsot_multilayer'
+PFLT_DATA = _REPO_ROOT / 'data'
 
 
 @dataclass

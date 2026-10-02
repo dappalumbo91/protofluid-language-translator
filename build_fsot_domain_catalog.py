@@ -14,17 +14,29 @@ Policy:
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-ARCHIVE = Path(r"I:\FSOT-Physical-Archive\02_FSOT-2.1-Lean-Full\data")
+ARCHIVE = _fsot_local_path('FSOT_2_1_LEAN_ROOT', '../FSOT-2.1-Lean') / 'data'
 ATLAS = ARCHIVE / "publication" / "domain_atlas.json"
 FIXTURES = ARCHIVE / "fsot_domain_scalar_fixtures.json"
-OUT_PFLT = Path(r"C:\Users\damia\Desktop\pflt\data")
-OUT_DRIVE = Path(r"D:\training data\pflt_linguistics\08_rosetta_fsot")
+OUT_PFLT = _REPO_ROOT / 'data'
+OUT_DRIVE = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '08_rosetta_fsot'
 
 # Keyword → core fixture name (lowercase match on domain slug)
 # Match against actual fixture core names (35)

@@ -60,7 +60,7 @@ VIS_LO, VIS_HI = 380.0, 750.0        # human visible
 NIR_LO, NIR_HI = 750.0, 1400.0       # near-IR (common silicon + InGaAs edge)
 
 OUT = Path(
-    r"D:\training data\pflt_linguistics\10_visual_scripts"
+    r"$FSOT_TRAINING_DATA/pflt_linguistics/10_visual_scripts"
     r"\hieroglyph_egyptian\images\fsot_multilayer"
 )
 

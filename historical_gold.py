@@ -14,13 +14,25 @@ No animal vocal data here yet — separate bioacoustic phase after human languag
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import sqlite3
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 
-DICT_ROOT = Path(r"C:\Users\damia\Desktop\Dictionary")
+DICT_ROOT = _fsot_local_path('FSOT_LOCAL_DATA', 'data_external/local') / 'Dictionary'
 SEED_PATH = DICT_ROOT / "historical_linguistics_seed.json"
 CAND_PATH = DICT_ROOT / "data" / "bridge_patterns" / "historical_validation_candidates_grc_la.json"
 DB_PATH = DICT_ROOT / "data" / "dictionary.db"

@@ -3,8 +3,8 @@
 Ingest Pleiades ancient-place names into PFLT name gazetteer contacts.
 
 Source (preferred local):
-  D:\\training data\\pflt_linguistics\\08_rosetta_fsot\\pleiades\\names.csv
-  D:\\training data\\pflt_linguistics\\08_rosetta_fsot\\pleiades\\places.csv
+  $FSOT_TRAINING_DATA/pflt_linguistics/08_rosetta_fsot/pleiades/names.csv
+  $FSOT_TRAINING_DATA/pflt_linguistics/08_rosetta_fsot/pleiades/places.csv
 
 Or download GIS package CSVs from:
   https://github.com/isawnyu/pleiades.datasets (data/gis/)
@@ -16,6 +16,18 @@ Policy:
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import csv
 import json
 import re
@@ -26,9 +38,9 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 DATA = Path(__file__).resolve().parent / "data"
-PLEIADES_DIR = Path(r"D:\training data\pflt_linguistics\08_rosetta_fsot\pleiades")
+PLEIADES_DIR = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '08_rosetta_fsot' / 'pleiades'
 OUT_JSON = DATA / "pleiades_contacts.json"
-OUT_DRIVE = Path(r"D:\training data\pflt_linguistics\08_rosetta_fsot\pleiades_contacts.json")
+OUT_DRIVE = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '08_rosetta_fsot' / 'pleiades_contacts.json'
 GAZ_PATH = DATA / "name_gazetteer.json"
 
 # BCP47-ish language tags seen in Pleiades → our codes
@@ -181,7 +193,7 @@ def merge_into_gazetteer(
     gaz["stats"]["n_contacts_multi"] = sum(1 for v in g_title.values() if len(v) >= 2)
 
     GAZ_PATH.write_text(json.dumps(gaz, ensure_ascii=False), encoding="utf-8")
-    drive_gaz = Path(r"D:\training data\pflt_linguistics\08_rosetta_fsot\name_gazetteer.json")
+    drive_gaz = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '08_rosetta_fsot' / 'name_gazetteer.json'
     drive_gaz.parent.mkdir(parents=True, exist_ok=True)
     drive_gaz.write_text(json.dumps(gaz, ensure_ascii=False), encoding="utf-8")
     return gaz["pleiades_merge"]

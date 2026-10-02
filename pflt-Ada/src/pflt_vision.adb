@@ -419,7 +419,7 @@ is
       Put_Line ("--- U-Net hypotheses sample file ---");
       Print_One
         (Load_Hypotheses_File
-           ("C:\Users\damia\Desktop\pflt\pflt-Ada\data\"
+           ("data/"
             & "unet_hypotheses_sample.tsv",
             "sample_wall.png"));
    end Run_Demo;

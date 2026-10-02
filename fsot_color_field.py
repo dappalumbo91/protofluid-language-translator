@@ -25,6 +25,18 @@ No free-fit color calibration curves: probe wavelengths and weights come from
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import math
 import struct
@@ -61,7 +73,7 @@ K = PHI * (GAMMA / E) * sqrt(2) / ln(PI) * mpf("0.99")
 VISIBLE_LO = 380.0
 VISIBLE_HI = 750.0
 
-OUT_ROOT = Path(r"D:\training data\pflt_linguistics\10_visual_scripts\hieroglyph_egyptian\images\fsot_color")
+OUT_ROOT = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '10_visual_scripts' / 'hieroglyph_egyptian' / 'images' / 'fsot_color'
 
 
 def seed_probe_wavelengths(n: int = 7) -> List[float]:

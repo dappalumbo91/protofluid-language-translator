@@ -7,15 +7,25 @@ Re-run m6_sentence_bleu.py after this to refresh BLEU-style bars.
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parents[1]
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
 DATA = Path(__file__).resolve().parent / "data"
-CACHE = Path(
-    r"D:\training data\pflt_linguistics\03_parallel_corpora\tatoeba\m6_pairs_cache.jsonl"
-)
+CACHE = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '03_parallel_corpora' / 'tatoeba' / 'm6_pairs_cache.jsonl'
 TOKEN_RE = re.compile(r"[\w'-]+", re.UNICODE)
 
 

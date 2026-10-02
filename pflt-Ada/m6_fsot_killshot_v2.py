@@ -11,6 +11,18 @@ One model on GPU at a time. Feature + hyp caches on disk.
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parents[1]
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import hashlib
 import json
 import math
@@ -29,15 +41,13 @@ REP.mkdir(exist_ok=True)
 CACHE.mkdir(parents=True, exist_ok=True)
 FEAT.mkdir(parents=True, exist_ok=True)
 
-MODELS = Path(r"D:\training data\pflt_linguistics\13_huggingface\models")
+MODELS = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '13_huggingface' / 'models'
 OPUS = MODELS / "Helsinki-NLP__opus-mt-de-en"
 NLLB13 = MODELS / "facebook__nllb-200-1.3B"
 NLLB600 = MODELS / "facebook__nllb-200-distilled-600M"
 NLLB33 = MODELS / "facebook__nllb-200-3.3B"
 
-ARCHIVE_COMPUTE = Path(
-    r"I:\FSOT-Physical-Archive\02_FSOT-2.1-Lean-Full\vendor\fsot_compute.py"
-)
+ARCHIVE_COMPUTE = _fsot_local_path('FSOT_2_1_LEAN_ROOT', '../FSOT-2.1-Lean') / 'vendor' / 'fsot_compute.py'
 PIN = "D1D38A185487B452E470AC68ECE2EB45AEB1CA9CE25FC9BF9564C19633FFBE70"
 LING_D_EFF = 12.0
 MID, STRETCH = 40.0, 48.0

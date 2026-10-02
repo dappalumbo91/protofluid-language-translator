@@ -8,6 +8,18 @@ Score test half — this is the number that matters for generalization claims.
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import hashlib
 import json
 import re
@@ -19,7 +31,7 @@ from PFLT_FSOT_2_1_aligned import PFLT
 
 PROMOTED = Path(__file__).resolve().parent / "data" / "classical_grc_la_promoted_tierA.jsonl"
 OUT = Path(__file__).resolve().parent / "data" / "held_out_classical_report.json"
-DRIVE = Path(r"D:\training data\pflt_linguistics\01_historical_gold\held_out_classical_report.json")
+DRIVE = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '01_historical_gold' / 'held_out_classical_report.json'
 
 
 def load_rows(path: Path) -> List[Dict[str, Any]]:

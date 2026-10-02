@@ -10,6 +10,18 @@ Law D1D38A fixed. Lessons: load→decode→unload; hyp_cache; no dual-model VRAM
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parents[1]
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import math
 import re
@@ -23,7 +35,7 @@ REP = ADA / "reports"
 CACHE = ADA / "data" / "hyp_cache"
 REP.mkdir(exist_ok=True)
 CACHE.mkdir(parents=True, exist_ok=True)
-MODELS = Path(r"D:\training data\pflt_linguistics\13_huggingface\models")
+MODELS = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '13_huggingface' / 'models'
 OPUS = MODELS / "Helsinki-NLP__opus-mt-de-en"
 NLLB_600 = MODELS / "facebook__nllb-200-distilled-600M"
 NLLB_13 = MODELS / "facebook__nllb-200-1.3B"

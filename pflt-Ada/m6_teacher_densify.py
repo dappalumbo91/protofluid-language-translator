@@ -3,7 +3,7 @@
 Teacher densify under FSOT: HF models propose phrase densify; law never trains.
 
 Uses local snapshots under:
-  D:\\training data\\pflt_linguistics\\13_huggingface\\models\\
+  $FSOT_TRAINING_DATA/pflt_linguistics/13_huggingface/models
 
 Priority:
   1. Helsinki-NLP opus-mt-*-en (small, fast CPU)
@@ -12,6 +12,18 @@ Priority:
 Teacher outputs densify phrase tables (students). Pin D1D38A unchanged.
 """
 from __future__ import annotations
+
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parents[1]
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
 
 import json
 import re
@@ -25,16 +37,10 @@ DATA = ADA / "data"
 REP = ADA / "reports"
 REP.mkdir(parents=True, exist_ok=True)
 
-MODELS = Path(r"D:\training data\pflt_linguistics\13_huggingface\models")
-CACHE_EVAL = Path(
-    r"D:\training data\pflt_linguistics\03_parallel_corpora\tatoeba\m6_pairs_cache.jsonl"
-)
-TATOEBA_SENT = Path(
-    r"D:\training data\pflt_linguistics\03_parallel_corpora\tatoeba\extracted\sentences.csv"
-)
-TATOEBA_LINK = Path(
-    r"D:\training data\pflt_linguistics\03_parallel_corpora\tatoeba\extracted\links.csv"
-)
+MODELS = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '13_huggingface' / 'models'
+CACHE_EVAL = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '03_parallel_corpora' / 'tatoeba' / 'm6_pairs_cache.jsonl'
+TATOEBA_SENT = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '03_parallel_corpora' / 'tatoeba' / 'extracted' / 'sentences.csv'
+TATOEBA_LINK = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '03_parallel_corpora' / 'tatoeba' / 'extracted' / 'links.csv'
 PHRASE_U = DATA / "m6_phrase_table.tsv"
 PHRASE_BI = DATA / "m6_bigram_table.tsv"
 

@@ -7,6 +7,18 @@ hieroglyph contract, vision multi-layer, lineage Tier-B rates, scalar health.
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import sys
 import time
@@ -18,7 +30,7 @@ from typing import Any, Dict, List
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT))
 
-DRIVE_OUT = Path(r"D:\training data\pflt_linguistics\00_manifests\stage_test_report.json")
+DRIVE_OUT = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '00_manifests' / 'stage_test_report.json'
 LOCAL_OUT = ROOT / "data" / "stage_test_report.json"
 
 
@@ -324,7 +336,7 @@ def main() -> int:
         path = ROOT / "data" / "asjp_lineage_gapfill_report.json"
         if not path.exists():
             path = Path(
-                r"D:\training data\pflt_linguistics\09_ml_checkpoints\lineage"
+                r"$FSOT_TRAINING_DATA/pflt_linguistics/09_ml_checkpoints/lineage"
                 r"\asjp_lineage_gapfill_report.json"
             )
         if path.exists():

@@ -2,10 +2,22 @@
 """
 Download PFLT / FSOT linguistics training data to Game Hard Drive.
 
-Target root: D:\\training data\\pflt_linguistics
+Target root: $FSOT_TRAINING_DATA/pflt_linguistics
 Every download writes a provenance JSON next to the file.
 """
 from __future__ import annotations
+
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
 
 import hashlib
 import json
@@ -18,11 +30,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-ROOT = Path(r"D:\training data\pflt_linguistics")
+ROOT = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics'
 LOG_DIR = ROOT / "logs"
-DESKTOP_PFLT = Path(r"C:\Users\damia\Desktop\pflt")
-DESKTOP_DICT = Path(r"C:\Users\damia\Desktop\Dictionary")
-DESKTOP_LING = Path(r"C:\Users\damia\Desktop\FSOT linguistics")
+DESKTOP_PFLT = _REPO_ROOT
+DESKTOP_DICT = _fsot_local_path('FSOT_LOCAL_DATA', 'data_external/local') / 'Dictionary'
+DESKTOP_LING = _fsot_local_path('FSOT_LOCAL_DATA', 'data_external/local') / 'FSOT linguistics'
 
 # (url, relative_dest, notes)
 REMOTE_TARGETS: List[Tuple[str, str, str]] = [

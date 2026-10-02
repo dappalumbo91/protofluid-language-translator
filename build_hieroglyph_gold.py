@@ -2,7 +2,7 @@
 """
 Build Egyptian hieroglyph Tier-A style gold from Unicode Unikemet.
 
-Source: D:\\training data\\pflt_linguistics\\10_visual_scripts\\unicode_refs\\Unikemet.txt
+Source: $FSOT_TRAINING_DATA/pflt_linguistics/10_visual_scripts/unicode_refs/Unikemet.txt
 Authority: Unicode Egyptian Hieroglyph Database (normative UCD contributory file).
 
 Maps:
@@ -14,6 +14,18 @@ this file is the *meaning* teacher table for attested catalog signs.
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import re
 from collections import defaultdict
@@ -21,10 +33,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-ROOT = Path(r"D:\training data\pflt_linguistics")
+ROOT = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics'
 UNIKEMET = ROOT / "10_visual_scripts" / "unicode_refs" / "Unikemet.txt"
 OUT_DIR = ROOT / "10_visual_scripts" / "hieroglyph_egyptian"
-PFLT_DATA = Path(r"C:\Users\damia\Desktop\pflt\data")
+PFLT_DATA = _REPO_ROOT / 'data'
 
 
 def parse_unikemet(path: Path) -> Dict[str, Dict[str, str]]:

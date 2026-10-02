@@ -23,6 +23,18 @@ This module builds (1–4) from Dictionary pos=name + place glosses, without LLM
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import re
 import sqlite3
@@ -34,9 +46,9 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Any
 
 DATA = Path(__file__).resolve().parent / "data"
-DB = Path(r"C:\Users\damia\Desktop\Dictionary\data\dictionary.db")
+DB = _fsot_local_path('FSOT_LOCAL_DATA', 'data_external/local') / 'Dictionary' / 'data' / 'dictionary.db'
 OUT = DATA / "name_gazetteer.json"
-DRIVE = Path(r"D:\training data\pflt_linguistics\08_rosetta_fsot\name_gazetteer.json")
+DRIVE = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '08_rosetta_fsot' / 'name_gazetteer.json'
 
 
 def fold(s: str) -> str:
@@ -273,7 +285,7 @@ class NameGazetteer:
         """Merge external Pleiades multi-form contacts (curriculum gazetteer)."""
         path = path or (DATA / "pleiades_contacts.json")
         if not path.exists():
-            alt = Path(r"D:\training data\pflt_linguistics\08_rosetta_fsot\pleiades_contacts.json")
+            alt = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '08_rosetta_fsot' / 'pleiades_contacts.json'
             path = alt if alt.exists() else path
         if not path.exists():
             return 0

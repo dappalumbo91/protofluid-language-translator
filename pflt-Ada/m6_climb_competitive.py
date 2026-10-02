@@ -18,6 +18,18 @@ Does NOT claim parity with neural MT until metrics justify it.
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parents[1]
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import math
 import re
@@ -31,7 +43,7 @@ DATA = ADA / "data"
 REP = ADA / "reports"
 REP.mkdir(parents=True, exist_ok=True)
 
-TATOEBA = Path(r"D:\training data\pflt_linguistics\03_parallel_corpora\tatoeba")
+TATOEBA = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '03_parallel_corpora' / 'tatoeba'
 EXTRACT = TATOEBA / "extracted"
 CACHE_EVAL = TATOEBA / "m6_pairs_cache.jsonl"
 PHRASE_U = DATA / "m6_phrase_table.tsv"
@@ -835,7 +847,7 @@ def write_report(score: dict, train_n: int) -> None:
         "",
         report["honest_note"],
         "",
-        "Corpora on `D:\\training data\\pflt_linguistics` — not GitHub.",
+        "Corpora on `$FSOT_TRAINING_DATA/pflt_linguistics` — not GitHub.",
         "",
         "## Overall (Tatoeba src→en, n=6400 held-out)",
         "",

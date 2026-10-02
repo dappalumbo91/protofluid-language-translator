@@ -18,6 +18,18 @@ This is how you stack against cutting-edge AI without becoming an LLM:
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 import sys
 from datetime import datetime, timezone
@@ -167,7 +179,7 @@ def main() -> None:
     out = Path(__file__).resolve().parent / "data" / "benchmark_report.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
-    drive = Path(r"D:\training data\pflt_linguistics\00_manifests\benchmark_report.json")
+    drive = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '00_manifests' / 'benchmark_report.json'
     drive.parent.mkdir(parents=True, exist_ok=True)
     drive.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
 

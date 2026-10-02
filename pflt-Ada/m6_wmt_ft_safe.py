@@ -2,6 +2,18 @@
 """Safer WMT finetune: freeze encoder, low LR, short schedule. Law D1D38A unchanged."""
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parents[1]
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import json
 from pathlib import Path
 
@@ -10,7 +22,7 @@ from datasets import load_dataset
 from torch.utils.data import DataLoader
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, get_linear_schedule_with_warmup
 
-MODELS = Path(r"D:\training data\pflt_linguistics\13_huggingface\models")
+MODELS = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '13_huggingface' / 'models'
 BASE = MODELS / "Helsinki-NLP__opus-mt-de-en"
 OUT = MODELS / "Helsinki-NLP__opus-mt-de-en-wmt-ft-v2"
 REP = Path(__file__).resolve().parent / "reports"

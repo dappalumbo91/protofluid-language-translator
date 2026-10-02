@@ -3,7 +3,7 @@
 Download + ingest the next 20 languages (ancient + modern mix) onto the game drive.
 
 Download root (external):
-  D:\\training data\\pflt_linguistics\\12_kaikki_downloads\\
+  $FSOT_TRAINING_DATA/pflt_linguistics/12_kaikki_downloads
 
 Sources:
   - Kaikki.org / Wiktextract per-language JSONL (English Wiktionary edition)
@@ -14,6 +14,18 @@ Then merges form->gloss into:
   pflt-Ada/data/gold_core.tsv, densify.tsv, train_mass.tsv, eval_sample.tsv
 """
 from __future__ import annotations
+
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parents[1]
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
 
 import gzip
 import json
@@ -29,8 +41,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 ADA = Path(__file__).resolve().parent
 ADA_DATA = ADA / "data"
-DRIVE = Path(r"D:\training data\pflt_linguistics\12_kaikki_downloads")
-INGEST = Path(r"D:\training data\pflt_linguistics\12_kaikki_downloads\ingested_gold")
+DRIVE = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '12_kaikki_downloads'
+INGEST = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '12_kaikki_downloads' / 'ingested_gold'
 MANIFEST = DRIVE / "download_manifest.json"
 
 # Kaikki English-Wiktionary language page name -> ISO-ish code

@@ -3,9 +3,9 @@
 Mine FSOT linguistics + Dictionary desktop assets into PFLT gap-fill data.
 
 Sources:
-  C:\\Users\\damia\\Desktop\\FSOT linguistics\\data\\fsot_rosetta_canonical.csv
-  C:\\Users\\damia\\Desktop\\Dictionary\\data\\dictionary.db
-  C:\\Users\\damia\\Desktop\\Dictionary\\historical_linguistics_seed.json
+  $FSOT_LOCAL_DATA/FSOT linguistics/data/fsot_rosetta_canonical.csv
+  $FSOT_LOCAL_DATA/Dictionary/data/dictionary.db
+  $FSOT_LOCAL_DATA/Dictionary/historical_linguistics_seed.json
 
 Outputs (Game Drive + pflt/data):
   rosetta_form_to_concept.jsonl   — form lookups
@@ -16,6 +16,18 @@ Outputs (Game Drive + pflt/data):
 """
 from __future__ import annotations
 
+import os as _os
+from pathlib import Path as _Path
+
+_REPO_ROOT = _Path(__file__).resolve().parent
+
+
+def _fsot_local_path(env, default):
+    """Local path outside the repo: $env if set, else a path relative to the repo root."""
+    _v = _os.environ.get(env, "").strip()
+    return _Path(_v) if _v else _REPO_ROOT / default
+
+
 import csv
 import json
 import re
@@ -25,15 +37,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
-LING = Path(r"C:\Users\damia\Desktop\FSOT linguistics")
-DICT = Path(r"C:\Users\damia\Desktop\Dictionary")
+LING = _fsot_local_path('FSOT_LOCAL_DATA', 'data_external/local') / 'FSOT linguistics'
+DICT = _fsot_local_path('FSOT_LOCAL_DATA', 'data_external/local') / 'Dictionary'
 ROSETTA = LING / "data" / "fsot_rosetta_canonical.csv"
 DB = DICT / "data" / "dictionary.db"
 SEED = DICT / "historical_linguistics_seed.json"
 
-OUT_PFLT = Path(r"C:\Users\damia\Desktop\pflt\data")
-OUT_DRIVE = Path(r"D:\training data\pflt_linguistics\01_historical_gold")
-OUT_AUDIO = Path(r"D:\training data\pflt_linguistics\05_phonology_vocal")
+OUT_PFLT = _REPO_ROOT / 'data'
+OUT_DRIVE = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '01_historical_gold'
+OUT_AUDIO = _fsot_local_path('FSOT_TRAINING_DATA', 'data_external/training_data') / 'pflt_linguistics' / '05_phonology_vocal'
 
 
 def mine_rosetta(max_rows: int = 0) -> Tuple[Dict[str, str], List[Dict[str, Any]], Dict[str, int]]:

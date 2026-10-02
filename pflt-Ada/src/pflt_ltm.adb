@@ -8,7 +8,7 @@ is
 
    Path_U : Unbounded_String :=
      To_Unbounded_String
-       ("C:\Users\damia\Desktop\pflt\pflt-Ada\data\ltm_mulling.jsonl");
+       ("data/ltm_mulling.jsonl");
    Episodes : Natural := 0;
 
    function To_Lower (S : String) return String is
@@ -69,7 +69,7 @@ is
    procedure Load_Default_Path is
    begin
       Set_Path
-        ("C:\Users\damia\Desktop\pflt\pflt-Ada\data\ltm_mulling.jsonl");
+        ("data/ltm_mulling.jsonl");
    end Load_Default_Path;
 
    procedure Remember

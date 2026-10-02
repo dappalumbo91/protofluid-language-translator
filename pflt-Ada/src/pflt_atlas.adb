@@ -250,7 +250,7 @@ is
    begin
       Dummy :=
         Load
-          ("C:\Users\damia\Desktop\pflt\pflt-Ada\data\domain_atlas.tsv");
+          ("data/domain_atlas.tsv");
    end Load_Default;
 
 end PFLT_Atlas;
