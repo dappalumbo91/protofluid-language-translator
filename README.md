@@ -1,5 +1,7 @@
 # Protofluid Language Translator (PFLT)
 
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+
 **Protofluid Language Translator** — a **universal translator of meaning** under **FSOT 2.1 law**.
 
 > Surface forms are labels. **Sense is identity.**  
@@ -13,7 +15,8 @@ It is **not** an NMT/QLoRA product and **not** “dictionary BLEU only.” It:
 3. **Converses / relays** and **ledgers** knowledge without rewriting law  
 4. **Certifies** every act with pinned \(S = K(T_1+T_2+T_3)\) (pin **D1D38A**)
 
-**Law authority:** `I:\FSOT-Physical-Archive\...\vendor\fsot_compute.py` via `fsot_law_bridge.py`.  
+**Law authority:** Build pin **D1D38A** is retained for this build; current theory authority is [FSOT-2.1-Lean](https://github.com/dappalumbo91/FSOT-2.1-Lean) pin **AEB2AD** (`vendor/fsot_compute.py`).  
+Local mirror (secondary): `I:\FSOT-Physical-Archive\...\vendor\fsot_compute.py` via `fsot_law_bridge.py`.  
 **Not** an LLM as translation or truth core.
 
 ### Fast path (seconds — the real product path)
